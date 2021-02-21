@@ -1,0 +1,1011 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>HWID数字许可激活工具</title>
+    <url>/2019/06/08/HWID%E6%95%B0%E5%AD%97%E8%AE%B8%E5%8F%AF%E6%BF%80%E6%B4%BB%E5%B7%A5%E5%85%B7/</url>
+    <content><![CDATA[<p>　　微软在2014年4月8日停止了xp系统的维护和更新，大部分用户都转战的win7，一晃十年过去了，win7用户占据了绝大部分，如今官网发布了公告：历经 10 年，对 Windows 7 的支持已近尾声 — 2020 年 1 月 14 日。我们了解，改变可能会很困难，因此，我们会为你提供有关后续行动的建议，并回答有关停止支持的问题。<span id="more"></span><br>　　自win10发布后微软也是费尽心思想让用户们升级win10，所以就很长一段时间的政策是如果你是win7用户，且系统处于激活状态，无论正版盗版升级到win10后都可以获得数字许可证（除企业版）。<br>　　这是什么概念？白给啊！！那有人就说了，我找工具类kms激活不一样嘛，答案是，，，确实一样。不过咱们是为了啥，毕竟正版用起来确实方便啊，尤其是学计算机的同学，我们买的电脑基本上都是预装的win10家庭中文版，够大部分人办公用了。可能有少部分人不满足家庭中文版的基本功能转战专业版企业版或者教育版，比如我。所以我当初没事干就是从win10家庭中文版重装到win7旗舰版，然后工具激活，再升级到win10专业版，获得了数字许可证，登录我微软账号后获得了与 Microsoft 帐户关联的数字许可证。然后为了纯净就格盘再重装win10专业版，联网自动激活，登录我微软账户，一个洗白党就此诞生，我当时是真能折腾。<br>　　这里先说一下区别，获得数字许可证相当于官网记录了你的电脑主板相关参数，只要你不换主板，无论重装多少次系统，只要是对应版本，在联网后都可以自动激活。<br>与 Microsoft 帐户关联的数字许可证呢，这个就是给予你的微软账号的权力了，一个微软账号可以关联5-8(范围区间)，具体我也不知道多少台电脑，也就是对应版本登录你的账号就可以选择是否激活该未激活电脑。<br>　　然后，，，在微软结束这个活动前，国外有人写了工具，就是模拟电脑环境从win7升级到win10来获得数字许可证，我当时就想，你怎么不早点写出来呢，，，后来国内大牛根据该工具用C重写了该工具，于是HWID数字许可激活工具就流传开来了，这个工具也整合了kms等激活方式，基本上全版本win10都可以用它激活，我是早期在远景论坛下载的，原帖现在也找不到了，就没标注原帖地址，贴上软件运行图</p>
+<p><strong>启动图</strong></p>
+<p><img src="https://i.loli.net/2019/09/09/ym8FBS4csvJAtqr.png" alt="TIM截图20190909212756.png"></p>
+<p><strong>主页面</strong><br><img src="https://i.loli.net/2019/09/09/MmtVCzXwnH7jORK.png" alt="TIM截图20190909212813.png"></p>
+<p><strong>下载地址</strong>：<a href="https://www.lanzous.com/i63k4ha">点我下载</a></p>
+<p>最后罗嗦两句，新系统肯定要比旧系统有优势，重点就在过渡期间，当初win10用户占用率少是什么原因？一是兼容性不好，好多游戏，软件win10兼容不了，二是win10太吃硬盘读写，在固态还没降价普及时大部分办公本以及网吧台式机都是用的机械硬盘，装win10开个机就轻易卡死，磁盘利用率动不动就100%，这要你有个球用。<br>现在好多了，兼容性基本上没问题了，固态硬盘价格也降了，就这么说吧，有固态上win10，没固态用win7，有没有固态用win10简直是两个体验，毕竟我是体验过4G RAM+机械盘+win7/10，4G RAM+固态盘+win7/10，8G RAM+固态盘的男人。</p>
+]]></content>
+      <categories>
+        <category>Softwares For Windows</category>
+      </categories>
+      <tags>
+        <tag>HWID</tag>
+        <tag>Windows</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo-视/音频插件-hexo-tag- a/d player</title>
+    <url>/2019/10/04/Hexo%E6%8F%92%E4%BB%B6-hexo-tag-%20a%E2%80%A2d%20player/</url>
+    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>在Hexo文章中插入音频请使用<a href="https://github.com/MoePlayer/APlayer">hexo-tag-aplayer</a></p>
+<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p><code>npm install hexo-tag-aplayer</code></p>
+<h1 id="Aplayer"><a href="#Aplayer" class="headerlink" title="Aplayer"></a>Aplayer<span id="more"></span></h1><h1 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h1>
+{% aplayer title author url [picture_url, narrow, autoplay, width:xxx, lrc:xxx] %}
+
+<p><code>title</code> : 曲目标题<br><code>author</code>: 曲目作者<br><code>url</code>: 音乐文件 URL 地址<br><code>picture_url</code>: (可选) 音乐对应的图片地址<br><code>narrow</code>: (可选)播放器袖珍风格<br><code>autoplay</code>: (可选) 自动播放，移动端浏览器暂时不支持此# # 功能<br><code>width:xxx</code>: (可选) 播放器宽度 (默认: 100%)<br><code>lrc:xxx</code>: (可选)歌词文件 URL 地址</p>
+<h1 id="Meting"><a href="#Meting" class="headerlink" title="Meting"></a>Meting</h1><h1 id="开启"><a href="#开启" class="headerlink" title="开启"></a>开启</h1><p>在<code>hexo/_config.yml</code>底部添加代码</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">aplayer:</span><br><span class="line">  　　meting: true</span><br></pre></td></tr></table></figure>
+
+<h1 id="语法-1"><a href="#语法-1" class="headerlink" title="语法"></a>语法</h1>
+{% meting "id" "server" "type" %}
+
+
+<table>
+<thead>
+<tr>
+<th align="center">选项</th>
+<th align="center">默认值</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">id</td>
+<td align="center">必须值</td>
+<td align="center">歌曲 id / 播放列表 id / 相册 id / 搜索关键字</td>
+</tr>
+<tr>
+<td align="center">server</td>
+<td align="center">必须值</td>
+<td align="center">音乐平台: netease, tencent, kugou, xiami, baidu</td>
+</tr>
+<tr>
+<td align="center">type</td>
+<td align="center">必须值</td>
+<td align="center">song, playlist, album, search, artist</td>
+</tr>
+<tr>
+<td align="center">fixed</td>
+<td align="center">false</td>
+<td align="center">开启固定模式</td>
+</tr>
+<tr>
+<td align="center">mini</td>
+<td align="center">false</td>
+<td align="center">开启迷你模式</td>
+</tr>
+<tr>
+<td align="center">loop</td>
+<td align="center">all</td>
+<td align="center">列表循环模式：all, one,none</td>
+</tr>
+<tr>
+<td align="center">order</td>
+<td align="center">list</td>
+<td align="center">列表播放模式： list, random</td>
+</tr>
+<tr>
+<td align="center">volume</td>
+<td align="center">0.7</td>
+<td align="center">播放器音量</td>
+</tr>
+<tr>
+<td align="center">lrctype</td>
+<td align="center">0</td>
+<td align="center">歌词格式类型</td>
+</tr>
+<tr>
+<td align="center">listfolded</td>
+<td align="center">false</td>
+<td align="center">指定音乐播放列表是否折叠</td>
+</tr>
+<tr>
+<td align="center">storagename</td>
+<td align="center">metingjs</td>
+<td align="center">LocalStorage 中存储播放器设定的键名</td>
+</tr>
+<tr>
+<td align="center">autoplay</td>
+<td align="center">true</td>
+<td align="center">自动播放，移动端浏览器暂时不支持此功能</td>
+</tr>
+<tr>
+<td align="center">mutex</td>
+<td align="center">true</td>
+<td align="center">该选项开启时，如果同页面有其他 aplayer 播放，该播放器会暂停</td>
+</tr>
+<tr>
+<td align="center">listmaxheight</td>
+<td align="center">340px</td>
+<td align="center">播放列表的最大长度</td>
+</tr>
+<tr>
+<td align="center">preload</td>
+<td align="center">auto</td>
+<td align="center">音乐文件预载入模式，可选项： none, metadata, auto</td>
+</tr>
+<tr>
+<td align="center">theme</td>
+<td align="center">#ad7a86</td>
+<td align="center">播放器风格色彩设置</td>
+</tr>
+</tbody></table>
+<hr>
+<h1 id="前言-1"><a href="#前言-1" class="headerlink" title="前言"></a>前言</h1><p>在Hexo文章中插入视频请使用<a href="https://github.com/MoePlayer/hexo-tag-dplayer">hexo-tag-dplayer</a></p>
+<h1 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h1><p><code>npm install hexo-tag-dplayer</code></p>
+<h1 id="语法-2"><a href="#语法-2" class="headerlink" title="语法"></a>语法</h1>
+{% dplayer "url=" %}
+
+
+<table>
+<thead>
+<tr>
+<th align="center">名称</th>
+<th align="center">默认值</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">container</td>
+<td align="center">document.querySelector(‘.dplayer’)</td>
+<td align="center">播放器容器元素</td>
+</tr>
+<tr>
+<td align="center">live</td>
+<td align="center">false</td>
+<td align="center">开启直播模式, 详情</td>
+</tr>
+<tr>
+<td align="center">autoplay</td>
+<td align="center">false</td>
+<td align="center">视频自动播放</td>
+</tr>
+<tr>
+<td align="center">theme</td>
+<td align="center">‘#b7daff’</td>
+<td align="center">主题色</td>
+</tr>
+<tr>
+<td align="center">loop</td>
+<td align="center">false</td>
+<td align="center">视频循环播放</td>
+</tr>
+<tr>
+<td align="center">lang</td>
+<td align="center">navigator.language.toLowerCase()</td>
+<td align="center">可选值: ‘en’, ‘zh-cn’, ‘zh-tw’</td>
+</tr>
+<tr>
+<td align="center">screenshot</td>
+<td align="center">false</td>
+<td align="center">开启截图，如果开启，视频和视频封面需要开启跨域</td>
+</tr>
+<tr>
+<td align="center">hotkey</td>
+<td align="center">true</td>
+<td align="center">开启热键</td>
+</tr>
+<tr>
+<td align="center">preload</td>
+<td align="center">‘auto’</td>
+<td align="center">预加载，可选值: ‘none’, ‘metadata’, ‘auto’</td>
+</tr>
+<tr>
+<td align="center">volume</td>
+<td align="center">0.7</td>
+<td align="center">默认音量，请注意播放器会记忆用户设置，用户手动设置音量后默认音量即失效</td>
+</tr>
+<tr>
+<td align="center">logo</td>
+<td align="center">-</td>
+<td align="center">在左上角展示一个 logo，你可以通过 CSS 调整它的大小和位置</td>
+</tr>
+<tr>
+<td align="center">apiBackend</td>
+<td align="center">-</td>
+<td align="center">自定义获取和发送弹幕行为，详情</td>
+</tr>
+<tr>
+<td align="center">video</td>
+<td align="center">-</td>
+<td align="center">视频信息</td>
+</tr>
+<tr>
+<td align="center">video.quality</td>
+<td align="center">-</td>
+<td align="center">详情</td>
+</tr>
+<tr>
+<td align="center">video.defaultQuality</td>
+<td align="center">-</td>
+<td align="center">详情</td>
+</tr>
+<tr>
+<td align="center">video.url</td>
+<td align="center">-</td>
+<td align="center">视频链接</td>
+</tr>
+<tr>
+<td align="center">video.pic</td>
+<td align="center">-</td>
+<td align="center">视频封面</td>
+</tr>
+<tr>
+<td align="center">video.thumbnails</td>
+<td align="center">-</td>
+<td align="center">视频缩略图，可以使用 DPlayer-thumbnails 生成</td>
+</tr>
+<tr>
+<td align="center">video.type</td>
+<td align="center">‘auto’</td>
+<td align="center">可选值: ‘auto’, ‘hls’, ‘flv’, ‘dash’, ‘webtorrent’, ‘normal’ 或其他自定义类型</td>
+</tr>
+<tr>
+<td align="center">video.customType</td>
+<td align="center">-</td>
+<td align="center">自定义类型</td>
+</tr>
+<tr>
+<td align="center">subtitle</td>
+<td align="center">-</td>
+<td align="center">外挂字幕</td>
+</tr>
+<tr>
+<td align="center">subtitle.url</td>
+<td align="center">required</td>
+<td align="center">字幕链接</td>
+</tr>
+<tr>
+<td align="center">subtitle.type</td>
+<td align="center">‘webvtt’</td>
+<td align="center">字幕类型，可选值: ‘webvtt’, ‘ass’，目前只支持 webvtt</td>
+</tr>
+<tr>
+<td align="center">subtitle.fontSize</td>
+<td align="center">‘20px’</td>
+<td align="center">字幕字号</td>
+</tr>
+<tr>
+<td align="center">subtitle.bottom</td>
+<td align="center">‘40px’</td>
+<td align="center">字幕距离播放器底部的距离，取值形如: ‘10px’ ‘10%’</td>
+</tr>
+<tr>
+<td align="center">subtitle.color</td>
+<td align="center">‘#fff’</td>
+<td align="center">字幕颜色</td>
+</tr>
+<tr>
+<td align="center">danmaku</td>
+<td align="center">-</td>
+<td align="center">显示弹幕</td>
+</tr>
+<tr>
+<td align="center">danmaku.id</td>
+<td align="center">required</td>
+<td align="center">弹幕池id，必须唯一</td>
+</tr>
+<tr>
+<td align="center">danmaku.api</td>
+<td align="center">required</td>
+<td align="center">详情</td>
+</tr>
+<tr>
+<td align="center">danmaku.token</td>
+<td align="center">-</td>
+<td align="center">弹幕后端验证 token</td>
+</tr>
+<tr>
+<td align="center">danmaku.maximum</td>
+<td align="center">-</td>
+<td align="center">弹幕最大数量</td>
+</tr>
+<tr>
+<td align="center">danmaku.addition</td>
+<td align="center">-</td>
+<td align="center">额外外挂弹幕，详情</td>
+</tr>
+<tr>
+<td align="center">danmaku.user</td>
+<td align="center">‘DIYgod’</td>
+<td align="center">弹幕用户名</td>
+</tr>
+<tr>
+<td align="center">danmaku.bottom</td>
+<td align="center">-</td>
+<td align="center">弹幕距离播放器底部的距离，防止遮挡字幕，取值形如: ‘10px’ ‘10%’</td>
+</tr>
+<tr>
+<td align="center">danmaku.unlimited</td>
+<td align="center">false</td>
+<td align="center">海量弹幕模式，即使重叠也展示全部弹幕，请注意播放器会记忆用户设置，用户手动设置后即失效</td>
+</tr>
+<tr>
+<td align="center">contextmenu</td>
+<td align="center">[]</td>
+<td align="center">自定义右键菜单</td>
+</tr>
+<tr>
+<td align="center">highlight</td>
+<td align="center">[]</td>
+<td align="center">自定义进度条提示点</td>
+</tr>
+<tr>
+<td align="center">mutex</td>
+<td align="center">true</td>
+<td align="center">互斥，阻止多个播放器同时播放，当前播放器播放时暂停其他播放器</td>
+</tr>
+</tbody></table>
+]]></content>
+      <categories>
+        <category>Plugins For Hexo</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>aplayer</tag>
+        <tag>dplayer</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>K2（路由）老矣，尚能饭否？①</title>
+    <url>/2020/03/03/K2%EF%BC%88%E8%B7%AF%E7%94%B1%EF%BC%89%E8%80%81%E7%9F%A3%EF%BC%8C%E5%B0%9A%E8%83%BD%E9%A5%AD%E5%90%A6%EF%BC%9F%20%20%E2%91%A0/</url>
+    <content><![CDATA[<h2 id="设置路由拨号和实现DDNS远程访问"><a href="#设置路由拨号和实现DDNS远程访问" class="headerlink" title="设置路由拨号和实现DDNS远程访问"></a><p align="center">设置路由拨号和实现DDNS远程访问</p></h2><p>　　在斐讯辉煌之际，鄙人有幸上车，以364软妹币拿下这款理财产品，之后没多久斐讯就倒闭跑路了，万千产品今犹在，不见当年斐讯狂。</p>
+<span id="more"></span>
+<p>　　官方固件没什么可说的，求稳就用官改，我一直用的H大的Padavan固件，这里贴上tg地址，有需求的可以看看：<a href="https://t.me/pdcn1/221">tg地址</a>，至于刷机我就不多说了，恩山多逛逛就会了。</p>
+<p>　　上一次说了中兴F677V2改桥接，关闭残废WIFI，也算是尽了它的使命，接下来的事就交给路由器来处理吧！</p>
+<p>　　<strong>1：拨号上网</strong></p>
+<p>　　外部网络-外网设置-外网连接类型：PPPoE：拨号，在PPPoE 和 PPP VPN 客户端设置里设置用户名和密码就可以了。<br><img src="https://i.loli.net/2020/05/05/mfilW9NQB2zuxda.png" alt="7.png"></p>
+<p>　　<strong>2：DDNS&amp;远程访问</strong></p>
+<p>　　远程访问需要知道公网ip和端口，运营商给我们分配的公网大都是动态的，也就是说它会变，要准确知道每次更换的IP地址就需要DDNS了。</p>
+<p>　　DDNS（Dynamic Domain Name Server，动态域名服务）是将用户的动态IP地址映射到一个固定的域名解析服务上，用户每次连接网络的时候客户端程序就会通过信息传递把该主机的动态IP地址传送给位于服务商主机上的服务器程序，服务器程序负责提供DNS服务并实现动态域名解析。</p>
+<p>　　花生壳是一个不错的选择，注册后会给你你个免费的域名，虽然很长很难记，但是毕竟它免费啊。<br><img src="https://i.loli.net/2020/05/05/3DXzqRY2amZIJrC.jpg" alt="Screenshot_20200505-121923.jpg"><br>　　<br>　　注册完要及时进行实名认证，不然过几天解析服务会停止。</p>
+<p>　　在路由器外部网络内，会有一个DDNS功能，不过咱们不用它，用自定义脚本，方便快捷又高效。</p>
+<ul>
+<li>打开自定义设置-脚本-自定义脚本0（功能配置）。<br>找到</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 如何在路由器中设置花生壳服务</span><br><span class="line">#&#x2F;tmp&#x2F;sh_ddns.sh &#x2F;tmp&#x2F;orayddns.log &#39;http:&#x2F;&#x2F;您的花生壳帐号:您的帐号密码@ddns.oray.com&#x2F;ph&#x2F;update?hostname&#x3D;你的ddns域名&#39; &amp;</span><br></pre></td></tr></table></figure>
+
+<p>　　可以看到里面有两个可选服务，一个orayddns一个3322ddns，我们用一个orayddns就行了，填上你的用户名和密码，删除<code>/tmp</code>之前的<code>#</code>，如下图，应用本面设置就可以了。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;tmp&#x2F;sh_ddns.sh &#x2F;tmp&#x2F;orayddns.log &#39;http:&#x2F;&#x2F;184××××××××:×××××××@ddns.oray.com&#x2F;ph&#x2F;update?hostname&#x3D;2××××××××.zicp.vip&#39; &amp;</span><br></pre></td></tr></table></figure>
+<p><img src="https://i.loli.net/2020/05/05/YOBugmpaVFZ1PK4.png" alt="8.png"></p>
+<p>　　注意后面的域名要换成你的。</p>
+<p>　　在花生壳里点击域名试试，是不是出现域名IP地址指向的IP了？</p>
+<p><img src="https://i.loli.net/2020/05/05/GfxmvHQ637LqlpW.jpg" alt="Screenshot_20200505-122757__01.jpg"></p>
+<p>　　3322ddns同理</p>
+<ul>
+<li>点击防火墙-从外网访问路由器服务</li>
+<li>打开允许从互联网设置</li>
+<li>互联网设置通信端口自行填写，注意端口范围和避免填写常用端口，这里我设置的：6688</li>
+<li>打开允许外网 HTTPS 访问Web服务    </li>
+<li>外网 HTTPS 访问 Web 服务端口自行填写，注意端口范围和避免填写常用端口，这里我设置的：6689</li>
+</ul>
+<p><img src="https://i.loli.net/2020/05/05/kyucXmvZ9zwgNUI.png" alt="9.png"></p>
+<p>　　应用设置，第一步完成，下面进行端口转发。</p>
+<ul>
+<li>打开外部网络-端口转发（UPnP）</li>
+<li>服务名称：自定义，自己知道是干啥的端口即可，我写的是K2</li>
+<li>源IP地址：暂不填写，默认全部</li>
+<li>端口范围：刚才设置的6688</li>
+<li>内网IP：路由登录IP，老毛子固件默认是192.168.123.1</li>
+<li>本地端口：和上面一样6688</li>
+<li>协议：TCP/UDP</li>
+</ul>
+<p><img src="https://i.loli.net/2020/05/05/cCoED2xV9MtvHuZ.png" alt="10.png"><br><img src="https://i.loli.net/2020/05/05/znquVfxbN5g9dA7.png" alt="11.png"></p>
+<p>　　点击+号，点击应用设置即可，现在就可以试试远程访问路由器了，浏览器输入你的花生壳域名:你设置的端口，例如我的：2×××××××.zicp.vip:6688就可以了。</p>
+<hr>
+<p>　　此系列教程包括但不仅限于k2路由，只要是老毛子padvan固件，都是一样的操作。</p>
+]]></content>
+      <categories>
+        <category>路由器</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>K2（路由）老矣，尚能饭否？②</title>
+    <url>/2020/03/09/K2%EF%BC%88%E8%B7%AF%E7%94%B1%EF%BC%89%E8%80%81%E7%9F%A3%EF%BC%8C%E5%B0%9A%E8%83%BD%E9%A5%AD%E5%90%A6%EF%BC%9F%E2%91%A1/</url>
+    <content><![CDATA[<h2 id="开启KMS服务以激活Windows和office"><a href="#开启KMS服务以激活Windows和office" class="headerlink" title="开启KMS服务以激活Windows和office"></a><p align="center">开启KMS服务以激活Windows和office</p></h2><p>　　KMS激活网上有很多共享服务器和相关软件，既然咱们的路由器有此功能，何不用咱自己的呢，还能给周围小伙伴们激活相关产品。</p>
+<span id="more"></span>
+<ul>
+<li>点击配置拓展环境</li>
+<li>启用 opt 自动更新    </li>
+<li>启用 扩展脚本 自动更新    </li>
+<li>opt 强制安装</li>
+<li>打开启用KMS功能</li>
+</ul>
+<p><img src="https://i.loli.net/2020/05/05/AHesT7dKFMpvrhm.png" alt="12.png"></p>
+<p><img src="https://i.loli.net/2020/05/05/9nNhrluLyt4RxfS.png" alt="14.png"></p>
+<p>　　注意看路由日志，等待环境初始化完成无日志输出后就可以了</p>
+<h1 id="Office手动激活命令："><a href="#Office手动激活命令：" class="headerlink" title="Office手动激活命令："></a>Office手动激活命令：</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd C:\Program Files\Microsoft Office\Office15（注意路径代号）</span><br><span class="line">cscript ospp.vbs &#x2F;sethst:192.168.123.1（或域名）</span><br><span class="line">cscript ospp.vbs &#x2F;act</span><br><span class="line">cscript ospp.vbs &#x2F;dstatus</span><br></pre></td></tr></table></figure>
+<p>　　<br>　　<code>cscript ospp.vbs /sethst:192.168.123.1</code>这里面的可替换为你的域名，以供局域网外提供kms服务，同时端口转发设置为<br><img src="https://i.loli.net/2020/05/05/UVYHLOD8NBmr6aR.png" alt="KMS端口.png"></p>
+<p>　　注意，第一行别傻乎乎的按照它给的命令输，注意office安装路径和版本代号，版本代号如下：</p>
+<table>
+<thead>
+<tr>
+<th align="center">Office版本</th>
+<th align="center">开发版本号</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">office97</td>
+<td align="center">8.0</td>
+</tr>
+<tr>
+<td align="center">office2000</td>
+<td align="center">9.0</td>
+</tr>
+<tr>
+<td align="center">office XP （2002）</td>
+<td align="center">10.0</td>
+</tr>
+<tr>
+<td align="center">office2003</td>
+<td align="center">11.0</td>
+</tr>
+<tr>
+<td align="center">office2007</td>
+<td align="center">12.0</td>
+</tr>
+<tr>
+<td align="center">office2010</td>
+<td align="center">14.0</td>
+</tr>
+<tr>
+<td align="center">office2013</td>
+<td align="center">15.0</td>
+</tr>
+<tr>
+<td align="center">office2016</td>
+<td align="center">16.0</td>
+</tr>
+</tbody></table>
+<p>　　还有就是一定要用<strong>管理员</strong>运行CMD或者PowerShell，一定奥！</p>
+<h1 id="windows手动激活命令："><a href="#windows手动激活命令：" class="headerlink" title="windows手动激活命令："></a>windows手动激活命令：</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 卸载当前产品密钥</span><br><span class="line">slmgr.vbs &#x2F;upk </span><br><span class="line"># 设置KMS服务器</span><br><span class="line">slmgr.vbs &#x2F;skms 192.168.123.1 </span><br><span class="line">#安装&#x2F;替换密钥</span><br><span class="line">slmgr.vbs &#x2F;ipk XXXXX-XXXXX-XXXXX-XXXXX-XXXXX </span><br><span class="line"># 自动在线激活Windows</span><br><span class="line">slmgr.vbs &#x2F;ato </span><br><span class="line">#查看激活状态</span><br><span class="line">slmgr.vbs &#x2F;xpr </span><br></pre></td></tr></table></figure>
+<p>　　<code>XXXXX-XXXXX-XXXXX-XXXXX-XXXXX</code>代表的是密钥，可找Windows对应版本的密钥。</p>
+<hr>
+<p>　　此系列教程包括但不仅限于k2路由，只要是老毛子padvan固件，都是一样的操作。</p>
+]]></content>
+      <categories>
+        <category>路由器</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>K2（路由）老矣，尚能饭否？③</title>
+    <url>/2020/03/16/K2%EF%BC%88%E8%B7%AF%E7%94%B1%EF%BC%89%E8%80%81%E7%9F%A3%EF%BC%8C%E5%B0%9A%E8%83%BD%E9%A5%AD%E5%90%A6%EF%BC%9F%E2%91%A2/</url>
+    <content><![CDATA[<h2 id="老毛子padvan固件开启ipv6"><a href="#老毛子padvan固件开启ipv6" class="headerlink" title="老毛子padvan固件开启ipv6"></a><p align="center">老毛子padvan固件开启ipv6</p></h2><p>　　前面我们用光猫桥接模式已经建立并使用了ipv4/ipv6的连接，所以，我们今天就在路由器固件上要开启ipv6。</p>
+<ul>
+<li><p>外部网络-IPv6 设置<span id="more"></span><br><img src="https://i.loli.net/2020/05/08/rV9EGZMeDpxbgIo.png" alt="1.png"></p>
+</li>
+<li><p>内部网络-DHCP 服务器<br><img src="https://i.loli.net/2020/05/08/VvdSs64DjaOXcoL.png" alt="2.png"></p>
+</li>
+<li><p>配置拓展环境<br><img src="https://i.loli.net/2020/05/08/biZsacxpVOLfSAF.png" alt="3.png"></p>
+</li>
+<li><p>系统管理-服务-启用SSH服务<br><img src="https://i.loli.net/2020/05/08/b5MJjhyLTgC38VQ.png" alt="4.png"></p>
+</li>
+<li><p>用putty或者xshell登录路由器<br><img src="https://i.loli.net/2020/05/08/5fs9PaAOiTUd6og.png" alt="5.png"></p>
+</li>
+</ul>
+<p>　　执行<code>ifconfig</code>，查看内网网卡，找到后缀最大的那个<br><img src="https://i.loli.net/2020/05/08/YIVOzAMRKrEk2X1.png" alt="6.png"></p>
+<ul>
+<li>执行以下命令<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">opkg update</span><br><span class="line">opkg install 6relayd</span><br></pre></td></tr></table></figure></li>
+<li>自定义设置-脚本-在路由器启动后执行，添加<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 自启动ipv6服务</span><br><span class="line">&#x2F;opt&#x2F;sbin&#x2F;6relayd -d -A eth2.2 br0</span><br></pre></td></tr></table></figure>
+<img src="https://i.loli.net/2020/05/08/7CYm2ifZWOMVzoU.png" alt="7.png"></li>
+</ul>
+<h2 id="注意：这里的eth2-2就是你执行ifconfig后看到的后缀最大的那个"><a href="#注意：这里的eth2-2就是你执行ifconfig后看到的后缀最大的那个" class="headerlink" title="注意：这里的eth2.2就是你执行ifconfig后看到的后缀最大的那个"></a><em>注意：这里的eth2.2就是你执行<code>ifconfig</code>后看到的后缀最大的那个</em></h2><ul>
+<li>系统管理-服务-计划任务，添加<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">*&#x2F;2 * * * * &#x2F;bin&#x2F;ping -6 -c 2 ipv6.baidu.com</span><br></pre></td></tr></table></figure>
+意思是每隔两分钟ping一下ipv6.baidu.com，不过没必要这么频繁，我设置的是每12小时ping一次。<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">30 *&#x2F;1 * * * &#x2F;bin&#x2F;ping -6 -c 2 ipv6.baidu.com</span><br></pre></td></tr></table></figure>
+<img src="https://i.loli.net/2020/05/08/wqARuHk94fOUWXi.png" alt="8.5.png"></li>
+</ul>
+<p><img src="https://i.loli.net/2020/05/08/PchJfqubZo9AKU1.png" alt="9.png"></p>
+<ul>
+<li>这里说一下计划任务的基本格式<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 基本格式 : </span><br><span class="line"># 0　　*　　*　　*　　*　　command </span><br><span class="line"># 分　时　日　月　周　命令 </span><br><span class="line"># 在以上各个字段中，还可以使用以下特殊字符：</span><br><span class="line"># 第一个数字（分钟）不能为*</span><br><span class="line"># 星号（*）：代表所有可能的值，例如month字段如果是星号，则表示在满足其它字段的制约条件后每月都执行该命令操作。</span><br><span class="line"># 逗号（,）：可以用逗号隔开的值指定一个列表范围，例如，“1,2,5,7,8,9”</span><br><span class="line"># 中杠（-）：可以用整数之间的中杠表示一个整数范围，例如“2-6”表示“2,3,4,5,6”</span><br><span class="line"># 正斜线（&#x2F;）：可以用正斜线指定时间的间隔频率，例如“0-23&#x2F;2”表示每两小时执行一次。同时正斜线可以和星号一起使用，例如*&#x2F;10，如果用在minute字段，表示每十分钟执行一次。</span><br></pre></td></tr></table></figure></li>
+<li>重启，点击网络地图_查看外部网络状态，发现ipv4和ipv6的wan，lan都正常了。<br><img src="https://i.loli.net/2020/05/08/JMGiayRvhF1x27Q.png" alt="10.png"></li>
+</ul>
+<hr>
+<p>　　此系列教程包括但不仅限于k2路由，只要是老毛子padvan固件，都是一样的操作。</p>
+]]></content>
+      <categories>
+        <category>路由器</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>WindowsStore_LTSC 2019</title>
+    <url>/2019/07/07/WindowsStore_LTSC%202019/</url>
+    <content><![CDATA[<p>　　Win10 TLSB属于Win10企业版，LTSB就是长期支持更新分支（Long Time Service Branch），这个版本专门给一些企业用户的，相比一般版本会缺少很多新功能，例如没有应用商店、没有Edge浏览器，没有cortana，大家可以把Win10 TLSB看成是Windows10企业版的精简版本。<span id="more"></span>LTSB是英语Long Term Servicing Branch的首字母缩写，汉语一般翻译成长期服务分支。LTSB分支是专门面向企业版的，Win10企业版LTSB分支支持周期长达10年，但只会获取安全更新(应该也可以获取热补丁更新)，而不获取功能更新，即不会增加任何新功能。这也是Win10企业版LTSB分支和Win10企业版最根本性的区别。<br>　　Windows 10 LTSC 现在改名成了 LTSC(Long Term Support Channel)。距离上一个长期服务LTSB版本发布已过去近三年了(微软仅发布过2015LTSB、2016LTSB两个版本，之后杳无音信)，18年10月3日微软发布了 Windows 10 RS5，终于再次发布了 Win10 LTSC 2019，且该版本已包含暗黑主题。<br>　　现在很少有时间折腾电脑了，我的办公本运行起来最新版也吃力了，干脆直接装企业版ltsc2109了。之前用专业版时习惯了用win10的应用商店，不得不说UWP应用是真的好用（虽然功能少点，但是界面和流畅度溜的很），现在一下没了win10商店挺不舒服的，于是就想装回win10商店，百度了百度，最笨的办法就是拆包，用命令行打组件补丁包，还要注意修改权限之类的balabala。。。看了看我想肯定有比我更懒的人，他们肯定有更简单的，然后我去了gayhub，发现了这个项目：<a href="https://github.com/kkkgo/LTSC-Add-MicrosoftStore">https://github.com/kkkgo/LTSC-Add-MicrosoftStore</a><br>嘤垂丝汀~为照顾某些同学爬墙费尽我就贴上原项目教程来了<br>　　为Windows 10 Enterprise LTSC增加应用商店<br>适用于Windows 10 Enterprise LTSC 2019<br>下载地址：<a href="https://codeload.github.com/kkkgo/LTSC-Add-MicrosoftStore/zip/2019">https://codeload.github.com/kkkgo/LTSC-Add-MicrosoftStore/zip/2019</a><br>要开始安装, 请打包下载后用右键管理员运行</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Add-Store.cmd</span><br></pre></td></tr></table></figure>
+<p>如果您不想安装App Installer / Purchase App / Xbox，请在运行安装之前删除对应的.appxbundle后缀的文件。但是，如果您计划安装游戏，或带有购买选项的应用，则不要删除。<br>如果装完之后商店仍然打不开，请先重启试试。如果仍然不行，请以管理员身份打开命令提示符并运行以下命令之后，然后再重启试试。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">PowerShell -ExecutionPolicy Unrestricted -Command &quot;&amp; &#123;$manifest &#x3D; (Get-AppxPackage Microsoft.WindowsStore).InstallLocation + &#39;\AppxManifest.xml&#39; ; Add-AppxPackage -DisableDevelopmentMode -Register $manifest&#125;&quot;</span><br></pre></td></tr></table></figure>
+<p>商店修复<br>Win+R打开运行，输入</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">WSReset.exe</span><br></pre></td></tr></table></figure>
+<p>回车。<br>该命令会清空并重置Windows Store商店的所有缓存。<br>该脚本由abbodi1406贡献：<br><a href="https://forums.mydigitallife.net/threads/add-store-to-windows-10-enterprise-ltsc-LTSC.70741/page-30#post-1468779">https://forums.mydigitallife.net/threads/add-store-to-windows-10-enterprise-ltsc-LTSC.70741/page-30#post-1468779</a></p>
+<hr>
+<p>　　于是乎我就装上了，可能有同学感觉还是麻烦，于是还有更简单的，后来逛吾爱时我发现有大神整合了该组件包，并打包成了exe可执行文件，双击鼠标就行了。原帖在这<br><a href="https://www.52pojie.cn/thread-868710-1-1.html">https://www.52pojie.cn/thread-868710-1-1.html</a><br>于是我就下载下来了，为了安全<del>好奇心驱使</del>我用UniExtract解包看了一下，奥豁~<br><strong>组件图</strong><br><img src="https://i.loli.net/2019/09/10/TRg6mpzBL5lAMFk.png" alt="TIM截图20190909212608.png"><br>　　确实够安全，打开bat文件看了看，现在把批处理命令贴出来</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@ECHO OFF&amp;PUSHD %~DP0 &amp;TITLE Windows Store for LTSC x64 </span><br><span class="line">::author MoeClub by Vicer**感谢这位作者（笔者言）**</span><br><span class="line">setlocal enabledelayedexpansion</span><br><span class="line">mode con cols&#x3D;60 lines&#x3D;30</span><br><span class="line">color 87</span><br><span class="line">cd.&gt;%WINDIR%\GetAdmin</span><br><span class="line">if exist %WINDIR%\GetAdmin (del &#x2F;f &#x2F;q &quot;%WINDIR%\GetAdmin&quot;) else (</span><br><span class="line">echo CreateObject^(&quot;Shell.Application&quot;^).ShellExecute &quot;%~s0&quot;, &quot;%*&quot;, &quot;&quot;, &quot;runas&quot;, 1 &gt;&gt; &quot;%temp%\Admin.vbs&quot;</span><br><span class="line">&quot;%temp%\Admin.vbs&quot;</span><br><span class="line">del &#x2F;s &#x2F;q &quot;%temp%\Admin.vbs&quot;</span><br><span class="line">exit &#x2F;b 2)</span><br><span class="line">cls</span><br><span class="line"></span><br><span class="line">if not exist &quot;%ProgramFiles%\WindowsApps&quot; goto error_exit</span><br><span class="line">if not exist &quot;%WINDIR%\SysWOW64&quot; goto error_exit</span><br><span class="line"></span><br><span class="line">::grant perm</span><br><span class="line">TAKEOWN &#x2F;F &quot;%ProgramFiles%\WindowsApps&quot; &#x2F;A &gt;NUL</span><br><span class="line">ICACLS &quot;%ProgramFiles%\WindowsApps&quot; &#x2F;grant:r &quot;Administrators:F&quot; &#x2F;Q &gt;NUL</span><br><span class="line">ICACLS &quot;%ProgramFiles%\WindowsApps&quot; &#x2F;grant:r &quot;All Application Packages:RX&quot; &#x2F;setintegritylevel L:I &#x2F;inheritance:e &#x2F;Q &gt;NUL</span><br><span class="line"></span><br><span class="line">::copy</span><br><span class="line">XCOPY &#x2F;Q&#x2F;Y&#x2F;E&#x2F;H&#x2F;O &quot;%~DP0WindowsApps\*&quot; &quot;%ProgramFiles%\WindowsApps\&quot; &gt;NUL 2&gt;NUL</span><br><span class="line"></span><br><span class="line">::restore perm</span><br><span class="line">ICACLS &quot;%ProgramFiles%\WindowsApps&quot; &#x2F;setowner &quot;NT Service\TrustedInstaller&quot; &#x2F;Q &gt;NUL </span><br><span class="line">ICACLS &quot;%ProgramFiles%\WindowsApps&quot; &#x2F;grant:r &quot;Administrators:RX&quot; &#x2F;Q &gt;NUL </span><br><span class="line">ICACLS &quot;%ProgramFiles%\WindowsApps&quot; &#x2F;reset &gt;NUL</span><br><span class="line"></span><br><span class="line">::install</span><br><span class="line">FOR &#x2F;F &quot;delims&#x3D;&quot; %%i IN (Package.txt) DO (PowerShell -Command &quot;&amp; &#123;Add-AppXPackage -Path &#39;%ProgramFiles%\WindowsApps\%%i\AppXManifest.xml&#39; -Register -DisableDevelopmentMode&#125;&quot;)</span><br><span class="line"></span><br><span class="line">:success_exit</span><br><span class="line">ECHO.</span><br><span class="line">ECHO Install finish.</span><br><span class="line">TIMEOUT &#x2F;T 3 &#x2F;NOBREAK &gt;NUL 2&gt;NUL</span><br><span class="line">exit 0</span><br><span class="line"></span><br><span class="line">:error_exit</span><br><span class="line">ECHO.</span><br><span class="line">ECHO Not support this device.</span><br><span class="line">TIMEOUT &#x2F;T 5 &#x2F;NOBREAK &gt;NUL 2&gt;NUL</span><br><span class="line">exit 1</span><br></pre></td></tr></table></figure>
+<p><strong>卸载命令单拉出来</strong><br>::unstal（卸载命令）</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Get-AppxPackage Microsoft.XboxIdentityProvider |Remove-AppxPackage</span><br><span class="line">Get-AppxPackage Microsoft.StorePurchaseApp |Remove-AppxPackage</span><br><span class="line">Get-AppxPackage Microsoft.WindowsStore |Remove-AppxPackage</span><br><span class="line">Get-AppxPackage Microsoft.Advertising.Xaml |Remove-AppxPackage</span><br><span class="line">Get-AppxPackage Microsoft.VCLibs.140.00 |Remove-AppxPackage</span><br><span class="line">Get-AppxPackage Microsoft.NET.Native.Framework.1.6 |Remove-AppxPackage</span><br><span class="line">Get-AppxPackage Microsoft.NET.Native.Runtime.1.6 |Remove-AppxPackage</span><br></pre></td></tr></table></figure>
+<p>这下可以放心了，说一下，我仅仅解包查看了内部结构，并未做出任何修改和打包处理，再次感谢作者。<br>然后我在我室友电脑上成功安装，第一次打开可能是英文，商店检测更新，更新完后就是中文啦</p>
+<p><strong>商店主页面</strong></p>
+<p><img src="https://i.loli.net/2019/09/10/WnzGiXmpZsldht9.png" alt="TIM截图20190909212317.png"></p>
+]]></content>
+      <categories>
+        <category>Softwares For Windows</category>
+      </categories>
+      <tags>
+        <tag>Windows</tag>
+        <tag>Software</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>office2016和visio同时安装</title>
+    <url>/2019/09/03/office2016%E5%92%8Cvisio%E5%90%8C%E6%97%B6%E5%AE%89%E8%A3%85/</url>
+    <content><![CDATA[<p>　　最近朋友找我帮忙给一台主机重装系统并安装好office2016及其visio2016，在安装完office后再安装visio时就傻了眼，提示框忘记截图了，大概意思就是您已安装office（32位），因为您计算机上已经安装了这些64位程序balabala。。。<span id="more"></span><br>百度了下才发现正常条件下是不能同时安装的，网上有些教程没什么用或者不详细，我在这详细说一下。<br>我是在msdn：<a href="https://msdn.itellyou.cn/">https://msdn.itellyou.cn/</a> 下载的官方镜像属性入下图，<br><img src="https://i.loli.net/2019/09/09/JTbWeMSwiYBKNOm.png" alt="TIM图片20190909184613.png"><br>分别是visio和office，差不多大，百度了下才知道实际上office2016iso镜像里是包含有visio的，同理visio也是，与我经常安装的office2010不同，2016版并不能在安装时自定义安装组件，也就是你点击安装，他会默认把所有的组件都安装到c盘，没错，连盘符你都没法选择。<br>我们去官网下载Office Deployment Tool工具：<a href="https://www.microsoft.com/en-us/download/details.aspx?id=49117">https://www.microsoft.com/en-us/download/details.aspx?id=49117</a><br>我们安装到d盘Tool文件夹，发现里面有这四个文件，<br><img src="https://i.loli.net/2019/09/09/UxLIeXDkvqMhcdb.png" alt="TIM图片20190909185735.png"><br>前三个就是配置文件，最后一个就是安装程序，按照电脑处理器架构选择修改哪个配置文件，比如我的电脑是64位的，我就选择修改第一个，（32位电脑修改X86的）右键编辑它，“Configuration”和“/Configuration”(这里去掉了Configuration两边的&lt;&gt;符号来适应md格式)之间的就是默认的配置文件，我们修改如下</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;Configuration&gt;</span><br><span class="line">  &lt;Add SourcePath&#x3D;&quot;A:\&quot; OfficeClientEdition&#x3D;&quot;64&quot; Branch&#x3D;&quot;Current&quot;&gt;</span><br><span class="line">    &lt;!-- &lt;Product ID&#x3D;&quot;O365ProPlusRetail&quot;&gt;</span><br><span class="line">      &lt;Language ID&#x3D;&quot;en-us&quot; &#x2F;&gt;</span><br><span class="line">    &lt;&#x2F;Product&gt; --&gt;</span><br><span class="line">    &lt;Product ID&#x3D;&quot;VisioProRetail&quot;&gt;</span><br><span class="line">      &lt;Language ID&#x3D;&quot;zh-cn&quot; &#x2F;&gt;</span><br><span class="line">    &lt;&#x2F;Product&gt;</span><br><span class="line">    &lt;Product ID&#x3D;&quot;proplusretail&quot;&gt;</span><br><span class="line">      &lt;Language ID&#x3D;&quot;zh-cn&quot; &#x2F;&gt;</span><br><span class="line">      &lt;ExcludeApp ID&#x3D;&quot;Access&quot; &#x2F;&gt;</span><br><span class="line">      &lt;ExcludeApp ID&#x3D;&quot;Publisher&quot; &#x2F;&gt;</span><br><span class="line">      &lt;ExcludeApp ID&#x3D;&quot;Groove&quot; &#x2F;&gt;</span><br><span class="line">      &lt;ExcludeApp ID&#x3D;&quot;Lync&quot; &#x2F;&gt;</span><br><span class="line">      &lt;ExcludeApp ID&#x3D;&quot;Outlook&quot; &#x2F;&gt;</span><br><span class="line">&lt;ExcludeApp ID&#x3D;&quot;Skype&quot; &#x2F;&gt;</span><br><span class="line">    &lt;&#x2F;Product&gt;</span><br><span class="line">  &lt;&#x2F;Add&gt;</span><br><span class="line">  &lt;!--  &lt;Updates Enabled&#x3D;&quot;TRUE&quot; Branch&#x3D;&quot;Current&quot; &#x2F;&gt; --&gt;</span><br><span class="line">  &lt;!--  &lt;Display Level&#x3D;&quot;None&quot; AcceptEULA&#x3D;&quot;TRUE&quot; &#x2F;&gt;  --&gt;</span><br><span class="line">  &lt;!--  &lt;Property Name&#x3D;&quot;AUTOACTIVATE&quot; Value&#x3D;&quot;1&quot; &#x2F;&gt;  --&gt;</span><br><span class="line">&lt;&#x2F;Configuration&gt;</span><br></pre></td></tr></table></figure>
+<p>其中，我们把上面两个镜像其中的一个双击打开，他就会自动挂载光驱（这是win10很早之前就自带的功能了，不用使用第三方软件了，很方便），如图我们可以看到电脑将驱动器挂载为H：盘，<br><img src="https://i.loli.net/2019/09/09/f68zCwthXQ5uNd2.png" alt="TIM图片20190909193803.png"><br>所以我们修改&lt;Add SourcePath=”A:&quot;为&lt;Add SourcePath=”H:&quot;，我们电脑是64位，所以<br>OfficeClientEdition=”64”不用修改，32位的机器修改为32。<br>修改完保存，在这个配置文件所在目录下按住shift键，鼠标右键点击：在此处打开Powershell 窗口，<br><img src="https://i.loli.net/2019/09/09/d9T6brcmJjfopQx.png" alt="TIM图片20190909194027.png"><br>也可以打开cmd窗口，cd到该目录，运行</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">D:\tool&gt;setup.exe &#x2F;configure configuration-Office365-x64.xml</span><br></pre></td></tr></table></figure>
+<p>就ok啦（这里注意配置文件名）。用PowerShell时可能遇到需要在命令行前加“./”，如果提示就加上。<br>setup.exe会自动运行，按照你的配置文件展开安装啦。</p>
+]]></content>
+      <categories>
+        <category>Softwares For Windows</category>
+      </categories>
+      <tags>
+        <tag>Windows</tag>
+        <tag>office</tag>
+        <tag>visio</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>《无题》</title>
+    <url>/2019/04/22/%E4%B8%80%E7%94%9F/</url>
+    <content><![CDATA[<p>18岁，你读了大学</p>
+<p>20岁，你大二结束，开始悔恨</p>
+<p>自己前两年幼稚的行为</p>
+<p>于是开始努力<span id="more"></span></p>
+<p>22岁你大学毕业了，却发现</p>
+<p>找不到一份令自己满意的工作</p>
+<p>26岁，你看着身边的人都结了婚</p>
+<p>婚礼的份子钱逐年递增</p>
+<p>春节回家，父母从带你串亲戚</p>
+<p>变成了带你去见相亲对象</p>
+<p>见了十几个姑娘</p>
+<p>你每次都觉得和那个她比</p>
+<p>差了一点</p>
+<p>28岁那年，你遇到了一个和你遭遇差不多的姑娘</p>
+<p>你们有一搭没一搭的聊着</p>
+<p>她说:你还不错</p>
+<p>你喝了一口可乐说:你也是</p>
+<p>你还不确定喜不喜欢她</p>
+<p>双方家长就已经摆好了订婚宴</p>
+<p>结婚的前一周，你和朋友出去喝酒</p>
+<p>你说，不想结婚</p>
+<p>朋友说，你啊，就是想太多。谁不是这么过来的？</p>
+<p>29岁，你们终于结了婚</p>
+<p>婚礼办的不大不小，朋友来的不多不少</p>
+<p>攒了几年想要去实现理想的钱</p>
+<p>搭在了这一场百人的私人庙会上</p>
+<p>婚礼进行到中间</p>
+<p>司仪带着标准的商业化微笑</p>
+<p>对着台下的亲朋喊道</p>
+<p>要不要让他们亲一个！</p>
+<p>台下那些人跟着一起起哄</p>
+<p>不知道为什么</p>
+<p>你简简单单的亲了一口</p>
+<p>俩人恢复到了一开始的站位</p>
+<p>你小声说了一句:我爱你</p>
+<p>那个昨天还看不惯你倒腾模型的新娘</p>
+<p>愣了一下说:我也爱你</p>
+<p>你不确定她是不是对你说的</p>
+<p>就像你不确定是不是对她说的一样</p>
+<p>婚礼结束后，并没有你想象的浪漫</p>
+<p>你听着外屋的新娘一笔一笔的算着份子钱</p>
+<p>想着不过才两年，怎么就变成这样了</p>
+<p>想着想着，洞房夜就睡着了</p>
+<p>30岁，她怀孕了</p>
+<p>辞掉了工作，在家养胎</p>
+<p>你在公司逐渐有了点地位</p>
+<p>手里管着十来个人</p>
+<p>独立负责一个项目</p>
+<p>结婚前陪嫁的那辆20万左右的车</p>
+<p>也变成了你一个人的独享</p>
+<p>但你依然不敢放松</p>
+<p>每次加班</p>
+<p>电话那头都是抱怨与委屈</p>
+<p>但你不能争什么</p>
+<p>谁让她怀了你的孩子</p>
+<p>在这一刻</p>
+<p>不论是她的父母还是你的父母</p>
+<p>都无条件的站在这一边</p>
+<p>31岁，孩子落地了</p>
+<p>前前后后连孕检带住院费花了10万块钱</p>
+<p>不过无所谓</p>
+<p>你看着你的孩子，怎么看怎么喜欢</p>
+<p>高兴的仿佛这是你的新生</p>
+<p>32岁，这是人生最不愿意重复的一年</p>
+<p>平均睡眠3小时</p>
+<p>孩子每一个小时都要闹腾一次</p>
+<p>第二天拖着睡不醒的眼睛去上班</p>
+<p>老板说你上班不干活</p>
+<p>回家媳妇说你不干活</p>
+<p>你想了半天不明白，那谁干活呢？</p>
+<p>那辆开了3年的车</p>
+<p>成为了你真正的家</p>
+<p>你不在抱怨路上拥堵的交通</p>
+<p>你甚至开始希望</p>
+<p>再多堵一会</p>
+<p>回到家，你关了发动机</p>
+<p>在车上点了一根烟</p>
+<p>这是你每天最幸福的十分钟</p>
+<p>车前是功名利禄，车尾是柴米油盐</p>
+<p>35岁你因为身体越来越差</p>
+<p>加班越来越少</p>
+<p>晋升的速度也越来越缓慢</p>
+<p>那天下班，媳妇告诉你</p>
+<p>孩子要上幼儿园了</p>
+<p>双语的一个月3000</p>
+<p>你皱了皱眉头，那边就已经不耐烦了</p>
+<p>“四单元的老王家孩子，一个月6000”</p>
+<p>“你已经这样了，你想让孩子也输？</p>
+<p>你没说话，回屋给媳妇转了6000块钱</p>
+<p>这笔钱，你原本打算给自己过个生日，买个新电脑</p>
+<p>38岁，孩子上了一年级</p>
+<p>老师说一年级最关键，打好基础很重要</p>
+<p>你笑着说，是是是，老师您多照顾</p>
+<p>新生接待的老师看着你不明事理的脸</p>
+<p>给你指了一条明路</p>
+<p>“课外辅导班，一个月2200</p>
+<p>40岁的时候，孩子上了三年级</p>
+<p>老师说，三年级，最关键，承上启下很重要</p>
+<p>你笑着说:是是是，正打算再报个补习班</p>
+<p>44岁，孩子上了初中</p>
+<p>有一天回到家，她对你说</p>
+<p>爸爸，我想学钢琴</p>
+<p>你没什么犹豫的</p>
+<p>你以为这些年，你已经习惯了</p>
+<p>但那句“爸爸现在买不起”你始终说不出口</p>
+<p>好在孩子比较懂事</p>
+<p>她说:爸爸没事，要不我先学陶笛也可以</p>
+<p>你看着这么懂事的孩子，却开心不起来</p>
+<p>46岁，孩子上了一个不好不差的高中</p>
+<p>有一天你在开会，接到了老师的电话</p>
+<p>电话里说你的孩子在学校打架了</p>
+<p>叫你去一趟</p>
+<p>你唯唯诺诺的</p>
+<p>和那个比你还小5岁的领导请了个假</p>
+<p>到学校又被老师训了一通</p>
+<p>无非台词就是那一句</p>
+<p>你们做家长的就知道工作，能不能陪陪孩子</p>
+<p>你看着这个老师，有点可笑</p>
+<p>好像当时说</p>
+<p>家长在外辛苦点</p>
+<p>多赚点钱让孩子多补补课的和他不是一个人</p>
+<p>50岁，孩子上了大学</p>
+<p>很争气，是一个一本</p>
+<p>他学的专业你有点看不懂</p>
+<p>你只知道工作不一定好找</p>
+<p>而且学费还死贵</p>
+<p>你和他深夜想聊聊</p>
+<p>准备了半斤白酒，一碟花生米</p>
+<p>你说着那些曾经你最讨厌的话</p>
+<p>还是要为以后工作着想</p>
+<p>挑个热门的专业</p>
+<p>活着比热爱重要</p>
+<p>你们从交流变成了争吵</p>
+<p>你发现，你老了</p>
+<p>老到可能都打不过这个18岁的孩子</p>
+<p>你说不过他，只能说一句:我是你爸爸！</p>
+<p>孩子看着你，知道再怎么争辩都没用</p>
+<p>这场确立你最后威严的酒局不欢而散</p>
+<p>你听的不真切</p>
+<p>在孩子回自己屋的路上好像叨叨了一句</p>
+<p>“我不想活的像你一样</p>
+<p>怎么就哭了呢？50岁的人了</p>
+<p>一定是酒太辣了，对不对</p>
+<p>定是酒太辣了</p>
+<p>55岁，孩子工作了，似乎有一点理解你了</p>
+<p>但你却反了过来，你说不要妥协</p>
+<p>56岁，孩子也结婚了</p>
+<p>你问他喜欢那个姑娘么</p>
+<p>他愣了愣说:喜欢吧</p>
+<p>60岁，辛苦了ー辈子，想出去走走</p>
+<p>身边的那个人过了30年</p>
+<p>你依旧分不清到底喜不喜欢</p>
+<p>你们开始规划旅游路线</p>
+<p>这么多年了</p>
+<p>你们还是存在分歧，还是在争吵</p>
+<p>某个瞬间，你觉得</p>
+<p>这样可能也挺好</p>
+<p>一切都准备好了</p>
+<p>儿子说:爸妈，我工作太忙了</p>
+<p>可以帮我照顾一下孩子么</p>
+<p>你们退了机票，又回到了30年前</p>
+<p>70岁，孩子的孩子也长大了，不用天天操心了</p>
+<p>你下定决心说:一定要去玩一趙</p>
+<p>可是手边的拐杖</p>
+<p>只能支持你走到楼下的花园</p>
+<p>75岁，你在医院的病床上</p>
+<p>身边聚满了人，你迷迷糊糊的看见医生摇了摇头</p>
+<p>周围那些人神情肃穆</p>
+<p>你明白了，你要死掉了</p>
+<p>你没有感到一丝害怕</p>
+<p>你突然问自己，我到底是什么时候死掉的呢？</p>
+<p>你想起来30岁的那场婚礼</p>
+<p>原来，那时候，你就死掉了吧</p>
+<p>依照惯例</p>
+<p>死前的3秒，你的大脑要走马灯</p>
+<p>倒叙你这75个年头的一生</p>
+<p>画面一张一张的过</p>
+<p>1秒</p>
+<p>2秒</p>
+<p>两秒过去了</p>
+<p>你面无表情的看着这两秒内的回忆</p>
+<p>第3秒</p>
+<p>突然你笑了</p>
+<p>原来已经回到了15岁的那一年</p>
+<p>你看见一个男孩</p>
+<p>他叼着一袋牛奶，背着书包</p>
+<p>从另一个女孩家的阳台下跑过</p>
+<p>那个男孩朝窗户里看了看</p>
+<p>那是15岁的你暗恋的那个女孩子</p>
+<p>你想不起来她长什么样子了</p>
+<p>最后一秒你努力的回忆着</p>
+<p>然后终于笑了出来</p>
+<p>3秒过去了</p>
+<p>身边的人突然间开始嚎啕大哭</p>
+<p>你可能听不清了</p>
+<p>你最后听到的嘈杂的声音</p>
+<p>是一群十五六的少年起着哄说的</p>
+<p>答应他…答应他…答应他……</p>
+<p>不爱你，不度生</p>
+<p>编辑于2019-03-14·著作权归作者所有</p>
+<p><strong><em>转自知乎用户求余秋雨</em></strong></p>
+]]></content>
+      <categories>
+        <category>浮生记</category>
+      </categories>
+      <tags>
+        <tag>悦･读</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>中兴 ZXHN F677V2 光猫改桥接</title>
+    <url>/2020/02/20/%E4%B8%AD%E5%85%B4%20ZXHN%20F677V2%20%E5%85%89%E7%8C%AB%E6%94%B9%E6%A1%A5%E6%8E%A5/</url>
+    <content><![CDATA[<p>　　在2019年年底，我家终于扯通了宽带，这次放假回家之后看了看发现是中兴 ZXHN F677V2 的光猫，联通的宽带，没有送路由器，用的是光猫自带的2.4Ghz的WiFi。正好我家有闲置的路由器，是斐讯的K2，就接在光猫上自动获取ip地址进行上网。<span id="more"></span>由于疫情在家闲着没事干，准备申请一个公网ip试试，却发现给的就是公网ip，这样就省了一大步了。</p>
+<p>　　要发挥公网的最大用处第一步就是改光猫拨号为光猫桥接，路由拨号，这个就需要超级管理员密码了。</p>
+<p>　　市面上大部分的光猫超级账户和密码在网上都能搜索的到。此教程仅适用于该型号或者此系列路由，目前我知道的我家的现况是设备注册后密码会随机设置，未开启telnet。</p>
+<p>　　先用光猫后边的密码进管理界面记录下INTERNET和iptv的VID和LOID码，一定要记住！一定！（我这个是改过桥接了）</p>
+<p><img src="https://i.loli.net/2020/05/05/DOTZgw4dac2j1i3.png" alt="QQ截图20200505114032.png"></p>
+<p>　　<strong>x_INTERNET_y_VID_z</strong></p>
+<p>　　我们来看一下他的结构，x 代表的是序号，我这是设置的第四个连接方式。y 代表的是拨号方式，R 是路由，B是桥接。z 就是你的VLAN ID了，一定要截图记录下来</p>
+<p><img src="https://i.loli.net/2020/05/05/gtZAqlr2bKh983G.png" alt="2.png"></p>
+<p>　　这个同样重要，记录下来！记录后还可以以便后续还原，或者自行更换光猫时使用。</p>
+<p>　　按住猫上的重置键30秒以上等猫重置了重启进  <a href="http://192.168.1.1/hidden_version_switch.gch">http://192.168.1.1/hidden_version_switch.gch</a> 选择<code>default version</code>，密码是：<code>CUAdmin</code>提交后光猫会重启。<br><img src="https://i.loli.net/2020/05/05/YRSK6kLFsgNO9Zn.png" alt="3.png"><br>　　光猫重启后用putty或者xshell连接类型选择telnet。</p>
+<ul>
+<li>用户名：<code>root</code></li>
+<li>密码：<code>Zte521</code><br><img src="https://i.loli.net/2020/05/05/JKwuzSihsOIdHn6.png" alt="4.png"><br><img src="https://i.loli.net/2020/05/05/Xxt3zNbprqOMTPg.png" alt="5.png"></li>
+</ul>
+<p>　　进入控制台后依次输入以下命令行</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">setmac 1 2180 你的LOID</span><br><span class="line">sendcmd 1 DB set PDTCTUSERINFO 0 tForcePushFlg 0</span><br><span class="line">sendcmd 1 DB set PDTCTUSERINFO 0 Result 1</span><br><span class="line">sendcmd 1 DB set CltLmt 8 Enable 0</span><br><span class="line">sendcmd 1 DB set DevAuthInfo 0 Enable 1</span><br><span class="line">sendcmd 1 DB save</span><br><span class="line">sendcmd 1 DB set TelnetCfg 0 Lan_EnableAfterOlt 1</span><br><span class="line">sendcmd 1 DB save</span><br></pre></td></tr></table></figure>
+<p>　　最后进192.168.1.1/cu.html，管理员账号密码都是：<code>CUAdmin</code>。</p>
+<p>　　以上命令行为恩山坛友提供：<a href="https://www.right.com.cn/forum/forum.php?mod=viewthread&tid=1263340&page=1">原帖</a></p>
+<p>　　进入后，选择基本配置，新建一个连接选项，我这里选择的是ipv4/v6，当然，现在ipv6还未普及，你觉得影响日常浏览体验可以只选择ipv4。（ipv6可是大势所趋啊，给都给了，干嘛不用呢）。</p>
+<ul>
+<li>端口绑定：你用哪个口就绑哪个吧。</li>
+<li>业务模式：<code>Bridge</code>，桥接模式。</li>
+<li>业务模式选择：<code>INTERNET</code>。</li>
+<li>VLAN模式选择改写，VLAN ID就写之前默认的数字。</li>
+</ul>
+<p><img src="https://i.loli.net/2020/05/05/OvnwXgPQHITFNZl.png" alt="6.png"></p>
+<p>　　这样桥接模式就添加了，为了稳定，我就把光猫自带的2.4GHzWIFI给关了，徒增功耗。</p>
+<p>　　IPTV同理。</p>
+<p>　　普通用户登录光猫，网络-宽带配置-上网账号设置就选择你刚才新建的那个，确定重启光猫，用终端拨号试试吧。</p>
+]]></content>
+      <categories>
+        <category>路由器</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>农村什么让你感到最恐怖？</title>
+    <url>/2019/10/03/%E5%86%9C%E6%9D%91%E4%BB%80%E4%B9%88%E8%AE%A9%E4%BD%A0%E6%84%9F%E5%88%B0%E6%9C%80%E6%81%90%E6%80%96%EF%BC%9F/</url>
+    <content><![CDATA[<p>前几天有个自称是我表妹的人加我微信，我加了，然后刚加她就转来500块钱，说什么一点心意让我收下。</p>
+<p>“机智”如我立马辨出是“骗子＂，立即删除。（因为我和表妹很少联系，也实在想不出任何一个得让她给我转钱的理由。）<span id="more"></span></p>
+<p>今天那个号又加我，还备注了我的真实姓名。我又半信半疑地加了。</p>
+<p>和上次一样，微信页面上又是转账500元，连话术也一模一样。<br><img src="https://i.loli.net/2020/03/02/tqogVTpFx15nvu3.jpg" alt="800723844.jpg"></p>
+<p>我直接一个视频电话打过去，镜头另一端，<br>竟真的是我表妹。还是瘦，神情也还是那么怯怯的。<br>因为我在上班，不方便多说，确认是她后就<br>挂断了，然后在微信上寒暄了几句。</p>
+<p>改备注的时候，一阵心疼。<br>表妹名“孝勤＂，只比我小9天。“孝＂是字辈， “勤”是家人（尤其是她爷爷，也就是我外公的哥哥，我称呼他大外公）对她的期愿，希望她勤劳，多干活。</p>
+<p>小时候我是“别人家的孩子＂，聪明，成绩好，总是学校的第一名。但我知道我取得第一仅仅是因为我比其他人有更多的时间读书而已。</p>
+<p>我从小和外公外婆一起生活，他们虽没多少文化，但都深刻明白知识的重要性，所以哪怕是农忙时节，他们也从不让我下地干活，要求我专心学习。</p>
+<p>而其他的孩子，则是农活第一，学习第二，毕竟地里真的有那么多活，而学习却是一个太过长远的投资。</p>
+<p>所以同龄很多孩子的童年，大部分时间是在割猪草喂猪、割牛草喂牛、种包谷收包谷、打谷子、打柴…</p>
+<p>尤其是，我的表妹。</p>
+<p>表妹的爸妈也就是我的大舅、舅娘，都在外打工，表妹和哥哥、爷爷留守在家。</p>
+<p>和新闻里写得不太一样，留守的老人儿童其实并没有那么多时间和精力去思念亲人、感受孤独，他们有那么那么多农活要忙，面朝黄土背朝天，烈日下忙着掰包谷，淋着雨赶熟透的谷子的收期。被汗水和辛劳填充的生活，是根本腾不出时间和精力去感伤的。</p>
+<p>大外公早鳏，多年没有枕边人，加上繁重的农活，让他的脾气有些暴躁。更让人悲凉的是，妹妹从生下来起就从未得到过他的疼爱，因为他尤为重男轻女。</p>
+<p>表妹是从来没有娱乐时间的，大外公从不准她闲下来，只要看她稍微一坐下，新的农活便就又安排上了。每当我学习或玩乐的时候，表妹不是在割猪草，就是在打柴，她总<br>是那么忙，忙得只得把上学时间当作一天中短暂的休息时刻。</p>
+<p>其实如果只是受着她那个年龄不该承受的辛劳，或许不会让我至今想到她仍心疼至此。</p>
+<p>大外公如果太忙，或者喝了酒，或者在哪里不如意，表妹就会成为他出气的沙包。揪住头发打，用脚踹，踹胸口，踹头..</p>
+<p>此刻，打下这些字，仍忍不住心痛如绞。</p>
+<p>有一次，表妹不知道因为什么又被大外公打了。那时我们好像是8岁还是9岁。8岁、9岁的小姑娘，竟被活活打到小便失禁。</p>
+<p>在我听到咒骂声和哭声赶到的时候，表妹正躺在被便液浸湿的地上，小声鸣咽。</p>
+<p>所幸，如此拳打脚踢，表妹没被打死，仍然健康。</p>
+<p>可能是成长环境的原因，表妹自小就是内向的，极度内向，寡言少语，很少笑，外人看上去就是讷讷的。但勤劳，孝顺，老实本分，正如她的名字那样。</p>
+<p>改备注时想到了这些，想起了这个生来凄苦的姑娘。</p>
+<p>好在，表妹后来机缘巧合读了一所卫校，现在在一个药店上班，并在去年嫁给了一个与她同样内向的男生。我听说那个男生是个手艺人的时候，顿时舒了一口气，再艰难的岁月也饿不死手艺人，希望这个男孩能护表妹一世周全。</p>
+<p>对了，她之所以给我转钱，是因为去年她结婚的时候我给她包了一个红包。</p>
+<p>后来我也登记结婚，但不准备办婚礼，没有宴请，她可能是听到我结婚的消息了，所以就这么讷讷的，说要表达一点心意。</p>
+<p>看吧，这个傻姑娘，连发个红包都这么笨。</p>
+<p>我一直认为农村是美好的，有外公的手作玩具，有外婆采来的山林野果，有青山隐隐，有大大的水牛，有小鸡大鹅，但今天又一次认识到，这并不是农村的全部。</p>
+<p>农村最恐怖的地方吗？大概就是过错与痛苦情有可<br>怒却又只能努力去理解、去原谅、去祝福。最后，虽然世人皆苦，但真的好希望你幸福。</p>
+<p>转自知乎@落木柔</p>
+]]></content>
+      <categories>
+        <category>浮生记</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>《电话》</title>
+    <url>/2019/06/22/%E7%94%B5%E8%AF%9D/</url>
+    <content><![CDATA[<p>我从十九楼跳了下去。</p>
+<p>原因是我“心理素质太差”，受不了来自父母的批评。</p>
+<p>在我的脑袋与地板亲密接触的那一刻，想象中的巨痛并涌上来。<span id="more"></span></p>
+<p>我的脑袋像是信号不良的老旧电视，画面开始泛起了ー点一点细碎的雪花，随后这些雪花越来越 多，将我的视野淹没。</p>
+<p>我就这么走了。</p>
+<p>当一个穿白色衣服的长舌头的人和一个穿黑衣服拿手铐的人一起站在我面前的时候，我终于意识到了这个现实。</p>
+<p>“怎么又是个小崽子？”白色长舌头的人说话了，他的声音很清楚，我非常好奇他到底是怎么伸着舌头说话的。</p>
+<p>“我怎么知道。＂黑色衣服的人瞪了他一眼，又低下头翻着手中一本陈旧的册子。</p>
+<p>那册子看着很薄，却怎么都翻不完。</p>
+<p>半晌，黑色衣服的人定了神:“有了。＂他用手指指着书页，读着那一行字，声音细若蚊吟。</p>
+<p>他的眉头逐渐皱了起来，嘟囔了一句:“不对啊。”</p>
+<p>“啥啥啥，怎么不对了。”伸着长舌头的人湊了过去，那舌头上流的口水溅到了黑衣服的人身上。</p>
+<p>我坐在地上，犹豫在三还是认为不告诉那位黑乎乎的兄弟这件事比较好。</p>
+<p>我看着他们讨论，什么也没想。</p>
+<p>半晌，他们终于有了结果。他们抬起头，装出正儿八经的样，清了嗓子。</p>
+<p>“你阳寿未尽，若非你自身意愿，我等不可轻易带你去往下一个轮回。予你半月时间，仔细考虑一番再定。”</p>
+<p>话音未落，他们化作一阵青烟消失了。也只是一阵恍愡，我的视野又逐漸清晰起来。</p>
+<p>一阵夜风吹来，我整个人都清醒了过来。</p>
+<p>仔细一看，我还在郊区废置的大楼楼顶。</p>
+<p>我的脚下，是十九层的高空。</p>
+<p>我选择闭上眼，再次试着向前迈出那一步。</p>
+<p>但是我没有，我也做不到了。</p>
+<p>在我第一次从这里跃下时，我的脑内出现的走马灯。</p>
+<p>我看到了我母亲第一次看到我时的笑容，看到了父亲在我开口叫他父亲时的兴奋。</p>
+<p>看到了他们在外奔波，回到家只能疲惫的瘫在沙发上。</p>
+<p>再长大一些，我看到母亲在台下看我表演时的喜悦，看到了父亲拿到我那张漂亮的成绩单时的欣慰。</p>
+<p>等我上了初中，看到了母亲在我初三时为我熬的鸡汤，看到了父亲为了不打扰我读书而戒了自己直以来的酒瘾。</p>
+<p>现在，我能想象到他们握着自己的手机，坐在客厅里。母亲时不时的看着门，父亲一支又一支的抽着烟，一旦手机屏幕亮起就匆匆点开查看是否是我的信息。</p>
+<p>我睁开眼晴，抬起头看了看天空。</p>
+<p>夜幕已然降临，繁星闪烁，以星芒点缀天空。不远处的城市中心区华灯璀璨。</p>
+<p>我叹了口气，转了身走到边绿以内，俯下身拎起了我的书包。我迅速的检查了一遍里面的物品。</p>
+<p>拿出了公交车卡，并掏出了我的遗书。</p>
+<p>我展开信纸，将那封自己亲手写的信读了一遍。</p>
+<p>幼稚至极，又不负责任。</p>
+<p>我在心里狼狠的唾弃了自己一番，随后将那封信撕碎，将碎纸片顺着夜风扬了出去。</p>
+<p>“回家吧…”我轻声对自己说。</p>
+<p>正当我背起我的书包时，口袋中的手机却亮了起来。</p>
+<p>我心下一惊，掏出手机查看上头显示的联系人ーー是我的父亲。</p>
+<p>我想了方才的种种，满怀期待的接了电话。</p>
+<p>“这么晚你去哪里了？”电话那头传来了父亲的声音，语调有点高。</p>
+<p>“现在跟哪个男的出去鬼混？要是搞出什么丑事老子打断你的腿！赶紧滚回来，少给我在外面丢人！”</p>
+<p>父亲劈头盖脸的一顿骂让我没来得及反应。我缓了缓，张开嘴想辩解什么却又来不及了。</p>
+<p>电话那头，已换了人。</p>
+<p>“你这孩子为什么这么不懂事？是想离家出走是吗，是要和爸爸妈妈对着干是吗？好啊，你就出去啊。看看没有爸妈谁养的起你，这么大了为什么就不懂得想想爸妈的难处？</p>
+<p>哦，考试没考好，跟同学闹矛盾了被爸妈说了几句就要耍性子离家出走？爸妈当年是怎么被你爷爷奶奶外公外婆管的你知道吧？你这就是我们给惯的！</p>
+<p>当初就不应该生你，一个女孩子这么没用，将来还要嫁出去，好啊你现在出去也是出去，随便找个男的嫁了赶紧把我们养你的钱还回来给我们养老好吧？”</p>
+<p>我的大脑像是被什么砸了一样，嗡嗡作响。我什么都不知道，也什么都想不出，只是呆呆的站在十九楼的夜风里。</p>
+<p>我抿了抿唇，颤着声。</p>
+<p>“妈，我在十九楼楼顶。”</p>
+<p>电话那头沉默了一下，我的心脏在这段沉默的期间愈发的闷。</p>
+<p>半晌，那边传来了一声冷笑。</p>
+<p>“翅膀硬了是吧，想拿命吓唬爸妈？</p>
+<p>我告诉你，你有本事就跳！马上跳，跳下去我和你爸趁着年轻还能再生一个孩子。</p>
+<p>那孩子肯定比你强！你今天有本事就跳，别给我回来！”</p>
+<p>我深深吸了一口气，摁掉了电话。</p>
+<p>我从十九楼跳了下去。</p>
+<p>文:郑清河</p>
+<p><img src="https://i.loli.net/2019/09/06/lqSIUfz2YZ1hETg.jpg" alt="754625857.jpeg"></p>
+]]></content>
+      <categories>
+        <category>浮生记</category>
+      </categories>
+      <tags>
+        <tag>悦･读</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>绕过校园网认证</title>
+    <url>/2019/04/01/%E7%BB%95%E8%BF%87%E6%A0%A1%E5%9B%AD%E7%BD%91%E8%AE%A4%E8%AF%81/</url>
+    <content><![CDATA[<p>　　大概一个月前阿里云活动，通过学生认证的购买服务器有很大的优惠，我就买了三个月的上海的服务器，本想建站呢，无奈备案过程太过复杂繁琐，就扔在一边不管了，这个月校园网到期了，平常又不怎么用，流量又用不完，所以就没续费，突然有个想法，绕过校园网认证上网。<span id="more"></span><br>　　这是我后续修改的内容，说点注意事项，服务器只有国内的才可以搭建openvpn，香港是中国的，但是香港的服务器却不能搭建，会被墙的。</p>
+<p>我们连接校园网，提示需要登录。</p>
+<p><img src="https://i.loli.net/2019/04/01/5ca1b8aae0e7f.jpg" alt="Screenshot_20190401-143631.jpg"></p>
+<p>　　我们到终端ping一下ip地址:115.239.210.27，此时是ping不通的，显然这是一个内网，通过这个内网登录到公网，经过认证成功后才能上网。</p>
+<p><img src="https://i.loli.net/2019/04/01/5ca1b8df36efb.jpg" alt="Screenshot_20190401-143622.jpg"></p>
+<p>所以整个认证过程是：</p>
+<h3 id="内网登录——公网认证——正常上网"><a href="#内网登录——公网认证——正常上网" class="headerlink" title="内网登录——公网认证——正常上网"></a>内网登录——公网认证——正常上网</h3><p>绕过过程是：</p>
+<h3 id="内网（不登陆）——绕过学校公网——连接服务器——正常上网"><a href="#内网（不登陆）——绕过学校公网——连接服务器——正常上网" class="headerlink" title="内网（不登陆）——绕过学校公网——连接服务器——正常上网"></a>内网（不登陆）——绕过学校公网——连接服务器——正常上网</h3><p>大概就是这样</p>
+<p><img src="https://i.loli.net/2019/04/02/5ca2c91de093a.jpg" alt="IMG_20190401_210247__01.jpg"></p>
+<p>　　那么怎样绕过呢？答案就是依赖端口通过UDP转发。重要的端口有三个，53，67，68。</p>
+<p>　　53端口:53端口为DNS(Domain Name Server,域名服务器)服务器所开放,主要用于域名解析,DNS 服务在NT系统中使用的最为广泛。</p>
+<p>　　67、68端口:67、68端口分别是为Bootp服务的Bootstrap Protocol Server(引导程序协议服务端)和Bootstrap Protocol Client(引导程序协议客户端)开放的端口。<br>　　SSR只可惜不代理UDP，只代理TCP，所以我们还是需要用OpenVPN，另一款优秀的代理软件。<br>　　这里是github项目地址：<a href="https://github.com/Nyr/openvpn-install">https://github.com/Nyr/openvpn-install</a></p>
+<p>　　搭建过程很简单，手机我就用JuiceSSH做演示了。连接服务器使用root账户，输入以下命令（不会使用juicessh的小伙伴可参考我博客的那篇文章）回车</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">wget https:&#x2F;&#x2F;git.io&#x2F;vpn -O openvpn-install.sh &amp;&amp; bash openvpn-install.sh</span><br></pre></td></tr></table></figure>
+<p>　　这里说一下，回车后会自动确定你服务器的内网（我用的不是大陆服务器，仅仅做演示，所以这里直接显示公网，省去了手动输入公网的步骤，你们在搭建的时候注意一下，其他基本一样，ip我也不打码了，演示完我就删掉了）</p>
+<p><img src="https://i.loli.net/2019/09/14/PxpgcbYsGQLThiy.jpg" alt="Screenshot_20190914-170125.jpg"></p>
+<p>　　下一步就是手动输入你的公网了，不明白的登录你的控制台找这里，公网内网都给你标注了</p>
+<p><img src="https://i.loli.net/2019/09/14/zTRxoIaSQlnEb95.jpg" alt="Screenshot_20190914-164547__01__01.jpg"></p>
+<p>　　接下来的除了端口都按照我的图里的选择就可以了，端口这个要自行测试你们学校的校园网了，一般的都是53可行，但是我是二班的，所以经过测试我们的是68,67可行。</p>
+<p><img src="https://i.loli.net/2019/09/14/iOfrAGWNV9TSv2p.jpg" alt="Screenshot_20190914-170300.jpg"></p>
+<p>　　最后一步输入配置文件名称，可自行编辑，我这边保持默认，回车等待部署安装就可以了</p>
+<p><img src="https://i.loli.net/2019/09/14/iOfrAGWNV9TSv2p.jpg" alt="Screenshot_20190914-170300.jpg"></p>
+<p>　　这就是搭建完成了，如果以后你想添加，删除用户，卸载都可以再次运行这个脚本，（如果你第一次搭建的端口学校不能，就可以再次运行该脚本先卸载再安装，因为添加用户端口是不会变的）还有生成的配置文件是保存在/root/client.ovpn的</p>
+<p>我们执行</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd &#x2F;root&#x2F;</span><br></pre></td></tr></table></figure>
+<p>切换到root目录下，执行</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cat client.ovpn</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://i.loli.net/2019/09/14/jfuZ9n2NecPzALQ.jpg" alt="Screenshot_20190914-173621.jpg"></p>
+<p>　　查看配置文件，然后复制整个配置文件的内容，大概就是如下，不要多也不要少复制了，包括client和tls-auth（为了适应markdown语法，两边没有加符号）。</p>
+<p><img src="https://i.loli.net/2019/09/14/bgQzNJ69GPRrWaM.jpg" alt="Screenshot_20190914-170641__01.jpg"></p>
+<p>　　我们新建一个文件，注意是文件，后缀为.ovpn，打开方式为文本编辑，或者事先修改后准为txt，mt可以直接打开，修改完再修改后缀为.ovpn也可以，把复制的内容粘贴过去就可以了。</p>
+<p><img src="https://i.loli.net/2019/09/14/vMjfC6sFTlJYAqX.jpg" alt="Screenshot_20190914-174257.jpg"></p>
+<p>打开openvpn软件，选择第三个</p>
+<p><img src="https://i.loli.net/2019/09/14/OhDrJVXkqu2aRdL.jpg" alt="Screenshot_20190914-171314.jpg"></p>
+<p>　　找到你新建文件的目录导入文件就可以啦，IMPORT和ADD，配置文件是没有密码的<br>　　<br>　　测一下速度，下载速度0.64M/s，我的服务器只有5Mbps，可以满速，实际使用中网速超过1M/s也是可能的</p>
+<p><img src="https://i.loli.net/2019/04/01/5ca21c8f70f7d.jpg" alt="Screenshot_20190401-214941.jpg"><br><img src="https://i.loli.net/2019/04/01/5ca217cef1f8b.jpg" alt="Screenshot_20190401-215148.jpg"></p>
+<p>　　最后放上我用平板测试的截图，B站，未登陆校园网，1080P可以看</p>
+<p><img src="https://i.loli.net/2019/04/01/5ca21da4df81c.png" alt="7ffa93fa4e5971cf.png"></p>
+<hr>
+<p>　　以上操作均是在Android上执行的，下面看一下ios端和Windows端的。</p>
+<h1 id="1：ios"><a href="#1：ios" class="headerlink" title="1：ios"></a>1：ios</h1><p>　　苹果商店是搜索不到vpn相关的软件的，可以自行注册或者找美国id登录商店搜索下载。<br>安装完成后电脑登录QQ，把配置文件发送到我的手机，然后在手机上接收，打开方式就选择用openvpn打开就行了，连接成功后测试如图</p>
+<p><img src="https://i.loli.net/2019/04/03/5ca433cb70c5e.png" alt="IMG_0021.png"></p>
+<h1 id="2：Windows"><a href="#2：Windows" class="headerlink" title="2：Windows"></a>2：Windows</h1><p>　　先连接有效网络<a href="https://www.lanzous.com/i3n8ewf">点我下载Windows客户端</a>，[<strong>自带配置文件已失效</strong>]解压到桌面，并运行exe执行文件，一路安装即可。</p>
+<p>安装完就可以连接校园网了。</p>
+<p>运行软件，右下角软件右键打开菜单，选择“Import file…”</p>
+<p><img src="https://i.loli.net/2019/04/03/5ca437707dfef.jpg" alt="-2dbec5eb280c420b.jpg"></p>
+<p>选择你的配置文件</p>
+<p><img src="https://i.loli.net/2019/04/03/5ca439748d377.png" alt="-63ce3226b4c9dedf.png"></p>
+<p>　　右下角软件右键打开菜单，选择“Connect”，输入用户和密码（这个项目默认的没有密码，可以直接连接）。</p>
+<p><img src="https://i.loli.net/2019/04/03/5ca439b26873e.png" alt="-442cdc5b11fb0173.png"></p>
+<p>连接成功，软件颜色变成绿色。</p>
+<p><img src="https://i.loli.net/2019/04/03/5ca439d455054.png" alt="20704d0de65fae4c.png"></p>
+]]></content>
+      <categories>
+        <category>Scripts For Linux</category>
+      </categories>
+      <tags>
+        <tag>SSR</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>《卖米》</title>
+    <url>/2019/03/22/%E5%8D%96%E7%B1%B3/</url>
+    <content><![CDATA[<h1 id="1"><a href="#1" class="headerlink" title="1"></a>1</h1><p>天刚蒙蒙亮，母亲就把我叫起来了：<br>“琼宝，今天是这里的场，我们担点米到场上卖了，好弄点钱给你爹买药。”<br>我迷迷糊糊睁开双眼，看看窗外，日头还没出来呢。<br>我实在太困，又在床上赖了一会儿。<span id="more"></span><br>隔壁传来父亲的咳嗽声，母亲在厨房忙活着，饭菜的香气混合着淡淡的油烟味飘过来，慢慢驱散了我的睡意。<br>我坐起来，穿好衣服，开始铺床。<br>“姐，我也跟你们一起去赶场好不好？你买冰棍给我吃！”<br>弟弟顶着一头睡得乱蓬蓬的头发跑到我房里来。<br>“毅宝，你不能去，你留在家里放水。”<br>隔壁传来父亲的声音，夹杂着几声咳嗽。<br>弟弟有些不情愿地冲隔壁说：<br>“爹，天气这么热，你自己昨天才中了暑，今天又叫我去，就不怕我也中暑！”<br>“人怕热，庄稼不怕？”<br>“都不去放水，地都干了，禾苗都死了，一家人喝西北风去？”<br>父亲一动气，咳嗽得越发厉害了。<br>弟弟冲我吐吐舌头，扮了个鬼脸，就到父亲房里去了。<br>只听见父亲开始叮嘱他怎么放水，去哪个塘里引水，先放哪丘田，哪几个地方要格外留神别人来截水，等等。</p>
+<h1 id="2"><a href="#2" class="headerlink" title="2"></a>2</h1><p>吃过饭，弟弟就找着父亲常用的那把锄头出去了。<br>我和母亲开始往谷箩里装米，装完后先称了一下，一担八十多斤，一担六十多斤。<br>我说：“妈，我挑重的那担吧。”<br>“你学生妹子，肩膀嫩，还是我来。”<br>母亲说着，一弯腰，把那担重的挑起来了。<br>我挑起那担轻的，跟着母亲出了门。<br>“路上小心点！咱们家的米好，别便宜卖了！”父亲披着衣服站在门口嘱咐道。<br>“知道了。你快回床上躺着吧。”<br>母亲艰难地把头从扁担旁边扭过来，吩咐道，“饭菜在锅里，中午你叫毅宝热一下吃！”<br>赶场的地方离我家大约有四里路，我和母亲挑着米，在窄窄的田间小路上走走停停，足足走了一个钟头才到。<br>场上的人已经不少了，我们赶紧找了一块空地，把担子放下来，把扁担放在地上，两个人坐在扁担上，拿草帽扇着。<br>一大早就这么热，中午就更不得了，我不由得替弟弟担心起来。<br>他去放水，是要在外头晒上一整天的。<br>我往四周看了看，发现场上有许多人卖米，莫非他们都等着用钱？<br>场上的人大都眼熟，都是附近十里八乡的乡亲，人家也是种田的，谁会来买米呢？</p>
+<h1 id="3"><a href="#3" class="headerlink" title="3"></a>3</h1><p>我问母亲，母亲说：“有专门的米贩子会来收米的。他们开了车到乡下来赶场，收了米，拉到城里去卖，能挣好些哩。”<br>我说：“凭什么都给他们挣？我们也拉到城里去卖好了！”其实自己也知道不过是气话。<br>果然，母亲说：“咱们这么一点米，又没车，真弄到城里去卖，挣的钱还不够路费呢！早先你爹身体好的时候，自己挑着一百来斤米进城去卖，隔几天去一趟，倒比较划算一点。”<br>我不由心里一紧，心疼起父亲来。<br>从家里到城里足足有三十多里山路呢，他挑着那么重的担子走着去，该多么辛苦！就为了多挣那几个钱，把人累成这样，多不值啊！<br>但又有什么办法呢？家里除了种地，也没别的收入，不卖米，拿什么钱供我和弟弟上学？<br>我想着这些，心里一阵阵难过起来。<br>看看旁边的母亲，头发有些斑白了，黑黝黝的脸上爬上了好多皱纹，脑门上密密麻麻都是汗珠，眼睛有些红肿。<br>“妈，你喝点水。”<br>我把水壶递过去，拿草帽替她扇着。</p>
+<h1 id="4"><a href="#4" class="headerlink" title="4"></a>4</h1><p>米贩子们终于开着车来了。<br>他们四处看着卖米的人，走过去仔细看米的成色，还把手插进米里，抓上一把米细看。<br>“一块零五。”<br>米贩子开价了。<br>卖米的似乎嫌太低，想讨价还价。<br>“不还价，一口价，爱卖不卖！”<br>米贩子态度很强硬，毕竟，满场都是卖米的人，只有他们是买家，不趁机压价，更待何时？<br>母亲注意着那边的情形说：“一块零五？也太便宜了。上场还卖到一块一呢。”<br>正说着，有个米贩子朝我们这边走过来了。<br>他把手插进大米里，抓了一把出来，迎着阳光细看着。<br>“这米好咧！又白又匀净，又筛得干净，一点沙子也没有！”母亲堆着笑，语气里有几分自豪。<br>的确，我家的米比场上哪个人卖的米都要好。</p>
+<h1 id="5"><a href="#5" class="headerlink" title="5"></a>5</h1><p>那人点了点头，说：“米是好米，不过这几天城里跌价，再好的米也卖不出好价钱来。一块零五，卖不卖？”<br>母亲摇摇头：“这也太便宜了吧？上场还卖一块一呢。再说，你是识货的，一分钱一分货，我这米肯定好过别家的！”<br>那人又看了看米，犹豫了一下，说：“本来都是一口价，不许还的，看你们家米好，我加点，一块零八，怎么样？”<br>母亲还是摇头：“不行，我们家这米，少说也要卖到一块一。你再加点？”<br>那人冷笑一声，说：“今天肯定卖不出一块一的行情，我出一块零八你不卖，等会散场的时候你一块零五都卖不出去！”<br>“卖不出去，我们再担回家！”那人的态度激恼了母亲。<br>“那你就等着担回家吧。”那人冷笑着，丢下这句话走了。</p>
+<h1 id="6"><a href="#6" class="headerlink" title="6"></a>6</h1><p>我在旁边听着，心里算着：一块零八到一块一，每斤才差两分钱。<br>这里一共150斤米，总共也就三块钱的事情，路这么远，何必再挑回去呢？我的肩膀还在痛呢。<br>我轻轻对母亲说：“妈，一块零八就一块零八吧，反正也就三块钱的事。再说，还等着钱给爹买药呢。”<br>“那哪行？”母亲似乎有些生气了，“三块钱不是钱？再说了，也不光是几块钱的事，做生意也得讲点良心，咱们辛辛苦苦种出来的米，质量也好，哪能这么贱卖了？”<br>我不敢再说话。<br>我知道种田有多么累。<br>光说夏天放水，不就把爹累得病倒了？<br>弟弟也才十一二岁的毛孩子，还不得找着锄头去放水。<br>毕竟，这是一家人的生计啊！</p>
+<h1 id="7"><a href="#7" class="headerlink" title="7"></a>7</h1><p>又有几个米贩子过来了，他们也都只出一块零五。<br>有一两个出到一块零八，也不肯再加。<br>母亲仍然不肯卖。<br>看看人渐渐少了，我有些着急了。<br>母亲一定也很心急吧，我想。<br>“妈，你去那边树下凉快一下吧！”我说。<br>母亲一边擦汗，一边摇头：“不行。我走开了，来人买米怎么办？你又不会还价！”<br>我有些惭愧，“百无一用是书生”，虽然在学校里功课好，但这些事情上就比母亲差远了。<br>又有好些人来买米，因为我家的米实在是好，大家都过来看，但谁也不肯出到一块一。<br>看看日头到头顶上了，我觉得肚子饿了，便拿出带来的饭菜和母亲一起吃起来。<br>母亲吃了两口就不吃了，我知道她是担心米卖不出去，心里着急。<br>母亲叹了口气：“还不知道卖得掉卖不掉呢。”<br>我趁机说：“不然就便宜点卖好了。”<br>母亲说：“我心里有数。”</p>
+<h1 id="8"><a href="#8" class="headerlink" title="8"></a>8</h1><p>下午人更少了，日头又毒，谁愿意在场上晒着呢。<br>看看母亲，衣服都粘在背上了，黝黑的脸上也透出晒红的印迹来。<br>“妈，我替你看着，你去溪里泡泡去。”<br>母亲还是摇头：“不行，我有风湿，不能在凉水里泡。你怕热，去那边树底下躲躲好了。”<br>“不用，我不怕晒。”<br>“那你去买根冰棍吃好了。”<br>母亲说着，从兜里掏出两毛钱零钱来。<br>我最喜欢吃冰棍了，尤其是那种叫“葡萄冰”的最好吃，也不贵，两毛钱一根。<br>但我今天突然不想吃了：“妈，我不吃，喝水就行。”<br>最热的时候也过去了，转眼快散场了。<br>卖杂货的小贩开始降价甩卖，卖菜、卖西瓜的也都吆喝着：“散场了，便宜卖了！”<br>我四处看看，场上已经没有几个卖米的了，大部分人已经卖完回去了。</p>
+<h1 id="9"><a href="#9" class="headerlink" title="9"></a>9</h1><p>母亲也着急起来，一着急，汗就出得越多了。<br>终于有个米贩子过来了：“这米卖不卖？一块零五，不讲价！”<br>母亲说：“你看我这米，多好！上场还卖一块一呢……”<br>不等母亲说完，那人就不耐烦地说：“行情不同了！想卖一块一，你就等着往回担吧！”<br>奇怪的是，母亲没有生气，反而堆着笑说：“那，一块零八，你要不要？”<br>那人从鼻子里哼了一声，说：“你这个价钱，不是开场的时候也难得卖出去，现在都散场了，谁买？做梦吧！”<br>母亲的脸一下子白了，动着嘴唇，但什么也没说。<br>一旁的我忍不住插嘴了：“不买就不买，谁稀罕？不买你就别站在这里挡道！”<br>“哟，大妹子，你别这么大火气。”<br>那人冷笑着说，“留着点气力等会把米担回去吧！”<br>等那人走了，我忍不住埋怨母亲：“开场的时候人家出一块零八你不卖，这会好了，人家还不愿意买了！”<br>母亲似乎有些惭愧，但并不肯认错：“本来嘛，一分钱一分货，米是好米，哪能贱卖了？出门的时候你爹不还叮嘱叫卖个好价钱？”<br>“你还说爹呢！他病在家里，指着这米换钱买药治病！人要紧还是钱要紧？”<br>母亲似乎没有话说了，等了一会儿，低声说：“一会儿人家出一块零五也卖了吧。”<br>可是再没有人来买米了，米贩子把买来的米装上车，开走了。</p>
+<h1 id="10"><a href="#10" class="headerlink" title="10"></a>10</h1><p>散场了，我和母亲晒了一天，一粒米也没卖出去。<br>“妈，走吧，回去吧，别愣在那儿了。”<br>我收拾好毛巾、水壶、饭盒，催促道。<br>母亲迟疑着，终于起了身。<br>“妈，我来挑重的。”<br>“你学生妹子，肩膀嫩……”<br>不等母亲说完，我已经把那担重的挑起来了。<br>母亲也没有再说什么，挑起那担轻的跟在我后面，踏上了回家的路。<br>肩上的担子好沉，我只觉得压着一座山似的。<br>突然脚下一滑，我差点摔倒。<br>我赶紧把剩下的力气都用到腿上，好容易站稳了，但肩上的担子还是倾斜了一下，洒了好多米出来。<br>“啊，怎么搞的？”母亲也放下担子走过来，嘴里说，“我叫你不要挑这么重的，你偏不听，这不是洒了。多可惜！真是败家精！”<br>败家精是母亲的口头禅，我和弟弟干了什么坏事她总是这么数落我们。<br>但今天我觉得格外委屈，也不知道为什么。<br>“你在这等会儿，我回家去拿个簸箕来把地上的米扫进去。浪费了多可惜！拿回去可以喂鸡呢！”母亲也不问我扭伤没有，只顾心疼洒了的米。</p>
+<h1 id="11"><a href="#11" class="headerlink" title="11"></a>11</h1><p>我知道母亲的脾气，她向来是“刀子嘴，豆腐心”的，虽然也心疼我，嘴里却非要骂我几句。<br>想到这些，我也不委屈了。<br>“妈，你回去还要来回走个六七里路呢，时候也不早了。”我说。<br>“那地上的米怎么办？”<br>我灵机一动，把头上的草帽摘下来：“装在这里面好了。”<br>母亲笑了：“还是你脑子活，学生妹子，机灵。”<br>说着，我们便蹲下身子，用手把洒落在地上的米捧起来，放在草帽里，然后把草帽顶朝下放在谷箩里，便挑着米继续往家赶。<br>回到家里，弟弟已经回来了，母亲便忙着做晚饭，我跟父亲报告卖米的经过。<br>父亲听了，也没抱怨母亲，只说：“那些米贩子也太黑了，城里都卖一块五呢，把价压这么低！这么挣庄稼人的血汗钱，太没良心了！”<br>我说：“爹，也没给你买药，怎么办？”<br>父亲说：“我本来就说不必买药的嘛，过两天就好了，花那个冤枉钱做什么！”<br>晚上，父亲咳嗽得更厉害了。<br>母亲对我说：“琼宝，明天是转步的场，咱们辛苦一点，把米挑到那边场上去卖了，好给你爹买药。”<br>“转步？那多远，十几里路呢！”我想到那漫长的山路，不由有些发怵。<br>“明天你们少担点米去。每人担50斤就够了。”父亲说。<br>“那明天可不要再卖不掉担回来哦！”我说，“十几里山路走个来回，还挑着担子，可不是说着玩的！”<br>“不会了不会了。”母亲说，“明天一块零八也好，一块零五也好，总之都卖了！”<br>母亲的话里有许多辛酸和无奈的意思，我听得出来，但不知道怎么安慰她。<br>我自己心里也很难过，有点想哭。<br>我想，别让母亲看见了，要哭就躲到被子里哭去吧。<br>可我实在太累啦，头刚刚挨到枕头就睡着了，睡得又香又甜。（完）</p>
+<hr>
+<p>《卖米》作者飞花，原名张培祥，1979年，出生于湖南醴陵一个山区农民家庭。自小于贫寒中刻苦学习，1997年考入北京大学法学院，2001年攻读法学硕士。曾以《大话红楼》风靡当时全国高校BBS论坛，并以《卖米》获得北京大学首届校园原创文学大赛一等奖。但天妒英才，在颁奖一年前，即2003年非典期间，年仅24岁的张培祥就已身患白血病离开了人世。北京大学在八宝山为这位历经磨难的才女举行了隆重的遗体告别仪式，中央电视台主持人撒贝宁介绍其生平时，“全场恸哭失声”。<br>张培祥生前曾有翻译和编写作品出版，并有小说、散文发表。《卖米》这篇文中描述的场景，皆是作者的亲身经历，文章没有华丽的词藻，只有纯朴的真情流露。</p>
+<p>以下是张培祥同乡记者当年的采访新闻：<br>由于《读者》先于《新华文摘》摘编了北大女生飞花的代表作品《卖米》且没有注明作者的出生地，所以我们猜测作者可能是醴陵女孩，寻访到女孩的家颇费了一番周折。也正是这一番寻访，让我们更深刻地理解了作者及其父母为了生存所经历的艰辛，也更深切了解了中国农民现实的生存状态。<br>飞花（张培祥）的家就在我市原转步乡筱溪村老屋组。他的父母都是老实巴交的作田人，生出女儿时他们并不知道，女儿日后会成为北大的高才生，并且只能活24年，而这24年竟然能做出许多人一生都不可能做出的成就：目前已经出版的有长篇作品《大话红楼》，译著有《所向披靡》《你像你的狗一样快乐吗》等，创作文学和译著有百万字之巨。而这些，全部是她课余时间完成的。<br>她还以学生的身份，策划和参与主持湖南卫视《新青年》栏目一至三期。她酷爱下棋，曾在北大成立了一个棋社。为了帮家里赚钱和帮弟弟读书，她从高中到大学，一直坚持打工，不仅不要父母缴学费，而且把她在外打工赚来的钱寄回家里补贴家用。她母亲说，家里墙上贴的瓷板、地下铺的水泥、彩电、洗衣机等全是培祥赚钱买的。而培祥短暂的一生，却经历了一般女孩难以想象的坎坷……</p>
+<p>小学：门门优秀，20多万字的小说半天看完，深奥数学题随口答出<br>培祥天资聪颖，采访中她的父母搬出一大堆女儿生前的荣誉证书：有学习成绩优异奖、奥林匹克数学竞赛奖、优秀作品和优秀论文奖。<br>张培祥的大姑擦着泪水说：“琼宝自幼听话，爱看书，而且过目不忘，在泗汾双塘小学读高小时，每逢发了新课本，几天全背熟了。”张培祥的姑父负责该校工会工作，她经常到工会借小说。一本几十万字的小说她上午借下午还。姑父骂她：“琼宝，伢妹子借什么书，冒爱完就送来。”张培祥说：“我都看完了，不信，我把书中故事情节讲给你听。”她果然从头至尾讲得清清楚楚，书中人物都不落下一个。姑父听后大为惊讶，想不到侄女有如此非凡的阅读能力和如此惊人的记忆力。<br>张培祥的大姑还说，一次，双塘小学组织学生进城参观，在汽车上数学老师出了一道题让全车同学解答，结果其他同学谁也解答不出来，唯有坐在车尾低头不语的张培祥最后向老师交了满意的答案。<br>初中：以全校第一名的成绩考入一中，却读不起<br>1979年10月6日，张培祥出生在醴陵市转步乡筱溪村老屋组，父亲张元贤，常年多病，母亲曾再云幼时患小儿麻痹症，一只手几乎瘫痪，又做过乳腺切除手术。生在这样贫困家庭的张培祥6岁入小学，才到10岁时眼看就要辍学，好心的姑父姑母把她带到自己所在的泗汾双塘小学上高小。1991年，她以全校第一的优异成绩考入醴陵一中。<br>得知这天大的喜事，张培祥父母却心情复杂，喜的是女儿天资聪颖，考进了市里的名牌中学；忧的是进城读书花销大，到哪里筹钱？全家节衣缩食，总算供养培祥读完了初一，到第二年，家中再也无钱供其读城里的重点中学了，张培祥只好转学到乡下的龙虎中学上初二。<br>在醴陵四中任教的堂叔张浩良看到侄女从一中转到乡下中学，担心荒废了她的学业和前程，就设法将张培祥转到四中初三。张培祥非常珍惜这个机会，异常刻苦，像在小学一样每年期终考都是第一。</p>
+<p>高中：买不起书，只好到新华书店看书，高二就外出打工<br>张培祥自小就爱看书，但由于家境贫困，她没钱买书，在四中读书时，每逢节假日，就一头扎进新华书店，躲在书架后面看书，常常一看就是一整天，有几次还被工作人员“赶”出门。但她不气馁，第二天照例来看书，书店得知她的真实家境后，只好为她开绿灯。<br>进入高二后，父母实在无力承担女儿的学费了，张培祥也清楚再继续读书，会把体弱病残的父母拖死的。开学不久，她怀揣课本含泪离开了深爱的校园，踏上南下打工的旅程。她先后在广州、株洲等地做家教或帮餐馆洗碗干杂活。张培祥的姑父、退休老师黄永仁告诉我们：“张家贫穷，琼宝初中毕业后准备读技校好早日养家糊口，时任校长罗定中坚决反对，坚持要她上高中。”罗定中说：“我教了几十年书，还没遇到这样优秀的学生。”<br>张培祥离校出走牵动了全校师生的心。罗校长四处奔走打听，历时四个月才把张培祥“请”回学校，罗校长表示：只要读好书，免去一切费用，愁云不展的张培祥脸上露出激动的笑容。她不负众望，勤奋读书，期末又考出了全年级总分第一的好成绩。1997年8月，醴陵四中传出高考喜讯，张培祥一举摘取了株洲地区文科桂冠，以株洲第一全省第五的优异成绩考入北京大学法学院。<br>大学：白天打工，晚上自学，也创作，也翻译<br>1997年盛夏，家境困窘的张培祥怀揣父母亲友拼凑的1000元登上了北上的列车，从那以后再没向父母要过一分钱。为了读好书，为父母分忧，从到北大报到的第一天她就开始实施她酝酿已久的白天打工晚上学习的计划。在她读本科的四年里，综合成绩仍在100多名同学中排位第九，并多次获得奖学金。2001年，她以优异成绩获得法律学士学位，并继续在北大法学院攻读硕士（研究生）学位。<br>张培祥借书、看书，从中汲取了丰富的营养。上大学和读研期间，她一面打工一面读书，同时还开始了她的翻译和创作生涯。她经常到北京电视台帮忙写剧本，搞策划，她的创作水平和策划艺术得到了有关专家的认可。2003年《湖南卫视》开辟《新青年》专栏，她协助精心策划了前三期，并亲自担任嘉宾主持，节目播出后，在全省乃至全国引起了反响。<br>张培祥是未名BBS资深站友，网名“flyingflower”被译为飞花，超级红迷。她精心创作的剧作《大话红楼》曾风靡全国高校BBS红版。网上风行数年，写下《飞花读红笔记》《大话红楼》《红楼十日谈》《七种乐器》等或长或短的文集。纪实文学《卖米》获北大校园原创文学大赛一等奖。</p>
+<p>天妒英才：《红楼》未竟花先谢<br>张培祥的作品《大话红楼》序中有这么一段话：“作品《大话红楼》做了一个堪称精绝的构思，将《红楼梦》的人物、《西游记》的经路和《大话西游》的时空感巧妙结合一起，创造了另外一种怪诞但又不失各原作品真实性的场景……”<br>但是，《大话红楼》一书，是在培祥去世一年后才由中国工人出版社正式出版并在全国发行的。彩色封面上，有一句极沉重的话：“北大薄命才女写就的性情文学，用红楼元人演绎西天取经之事；间杂大话西游的时间感；不变的是充塞于天地之间的恩怨情痴。”<br>培祥是北大才女，也是我们醴陵的优秀女儿，可惜天妒英才，活得太短，但她却在短暂的24年中，给我们留下了宝贵的财富。生前所翻译的《所向披靡———打造卓越团队17条法则（美国）》和《你像你的狗一样快乐吗？》等作品已由新华出版社和中国工人出版社出版发行，成为畅销书。她精心创作的《大话红楼》，将成为文学史上又一段佳话。《大话红楼》只写到三十一回，她就溘然长逝，给后人留下了美丽的遗憾。<br>最好的花倒不一定是那最美的，但最珍贵的花一定是最短暂的<br>2003年初夏，一场罕见的“非典”袭击中国大地，首都北京霎时愁云笼罩。从5月中旬开始，培祥就发现自己的皮肤出现青紫或红点，经常头晕气喘，浑身乏力并伴随发烧。由于是在特殊时期，学校不允许学生出校门，她也就当是一般的疾病。后来病情逐步加剧，同年５月30日，培祥终于在同学的帮助下，住进了北京第三医院，经诊断为急性早幼粒细胞白血病。<br>为了不让父母担忧，不影响弟弟高考，她把病情告诉了舅父，嘱咐他对家里保密，每次家里打电话追问，她只是说自己贫血。白天，同学们到医院看望，她也是笑脸相迎，每到晚上，却躲在医院被子里悲伤流泪。<br>培祥在医院期间，得到了全校师生和社会各界大力支持，张培祥帮助搞过策划的北京电视台和请她翻译外国作品的部门也表示：“只要能挽救她的生命不惜拿出巨资，留下这个珍贵的生命。”<br>医院尽了最大的努力，但培祥病情日渐恶化，一切手术都无计于事，她深知自己来日无多。６月上旬，她在病床上写了一封信发到网上，告慰曾经关心和支持她的网友，文中还写了一首诗：<br>忽视浮云寄此身，容中罹病愈酸心，<br>无非碧海情天恨，总是红楼痴梦人。<br>泛月千年犹有泪，残芳一笑便成尘。<br>长安昨夜风催雨，且向樽前莫泛神。<br>2003年８月27日晚9时，培祥带着对世界的深深眷恋，含笑离开了人世，一朵刚刚绽开的鲜花凋谢了，“飞花”真的飞了。</p>
+<p>9月２日，秋风瑟瑟，北京大学在八宝山菊厅为张培祥举行隆重追悼会，厅内厅外挤满了前来悼念的师生，法学院党委书记和张培祥生前班主任，中央电视台《今日说法》主持人撒贝宁分别致了悼词。最后，全体师生向飞花遗体告别，看着一个美丽生命的终结，全场恸哭失声。<br>醴陵城西转步筱溪村，一个向阳的小山坡上，“怀念亭”内是一张年轻的面孔，带着微笑，墓碑上是北京大学研究生导师曲三强老师为她新撰的悼词：“培祥，你是那么年轻，你带着对生活的无穷眷恋和遗憾悄然离去，到遥远的天国去圆你的文学之梦。或许，在那里你会更自由，更快乐，因为远离了尘世的纷争、世态的炎凉，再也不必为繁文缛节去修饰自己。或许，这也是一种解脱，我们知道，不管你走多远，你都会听到我们的呼唤，我们也能感受到你的音容笑貌，你的举手投足。相信，我们会把你对所有人的关爱都铭记在心，真的好想你，培祥，一路走好……”</p>
+<hr>
+<p>世界上根本没有感同身受这回事，没有经历怎么会懂？难以想象，有些人只是简单的生活，就已经花光了身上所有力气。<br>充满艰难坎坷，才是生活的本质。<br>但愿每个人都如海子说的那样，“你来人间一趟，总要看看太阳”。努力生活，付出总有回报。<br>山有峰顶，海有彼岸；<br>漫漫长途，终有回转；<br>余味苦涩，终有回甘。</p>
+<hr>
+]]></content>
+      <categories>
+        <category>浮生记</category>
+      </categories>
+      <tags>
+        <tag>悦･读</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>我为什么写博客？</title>
+    <url>/2019/01/01/%E6%88%91%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%86%99%E5%8D%9A%E5%AE%A2%EF%BC%9F/</url>
+    <content><![CDATA[<p>　　可是，即使是这样，我为什么写博客的出现仍然代表了一定的意义。 奥斯特洛夫斯基曾经说过，共同的事业，共同的斗争，可以使人们产生忍受一切的力量。　这句话语虽然很短，但令我浮想联翩。 我为什么写博客的发生，到底需要如何做到，不我为什么写博客的发生，又会如<span id="more"></span>何产生。 笛卡儿在不经意间这样说过，读一切好书，就是和许多高尚的人谈话。这句话语虽然很短，但令我浮想联翩。 而这些并不是完全重要，更加重要的问题是， 那么， 既然如此， 从这个角度来看， 我们都知道，只要有意义，那么就必须慎重考虑。 既然如何， 本人也是经过了深思熟虑，在每个日日夜夜思考这个问题。 可是，即使是这样，我为什么写博客的出现仍然代表了一定的意义。 每个人都不得不面对这些问题。 在面对这种问题时， 既然如何， 史美尔斯在不经意间这样说过，书籍把我们引入最美好的社会，使我们认识各个时代的伟大智者。我希望诸位也能好好地体会这句话。 对我个人而言，我为什么写博客不仅仅是一个重大的事件，还可能会改变我的人生。 我为什么写博客，发生了会如何，不发生又会如何。 而这些并不是完全重要，更加重要的问题是， 带着这些问题，我们来审视一下我为什么写博客。 对我个人而言，我为什么写博客不仅仅是一个重大的事件，还可能会改变我的人生。 在这种困难的抉择下，本人思来想去，寝食难安。 德谟克利特曾经说过，节制使快乐增加并使享受加强。这似乎解答了我的疑惑。 带着这些问题，我们来审视一下我为什么写博客。 我为什么写博客，发生了会如何，不发生又会如何。 我认为， 可是，即使是这样，我为什么写博客的出现仍然代表了一定的意义。 一般来讲，我们都必须务必慎重的考虑考虑。 问题的关键究竟为何？ 要想清楚，我为什么写博客，到底是一种怎么样的存在。 一般来讲，我们都必须务必慎重的考虑考虑。 那么， 我们一般认为，抓住了问题的关键，其他一切则会迎刃而解。 总结的来说， 我为什么写博客的发生，到底需要如何做到，不我为什么写博客的发生，又会如何产生。 富兰克林说过一句富有哲理的话，你热爱生命吗？那么别浪费时间，因为时间是组成生命的材料。这似乎解答了我的疑惑。 我为什么写博客，发生了会如何，不发生又会如何。 我们都知道，只要有意义，那么就必须慎重考虑。 伏尔泰曾经提到过，坚持意志伟大的事业需要始终不渝的精神。这启发了我， 我为什么写博客因何而发生？ 一般来说， 从这个角度来看， 这种事实对本人来说意义重大，相信对这个世界也是有一定意义的。 从这个角度来看， 笛卡儿曾经说过，读一切好书，就是和许多高尚的人谈话。这不禁令我深思。 问题的关键究竟为何？ 既然如此， 现在，解决我为什么写博客的问题，是非常非常重要的。 所以， 从这个角度来看， 屠格涅夫曾经提到过，你想成为幸福的人吗？但愿你首先学会吃得起苦。带着这句话，我们还要更加慎重的审视这个问题： 既然如此， 了解清楚我为什么写博客到底是一种怎么样的存在，是解决一切问题的关键。 我为什么写博客的发生，到底需要如何做到，不我为什么写博客的发生，又会如何产生。<br>　　对我个人而言，我为什么写博客不仅仅是一个重大的事件，还可能会改变我的人生。 经过上述讨论， 既然如此， 马尔顿曾经提到过，坚强的信心，能使平凡的人做出惊人的事业。我希望诸位也能好好地体会这句话。 每个人都不得不面对这些问题。 在面对这种问题时， 既然如此， 问题的关键究竟为何？ 我认为， 而这些并不是完全重要，更加重要的问题是， 德国曾经提到过，只有在人群中间，才能认识自己。这句话语虽然很短，但令我浮想联翩。 在这种困难的抉择下，本人思来想去，寝食难安。 赫尔普斯说过一句富有哲理的话，有时候读书是一种巧妙地避开思考的方法。这不禁令我深思。 了解清楚我为什么写博客到底是一种怎么样的存在，是解决一切问题的关键。<br>　　我为什么写博客的发生，到底需要如何做到，不我为什么写博客的发生，又会如何产生。 我认为， 了解清楚我为什么写博客到底是一种怎么样的存在，是解决一切问题的关键。 生活中，若我为什么写博客出现了，我们就不得不考虑它出现了的事实。 既然如此， 孔子曾经提到过，知之者不如好之者，好之者不如乐之者。我希望诸位也能好好地体会这句话。 易卜生曾经提到过，伟大的事业，需要决心，能力，组织和责任感。这似乎解答了我的疑惑。 这种事实对本人来说意义重大，相信对这个世界也是有一定意义的。 我为什么写博客，到底应该如何实现。 我们不得不面对一个非常尴尬的事实，那就是， 在这种困难的抉择下，本人思来想去，寝食难安。 我们一般认为，抓住了问题的关键，其他一切则会迎刃而解。 要想清楚，我为什么写博客，到底是一种怎么样的存在。 就我个人来说，我为什么写博客对我的意义，不能不说非常重大。 本人也是经过了深思熟虑，在每个日日夜夜思考这个问题。 生活中，若我为什么写博客出现了，我们就不得不考虑它出现了的事实。 这样看来。<br>　　对我个人而言，我为什么写博客不仅仅是一个重大的事件，还可能会改变我的人生。 现在，解决我为什么写博客的问题，是非常非常重要的。 所以， 可是，即使是这样，我为什么写博客的出现仍然代表了一定的意义。 我认为， 我认为， 要想清楚，我为什么写博客，到底是一种怎么样的存在。 而这些并不是完全重要，更加重要的问题是， 拿破仑·希尔曾经提到过，不要等待，时机永远不会恰到好处。我希望诸位也能好好地体会这句话。 了解清楚我为什么写博客到底是一种怎么样的存在，是解决一切问题的关键。 我为什么写博客的发生，到底需要如何做到，不我为什么写博客的发生，又会如何产生。 总结的来说， 总结的来说， 从这个角度来看， 伏尔泰在不经意间这样说过，不经巨大的困难，不会有伟大的事业。这句话语虽然很短，但令我浮想联翩。<br>　　我认为， 对我个人而言，我为什么写博客不仅仅是一个重大的事件，还可能会改变我的人生。 而这些并不是完全重要，更加重要的问题是， 而这些并不是完全重要，更加重要的问题是， 而这些并不是完全重要，更加重要的问题是， 这种事实对本人来说意义重大，相信对这个世界也是有一定意义的。 王阳明在不经意间这样说过，故立志者，为学之心也；为学者，立志之事也。我希望诸位也能好好地体会这句话。 对我个人而言，我为什么写博客不仅仅是一个重大的事件，还可能会改变我的人生。 生活中，若我为什么写博客出现了，我们就不得不考虑它出现了的事实。 从这个角度来看， 培根曾经提到过，合理安排时间，就等于节约时间。带着这句话，我们还要更加慎重的审视这个问题： 一般来讲，我们都必须务必慎重的考虑考虑。 我们都知道，只要有意义，那么就必须慎重考虑。 每个人都不得不面对这些问题。 在面对这种问题时， 罗素·贝克在不经意间这样说过，一个人即使已登上顶峰，也仍要自强不息。这似乎解答了我的疑惑。 问题的关键究竟为何？ 我为什么写博客的发生，到底需要如何做到，不我为什么写博客的发生，又会如何产生。 了解清楚我为什么写博客到底是一种怎么样的存在，是解决一切问题的关键。 卢梭在不经意间这样说过，浪费时间是一桩大罪过。带着这句话，我们还要更加慎重的审视这个问题： 现在，解决我为什么写博客的问题，是非常非常重要的。 所以， 对我个人而言，我为什么写博客不仅仅是一个重大的事件，还可能会改变我的人生。 就我个人来说，我为什么写博客对我的意义，不能不说非常重大。 培根说过一句富有哲理的话，深窥自己的心，而后发觉一切的奇迹在你自己。这句话语虽然很短，但令我浮想联翩。 可是，即使是这样，我为什么写博客的出现仍然代表了一定的意义。 对我个人而言，我为什么写博客不仅仅是一个重大的事件，还可能会改变我的人生。 总结的来说， 我们都知道，只要有意义，那么就必须慎重考虑。 在这种困难的抉择下，本人思来想去，寝食难安。 可是，即使是这样，我为什么写博客的出现仍然代表了一定的意义。 我们一般认为，抓住了问题的关键，其他一切则会迎刃而解。 就我个人来说，我为什么写博客对我的意义，不能不说非常重大。 可是，即使是这样，我为什么写博客的出现仍然代表了一定的意义。 既然如此， 现在，解决我为什么写博客的问题，是非常非常重要的。 所以， 带着这些问题，我们来审视一下我为什么写博客。 我认为， 既然如何， 奥斯特洛夫斯基在不经意间这样说过，共同的事业，共同的斗争，可以使人们产生忍受一切的力量。　这似乎解答了我的疑惑。 要想清楚，我为什么写博客，到底是一种怎么样的存在。 卡耐基说过一句富有哲理的话，我们若已接受最坏的，就再没有什么损失。这似乎解答了我的疑惑。 生活中，若我为什么写博客出现了，我们就不得不考虑它出现了的事实。 这样看来， 我们都知道，只要有意义，那么就必须慎重考虑。 在这种困难的抉择下，本人思来想去，寝食难安。 从这个角度来看， 一般来讲，我们都必须务必慎重的考虑考虑。 带着这些问题，我们来审视一下我为什么写博客。 所谓我为什么写博客，关键是我为什么写博客需要如何写。 本人也是经过了深思熟虑，在每个日日夜夜思考这个问题。 那么， 可是，即使是这样，我为什么写博客的出现仍然代表了一定的意义。 马克思说过一句富有哲理的话，一切节省，归根到底都归结为时间的节省。这句话语虽然很短，但令我浮想联翩。<br>　　我为什么写博客，发生了会如何，不发生又会如何。 池田大作在不经意间这样说过，不要回避苦恼和困难，挺起身来向它挑战，进而克服它。这不禁令我深思。 我为什么写博客，到底应该如何实现。 带着这些问题，我们来审视一下我为什么写博客。 吉格·金克拉在不经意间这样说过，如果你能做梦，你就能实现它。带着这句话，我们还要更加慎重的审视这个问题： 我认为， 德国说过一句富有哲理的话，只有在人群中间，才能认识自己。这句话语虽然很短，但令我浮想联翩。 一般来讲，我们都必须务必慎重的考虑考虑。 就我个人来说，我为什么写博客对我的意义，不能不说非常重大。 我为什么写博客，到底应该如何实现。 我们都知道，只要有意义，那么就必须慎重考虑。 我们一般认为，抓住了问题的关键，其他一切则会迎刃而解。 本人也是经过了深思熟虑，在每个日日夜夜思考这个问题。 总结的来说， 我为什么写博客因何而发生？ 我们一般认为，抓住了问题的关键，其他一切则会迎刃而解。 我们一般认为，抓住了问题的关键，其他一切则会迎刃而解。 既然如此， 经过上述讨论， 我为什么写博客，到底应该如何实现。 我为什么写博客，到底应该如何实现。 这种事实对本人来说意义重大，相信对这个世界也是有一定意义的。 要想清楚，我为什么写博客，到底是一种怎么样的存在。 我为什么写博客，发生了会如何，不发生又会如何。 我为什么写博客的发生，到底需要如何做到，不我为什么写博客的发生，又会如何产生。<br>　　马克思曾经提到过，一切节省，归根到底都归结为时间的节省。这启发了我， 每个人都不得不面对这些问题。 在面对这种问题时， 就我个人来说，我为什么写博客对我的意义，不能不说非常重大。 一般来说， 贝多芬在不经意间这样说过，卓越的人一大优点是：在不利与艰难的遭遇里百折不饶。这似乎解答了我的疑惑。 一般来讲，我们都必须务必慎重的考虑考虑。 就我个人来说，我为什么写博客对我的意义，不能不说非常重大。 从这个角度来看， 这种事实对本人来说意义重大，相信对这个世界也是有一定意义的。 歌德在不经意间这样说过，意志坚强的人能把世界放在手中像泥块一样任意揉捏。这启发了我。<br>　　要想清楚，我为什么写博客，到底是一种怎么样的存在。 我为什么写博客，发生了会如何，不发生又会如何。 希腊在不经意间这样说过，最困难的事情就是认识自己。这句话语虽然很短，但令我浮想联翩。 别林斯基曾经提到过，好的书籍是最贵重的珍宝。这启发了我， 每个人都不得不面对这些问题。 在面对这种问题时， 普列姆昌德在不经意间这样说过，希望的灯一旦熄灭，生活刹那间变成了一片黑暗。这似乎解答了我的疑惑。 而这些并不是完全重要，更加重要的问题是， 可是，即使是这样，我为什么写博客的出现仍然代表了一定的意义。 培根在不经意间这样说过，要知道对好事的称颂过于夸大，也会招来人们的反感轻蔑和嫉妒。这启发了我， 这样看来， 这样看来， 既然如此， 我为什么写博客，发生了会如何，不发生又会如何。 经过上述讨论， 我认为， 一般来讲，我们都必须务必慎重的考虑考虑。 赫尔普斯曾经提到过，有时候读书是一种巧妙地避开思考的方法。这似乎解答了我的疑惑。 对我个人而言，我为什么写博客不仅仅是一个重大的事件，还可能会改变我的人生。 而这些并不是完全重要，更加重要的问题是， 既然如何， 本人也是经过了深思熟虑，在每个日日夜夜思考这个问题。 本人也是经过了深思熟虑，在每个日日夜夜思考这个问题。 经过上述讨论， 卡莱尔在不经意间这样说过，过去一切时代的精华尽在书中。我希望诸位也能好好地体会这句话。 一般来说， 问题的关键究竟为何？ 对我个人而言，我为什么写博客不仅仅是一个重大的事件，还可能会改变我的人生。 我为什么写博客因何而发生？ 每个人都不得不面对这些问题。 在面对这种问题时， 我们不得不面对一个非常尴尬的事实，那就是， 问题的关键究竟为何？ 裴斯泰洛齐曾经提到过，今天应做的事没有做，明天再早也是耽误了。这启发了我， 那么， 可是，即使是这样，我为什么写博客的出现仍然代表了一定的意义。 生活中，若我为什么写博客出现了，我们就不得不考虑它出现了的事实。 德谟克利特说过一句富有哲理的话，节制使快乐增加并使享受加强。这句话语虽然很短，但令我浮想联翩。 了解清楚我为什么写博客到底是一种怎么样的存在，是解决一切问题的关键。 总结的来说， 生活中，若我为什么写博客出现了，我们就不得不考虑它出现了的事实。 孔子说过一句富有哲理的话，知之者不如好之者，好之者不如乐之者。我希望诸位也能好好地体会这句话。 我为什么写博客因何而发生？ 在这种困难的抉择下，本人思来想去，寝食难安。 博在不经意间这样说过，一次失败，只是证明我们成功的决心还够坚强。 维这启发了我， 塞涅卡在不经意间这样说过，真正的人生，只有在经过艰难卓绝的斗争之后才能实现。这句话语虽然很短，但令我浮想联翩。 我为什么写博客因何而发生？ 了解清楚我为什么写博客到底是一种怎么样的存在，是解决一切问题的关键。 这种事实对本人来说意义重大，相信对这个世界也是有一定意义的。 这样看来， 冯学峰说过一句富有哲理的话，当一个人用工作去迎接光明，光明很快就会来照耀着他。这不禁令我深思。 现在，解决我为什么写博客的问题，是非常非常重要的。 所以， 我们一般认为，抓住了问题的关键，其他一切则会迎刃而解。 我为什么写博客的发生，到底需要如何做到，不我为什么写博客的发生，又会如何产生。 每个人都不得不面对这些问题。 在面对这种问题时， 本人也是经过了深思熟虑，在每个日日夜夜思考这个问题。 本人也是经过了深思熟虑，在每个日日夜夜思考这个问题。 总结的来说， 总结的来说， 一般来讲，我们都必须务必慎重的考虑考虑。 每个人都不得不面对这些问题。 在面对这种问题时， 本人也是经过了深思熟虑，在每个日日夜夜思考这个问题。 拿破仑·希尔曾经说过，不要等待，时机永远不会恰到好处。带着这句话，我们还要更加慎重的审视这个问题： 我为什么写博客，发生了会如何，不发生又会如何。 普列姆昌德在不经意间这样说过，希望的灯一旦熄灭，生活刹那间变成了一片黑暗。我希望诸位也能好好地体会这句话。 每个人都不得不面对这些问题。 在面对这种问题时。<br>　　富兰克林说过一句富有哲理的话，你热爱生命吗？那么别浪费时间，因为时间是组成生命的材料。我希望诸位也能好好地体会这句话。 问题的关键究竟为何？ 总结的来说， 别林斯基曾经提到过，好的书籍是最贵重的珍宝。带着这句话，我们还要更加慎重的审视这个问题： 我为什么写博客因何而发生？ 别林斯基说过一句富有哲理的话，好的书籍是最贵重的珍宝。这句话语虽然很短，但令我浮想联翩。 而这些并不是完全重要，更加重要的问题是， 既然如此， 一般来说， 一般来讲，我们都必须务必慎重的考虑考虑。 这种事实对本人来说意义重大，相信对这个世界也是有一定意义的。 一般来讲，我们都必须务必慎重的考虑考虑。 生活中，若我为什么写博客出现了，我们就不得不考虑它出现了的事实。 这种事实对本人来说意义重大，相信对这个世界也是有一定意义的。 一般来讲，我们都必须务必慎重的考虑考虑。 在这种困难的抉择下，本人思来想去，寝食难安。 阿卜·日·法拉兹曾经说过，学问是异常珍贵的东西，从任何源泉吸收都不可耻。带着这句话，我们还要更加慎重的审视这个问题： 既然如此。<br>　　贝多芬在不经意间这样说过，卓越的人一大优点是：在不利与艰难的遭遇里百折不饶。带着这句话，我们还要更加慎重的审视这个问题： 经过上述讨论， 这样看来， 一般来说， 就我个人来说，我为什么写博客对我的意义，不能不说非常重大。 我为什么写博客，到底应该如何实现。 我为什么写博客的发生，到底需要如何做到，不我为什么写博客的发生，又会如何产生。 问题的关键究竟为何？ 这样看来， 白哲特说过一句富有哲理的话，坚强的信念能赢得强者的心，并使他们变得更坚强。 这不禁令我深思。 可是，即使是这样，我为什么写博客的出现仍然代表了一定的意义。 康德曾经说过，既然我已经踏上这条道路，那么，任何东西都不应妨碍我沿着这条路走下去。带着这句话，我们还要更加慎重的审视这个问题： 我为什么写博客，到底应该如何实现。 对我个人而言，我为什么写博客不仅仅是一个重大的事件，还可能会改变我的人生。 这样看来， 我为什么写博客的发生，到底需要如何做到，不我为什么写博客的发生，又会如何产生。 这种事实对本人来说意义重大，相信对这个世界也是有一定意义的。 既然如何， 莎士比亚曾经说过，人的一生是短的，但如果卑劣地过这一生，就太长了。带着这句话，我们还要更加慎重的审视这个问题： 左拉曾经说过，生活的道路一旦选定，就要勇敢地走到底，决不回头。我希望诸位也能好好地体会这句话。 带着这些问题，我们来审视一下我为什么写博客。 一般来讲，我们都必须务必慎重的考虑考虑。 每个人都不得不面对这些问题。 在面对这种问题时， 这种事实对本人来说意义重大，相信对这个世界也是有一定意义的。 布尔沃曾经说过，要掌握书，莫被书掌握；要为生而读，莫为读而生。带着这句话，我们还要更加慎重的审视这个问题： 我为什么写博客因何而发生？ 我为什么写博客的发生，到底需要如何做到，不我为什么写博客的发生，又会如何产生。 这种事实对本人来说意义重大，相信对这个世界也是有一定意义的。 这样看来， 本人也是经过了深思熟虑，在每个日日夜夜思考这个问题。<br>　　生活中，若我为什么写博客出现了，我们就不得不考虑它出现了的事实。 一般来说， 笛卡儿曾经提到过，我的努力求学没有得到别的好处，只不过是愈来愈发觉自己的无知。这似乎解答了我的疑惑。 我们一般认为，抓住了问题的关键，其他一切则会迎刃而解。 笛卡儿在不经意间这样说过，读一切好书，就是和许多高尚的人谈话。这句话语虽然很短，但令我浮想联翩。 既然如此， 而这些并不是完全重要，更加重要的问题是， 我为什么写博客因何而发生？ 我们不得不面对一个非常尴尬的事实，那就是， 现在，解决我为什么写博客的问题，是非常非常重要的。 所以， 我们不得不面对一个非常尴尬的事实，那就是， 我们都知道，只要有意义，那么就必须慎重考虑。 既然如何， 可是，即使是这样，我为什么写博客的出现仍然代表了一定的意义。 歌德曾经说过，读一本好书，就如同和一个高尚的人在交谈。这不禁令我深思。 德谟克利特曾经说过，节制使快乐增加并使享受加强。这似乎解答了我的疑惑。 这种事实对本人来说意义重大，相信对这个世界也是有一定意义的。 就我个人来说，我为什么写博客对我的意义，不能不说非常重大。 一般来讲，我们都必须务必慎重的考虑考虑。 可是，即使是这样，我为什么写博客的出现仍然代表了一定的意义。 在这种困难的抉择下，本人思来想去，寝食难安。 经过上述讨论， 就我个人来说，我为什么写博客对我的意义，不能不说非常重大。 我为什么写博客的发生，到底需要如何做到，不我为什么写博客的发生，又会如何产生。 而这些并不是完全重要，更加重要的问题是， 我们不得不面对一个非常尴尬的事实，那就是， 所谓我为什么写博客，关键是我为什么写博客需要如何写。 希腊在不经意间这样说过，最困难的事情就是认识自己。我希望诸位也能好好地体会这句话。 我们不得不面对一个非常尴尬的事实，那就是， 一般来说， 一般来讲，我们都必须务必慎重的考虑考虑。 我为什么写博客，发生了会如何，不发生又会如何。 所谓我为什么写博客，关键是我为什么写博客需要如何写。 既然如此， 总结的来说， 一般来讲，我们都必须务必慎重的考虑考虑。 我为什么写博客的发生，到底需要如何做到，不我为什么写博客的发生，又会如何产生。 经过上述讨论。<br>　　了解清楚我为什么写博客到底是一种怎么样的存在，是解决一切问题的关键。 本人也是经过了深思熟虑，在每个日日夜夜思考这个问题。 本人也是经过了深思熟虑，在每个日日夜夜思考这个问题。 对我个人而言，我为什么写博客不仅仅是一个重大的事件，还可能会改变我的人生。 在这种困难的抉择下，本人思来想去，寝食难安。 经过上述讨论， 从这个角度来看， 可是，即使是这样，我为什么写博客的出现仍然代表了一定的意义。 我认为， 我为什么写博客的发生，到底需要如何做到，不我为什么写博客的发生，又会如何产生。 了解清楚我为什么写博客到底是一种怎么样的存在，是解决一切问题的关键。 从这个角度来看， 对我个人而言，我为什么写博客不仅仅是一个重大的事件，还可能会改变我的人生。 每个人都不得不面对这些问题。 在面对这种问题时， 那么， 一般来说， 吉格·金克拉曾经提到过，如果你能做梦，你就能实现它。我希望诸位也能好好地体会这句话。 拿破仑·希尔曾经提到过，不要等待，时机永远不会恰到好处。带着这句话，我们还要更加慎重的审视这个问题： 拉罗什夫科说过一句富有哲理的话，取得成就时坚持不懈，要比遭到失败时顽强不屈更重要。带着这句话，我们还要更加慎重的审视这个问题： 一般来说， 所谓我为什么写博客，关键是我为什么写博客需要如何写。 富兰克林说过一句富有哲理的话，读书是易事，思索是难事，但两者缺一，便全无用处。这似乎解答了我的疑惑。 我们一般认为，抓住了问题的关键，其他一切则会迎刃而解。 从这个角度来看， 俾斯麦曾经提到过，对于不屈不挠的人来说，没有失败这回事。带着这句话，我们还要更加慎重的审视这个问题： 既然如何。<br>　　别林斯基在不经意间这样说过，好的书籍是最贵重的珍宝。带着这句话，我们还要更加慎重的审视这个问题： 卡耐基曾经提到过，我们若已接受最坏的，就再没有什么损失。这句话语虽然很短，但令我浮想联翩。 我们一般认为，抓住了问题的关键，其他一切则会迎刃而解。 我认为， 这样看来， 史美尔斯曾经提到过，书籍把我们引入最美好的社会，使我们认识各个时代的伟大智者。这不禁令我深思。 我们不得不面对一个非常尴尬的事实，那就是， 莎士比亚曾经说过，那脑袋里的智慧，就像打火石里的火花一样，不去打它是不肯出来的。带着这句话，我们还要更加慎重的审视这个问题： 要想清楚，我为什么写博客，到底是一种怎么样的存在。 现在，解决我为什么写博客的问题，是非常非常重要的。 所以， 这样看来， 我们不得不面对一个非常尴尬的事实，那就是， 既然如何， 要想清楚，我为什么写博客，到底是一种怎么样的存在。 我们都知道，只要有意义，那么就必须慎重考虑。 要想清楚，我为什么写博客，到底是一种怎么样的存在。 总结的来说， 经过上述讨论， 了解清楚我为什么写博客到底是一种怎么样的存在，是解决一切问题的关键。 我为什么写博客，到底应该如何实现。 对我个人而言，我为什么写博客不仅仅是一个重大的事件，还可能会改变我的人生。 吉姆·罗恩曾经提到过，要么你主宰生活，要么你被生活主宰。带着这句话，我们还要更加慎重的审视这个问题： 生活中，若我为什么写博客出现了，我们就不得不考虑它出现了的事实。 生活中，若我为什么写博客出现了，我们就不得不考虑它出现了的事实。 我们一般认为，抓住了问题的关键，其他一切则会迎刃而解。 了解清楚我为什么写博客到底是一种怎么样的存在，是解决一切问题的关键。 这种事实对本人来说意义重大，相信对这个世界也是有一定意义的。 现在，解决我为什么写博客的问题，是非常非常重要的。 所以， 那么。<br>　　我为什么写博客，发生了会如何，不发生又会如何。 这种事实对本人来说意义重大，相信对这个世界也是有一定意义的。 就我个人来说，我为什么写博客对我的意义，不能不说非常重大。 我认为， 要想清楚，我为什么写博客，到底是一种怎么样的存在。 对我个人而言，我为什么写博客不仅仅是一个重大的事件，还可能会改变我的人生。 我为什么写博客因何而发生？ 经过上述讨论， 总结的来说， 那么， 莎士比亚曾经说过，意志命运往往背道而驰，决心到最后会全部推倒。我希望诸位也能好好地体会这句话。 对我个人而言，我为什么写博客不仅仅是一个重大的事件，还可能会改变我的人生。 可是，即使是这样，我为什么写博客的出现仍然代表了一定的意义。 本人也是经过了深思熟虑，在每个日日夜夜思考这个问题。<br>　　我为什么写博客的发生，到底需要如何做到，不我为什么写博客的发生，又会如何产生。 要想清楚，我为什么写博客，到底是一种怎么样的存在。 每个人都不得不面对这些问题。 在面对这种问题时， 本人也是经过了深思熟虑，在每个日日夜夜思考这个问题。 现在，解决我为什么写博客的问题，是非常非常重要的。 所以， 德谟克利特在不经意间这样说过，节制使快乐增加并使享受加强。这不禁令我深思。 问题的关键究竟为何？ 我为什么写博客的发生，到底需要如何做到，不我为什么写博客的发生，又会如何产生。 屠格涅夫说过一句富有哲理的话，你想成为幸福的人吗？但愿你首先学会吃得起苦。这不禁令我深思。 我们一般认为，抓住了问题的关键，其他一切则会迎刃而解。 生活中，若我为什么写博客出现了，我们就不得不考虑它出现了的事实。 冯学峰曾经说过，当一个人用工作去迎接光明，光明很快就会来照耀着他。这似乎解答了我的疑惑。 富勒在不经意间这样说过，苦难磨炼一些人，也毁灭另一些人。带着这句话，我们还要更加慎重的审视这个问题： 那么， 每个人都不得不面对这些问题。 在面对这种问题时， 现在，解决我为什么写博客的问题，是非常非常重要的。 所以， 这种事实对本人来说意义重大，相信对这个世界也是有一定意义的。 问题的关键究竟为何？ 现在，解决我为什么写博客的问题，是非常非常重要的。 所以， 带着这些问题，我们来审视一下我为什么写博客。 从这个角度来看， 既然如此， 我为什么写博客，到底应该如何实现。 从这个角度来看， 一般来说， 带着这些问题，我们来审视一下我为什么写博客。 总结的来说， 我们一般认为，抓住了问题的关键，其他一切则会迎刃而解。 吉格·金克拉说过一句富有哲理的话，如果你能做梦，你就能实现它。这似乎解答了我的疑惑。 对我个人而言，我为什么写博客不仅仅是一个重大的事件，还可能会改变我的人生。 那么， 邓拓曾经说过，越是没有本领的就越加自命不凡。这句话语虽然很短，但令我浮想联翩。 叔本华在不经意间这样说过，普通人只想到如何度过时间，有才能的人设法利用时间。我希望诸位也能好好地体会这句话。 我认为， 卡耐基在不经意间这样说过，一个不注意小事情的人，永远不会成就大事业。这句话语虽然很短，但令我浮想联翩。 易卜生说过一句富有哲理的话，伟大的事业，需要决心，能力，组织和责任感。我希望诸位也能好好地体会这句话。 那么， 我为什么写博客，发生了会如何，不发生又会如何。 而这些并不是完全重要，更加重要的问题是， 生活中，若我为什么写博客出现了，我们就不得不考虑它出现了的事实。 我们一般认为，抓住了问题的关键，其他一切则会迎刃而解。 可是，即使是这样，我为什么写博客的出现仍然代表了一定的意义。 吉格·金克拉说过一句富有哲理的话，如果你能做梦，你就能实现它。我希望诸位也能好好地体会这句话。 这种事实对本人来说意义重大，相信对这个世界也是有一定意义的。 既然如此， 维龙在不经意间这样说过，要成功不需要什么特别的才能，只要把你能做的小事做得好就行了。这似乎解答了我的疑惑。 我们都知道，只要有意义，那么就必须慎重考虑。 既然如此。<br>　　生活中，若我为什么写博客出现了，我们就不得不考虑它出现了的事实。 维龙在不经意间这样说过，要成功不需要什么特别的才能，只要把你能做的小事做得好就行了。这句话语虽然很短，但令我浮想联翩。 从这个角度来看， 在这种困难的抉择下，本人思来想去，寝食难安。 既然如此， 我为什么写博客，到底应该如何实现。 在这种困难的抉择下，本人思来想去，寝食难安。 所谓我为什么写博客，关键是我为什么写博客需要如何写。 就我个人来说，我为什么写博客对我的意义，不能不说非常重大。 要想清楚，我为什么写博客，到底是一种怎么样的存在。 在这种困难的抉择下，本人思来想去，寝食难安。 那么， 爱迪生说过一句富有哲理的话，失败也是我需要的，它和成功对我一样有价值。带着这句话，我们还要更加慎重的审视这个问题。</p>
+<hr>
+<hr>
+<p>　　厉害，你竟然真的看完了！哈哈，这是项目地址，你也可以来试试呐ｸﾞｯ!(๑•̀ㅂ•́)و✧:<br><a href="https://github.com/menzi11/BullshitGenerator">https://github.com/menzi11/BullshitGenerator</a></p>
+]]></content>
+      <categories>
+        <category>浮生记</category>
+      </categories>
+  </entry>
+</search>
