@@ -340,59 +340,6 @@
       </tags>
   </entry>
   <entry>
-    <title>K2（路由）老矣，尚能饭否？①</title>
-    <url>/2020/03/03/K2%EF%BC%88%E8%B7%AF%E7%94%B1%EF%BC%89%E8%80%81%E7%9F%A3%EF%BC%8C%E5%B0%9A%E8%83%BD%E9%A5%AD%E5%90%A6%EF%BC%9F%20%20%E2%91%A0/</url>
-    <content><![CDATA[<h2 id="设置路由拨号和实现DDNS远程访问"><a href="#设置路由拨号和实现DDNS远程访问" class="headerlink" title="设置路由拨号和实现DDNS远程访问"></a><p align="center">设置路由拨号和实现DDNS远程访问</p></h2><p>　　在斐讯辉煌之际，鄙人有幸上车，以364软妹币拿下这款理财产品，之后没多久斐讯就倒闭跑路了，万千产品今犹在，不见当年斐讯狂。</p>
-<span id="more"></span>
-<p>　　官方固件没什么可说的，求稳就用官改，我一直用的H大的Padavan固件，这里贴上tg地址，有需求的可以看看：<a href="https://t.me/pdcn1/221">tg地址</a>，至于刷机我就不多说了，恩山多逛逛就会了。</p>
-<p>　　上一次说了中兴F677V2改桥接，关闭残废WIFI，也算是尽了它的使命，接下来的事就交给路由器来处理吧！</p>
-<p>　　<strong>1：拨号上网</strong></p>
-<p>　　外部网络-外网设置-外网连接类型：PPPoE：拨号，在PPPoE 和 PPP VPN 客户端设置里设置用户名和密码就可以了。<br><img src="https://i.loli.net/2020/05/05/mfilW9NQB2zuxda.png" alt="7.png"></p>
-<p>　　<strong>2：DDNS&amp;远程访问</strong></p>
-<p>　　远程访问需要知道公网ip和端口，运营商给我们分配的公网大都是动态的，也就是说它会变，要准确知道每次更换的IP地址就需要DDNS了。</p>
-<p>　　DDNS（Dynamic Domain Name Server，动态域名服务）是将用户的动态IP地址映射到一个固定的域名解析服务上，用户每次连接网络的时候客户端程序就会通过信息传递把该主机的动态IP地址传送给位于服务商主机上的服务器程序，服务器程序负责提供DNS服务并实现动态域名解析。</p>
-<p>　　花生壳是一个不错的选择，注册后会给你你个免费的域名，虽然很长很难记，但是毕竟它免费啊。<br><img src="https://i.loli.net/2020/05/05/3DXzqRY2amZIJrC.jpg" alt="Screenshot_20200505-121923.jpg"><br>　　<br>　　注册完要及时进行实名认证，不然过几天解析服务会停止。</p>
-<p>　　在路由器外部网络内，会有一个DDNS功能，不过咱们不用它，用自定义脚本，方便快捷又高效。</p>
-<ul>
-<li>打开自定义设置-脚本-自定义脚本0（功能配置）。<br>找到</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 如何在路由器中设置花生壳服务</span><br><span class="line">#&#x2F;tmp&#x2F;sh_ddns.sh &#x2F;tmp&#x2F;orayddns.log &#39;http:&#x2F;&#x2F;您的花生壳帐号:您的帐号密码@ddns.oray.com&#x2F;ph&#x2F;update?hostname&#x3D;你的ddns域名&#39; &amp;</span><br></pre></td></tr></table></figure>
-
-<p>　　可以看到里面有两个可选服务，一个orayddns一个3322ddns，我们用一个orayddns就行了，填上你的用户名和密码，删除<code>/tmp</code>之前的<code>#</code>，如下图，应用本面设置就可以了。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;tmp&#x2F;sh_ddns.sh &#x2F;tmp&#x2F;orayddns.log &#39;http:&#x2F;&#x2F;184××××××××:×××××××@ddns.oray.com&#x2F;ph&#x2F;update?hostname&#x3D;2××××××××.zicp.vip&#39; &amp;</span><br></pre></td></tr></table></figure>
-<p><img src="https://i.loli.net/2020/05/05/YOBugmpaVFZ1PK4.png" alt="8.png"></p>
-<p>　　注意后面的域名要换成你的。</p>
-<p>　　在花生壳里点击域名试试，是不是出现域名IP地址指向的IP了？</p>
-<p><img src="https://i.loli.net/2020/05/05/GfxmvHQ637LqlpW.jpg" alt="Screenshot_20200505-122757__01.jpg"></p>
-<p>　　3322ddns同理</p>
-<ul>
-<li>点击防火墙-从外网访问路由器服务</li>
-<li>打开允许从互联网设置</li>
-<li>互联网设置通信端口自行填写，注意端口范围和避免填写常用端口，这里我设置的：6688</li>
-<li>打开允许外网 HTTPS 访问Web服务    </li>
-<li>外网 HTTPS 访问 Web 服务端口自行填写，注意端口范围和避免填写常用端口，这里我设置的：6689</li>
-</ul>
-<p><img src="https://i.loli.net/2020/05/05/kyucXmvZ9zwgNUI.png" alt="9.png"></p>
-<p>　　应用设置，第一步完成，下面进行端口转发。</p>
-<ul>
-<li>打开外部网络-端口转发（UPnP）</li>
-<li>服务名称：自定义，自己知道是干啥的端口即可，我写的是K2</li>
-<li>源IP地址：暂不填写，默认全部</li>
-<li>端口范围：刚才设置的6688</li>
-<li>内网IP：路由登录IP，老毛子固件默认是192.168.123.1</li>
-<li>本地端口：和上面一样6688</li>
-<li>协议：TCP/UDP</li>
-</ul>
-<p><img src="https://i.loli.net/2020/05/05/cCoED2xV9MtvHuZ.png" alt="10.png"><br><img src="https://i.loli.net/2020/05/05/znquVfxbN5g9dA7.png" alt="11.png"></p>
-<p>　　点击+号，点击应用设置即可，现在就可以试试远程访问路由器了，浏览器输入你的花生壳域名:你设置的端口，例如我的：2×××××××.zicp.vip:6688就可以了。</p>
-<hr>
-<p>　　此系列教程包括但不仅限于k2路由，只要是老毛子padvan固件，都是一样的操作。</p>
-]]></content>
-      <categories>
-        <category>路由器</category>
-      </categories>
-  </entry>
-  <entry>
     <title>K2（路由）老矣，尚能饭否？②</title>
     <url>/2020/03/09/K2%EF%BC%88%E8%B7%AF%E7%94%B1%EF%BC%89%E8%80%81%E7%9F%A3%EF%BC%8C%E5%B0%9A%E8%83%BD%E9%A5%AD%E5%90%A6%EF%BC%9F%E2%91%A1/</url>
     <content><![CDATA[<h2 id="开启KMS服务以激活Windows和office"><a href="#开启KMS服务以激活Windows和office" class="headerlink" title="开启KMS服务以激活Windows和office"></a><p align="center">开启KMS服务以激活Windows和office</p></h2><p>　　KMS激活网上有很多共享服务器和相关软件，既然咱们的路由器有此功能，何不用咱自己的呢，还能给周围小伙伴们激活相关产品。</p>
@@ -453,6 +400,59 @@
 <p>　　还有就是一定要用<strong>管理员</strong>运行CMD或者PowerShell，一定奥！</p>
 <h1 id="windows手动激活命令："><a href="#windows手动激活命令：" class="headerlink" title="windows手动激活命令："></a>windows手动激活命令：</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 卸载当前产品密钥</span><br><span class="line">slmgr.vbs &#x2F;upk </span><br><span class="line"># 设置KMS服务器</span><br><span class="line">slmgr.vbs &#x2F;skms 192.168.123.1 </span><br><span class="line">#安装&#x2F;替换密钥</span><br><span class="line">slmgr.vbs &#x2F;ipk XXXXX-XXXXX-XXXXX-XXXXX-XXXXX </span><br><span class="line"># 自动在线激活Windows</span><br><span class="line">slmgr.vbs &#x2F;ato </span><br><span class="line">#查看激活状态</span><br><span class="line">slmgr.vbs &#x2F;xpr </span><br></pre></td></tr></table></figure>
 <p>　　<code>XXXXX-XXXXX-XXXXX-XXXXX-XXXXX</code>代表的是密钥，可找Windows对应版本的密钥。</p>
+<hr>
+<p>　　此系列教程包括但不仅限于k2路由，只要是老毛子padvan固件，都是一样的操作。</p>
+]]></content>
+      <categories>
+        <category>路由器</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>K2（路由）老矣，尚能饭否？①</title>
+    <url>/2020/03/03/K2%EF%BC%88%E8%B7%AF%E7%94%B1%EF%BC%89%E8%80%81%E7%9F%A3%EF%BC%8C%E5%B0%9A%E8%83%BD%E9%A5%AD%E5%90%A6%EF%BC%9F%20%20%E2%91%A0/</url>
+    <content><![CDATA[<h2 id="设置路由拨号和实现DDNS远程访问"><a href="#设置路由拨号和实现DDNS远程访问" class="headerlink" title="设置路由拨号和实现DDNS远程访问"></a><p align="center">设置路由拨号和实现DDNS远程访问</p></h2><p>　　在斐讯辉煌之际，鄙人有幸上车，以364软妹币拿下这款理财产品，之后没多久斐讯就倒闭跑路了，万千产品今犹在，不见当年斐讯狂。</p>
+<span id="more"></span>
+<p>　　官方固件没什么可说的，求稳就用官改，我一直用的H大的Padavan固件，这里贴上tg地址，有需求的可以看看：<a href="https://t.me/pdcn1/221">tg地址</a>，至于刷机我就不多说了，恩山多逛逛就会了。</p>
+<p>　　上一次说了中兴F677V2改桥接，关闭残废WIFI，也算是尽了它的使命，接下来的事就交给路由器来处理吧！</p>
+<p>　　<strong>1：拨号上网</strong></p>
+<p>　　外部网络-外网设置-外网连接类型：PPPoE：拨号，在PPPoE 和 PPP VPN 客户端设置里设置用户名和密码就可以了。<br><img src="https://i.loli.net/2020/05/05/mfilW9NQB2zuxda.png" alt="7.png"></p>
+<p>　　<strong>2：DDNS&amp;远程访问</strong></p>
+<p>　　远程访问需要知道公网ip和端口，运营商给我们分配的公网大都是动态的，也就是说它会变，要准确知道每次更换的IP地址就需要DDNS了。</p>
+<p>　　DDNS（Dynamic Domain Name Server，动态域名服务）是将用户的动态IP地址映射到一个固定的域名解析服务上，用户每次连接网络的时候客户端程序就会通过信息传递把该主机的动态IP地址传送给位于服务商主机上的服务器程序，服务器程序负责提供DNS服务并实现动态域名解析。</p>
+<p>　　花生壳是一个不错的选择，注册后会给你你个免费的域名，虽然很长很难记，但是毕竟它免费啊。<br><img src="https://i.loli.net/2020/05/05/3DXzqRY2amZIJrC.jpg" alt="Screenshot_20200505-121923.jpg"><br>　　<br>　　注册完要及时进行实名认证，不然过几天解析服务会停止。</p>
+<p>　　在路由器外部网络内，会有一个DDNS功能，不过咱们不用它，用自定义脚本，方便快捷又高效。</p>
+<ul>
+<li>打开自定义设置-脚本-自定义脚本0（功能配置）。<br>找到</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 如何在路由器中设置花生壳服务</span><br><span class="line">#&#x2F;tmp&#x2F;sh_ddns.sh &#x2F;tmp&#x2F;orayddns.log &#39;http:&#x2F;&#x2F;您的花生壳帐号:您的帐号密码@ddns.oray.com&#x2F;ph&#x2F;update?hostname&#x3D;你的ddns域名&#39; &amp;</span><br></pre></td></tr></table></figure>
+
+<p>　　可以看到里面有两个可选服务，一个orayddns一个3322ddns，我们用一个orayddns就行了，填上你的用户名和密码，删除<code>/tmp</code>之前的<code>#</code>，如下图，应用本面设置就可以了。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;tmp&#x2F;sh_ddns.sh &#x2F;tmp&#x2F;orayddns.log &#39;http:&#x2F;&#x2F;184××××××××:×××××××@ddns.oray.com&#x2F;ph&#x2F;update?hostname&#x3D;2××××××××.zicp.vip&#39; &amp;</span><br></pre></td></tr></table></figure>
+<p><img src="https://i.loli.net/2020/05/05/YOBugmpaVFZ1PK4.png" alt="8.png"></p>
+<p>　　注意后面的域名要换成你的。</p>
+<p>　　在花生壳里点击域名试试，是不是出现域名IP地址指向的IP了？</p>
+<p><img src="https://i.loli.net/2020/05/05/GfxmvHQ637LqlpW.jpg" alt="Screenshot_20200505-122757__01.jpg"></p>
+<p>　　3322ddns同理</p>
+<ul>
+<li>点击防火墙-从外网访问路由器服务</li>
+<li>打开允许从互联网设置</li>
+<li>互联网设置通信端口自行填写，注意端口范围和避免填写常用端口，这里我设置的：6688</li>
+<li>打开允许外网 HTTPS 访问Web服务    </li>
+<li>外网 HTTPS 访问 Web 服务端口自行填写，注意端口范围和避免填写常用端口，这里我设置的：6689</li>
+</ul>
+<p><img src="https://i.loli.net/2020/05/05/kyucXmvZ9zwgNUI.png" alt="9.png"></p>
+<p>　　应用设置，第一步完成，下面进行端口转发。</p>
+<ul>
+<li>打开外部网络-端口转发（UPnP）</li>
+<li>服务名称：自定义，自己知道是干啥的端口即可，我写的是K2</li>
+<li>源IP地址：暂不填写，默认全部</li>
+<li>端口范围：刚才设置的6688</li>
+<li>内网IP：路由登录IP，老毛子固件默认是192.168.123.1</li>
+<li>本地端口：和上面一样6688</li>
+<li>协议：TCP/UDP</li>
+</ul>
+<p><img src="https://i.loli.net/2020/05/05/cCoED2xV9MtvHuZ.png" alt="10.png"><br><img src="https://i.loli.net/2020/05/05/znquVfxbN5g9dA7.png" alt="11.png"></p>
+<p>　　点击+号，点击应用设置即可，现在就可以试试远程访问路由器了，浏览器输入你的花生壳域名:你设置的端口，例如我的：2×××××××.zicp.vip:6688就可以了。</p>
 <hr>
 <p>　　此系列教程包括但不仅限于k2路由，只要是老毛子padvan固件，都是一样的操作。</p>
 ]]></content>
