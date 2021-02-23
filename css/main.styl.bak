@@ -45,3 +45,35 @@ for $inject_mixin in hexo-config('injects.mixin')
 // --------------------------------------------------
 for $inject_style in hexo-config('injects.style')
   @import $inject_style;
+
+// 配置全局页面,椭圆化(页面方框变成椭圆的),以及添加透明度(将页面方框透明化)
+.header-inner {                                                                                                                                                                                // 菜单栏
+    border-radius: 30px 30px 30px 30px;
+    box-shadow: 8px 7px 2px 0 rgba(0,0,0,0.12), 7px 4px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12);                      //增加阴影部分
+//    background: rgba(255,255,255,.5);                                                                                                                                         // 增加透明度
+}
+.sidebar-inner {                                                                                                                                                                                // 头衔栏
+    border-radius: 30px 30px 30px 30px;
+    position: absolute;
+    overflow: hidden;
+    box-shadow: 8px 7px 2px 0 rgba(0,0,0,0.12), 7px 4px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12);                      // 增加阴影部分
+//    background: rgba(255,255,255,.5);                                                                                                                                         // 增加透明度
+}
+.post-block {                                                                                                                                                                                  // 主文章页面
+    border-radius: 30px 30px 30px 30px;
+    box-shadow: 8px 7px 2px 0 rgba(0,0,0,0.12), 7px 4px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12);                     // 增加阴影部分
+//    background: rgba(255,255,255,.5);                                                                                                                                         // 增加透明度
+}
+#posts > article + article .post-block {                                                                                                                                           // 后面的文章
+    border-radius: 30px 30px 30px 30px;
+    box-shadow: 10px 10px 3px 0 rgba(0,0,0,0.15), 10px 4px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12);               //增加阴影部分
+//    background: rgba(255,255,255,.5);                                                                                                                                         // 增加透明度
+}
+.pagination {                                                                                                                                                                                   // 页面分页
+    border-radius: 30px 80px 30px 80px;                                                                                                                                        // 扁平化,两边非对称
+    box-shadow: 8px 7px 2px 0 rgba(0,0,0,0.12), 7px 4px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12);                      //增加阴影部分
+//    background: rgba(255,255,255,.5);                                                                                                                                         // 增加透明度
+}
+.menu-item-active a, .menu .menu-item a:hover, .menu .menu-item span.exturl:hover {
+    background: #f9f9f99e;                                                                                                                                                             // 首页菜单选中后,变成淡白色.
+}
