@@ -1291,7 +1291,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #069d73;
+  background: #5346a3;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2862,30 +2862,27 @@ ul.breadcrumb li + li:last-child {
     margin: 8px 0 0;
   }
 }
-.header-inner {
-  border-radius: 15px 15px 15px 15px;
-  box-shadow: 8px 7px 2px 0 rgba(0,0,0,0.12), 7px 4px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12);
+.post-block {
+  border-radius: 15px;
 }
 .sidebar-inner {
-  border-radius: 15px 15px 15px 15px;
-  position: absolute;
-  overflow: hidden;
-  box-shadow: 8px 7px 2px 0 rgba(0,0,0,0.12), 7px 4px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12);
+  border-radius: 15px;
 }
-.post-block {
-  border-radius: 15px 15px 15px 15px;
-  box-shadow: 8px 7px 2px 0 rgba(0,0,0,0.12), 7px 4px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12);
+.header-inner {
+  border-radius: 15px;
 }
-#posts > article + article .post-block {
-  border-radius: 15px 15px 15px 15px;
-  box-shadow: 10px 10px 3px 0 rgba(0,0,0,0.15), 10px 4px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12);
+.back-to-top {
+  border-radius: 7px;
 }
 .pagination {
-  border-radius: 15px 15px 15px 15px;
-  box-shadow: 8px 7px 2px 0 rgba(0,0,0,0.12), 7px 4px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12);
+  border-radius: 15px;
 }
-.menu-item-active a,
-.menu .menu-item a:hover,
-.menu .menu-item span.exturl:hover {
-  background: rgba(249,249,249,0.62);
+.pagination .page-number.current {
+  background: #333;
+  border-top-color: #222;
+  color: #fff;
+  border-radius: 7px;
+}
+.menu .menu-item .badge {
+  background: rgba(34,34,34,0.71);
 }
