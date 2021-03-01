@@ -322,24 +322,6 @@
       </tags>
   </entry>
   <entry>
-    <title>HWID数字许可激活工具</title>
-    <url>/2019/06/08/HWID%E6%95%B0%E5%AD%97%E8%AE%B8%E5%8F%AF%E6%BF%80%E6%B4%BB%E5%B7%A5%E5%85%B7/</url>
-    <content><![CDATA[<p>　　微软在2014年4月8日停止了xp系统的维护和更新，大部分用户都转战的win7，一晃十年过去了，win7用户占据了绝大部分，如今官网发布了公告：历经 10 年，对 Windows 7 的支持已近尾声 — 2020 年 1 月 14 日。我们了解，改变可能会很困难，因此，我们会为你提供有关后续行动的建议，并回答有关停止支持的问题。<span id="more"></span><br>　　自win10发布后微软也是费尽心思想让用户们升级win10，所以就很长一段时间的政策是如果你是win7用户，且系统处于激活状态，无论正版盗版升级到win10后都可以获得数字许可证（除企业版）。<br>　　这是什么概念？白给啊！！那有人就说了，我找工具类kms激活不一样嘛，答案是，，，确实一样。不过咱们是为了啥，毕竟正版用起来确实方便啊，尤其是学计算机的同学，我们买的电脑基本上都是预装的win10家庭中文版，够大部分人办公用了。可能有少部分人不满足家庭中文版的基本功能转战专业版企业版或者教育版，比如我。所以我当初没事干就是从win10家庭中文版重装到win7旗舰版，然后工具激活，再升级到win10专业版，获得了数字许可证，登录我微软账号后获得了与 Microsoft 帐户关联的数字许可证。然后为了纯净就格盘再重装win10专业版，联网自动激活，登录我微软账户，一个洗白党就此诞生，我当时是真能折腾。<br>　　这里先说一下区别，获得数字许可证相当于官网记录了你的电脑主板相关参数，只要你不换主板，无论重装多少次系统，只要是对应版本，在联网后都可以自动激活。<br>与 Microsoft 帐户关联的数字许可证呢，这个就是给予你的微软账号的权力了，一个微软账号可以关联5-8(范围区间)，具体我也不知道多少台电脑，也就是对应版本登录你的账号就可以选择是否激活该未激活电脑。<br>　　然后，，，在微软结束这个活动前，国外有人写了工具，就是模拟电脑环境从win7升级到win10来获得数字许可证，我当时就想，你怎么不早点写出来呢，，，后来国内大牛根据该工具用C重写了该工具，于是HWID数字许可激活工具就流传开来了，这个工具也整合了kms等激活方式，基本上全版本win10都可以用它激活，我是早期在远景论坛下载的，原帖现在也找不到了，就没标注原帖地址，贴上软件运行图</p>
-<p><strong>启动图</strong></p>
-<p><img src="https://i.loli.net/2019/09/09/ym8FBS4csvJAtqr.png" alt="TIM截图20190909212756.png"></p>
-<p><strong>主页面</strong><br><img src="https://i.loli.net/2019/09/09/MmtVCzXwnH7jORK.png" alt="TIM截图20190909212813.png"></p>
-<p><strong>下载地址</strong>：<a href="https://www.lanzous.com/i63k4ha">点我下载</a></p>
-<p>最后罗嗦两句，新系统肯定要比旧系统有优势，重点就在过渡期间，当初win10用户占用率少是什么原因？一是兼容性不好，好多游戏，软件win10兼容不了，二是win10太吃硬盘读写，在固态还没降价普及时大部分办公本以及网吧台式机都是用的机械硬盘，装win10开个机就轻易卡死，磁盘利用率动不动就100%，这要你有个球用。<br>现在好多了，兼容性基本上没问题了，固态硬盘价格也降了，就这么说吧，有固态上win10，没固态用win7，有没有固态用win10简直是两个体验，毕竟我是体验过4G RAM+机械盘+win7/10，4G RAM+固态盘+win7/10，8G RAM+固态盘的男人。</p>
-]]></content>
-      <categories>
-        <category>Softwares For Windows</category>
-      </categories>
-      <tags>
-        <tag>HWID</tag>
-        <tag>Windows</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>K2（路由）老矣，尚能饭否？①</title>
     <url>/2020/03/03/K2%EF%BC%88%E8%B7%AF%E7%94%B1%EF%BC%89%E8%80%81%E7%9F%A3%EF%BC%8C%E5%B0%9A%E8%83%BD%E9%A5%AD%E5%90%A6%EF%BC%9F%20%20%E2%91%A0/</url>
     <content><![CDATA[<h2 id="设置路由拨号和实现DDNS远程访问"><a href="#设置路由拨号和实现DDNS远程访问" class="headerlink" title="设置路由拨号和实现DDNS远程访问"></a><p align="center">设置路由拨号和实现DDNS远程访问</p></h2><p>　　在斐讯辉煌之际，鄙人有幸上车，以364软妹币拿下这款理财产品，之后没多久斐讯就倒闭跑路了，万千产品今犹在，不见当年斐讯狂。</p>
@@ -391,6 +373,24 @@
       <categories>
         <category>路由器</category>
       </categories>
+  </entry>
+  <entry>
+    <title>HWID数字许可激活工具</title>
+    <url>/2019/06/08/HWID%E6%95%B0%E5%AD%97%E8%AE%B8%E5%8F%AF%E6%BF%80%E6%B4%BB%E5%B7%A5%E5%85%B7/</url>
+    <content><![CDATA[<p>　　微软在2014年4月8日停止了xp系统的维护和更新，大部分用户都转战的win7，一晃十年过去了，win7用户占据了绝大部分，如今官网发布了公告：历经 10 年，对 Windows 7 的支持已近尾声 — 2020 年 1 月 14 日。我们了解，改变可能会很困难，因此，我们会为你提供有关后续行动的建议，并回答有关停止支持的问题。<span id="more"></span><br>　　自win10发布后微软也是费尽心思想让用户们升级win10，所以就很长一段时间的政策是如果你是win7用户，且系统处于激活状态，无论正版盗版升级到win10后都可以获得数字许可证（除企业版）。<br>　　这是什么概念？白给啊！！那有人就说了，我找工具类kms激活不一样嘛，答案是，，，确实一样。不过咱们是为了啥，毕竟正版用起来确实方便啊，尤其是学计算机的同学，我们买的电脑基本上都是预装的win10家庭中文版，够大部分人办公用了。可能有少部分人不满足家庭中文版的基本功能转战专业版企业版或者教育版，比如我。所以我当初没事干就是从win10家庭中文版重装到win7旗舰版，然后工具激活，再升级到win10专业版，获得了数字许可证，登录我微软账号后获得了与 Microsoft 帐户关联的数字许可证。然后为了纯净就格盘再重装win10专业版，联网自动激活，登录我微软账户，一个洗白党就此诞生，我当时是真能折腾。<br>　　这里先说一下区别，获得数字许可证相当于官网记录了你的电脑主板相关参数，只要你不换主板，无论重装多少次系统，只要是对应版本，在联网后都可以自动激活。<br>与 Microsoft 帐户关联的数字许可证呢，这个就是给予你的微软账号的权力了，一个微软账号可以关联5-8(范围区间)，具体我也不知道多少台电脑，也就是对应版本登录你的账号就可以选择是否激活该未激活电脑。<br>　　然后，，，在微软结束这个活动前，国外有人写了工具，就是模拟电脑环境从win7升级到win10来获得数字许可证，我当时就想，你怎么不早点写出来呢，，，后来国内大牛根据该工具用C重写了该工具，于是HWID数字许可激活工具就流传开来了，这个工具也整合了kms等激活方式，基本上全版本win10都可以用它激活，我是早期在远景论坛下载的，原帖现在也找不到了，就没标注原帖地址，贴上软件运行图</p>
+<p><strong>启动图</strong></p>
+<p><img src="https://i.loli.net/2019/09/09/ym8FBS4csvJAtqr.png" alt="TIM截图20190909212756.png"></p>
+<p><strong>主页面</strong><br><img src="https://i.loli.net/2019/09/09/MmtVCzXwnH7jORK.png" alt="TIM截图20190909212813.png"></p>
+<p><strong>下载地址</strong>：<a href="https://www.lanzous.com/i63k4ha">点我下载</a></p>
+<p>最后罗嗦两句，新系统肯定要比旧系统有优势，重点就在过渡期间，当初win10用户占用率少是什么原因？一是兼容性不好，好多游戏，软件win10兼容不了，二是win10太吃硬盘读写，在固态还没降价普及时大部分办公本以及网吧台式机都是用的机械硬盘，装win10开个机就轻易卡死，磁盘利用率动不动就100%，这要你有个球用。<br>现在好多了，兼容性基本上没问题了，固态硬盘价格也降了，就这么说吧，有固态上win10，没固态用win7，有没有固态用win10简直是两个体验，毕竟我是体验过4G RAM+机械盘+win7/10，4G RAM+固态盘+win7/10，8G RAM+固态盘的男人。</p>
+]]></content>
+      <categories>
+        <category>Softwares For Windows</category>
+      </categories>
+      <tags>
+        <tag>HWID</tag>
+        <tag>Windows</tag>
+      </tags>
   </entry>
   <entry>
     <title>K2（路由）老矣，尚能饭否？②</title>
@@ -498,51 +498,6 @@
       <categories>
         <category>路由器</category>
       </categories>
-  </entry>
-  <entry>
-    <title>WindowsStore_LTSC 2019</title>
-    <url>/2019/07/07/WindowsStore_LTSC%202019/</url>
-    <content><![CDATA[<p>　　Win10 TLSB属于Win10企业版，LTSB就是长期支持更新分支（Long Time Service Branch），这个版本专门给一些企业用户的，相比一般版本会缺少很多新功能，例如没有应用商店、没有Edge浏览器，没有cortana，大家可以把Win10 TLSB看成是Windows10企业版的精简版本。<span id="more"></span>LTSB是英语Long Term Servicing Branch的首字母缩写，汉语一般翻译成长期服务分支。LTSB分支是专门面向企业版的，Win10企业版LTSB分支支持周期长达10年，但只会获取安全更新(应该也可以获取热补丁更新)，而不获取功能更新，即不会增加任何新功能。这也是Win10企业版LTSB分支和Win10企业版最根本性的区别。<br>　　Windows 10 LTSC 现在改名成了 LTSC(Long Term Support Channel)。距离上一个长期服务LTSB版本发布已过去近三年了(微软仅发布过2015LTSB、2016LTSB两个版本，之后杳无音信)，18年10月3日微软发布了 Windows 10 RS5，终于再次发布了 Win10 LTSC 2019，且该版本已包含暗黑主题。<br>　　现在很少有时间折腾电脑了，我的办公本运行起来最新版也吃力了，干脆直接装企业版ltsc2109了。之前用专业版时习惯了用win10的应用商店，不得不说UWP应用是真的好用（虽然功能少点，但是界面和流畅度溜的很），现在一下没了win10商店挺不舒服的，于是就想装回win10商店，百度了百度，最笨的办法就是拆包，用命令行打组件补丁包，还要注意修改权限之类的balabala。。。看了看我想肯定有比我更懒的人，他们肯定有更简单的，然后我去了gayhub，发现了这个项目：<a href="https://github.com/kkkgo/LTSC-Add-MicrosoftStore">https://github.com/kkkgo/LTSC-Add-MicrosoftStore</a><br>嘤垂丝汀~为照顾某些同学爬墙费尽我就贴上原项目教程来了<br>　　为Windows 10 Enterprise LTSC增加应用商店<br>适用于Windows 10 Enterprise LTSC 2019<br>下载地址：<a href="https://codeload.github.com/kkkgo/LTSC-Add-MicrosoftStore/zip/2019">https://codeload.github.com/kkkgo/LTSC-Add-MicrosoftStore/zip/2019</a><br>要开始安装, 请打包下载后用右键管理员运行</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Add-Store.cmd</span><br></pre></td></tr></table></figure>
-<p>如果您不想安装App Installer / Purchase App / Xbox，请在运行安装之前删除对应的.appxbundle后缀的文件。但是，如果您计划安装游戏，或带有购买选项的应用，则不要删除。<br>如果装完之后商店仍然打不开，请先重启试试。如果仍然不行，请以管理员身份打开命令提示符并运行以下命令之后，然后再重启试试。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">PowerShell -ExecutionPolicy Unrestricted -Command &quot;&amp; &#123;$manifest &#x3D; (Get-AppxPackage Microsoft.WindowsStore).InstallLocation + &#39;\AppxManifest.xml&#39; ; Add-AppxPackage -DisableDevelopmentMode -Register $manifest&#125;&quot;</span><br></pre></td></tr></table></figure>
-<p>商店修复<br>Win+R打开运行，输入</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">WSReset.exe</span><br></pre></td></tr></table></figure>
-<p>回车。<br>该命令会清空并重置Windows Store商店的所有缓存。<br>该脚本由abbodi1406贡献：<br><a href="https://forums.mydigitallife.net/threads/add-store-to-windows-10-enterprise-ltsc-LTSC.70741/page-30#post-1468779">https://forums.mydigitallife.net/threads/add-store-to-windows-10-enterprise-ltsc-LTSC.70741/page-30#post-1468779</a></p>
-<hr>
-<p>　　于是乎我就装上了，可能有同学感觉还是麻烦，于是还有更简单的，后来逛吾爱时我发现有大神整合了该组件包，并打包成了exe可执行文件，双击鼠标就行了。原帖在这<br><a href="https://www.52pojie.cn/thread-868710-1-1.html">https://www.52pojie.cn/thread-868710-1-1.html</a><br>于是我就下载下来了，为了安全<del>好奇心驱使</del>我用UniExtract解包看了一下，奥豁~<br><strong>组件图</strong><br><img src="https://i.loli.net/2019/09/10/TRg6mpzBL5lAMFk.png" alt="TIM截图20190909212608.png"><br>　　确实够安全，打开bat文件看了看，现在把批处理命令贴出来</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@ECHO OFF&amp;PUSHD %~DP0 &amp;TITLE Windows Store for LTSC x64 </span><br><span class="line">::author MoeClub by Vicer**感谢这位作者（笔者言）**</span><br><span class="line">setlocal enabledelayedexpansion</span><br><span class="line">mode con cols&#x3D;60 lines&#x3D;30</span><br><span class="line">color 87</span><br><span class="line">cd.&gt;%WINDIR%\GetAdmin</span><br><span class="line">if exist %WINDIR%\GetAdmin (del &#x2F;f &#x2F;q &quot;%WINDIR%\GetAdmin&quot;) else (</span><br><span class="line">echo CreateObject^(&quot;Shell.Application&quot;^).ShellExecute &quot;%~s0&quot;, &quot;%*&quot;, &quot;&quot;, &quot;runas&quot;, 1 &gt;&gt; &quot;%temp%\Admin.vbs&quot;</span><br><span class="line">&quot;%temp%\Admin.vbs&quot;</span><br><span class="line">del &#x2F;s &#x2F;q &quot;%temp%\Admin.vbs&quot;</span><br><span class="line">exit &#x2F;b 2)</span><br><span class="line">cls</span><br><span class="line"></span><br><span class="line">if not exist &quot;%ProgramFiles%\WindowsApps&quot; goto error_exit</span><br><span class="line">if not exist &quot;%WINDIR%\SysWOW64&quot; goto error_exit</span><br><span class="line"></span><br><span class="line">::grant perm</span><br><span class="line">TAKEOWN &#x2F;F &quot;%ProgramFiles%\WindowsApps&quot; &#x2F;A &gt;NUL</span><br><span class="line">ICACLS &quot;%ProgramFiles%\WindowsApps&quot; &#x2F;grant:r &quot;Administrators:F&quot; &#x2F;Q &gt;NUL</span><br><span class="line">ICACLS &quot;%ProgramFiles%\WindowsApps&quot; &#x2F;grant:r &quot;All Application Packages:RX&quot; &#x2F;setintegritylevel L:I &#x2F;inheritance:e &#x2F;Q &gt;NUL</span><br><span class="line"></span><br><span class="line">::copy</span><br><span class="line">XCOPY &#x2F;Q&#x2F;Y&#x2F;E&#x2F;H&#x2F;O &quot;%~DP0WindowsApps\*&quot; &quot;%ProgramFiles%\WindowsApps\&quot; &gt;NUL 2&gt;NUL</span><br><span class="line"></span><br><span class="line">::restore perm</span><br><span class="line">ICACLS &quot;%ProgramFiles%\WindowsApps&quot; &#x2F;setowner &quot;NT Service\TrustedInstaller&quot; &#x2F;Q &gt;NUL </span><br><span class="line">ICACLS &quot;%ProgramFiles%\WindowsApps&quot; &#x2F;grant:r &quot;Administrators:RX&quot; &#x2F;Q &gt;NUL </span><br><span class="line">ICACLS &quot;%ProgramFiles%\WindowsApps&quot; &#x2F;reset &gt;NUL</span><br><span class="line"></span><br><span class="line">::install</span><br><span class="line">FOR &#x2F;F &quot;delims&#x3D;&quot; %%i IN (Package.txt) DO (PowerShell -Command &quot;&amp; &#123;Add-AppXPackage -Path &#39;%ProgramFiles%\WindowsApps\%%i\AppXManifest.xml&#39; -Register -DisableDevelopmentMode&#125;&quot;)</span><br><span class="line"></span><br><span class="line">:success_exit</span><br><span class="line">ECHO.</span><br><span class="line">ECHO Install finish.</span><br><span class="line">TIMEOUT &#x2F;T 3 &#x2F;NOBREAK &gt;NUL 2&gt;NUL</span><br><span class="line">exit 0</span><br><span class="line"></span><br><span class="line">:error_exit</span><br><span class="line">ECHO.</span><br><span class="line">ECHO Not support this device.</span><br><span class="line">TIMEOUT &#x2F;T 5 &#x2F;NOBREAK &gt;NUL 2&gt;NUL</span><br><span class="line">exit 1</span><br></pre></td></tr></table></figure>
-<p><strong>卸载命令单拉出来</strong><br>::unstal（卸载命令）</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Get-AppxPackage Microsoft.XboxIdentityProvider |Remove-AppxPackage</span><br><span class="line">Get-AppxPackage Microsoft.StorePurchaseApp |Remove-AppxPackage</span><br><span class="line">Get-AppxPackage Microsoft.WindowsStore |Remove-AppxPackage</span><br><span class="line">Get-AppxPackage Microsoft.Advertising.Xaml |Remove-AppxPackage</span><br><span class="line">Get-AppxPackage Microsoft.VCLibs.140.00 |Remove-AppxPackage</span><br><span class="line">Get-AppxPackage Microsoft.NET.Native.Framework.1.6 |Remove-AppxPackage</span><br><span class="line">Get-AppxPackage Microsoft.NET.Native.Runtime.1.6 |Remove-AppxPackage</span><br></pre></td></tr></table></figure>
-<p>这下可以放心了，说一下，我仅仅解包查看了内部结构，并未做出任何修改和打包处理，再次感谢作者。<br>然后我在我室友电脑上成功安装，第一次打开可能是英文，商店检测更新，更新完后就是中文啦</p>
-<p><strong>商店主页面</strong></p>
-<p><img src="https://i.loli.net/2019/09/10/WnzGiXmpZsldht9.png" alt="TIM截图20190909212317.png"></p>
-]]></content>
-      <categories>
-        <category>Softwares For Windows</category>
-      </categories>
-      <tags>
-        <tag>Windows</tag>
-        <tag>Software</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>office2016和visio同时安装</title>
-    <url>/2019/09/03/office2016%E5%92%8Cvisio%E5%90%8C%E6%97%B6%E5%AE%89%E8%A3%85/</url>
-    <content><![CDATA[<p>　　最近朋友找我帮忙给一台主机重装系统并安装好office2016及其visio2016，在安装完office后再安装visio时就傻了眼，提示框忘记截图了，大概意思就是您已安装office（32位），因为您计算机上已经安装了这些64位程序balabala。。。<span id="more"></span><br>百度了下才发现正常条件下是不能同时安装的，网上有些教程没什么用或者不详细，我在这详细说一下。<br>我是在msdn：<a href="https://msdn.itellyou.cn/">https://msdn.itellyou.cn/</a> 下载的官方镜像属性入下图，<br><img src="https://i.loli.net/2019/09/09/JTbWeMSwiYBKNOm.png" alt="TIM图片20190909184613.png"><br>分别是visio和office，差不多大，百度了下才知道实际上office2016iso镜像里是包含有visio的，同理visio也是，与我经常安装的office2010不同，2016版并不能在安装时自定义安装组件，也就是你点击安装，他会默认把所有的组件都安装到c盘，没错，连盘符你都没法选择。<br>我们去官网下载Office Deployment Tool工具：<a href="https://www.microsoft.com/en-us/download/details.aspx?id=49117">https://www.microsoft.com/en-us/download/details.aspx?id=49117</a><br>我们安装到d盘Tool文件夹，发现里面有这四个文件，<br><img src="https://i.loli.net/2019/09/09/UxLIeXDkvqMhcdb.png" alt="TIM图片20190909185735.png"><br>前三个就是配置文件，最后一个就是安装程序，按照电脑处理器架构选择修改哪个配置文件，比如我的电脑是64位的，我就选择修改第一个，（32位电脑修改X86的）右键编辑它，“Configuration”和“/Configuration”(这里去掉了Configuration两边的&lt;&gt;符号来适应md格式)之间的就是默认的配置文件，我们修改如下</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;Configuration&gt;</span><br><span class="line">  &lt;Add SourcePath&#x3D;&quot;A:\&quot; OfficeClientEdition&#x3D;&quot;64&quot; Branch&#x3D;&quot;Current&quot;&gt;</span><br><span class="line">    &lt;!-- &lt;Product ID&#x3D;&quot;O365ProPlusRetail&quot;&gt;</span><br><span class="line">      &lt;Language ID&#x3D;&quot;en-us&quot; &#x2F;&gt;</span><br><span class="line">    &lt;&#x2F;Product&gt; --&gt;</span><br><span class="line">    &lt;Product ID&#x3D;&quot;VisioProRetail&quot;&gt;</span><br><span class="line">      &lt;Language ID&#x3D;&quot;zh-cn&quot; &#x2F;&gt;</span><br><span class="line">    &lt;&#x2F;Product&gt;</span><br><span class="line">    &lt;Product ID&#x3D;&quot;proplusretail&quot;&gt;</span><br><span class="line">      &lt;Language ID&#x3D;&quot;zh-cn&quot; &#x2F;&gt;</span><br><span class="line">      &lt;ExcludeApp ID&#x3D;&quot;Access&quot; &#x2F;&gt;</span><br><span class="line">      &lt;ExcludeApp ID&#x3D;&quot;Publisher&quot; &#x2F;&gt;</span><br><span class="line">      &lt;ExcludeApp ID&#x3D;&quot;Groove&quot; &#x2F;&gt;</span><br><span class="line">      &lt;ExcludeApp ID&#x3D;&quot;Lync&quot; &#x2F;&gt;</span><br><span class="line">      &lt;ExcludeApp ID&#x3D;&quot;Outlook&quot; &#x2F;&gt;</span><br><span class="line">&lt;ExcludeApp ID&#x3D;&quot;Skype&quot; &#x2F;&gt;</span><br><span class="line">    &lt;&#x2F;Product&gt;</span><br><span class="line">  &lt;&#x2F;Add&gt;</span><br><span class="line">  &lt;!--  &lt;Updates Enabled&#x3D;&quot;TRUE&quot; Branch&#x3D;&quot;Current&quot; &#x2F;&gt; --&gt;</span><br><span class="line">  &lt;!--  &lt;Display Level&#x3D;&quot;None&quot; AcceptEULA&#x3D;&quot;TRUE&quot; &#x2F;&gt;  --&gt;</span><br><span class="line">  &lt;!--  &lt;Property Name&#x3D;&quot;AUTOACTIVATE&quot; Value&#x3D;&quot;1&quot; &#x2F;&gt;  --&gt;</span><br><span class="line">&lt;&#x2F;Configuration&gt;</span><br></pre></td></tr></table></figure>
-<p>其中，我们把上面两个镜像其中的一个双击打开，他就会自动挂载光驱（这是win10很早之前就自带的功能了，不用使用第三方软件了，很方便），如图我们可以看到电脑将驱动器挂载为H：盘，<br><img src="https://i.loli.net/2019/09/09/f68zCwthXQ5uNd2.png" alt="TIM图片20190909193803.png"><br>所以我们修改&lt;Add SourcePath=”A:&quot;为&lt;Add SourcePath=”H:&quot;，我们电脑是64位，所以<br>OfficeClientEdition=”64”不用修改，32位的机器修改为32。<br>修改完保存，在这个配置文件所在目录下按住shift键，鼠标右键点击：在此处打开Powershell 窗口，<br><img src="https://i.loli.net/2019/09/09/d9T6brcmJjfopQx.png" alt="TIM图片20190909194027.png"><br>也可以打开cmd窗口，cd到该目录，运行</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">D:\tool&gt;setup.exe &#x2F;configure configuration-Office365-x64.xml</span><br></pre></td></tr></table></figure>
-<p>就ok啦（这里注意配置文件名）。用PowerShell时可能遇到需要在命令行前加“./”，如果提示就加上。<br>setup.exe会自动运行，按照你的配置文件展开安装啦。</p>
-]]></content>
-      <categories>
-        <category>Softwares For Windows</category>
-      </categories>
-      <tags>
-        <tag>Windows</tag>
-        <tag>office</tag>
-        <tag>visio</tag>
-      </tags>
   </entry>
   <entry>
     <title>《无题》</title>
@@ -757,6 +712,33 @@
       </tags>
   </entry>
   <entry>
+    <title>WindowsStore_LTSC 2019</title>
+    <url>/2019/07/07/WindowsStore_LTSC%202019/</url>
+    <content><![CDATA[<p>　　Win10 TLSB属于Win10企业版，LTSB就是长期支持更新分支（Long Time Service Branch），这个版本专门给一些企业用户的，相比一般版本会缺少很多新功能，例如没有应用商店、没有Edge浏览器，没有cortana，大家可以把Win10 TLSB看成是Windows10企业版的精简版本。<span id="more"></span>LTSB是英语Long Term Servicing Branch的首字母缩写，汉语一般翻译成长期服务分支。LTSB分支是专门面向企业版的，Win10企业版LTSB分支支持周期长达10年，但只会获取安全更新(应该也可以获取热补丁更新)，而不获取功能更新，即不会增加任何新功能。这也是Win10企业版LTSB分支和Win10企业版最根本性的区别。<br>　　Windows 10 LTSC 现在改名成了 LTSC(Long Term Support Channel)。距离上一个长期服务LTSB版本发布已过去近三年了(微软仅发布过2015LTSB、2016LTSB两个版本，之后杳无音信)，18年10月3日微软发布了 Windows 10 RS5，终于再次发布了 Win10 LTSC 2019，且该版本已包含暗黑主题。<br>　　现在很少有时间折腾电脑了，我的办公本运行起来最新版也吃力了，干脆直接装企业版ltsc2109了。之前用专业版时习惯了用win10的应用商店，不得不说UWP应用是真的好用（虽然功能少点，但是界面和流畅度溜的很），现在一下没了win10商店挺不舒服的，于是就想装回win10商店，百度了百度，最笨的办法就是拆包，用命令行打组件补丁包，还要注意修改权限之类的balabala。。。看了看我想肯定有比我更懒的人，他们肯定有更简单的，然后我去了gayhub，发现了这个项目：<a href="https://github.com/kkkgo/LTSC-Add-MicrosoftStore">https://github.com/kkkgo/LTSC-Add-MicrosoftStore</a><br>嘤垂丝汀~为照顾某些同学爬墙费尽我就贴上原项目教程来了<br>　　为Windows 10 Enterprise LTSC增加应用商店<br>适用于Windows 10 Enterprise LTSC 2019<br>下载地址：<a href="https://codeload.github.com/kkkgo/LTSC-Add-MicrosoftStore/zip/2019">https://codeload.github.com/kkkgo/LTSC-Add-MicrosoftStore/zip/2019</a><br>要开始安装, 请打包下载后用右键管理员运行</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Add-Store.cmd</span><br></pre></td></tr></table></figure>
+<p>如果您不想安装App Installer / Purchase App / Xbox，请在运行安装之前删除对应的.appxbundle后缀的文件。但是，如果您计划安装游戏，或带有购买选项的应用，则不要删除。<br>如果装完之后商店仍然打不开，请先重启试试。如果仍然不行，请以管理员身份打开命令提示符并运行以下命令之后，然后再重启试试。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">PowerShell -ExecutionPolicy Unrestricted -Command &quot;&amp; &#123;$manifest &#x3D; (Get-AppxPackage Microsoft.WindowsStore).InstallLocation + &#39;\AppxManifest.xml&#39; ; Add-AppxPackage -DisableDevelopmentMode -Register $manifest&#125;&quot;</span><br></pre></td></tr></table></figure>
+<p>商店修复<br>Win+R打开运行，输入</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">WSReset.exe</span><br></pre></td></tr></table></figure>
+<p>回车。<br>该命令会清空并重置Windows Store商店的所有缓存。<br>该脚本由abbodi1406贡献：<br><a href="https://forums.mydigitallife.net/threads/add-store-to-windows-10-enterprise-ltsc-LTSC.70741/page-30#post-1468779">https://forums.mydigitallife.net/threads/add-store-to-windows-10-enterprise-ltsc-LTSC.70741/page-30#post-1468779</a></p>
+<hr>
+<p>　　于是乎我就装上了，可能有同学感觉还是麻烦，于是还有更简单的，后来逛吾爱时我发现有大神整合了该组件包，并打包成了exe可执行文件，双击鼠标就行了。原帖在这<br><a href="https://www.52pojie.cn/thread-868710-1-1.html">https://www.52pojie.cn/thread-868710-1-1.html</a><br>于是我就下载下来了，为了安全<del>好奇心驱使</del>我用UniExtract解包看了一下，奥豁~<br><strong>组件图</strong><br><img src="https://i.loli.net/2019/09/10/TRg6mpzBL5lAMFk.png" alt="TIM截图20190909212608.png"><br>　　确实够安全，打开bat文件看了看，现在把批处理命令贴出来</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@ECHO OFF&amp;PUSHD %~DP0 &amp;TITLE Windows Store for LTSC x64 </span><br><span class="line">::author MoeClub by Vicer**感谢这位作者（笔者言）**</span><br><span class="line">setlocal enabledelayedexpansion</span><br><span class="line">mode con cols&#x3D;60 lines&#x3D;30</span><br><span class="line">color 87</span><br><span class="line">cd.&gt;%WINDIR%\GetAdmin</span><br><span class="line">if exist %WINDIR%\GetAdmin (del &#x2F;f &#x2F;q &quot;%WINDIR%\GetAdmin&quot;) else (</span><br><span class="line">echo CreateObject^(&quot;Shell.Application&quot;^).ShellExecute &quot;%~s0&quot;, &quot;%*&quot;, &quot;&quot;, &quot;runas&quot;, 1 &gt;&gt; &quot;%temp%\Admin.vbs&quot;</span><br><span class="line">&quot;%temp%\Admin.vbs&quot;</span><br><span class="line">del &#x2F;s &#x2F;q &quot;%temp%\Admin.vbs&quot;</span><br><span class="line">exit &#x2F;b 2)</span><br><span class="line">cls</span><br><span class="line"></span><br><span class="line">if not exist &quot;%ProgramFiles%\WindowsApps&quot; goto error_exit</span><br><span class="line">if not exist &quot;%WINDIR%\SysWOW64&quot; goto error_exit</span><br><span class="line"></span><br><span class="line">::grant perm</span><br><span class="line">TAKEOWN &#x2F;F &quot;%ProgramFiles%\WindowsApps&quot; &#x2F;A &gt;NUL</span><br><span class="line">ICACLS &quot;%ProgramFiles%\WindowsApps&quot; &#x2F;grant:r &quot;Administrators:F&quot; &#x2F;Q &gt;NUL</span><br><span class="line">ICACLS &quot;%ProgramFiles%\WindowsApps&quot; &#x2F;grant:r &quot;All Application Packages:RX&quot; &#x2F;setintegritylevel L:I &#x2F;inheritance:e &#x2F;Q &gt;NUL</span><br><span class="line"></span><br><span class="line">::copy</span><br><span class="line">XCOPY &#x2F;Q&#x2F;Y&#x2F;E&#x2F;H&#x2F;O &quot;%~DP0WindowsApps\*&quot; &quot;%ProgramFiles%\WindowsApps\&quot; &gt;NUL 2&gt;NUL</span><br><span class="line"></span><br><span class="line">::restore perm</span><br><span class="line">ICACLS &quot;%ProgramFiles%\WindowsApps&quot; &#x2F;setowner &quot;NT Service\TrustedInstaller&quot; &#x2F;Q &gt;NUL </span><br><span class="line">ICACLS &quot;%ProgramFiles%\WindowsApps&quot; &#x2F;grant:r &quot;Administrators:RX&quot; &#x2F;Q &gt;NUL </span><br><span class="line">ICACLS &quot;%ProgramFiles%\WindowsApps&quot; &#x2F;reset &gt;NUL</span><br><span class="line"></span><br><span class="line">::install</span><br><span class="line">FOR &#x2F;F &quot;delims&#x3D;&quot; %%i IN (Package.txt) DO (PowerShell -Command &quot;&amp; &#123;Add-AppXPackage -Path &#39;%ProgramFiles%\WindowsApps\%%i\AppXManifest.xml&#39; -Register -DisableDevelopmentMode&#125;&quot;)</span><br><span class="line"></span><br><span class="line">:success_exit</span><br><span class="line">ECHO.</span><br><span class="line">ECHO Install finish.</span><br><span class="line">TIMEOUT &#x2F;T 3 &#x2F;NOBREAK &gt;NUL 2&gt;NUL</span><br><span class="line">exit 0</span><br><span class="line"></span><br><span class="line">:error_exit</span><br><span class="line">ECHO.</span><br><span class="line">ECHO Not support this device.</span><br><span class="line">TIMEOUT &#x2F;T 5 &#x2F;NOBREAK &gt;NUL 2&gt;NUL</span><br><span class="line">exit 1</span><br></pre></td></tr></table></figure>
+<p><strong>卸载命令单拉出来</strong><br>::unstal（卸载命令）</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Get-AppxPackage Microsoft.XboxIdentityProvider |Remove-AppxPackage</span><br><span class="line">Get-AppxPackage Microsoft.StorePurchaseApp |Remove-AppxPackage</span><br><span class="line">Get-AppxPackage Microsoft.WindowsStore |Remove-AppxPackage</span><br><span class="line">Get-AppxPackage Microsoft.Advertising.Xaml |Remove-AppxPackage</span><br><span class="line">Get-AppxPackage Microsoft.VCLibs.140.00 |Remove-AppxPackage</span><br><span class="line">Get-AppxPackage Microsoft.NET.Native.Framework.1.6 |Remove-AppxPackage</span><br><span class="line">Get-AppxPackage Microsoft.NET.Native.Runtime.1.6 |Remove-AppxPackage</span><br></pre></td></tr></table></figure>
+<p>这下可以放心了，说一下，我仅仅解包查看了内部结构，并未做出任何修改和打包处理，再次感谢作者。<br>然后我在我室友电脑上成功安装，第一次打开可能是英文，商店检测更新，更新完后就是中文啦</p>
+<p><strong>商店主页面</strong></p>
+<p><img src="https://i.loli.net/2019/09/10/WnzGiXmpZsldht9.png" alt="TIM截图20190909212317.png"></p>
+]]></content>
+      <categories>
+        <category>Softwares For Windows</category>
+      </categories>
+      <tags>
+        <tag>Windows</tag>
+        <tag>Software</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>中兴 ZXHN F677V2 光猫改桥接</title>
     <url>/2020/02/20/%E4%B8%AD%E5%85%B4%20ZXHN%20F677V2%20%E5%85%89%E7%8C%AB%E6%94%B9%E6%A1%A5%E6%8E%A5/</url>
     <content><![CDATA[<p>　　在2019年年底，我家终于扯通了宽带，这次放假回家之后看了看发现是中兴 ZXHN F677V2 的光猫，联通的宽带，没有送路由器，用的是光猫自带的2.4Ghz的WiFi。正好我家有闲置的路由器，是斐讯的K2，就接在光猫上自动获取ip地址进行上网。<span id="more"></span>由于疫情在家闲着没事干，准备申请一个公网ip试试，却发现给的就是公网ip，这样就省了一大步了。</p>
@@ -792,6 +774,24 @@
       <categories>
         <category>路由器</category>
       </categories>
+  </entry>
+  <entry>
+    <title>office2016和visio同时安装</title>
+    <url>/2019/09/03/office2016%E5%92%8Cvisio%E5%90%8C%E6%97%B6%E5%AE%89%E8%A3%85/</url>
+    <content><![CDATA[<p>　　最近朋友找我帮忙给一台主机重装系统并安装好office2016及其visio2016，在安装完office后再安装visio时就傻了眼，提示框忘记截图了，大概意思就是您已安装office（32位），因为您计算机上已经安装了这些64位程序balabala。。。<span id="more"></span><br>百度了下才发现正常条件下是不能同时安装的，网上有些教程没什么用或者不详细，我在这详细说一下。<br>我是在msdn：<a href="https://msdn.itellyou.cn/">https://msdn.itellyou.cn/</a> 下载的官方镜像属性入下图，<br><img src="https://i.loli.net/2019/09/09/JTbWeMSwiYBKNOm.png" alt="TIM图片20190909184613.png"><br>分别是visio和office，差不多大，百度了下才知道实际上office2016iso镜像里是包含有visio的，同理visio也是，与我经常安装的office2010不同，2016版并不能在安装时自定义安装组件，也就是你点击安装，他会默认把所有的组件都安装到c盘，没错，连盘符你都没法选择。<br>我们去官网下载Office Deployment Tool工具：<a href="https://www.microsoft.com/en-us/download/details.aspx?id=49117">https://www.microsoft.com/en-us/download/details.aspx?id=49117</a><br>我们安装到d盘Tool文件夹，发现里面有这四个文件，<br><img src="https://i.loli.net/2019/09/09/UxLIeXDkvqMhcdb.png" alt="TIM图片20190909185735.png"><br>前三个就是配置文件，最后一个就是安装程序，按照电脑处理器架构选择修改哪个配置文件，比如我的电脑是64位的，我就选择修改第一个，（32位电脑修改X86的）右键编辑它，“Configuration”和“/Configuration”(这里去掉了Configuration两边的&lt;&gt;符号来适应md格式)之间的就是默认的配置文件，我们修改如下</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;Configuration&gt;</span><br><span class="line">  &lt;Add SourcePath&#x3D;&quot;A:\&quot; OfficeClientEdition&#x3D;&quot;64&quot; Branch&#x3D;&quot;Current&quot;&gt;</span><br><span class="line">    &lt;!-- &lt;Product ID&#x3D;&quot;O365ProPlusRetail&quot;&gt;</span><br><span class="line">      &lt;Language ID&#x3D;&quot;en-us&quot; &#x2F;&gt;</span><br><span class="line">    &lt;&#x2F;Product&gt; --&gt;</span><br><span class="line">    &lt;Product ID&#x3D;&quot;VisioProRetail&quot;&gt;</span><br><span class="line">      &lt;Language ID&#x3D;&quot;zh-cn&quot; &#x2F;&gt;</span><br><span class="line">    &lt;&#x2F;Product&gt;</span><br><span class="line">    &lt;Product ID&#x3D;&quot;proplusretail&quot;&gt;</span><br><span class="line">      &lt;Language ID&#x3D;&quot;zh-cn&quot; &#x2F;&gt;</span><br><span class="line">      &lt;ExcludeApp ID&#x3D;&quot;Access&quot; &#x2F;&gt;</span><br><span class="line">      &lt;ExcludeApp ID&#x3D;&quot;Publisher&quot; &#x2F;&gt;</span><br><span class="line">      &lt;ExcludeApp ID&#x3D;&quot;Groove&quot; &#x2F;&gt;</span><br><span class="line">      &lt;ExcludeApp ID&#x3D;&quot;Lync&quot; &#x2F;&gt;</span><br><span class="line">      &lt;ExcludeApp ID&#x3D;&quot;Outlook&quot; &#x2F;&gt;</span><br><span class="line">&lt;ExcludeApp ID&#x3D;&quot;Skype&quot; &#x2F;&gt;</span><br><span class="line">    &lt;&#x2F;Product&gt;</span><br><span class="line">  &lt;&#x2F;Add&gt;</span><br><span class="line">  &lt;!--  &lt;Updates Enabled&#x3D;&quot;TRUE&quot; Branch&#x3D;&quot;Current&quot; &#x2F;&gt; --&gt;</span><br><span class="line">  &lt;!--  &lt;Display Level&#x3D;&quot;None&quot; AcceptEULA&#x3D;&quot;TRUE&quot; &#x2F;&gt;  --&gt;</span><br><span class="line">  &lt;!--  &lt;Property Name&#x3D;&quot;AUTOACTIVATE&quot; Value&#x3D;&quot;1&quot; &#x2F;&gt;  --&gt;</span><br><span class="line">&lt;&#x2F;Configuration&gt;</span><br></pre></td></tr></table></figure>
+<p>其中，我们把上面两个镜像其中的一个双击打开，他就会自动挂载光驱（这是win10很早之前就自带的功能了，不用使用第三方软件了，很方便），如图我们可以看到电脑将驱动器挂载为H：盘，<br><img src="https://i.loli.net/2019/09/09/f68zCwthXQ5uNd2.png" alt="TIM图片20190909193803.png"><br>所以我们修改&lt;Add SourcePath=”A:&quot;为&lt;Add SourcePath=”H:&quot;，我们电脑是64位，所以<br>OfficeClientEdition=”64”不用修改，32位的机器修改为32。<br>修改完保存，在这个配置文件所在目录下按住shift键，鼠标右键点击：在此处打开Powershell 窗口，<br><img src="https://i.loli.net/2019/09/09/d9T6brcmJjfopQx.png" alt="TIM图片20190909194027.png"><br>也可以打开cmd窗口，cd到该目录，运行</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">D:\tool&gt;setup.exe &#x2F;configure configuration-Office365-x64.xml</span><br></pre></td></tr></table></figure>
+<p>就ok啦（这里注意配置文件名）。用PowerShell时可能遇到需要在命令行前加“./”，如果提示就加上。<br>setup.exe会自动运行，按照你的配置文件展开安装啦。</p>
+]]></content>
+      <categories>
+        <category>Softwares For Windows</category>
+      </categories>
+      <tags>
+        <tag>Windows</tag>
+        <tag>office</tag>
+        <tag>visio</tag>
+      </tags>
   </entry>
   <entry>
     <title>农村什么让你感到最恐怖？</title>
