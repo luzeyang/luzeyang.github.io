@@ -527,6 +527,24 @@
       </tags>
   </entry>
   <entry>
+    <title>office2016和visio同时安装</title>
+    <url>/2019/09/03/office2016%E5%92%8Cvisio%E5%90%8C%E6%97%B6%E5%AE%89%E8%A3%85/</url>
+    <content><![CDATA[<p>　　最近朋友找我帮忙给一台主机重装系统并安装好office2016及其visio2016，在安装完office后再安装visio时就傻了眼，提示框忘记截图了，大概意思就是您已安装office（32位），因为您计算机上已经安装了这些64位程序balabala。。。<span id="more"></span><br>百度了下才发现正常条件下是不能同时安装的，网上有些教程没什么用或者不详细，我在这详细说一下。<br>我是在msdn：<a href="https://msdn.itellyou.cn/">https://msdn.itellyou.cn/</a> 下载的官方镜像属性入下图，<br><img src="https://i.loli.net/2019/09/09/JTbWeMSwiYBKNOm.png" alt="TIM图片20190909184613.png"><br>分别是visio和office，差不多大，百度了下才知道实际上office2016iso镜像里是包含有visio的，同理visio也是，与我经常安装的office2010不同，2016版并不能在安装时自定义安装组件，也就是你点击安装，他会默认把所有的组件都安装到c盘，没错，连盘符你都没法选择。<br>我们去官网下载Office Deployment Tool工具：<a href="https://www.microsoft.com/en-us/download/details.aspx?id=49117">https://www.microsoft.com/en-us/download/details.aspx?id=49117</a><br>我们安装到d盘Tool文件夹，发现里面有这四个文件，<br><img src="https://i.loli.net/2019/09/09/UxLIeXDkvqMhcdb.png" alt="TIM图片20190909185735.png"><br>前三个就是配置文件，最后一个就是安装程序，按照电脑处理器架构选择修改哪个配置文件，比如我的电脑是64位的，我就选择修改第一个，（32位电脑修改X86的）右键编辑它，“Configuration”和“/Configuration”(这里去掉了Configuration两边的&lt;&gt;符号来适应md格式)之间的就是默认的配置文件，我们修改如下</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;Configuration&gt;</span><br><span class="line">  &lt;Add SourcePath&#x3D;&quot;A:\&quot; OfficeClientEdition&#x3D;&quot;64&quot; Branch&#x3D;&quot;Current&quot;&gt;</span><br><span class="line">    &lt;!-- &lt;Product ID&#x3D;&quot;O365ProPlusRetail&quot;&gt;</span><br><span class="line">      &lt;Language ID&#x3D;&quot;en-us&quot; &#x2F;&gt;</span><br><span class="line">    &lt;&#x2F;Product&gt; --&gt;</span><br><span class="line">    &lt;Product ID&#x3D;&quot;VisioProRetail&quot;&gt;</span><br><span class="line">      &lt;Language ID&#x3D;&quot;zh-cn&quot; &#x2F;&gt;</span><br><span class="line">    &lt;&#x2F;Product&gt;</span><br><span class="line">    &lt;Product ID&#x3D;&quot;proplusretail&quot;&gt;</span><br><span class="line">      &lt;Language ID&#x3D;&quot;zh-cn&quot; &#x2F;&gt;</span><br><span class="line">      &lt;ExcludeApp ID&#x3D;&quot;Access&quot; &#x2F;&gt;</span><br><span class="line">      &lt;ExcludeApp ID&#x3D;&quot;Publisher&quot; &#x2F;&gt;</span><br><span class="line">      &lt;ExcludeApp ID&#x3D;&quot;Groove&quot; &#x2F;&gt;</span><br><span class="line">      &lt;ExcludeApp ID&#x3D;&quot;Lync&quot; &#x2F;&gt;</span><br><span class="line">      &lt;ExcludeApp ID&#x3D;&quot;Outlook&quot; &#x2F;&gt;</span><br><span class="line">&lt;ExcludeApp ID&#x3D;&quot;Skype&quot; &#x2F;&gt;</span><br><span class="line">    &lt;&#x2F;Product&gt;</span><br><span class="line">  &lt;&#x2F;Add&gt;</span><br><span class="line">  &lt;!--  &lt;Updates Enabled&#x3D;&quot;TRUE&quot; Branch&#x3D;&quot;Current&quot; &#x2F;&gt; --&gt;</span><br><span class="line">  &lt;!--  &lt;Display Level&#x3D;&quot;None&quot; AcceptEULA&#x3D;&quot;TRUE&quot; &#x2F;&gt;  --&gt;</span><br><span class="line">  &lt;!--  &lt;Property Name&#x3D;&quot;AUTOACTIVATE&quot; Value&#x3D;&quot;1&quot; &#x2F;&gt;  --&gt;</span><br><span class="line">&lt;&#x2F;Configuration&gt;</span><br></pre></td></tr></table></figure>
+<p>其中，我们把上面两个镜像其中的一个双击打开，他就会自动挂载光驱（这是win10很早之前就自带的功能了，不用使用第三方软件了，很方便），如图我们可以看到电脑将驱动器挂载为H：盘，<br><img src="https://i.loli.net/2019/09/09/f68zCwthXQ5uNd2.png" alt="TIM图片20190909193803.png"><br>所以我们修改&lt;Add SourcePath=”A:&quot;为&lt;Add SourcePath=”H:&quot;，我们电脑是64位，所以<br>OfficeClientEdition=”64”不用修改，32位的机器修改为32。<br>修改完保存，在这个配置文件所在目录下按住shift键，鼠标右键点击：在此处打开Powershell 窗口，<br><img src="https://i.loli.net/2019/09/09/d9T6brcmJjfopQx.png" alt="TIM图片20190909194027.png"><br>也可以打开cmd窗口，cd到该目录，运行</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">D:\tool&gt;setup.exe &#x2F;configure configuration-Office365-x64.xml</span><br></pre></td></tr></table></figure>
+<p>就ok啦（这里注意配置文件名）。用PowerShell时可能遇到需要在命令行前加“./”，如果提示就加上。<br>setup.exe会自动运行，按照你的配置文件展开安装啦。</p>
+]]></content>
+      <categories>
+        <category>Softwares For Windows</category>
+      </categories>
+      <tags>
+        <tag>Windows</tag>
+        <tag>office</tag>
+        <tag>visio</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>《无题》</title>
     <url>/2019/04/22/%E4%B8%80%E7%94%9F/</url>
     <content><![CDATA[<p>18岁，你读了大学</p>
@@ -739,24 +757,6 @@
       </tags>
   </entry>
   <entry>
-    <title>office2016和visio同时安装</title>
-    <url>/2019/09/03/office2016%E5%92%8Cvisio%E5%90%8C%E6%97%B6%E5%AE%89%E8%A3%85/</url>
-    <content><![CDATA[<p>　　最近朋友找我帮忙给一台主机重装系统并安装好office2016及其visio2016，在安装完office后再安装visio时就傻了眼，提示框忘记截图了，大概意思就是您已安装office（32位），因为您计算机上已经安装了这些64位程序balabala。。。<span id="more"></span><br>百度了下才发现正常条件下是不能同时安装的，网上有些教程没什么用或者不详细，我在这详细说一下。<br>我是在msdn：<a href="https://msdn.itellyou.cn/">https://msdn.itellyou.cn/</a> 下载的官方镜像属性入下图，<br><img src="https://i.loli.net/2019/09/09/JTbWeMSwiYBKNOm.png" alt="TIM图片20190909184613.png"><br>分别是visio和office，差不多大，百度了下才知道实际上office2016iso镜像里是包含有visio的，同理visio也是，与我经常安装的office2010不同，2016版并不能在安装时自定义安装组件，也就是你点击安装，他会默认把所有的组件都安装到c盘，没错，连盘符你都没法选择。<br>我们去官网下载Office Deployment Tool工具：<a href="https://www.microsoft.com/en-us/download/details.aspx?id=49117">https://www.microsoft.com/en-us/download/details.aspx?id=49117</a><br>我们安装到d盘Tool文件夹，发现里面有这四个文件，<br><img src="https://i.loli.net/2019/09/09/UxLIeXDkvqMhcdb.png" alt="TIM图片20190909185735.png"><br>前三个就是配置文件，最后一个就是安装程序，按照电脑处理器架构选择修改哪个配置文件，比如我的电脑是64位的，我就选择修改第一个，（32位电脑修改X86的）右键编辑它，“Configuration”和“/Configuration”(这里去掉了Configuration两边的&lt;&gt;符号来适应md格式)之间的就是默认的配置文件，我们修改如下</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;Configuration&gt;</span><br><span class="line">  &lt;Add SourcePath&#x3D;&quot;A:\&quot; OfficeClientEdition&#x3D;&quot;64&quot; Branch&#x3D;&quot;Current&quot;&gt;</span><br><span class="line">    &lt;!-- &lt;Product ID&#x3D;&quot;O365ProPlusRetail&quot;&gt;</span><br><span class="line">      &lt;Language ID&#x3D;&quot;en-us&quot; &#x2F;&gt;</span><br><span class="line">    &lt;&#x2F;Product&gt; --&gt;</span><br><span class="line">    &lt;Product ID&#x3D;&quot;VisioProRetail&quot;&gt;</span><br><span class="line">      &lt;Language ID&#x3D;&quot;zh-cn&quot; &#x2F;&gt;</span><br><span class="line">    &lt;&#x2F;Product&gt;</span><br><span class="line">    &lt;Product ID&#x3D;&quot;proplusretail&quot;&gt;</span><br><span class="line">      &lt;Language ID&#x3D;&quot;zh-cn&quot; &#x2F;&gt;</span><br><span class="line">      &lt;ExcludeApp ID&#x3D;&quot;Access&quot; &#x2F;&gt;</span><br><span class="line">      &lt;ExcludeApp ID&#x3D;&quot;Publisher&quot; &#x2F;&gt;</span><br><span class="line">      &lt;ExcludeApp ID&#x3D;&quot;Groove&quot; &#x2F;&gt;</span><br><span class="line">      &lt;ExcludeApp ID&#x3D;&quot;Lync&quot; &#x2F;&gt;</span><br><span class="line">      &lt;ExcludeApp ID&#x3D;&quot;Outlook&quot; &#x2F;&gt;</span><br><span class="line">&lt;ExcludeApp ID&#x3D;&quot;Skype&quot; &#x2F;&gt;</span><br><span class="line">    &lt;&#x2F;Product&gt;</span><br><span class="line">  &lt;&#x2F;Add&gt;</span><br><span class="line">  &lt;!--  &lt;Updates Enabled&#x3D;&quot;TRUE&quot; Branch&#x3D;&quot;Current&quot; &#x2F;&gt; --&gt;</span><br><span class="line">  &lt;!--  &lt;Display Level&#x3D;&quot;None&quot; AcceptEULA&#x3D;&quot;TRUE&quot; &#x2F;&gt;  --&gt;</span><br><span class="line">  &lt;!--  &lt;Property Name&#x3D;&quot;AUTOACTIVATE&quot; Value&#x3D;&quot;1&quot; &#x2F;&gt;  --&gt;</span><br><span class="line">&lt;&#x2F;Configuration&gt;</span><br></pre></td></tr></table></figure>
-<p>其中，我们把上面两个镜像其中的一个双击打开，他就会自动挂载光驱（这是win10很早之前就自带的功能了，不用使用第三方软件了，很方便），如图我们可以看到电脑将驱动器挂载为H：盘，<br><img src="https://i.loli.net/2019/09/09/f68zCwthXQ5uNd2.png" alt="TIM图片20190909193803.png"><br>所以我们修改&lt;Add SourcePath=”A:&quot;为&lt;Add SourcePath=”H:&quot;，我们电脑是64位，所以<br>OfficeClientEdition=”64”不用修改，32位的机器修改为32。<br>修改完保存，在这个配置文件所在目录下按住shift键，鼠标右键点击：在此处打开Powershell 窗口，<br><img src="https://i.loli.net/2019/09/09/d9T6brcmJjfopQx.png" alt="TIM图片20190909194027.png"><br>也可以打开cmd窗口，cd到该目录，运行</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">D:\tool&gt;setup.exe &#x2F;configure configuration-Office365-x64.xml</span><br></pre></td></tr></table></figure>
-<p>就ok啦（这里注意配置文件名）。用PowerShell时可能遇到需要在命令行前加“./”，如果提示就加上。<br>setup.exe会自动运行，按照你的配置文件展开安装啦。</p>
-]]></content>
-      <categories>
-        <category>Softwares For Windows</category>
-      </categories>
-      <tags>
-        <tag>Windows</tag>
-        <tag>office</tag>
-        <tag>visio</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>中兴 ZXHN F677V2 光猫改桥接</title>
     <url>/2020/02/20/%E4%B8%AD%E5%85%B4%20ZXHN%20F677V2%20%E5%85%89%E7%8C%AB%E6%94%B9%E6%A1%A5%E6%8E%A5/</url>
     <content><![CDATA[<p>　　在2019年年底，我家终于扯通了宽带，这次放假回家之后看了看发现是中兴 ZXHN F677V2 的光猫，联通的宽带，没有送路由器，用的是光猫自带的2.4Ghz的WiFi。正好我家有闲置的路由器，是斐讯的K2，就接在光猫上自动获取ip地址进行上网。<span id="more"></span>由于疫情在家闲着没事干，准备申请一个公网ip试试，却发现给的就是公网ip，这样就省了一大步了。</p>
@@ -830,69 +830,6 @@
       <categories>
         <category>浮生记</category>
       </categories>
-  </entry>
-  <entry>
-    <title>如果张东升是个程序员</title>
-    <url>/2019/09/03/%E5%A6%82%E6%9E%9C%E5%BC%A0%E4%B8%9C%E5%8D%87%E6%98%AF%E4%B8%AA%E7%A8%8B%E5%BA%8F%E5%91%98/</url>
-    <content><![CDATA[<p>如果张东升是个程序员<br>菜鸟教程  3天前<br>以下文章来源于编程技术宇宙 ，作者轩辕之风</p>
-<p>张东升是一家互联网公司的程序员，一直以来都勤勤恳恳老实工作。</p>
-<p>可最近一段时间，老板接了几个项目回来，不但开启了996的工作模式，更要命的是频频更改需求，弄得大家是敢怒不敢言。</p>
-<p>时间一久，东升慢慢开始消极怠工，晚上也不怎么加班了。终于有一天，和老板在会议室吵了起来，老板决意让其忙完手头的项目就离职。</p>
-<p>老板看大家最近一段时间都很辛苦，决定组织一次团建，在群里询问大家有什么活动建议。</p>
-<p>这时，张东升提议：“最近大家都工作挺累，也没有什么机会锻炼，身体要紧，要不一起去爬六峰山吧。”</p>
-<p>东升的提议获得了不少人的赞同，团建活动就这么定了下来。</p>
-<p>团建这天，爬至半山腰，东升问老板：“您看我还有机会吗？”</p>
-<p>老板看了他一眼，没有说话，继续抽烟。</p>
-<p>爬至山顶，大家三三两两都在拍照发朋友圈。</p>
-<p>这时东升拉住老板到一旁说给他拍照，老板知道东升是为讨好自己，也就没有拒绝。</p>
-<p>东升举起手机，却说老板衣服有褶皱，上前为其整理，竟趁其不备将其推下山崖···</p>
-<p>晚上，张东升还在电脑前调试着代码，突然，一封主题为“警告”的邮件窗口从侧边弹了出来。</p>
-<p>东升的心跳立刻加速，小心翼翼地点开了这封邮件，正文只有四个字：“请看附件！”</p>
-<p>附件是一个word文档，东升并没有立即打开，职业习惯让他打开了VMware虚拟机，在虚拟机中打开了这个文件。</p>
-<p>原来以为白天的事无人知晓，没想到这一幕正好被对面山头正在拍摄抖音短视频的三个小孩用手机录了下来。</p>
-<p>三个小孩看到了张东升T恤上的公司名字，并在公司网站上找到了他的邮箱，这才给他发了这封邮件。</p>
-<p>张东升看到后，大惊失色，想找到对方，却不知道对方是什么来头。</p>
-<p>这时他注意到附件是一个docx文件，想到office2007及其以后的版本才用这个格式，其实际上是一个压缩文件格式zip。</p>
-<p>东升思索片刻将其重命名为一个zip文件，然后解压，想看看是否能发现些什么信息。</p>
-<p>接着在docProps目录下找到了app.xml:</p>
-<p>…<br><AppVersion>15.0000</AppVersion><br>…<br>版本号是15，看来对方用的是一个Office2013版本的word。</p>
-<p>东升很快在网络上搜到了一个漏洞：CVE-2017-11882，这是一个可以远程执行代码的漏洞，字符串拷贝没有对长度进行校验导致栈溢出。</p>
-<p>说干就干，东升打开了metasploit，通过它很快生成一段包含恶意代码的word文件，将其作为附件回复给了对方。</p>
-<p>三个小孩此刻正聚集在朱朝阳的家里，自从他们发送了警告邮件，心里就忐忑难耐，一直盯着电脑屏幕，看看是否会有回复。</p>
-<p>一看到邮件弹窗，就赶紧点了开来。邮件正文也只写了一句话：我想说的都在附件中。</p>
-<p>朱朝阳没有犹豫，又立刻点了附件。电脑上的Word进程随即启动，解析附件doc文件时，触发了漏洞，执行了张东升事先编写的恶意代码。而此时，朱朝阳却一无所知。</p>
-<p>恶意程序很快和张东升的电脑建立了网络连接，并开始收集朱朝阳电脑的信息，IP地址、MAC地址、电脑文件等等。</p>
-<p>东升不愧是经验丰富的程序员，为了躲过电脑防火墙的拦截，他编写的恶意代码通过ICMP协议的负载字段进行数据传输。</p>
-<p>朱朝阳正瞅着空白的word文档感到疑惑，突然电脑屏幕上出现了一个视频聊天窗口，一陌生男子的画面突然出现吓得朱朝阳惊出了一身冷汗。</p>
-<p>定睛一看，这男子不是别人，正是推人的张东升。</p>
-<p>张东升先开口了：“没想到竟然是个小孩。我已经知道你电脑的IP地址，也知道你家住在哪里，明天上午出来聊聊，就在你家巷子口的面馆。”说完就切断了视频信号。</p>
-<p>张东升的突然出现，显然吓坏了朱朝阳。一旁的严良问道：“什么是IP地址？他又是怎么知道你家的位置，连面馆都知道，这简直太可怕了。”</p>
-<p>朱朝阳镇定了两分钟，缓过神来，说到：“一定是刚才的邮件附件有问题，我的电脑已经被他控制。IP地址是电脑接入网络分配的通信身份证号码，通过IP地址就能锁定电脑的位置，再用地图一看就能知道附近的街道布局和街景画面，知道面馆也就不足为奇了。”</p>
-<p>这一夜注定是个不眠之夜。</p>
-<p>第二天，双方如约相见。张表示可以用钱买下手机，严良威胁张东升，要卖可以，必须30万。</p>
-<p>东升愣了一下，“你们小小年纪，要这么多钱做什么？”</p>
-<p>严良顶了一句：“不关你的事。”</p>
-<p>东升无奈，表示要先看到手机视频再说。</p>
-<p>朱朝阳拿出手机，刚打开视频，手机竟然没电。张见状拿出自己手机的充电器给朱朝阳。</p>
-<p>待手机充电，张看到了视频。张表示他一个程序员，挣得不多，要等到四月份发了年终奖才凑得齐。</p>
-<p>三小孩却只给了他一个星期时间。</p>
-<p>一个星期过去，见东升未曾联系，三小孩主动联系张。张却不以为意，说让他们去报警吧。</p>
-<p>三小孩不解，正想拿着手机去报警，却发现手机竟然已经死机无法打开了。</p>
-<p>原来张东升拿出的那个充电器是事先精心准备，充电器里面内置了一个小型芯片，数据线一旦连接到手机就植入病毒程序，等待时机进行手机数据破坏。</p>
-<p>不过，让张东升没有想到的是，朱朝阳竟然提前备份了数据，再次发来邮件威胁。</p>
-<p>夜晚，洗完澡的张东升看着镜子里在自己，回想这些年多少次熬夜加班，不记得何时竟已经秃头，戴上了假发。</p>
-<p>怒从心中起，恶向胆边生。张东升决定把这三个小孩一并收拾了。</p>
-<p>东升跟踪数日，终于找到另外两个小孩原来住在海边浅滩的破船上，一天夜里洒满汽油纵火焚烧。</p>
-<p>随即又潜到朱朝阳的住处，竟发现虽然已是深夜，朱朝阳还在电脑旁写着代码，旁边的书桌上放满了C/C++编程、数据结构与算法、操作系统等书籍。不禁想起了当年挑灯学习编程的自己。没想到一失足成千古恨，如今自己再也回不了头了。</p>
-<p>不知何故，张东升竟改变主意，悄然离开了。</p>
-<p>第二天，张向朱朝阳的电子邮箱里发送了一份学习资料，什么剑指offer、分布式计算、云计算、微服务、Dubbo、高并发、数据库实战，琳琅满目，应接不暇，足足有100多G。</p>
-<p>不久，海边纵火一事案发，警方通过在电信局部署的网络流量采集中心的木马警报日志，溯源恢复了之前的邮件来往信息，很快锁定了程序员张东升。</p>
-<p>张东升再次来到朱朝阳家，挟持了朱，警方随后赶到。</p>
-<p>朱问张：你杀了我的小伙伴，为什么却给我发了一堆学习资料？</p>
-<p>张东升笑着说：“杀了你有什么意思，我要你像我一样，成为一个程序员。”</p>
-<p>朝阳却说：“那你干嘛给我放网盘，100多G的资料，60KB/s，你知道要下多久吗？”</p>
-<p>东升一听大怒，举起手中利器便要作势刺向朝阳，只听一声枪响，东升应声倒下。</p>
-]]></content>
   </entry>
   <entry>
     <title>《电话》</title>
