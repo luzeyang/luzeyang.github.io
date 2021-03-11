@@ -500,24 +500,6 @@
       </categories>
   </entry>
   <entry>
-    <title>office2016和visio同时安装</title>
-    <url>/2019/09/03/office2016%E5%92%8Cvisio%E5%90%8C%E6%97%B6%E5%AE%89%E8%A3%85/</url>
-    <content><![CDATA[<p>　　最近朋友找我帮忙给一台主机重装系统并安装好office2016及其visio2016，在安装完office后再安装visio时就傻了眼，提示框忘记截图了，大概意思就是您已安装office（32位），因为您计算机上已经安装了这些64位程序balabala。。。<span id="more"></span><br>百度了下才发现正常条件下是不能同时安装的，网上有些教程没什么用或者不详细，我在这详细说一下。<br>我是在msdn：<a href="https://msdn.itellyou.cn/">https://msdn.itellyou.cn/</a> 下载的官方镜像属性入下图，<br><img src="https://i.loli.net/2019/09/09/JTbWeMSwiYBKNOm.png" alt="TIM图片20190909184613.png"><br>分别是visio和office，差不多大，百度了下才知道实际上office2016iso镜像里是包含有visio的，同理visio也是，与我经常安装的office2010不同，2016版并不能在安装时自定义安装组件，也就是你点击安装，他会默认把所有的组件都安装到c盘，没错，连盘符你都没法选择。<br>我们去官网下载Office Deployment Tool工具：<a href="https://www.microsoft.com/en-us/download/details.aspx?id=49117">https://www.microsoft.com/en-us/download/details.aspx?id=49117</a><br>我们安装到d盘Tool文件夹，发现里面有这四个文件，<br><img src="https://i.loli.net/2019/09/09/UxLIeXDkvqMhcdb.png" alt="TIM图片20190909185735.png"><br>前三个就是配置文件，最后一个就是安装程序，按照电脑处理器架构选择修改哪个配置文件，比如我的电脑是64位的，我就选择修改第一个，（32位电脑修改X86的）右键编辑它，“Configuration”和“/Configuration”(这里去掉了Configuration两边的&lt;&gt;符号来适应md格式)之间的就是默认的配置文件，我们修改如下</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;Configuration&gt;</span><br><span class="line">  &lt;Add SourcePath&#x3D;&quot;A:\&quot; OfficeClientEdition&#x3D;&quot;64&quot; Branch&#x3D;&quot;Current&quot;&gt;</span><br><span class="line">    &lt;!-- &lt;Product ID&#x3D;&quot;O365ProPlusRetail&quot;&gt;</span><br><span class="line">      &lt;Language ID&#x3D;&quot;en-us&quot; &#x2F;&gt;</span><br><span class="line">    &lt;&#x2F;Product&gt; --&gt;</span><br><span class="line">    &lt;Product ID&#x3D;&quot;VisioProRetail&quot;&gt;</span><br><span class="line">      &lt;Language ID&#x3D;&quot;zh-cn&quot; &#x2F;&gt;</span><br><span class="line">    &lt;&#x2F;Product&gt;</span><br><span class="line">    &lt;Product ID&#x3D;&quot;proplusretail&quot;&gt;</span><br><span class="line">      &lt;Language ID&#x3D;&quot;zh-cn&quot; &#x2F;&gt;</span><br><span class="line">      &lt;ExcludeApp ID&#x3D;&quot;Access&quot; &#x2F;&gt;</span><br><span class="line">      &lt;ExcludeApp ID&#x3D;&quot;Publisher&quot; &#x2F;&gt;</span><br><span class="line">      &lt;ExcludeApp ID&#x3D;&quot;Groove&quot; &#x2F;&gt;</span><br><span class="line">      &lt;ExcludeApp ID&#x3D;&quot;Lync&quot; &#x2F;&gt;</span><br><span class="line">      &lt;ExcludeApp ID&#x3D;&quot;Outlook&quot; &#x2F;&gt;</span><br><span class="line">&lt;ExcludeApp ID&#x3D;&quot;Skype&quot; &#x2F;&gt;</span><br><span class="line">    &lt;&#x2F;Product&gt;</span><br><span class="line">  &lt;&#x2F;Add&gt;</span><br><span class="line">  &lt;!--  &lt;Updates Enabled&#x3D;&quot;TRUE&quot; Branch&#x3D;&quot;Current&quot; &#x2F;&gt; --&gt;</span><br><span class="line">  &lt;!--  &lt;Display Level&#x3D;&quot;None&quot; AcceptEULA&#x3D;&quot;TRUE&quot; &#x2F;&gt;  --&gt;</span><br><span class="line">  &lt;!--  &lt;Property Name&#x3D;&quot;AUTOACTIVATE&quot; Value&#x3D;&quot;1&quot; &#x2F;&gt;  --&gt;</span><br><span class="line">&lt;&#x2F;Configuration&gt;</span><br></pre></td></tr></table></figure>
-<p>其中，我们把上面两个镜像其中的一个双击打开，他就会自动挂载光驱（这是win10很早之前就自带的功能了，不用使用第三方软件了，很方便），如图我们可以看到电脑将驱动器挂载为H：盘，<br><img src="https://i.loli.net/2019/09/09/f68zCwthXQ5uNd2.png" alt="TIM图片20190909193803.png"><br>所以我们修改&lt;Add SourcePath=”A:&quot;为&lt;Add SourcePath=”H:&quot;，我们电脑是64位，所以<br>OfficeClientEdition=”64”不用修改，32位的机器修改为32。<br>修改完保存，在这个配置文件所在目录下按住shift键，鼠标右键点击：在此处打开Powershell 窗口，<br><img src="https://i.loli.net/2019/09/09/d9T6brcmJjfopQx.png" alt="TIM图片20190909194027.png"><br>也可以打开cmd窗口，cd到该目录，运行</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">D:\tool&gt;setup.exe &#x2F;configure configuration-Office365-x64.xml</span><br></pre></td></tr></table></figure>
-<p>就ok啦（这里注意配置文件名）。用PowerShell时可能遇到需要在命令行前加“./”，如果提示就加上。<br>setup.exe会自动运行，按照你的配置文件展开安装啦。</p>
-]]></content>
-      <categories>
-        <category>Softwares For Windows</category>
-      </categories>
-      <tags>
-        <tag>Windows</tag>
-        <tag>office</tag>
-        <tag>visio</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>WindowsStore_LTSC 2019</title>
     <url>/2019/07/07/WindowsStore_LTSC%202019/</url>
     <content><![CDATA[<p>　　Win10 TLSB属于Win10企业版，LTSB就是长期支持更新分支（Long Time Service Branch），这个版本专门给一些企业用户的，相比一般版本会缺少很多新功能，例如没有应用商店、没有Edge浏览器，没有cortana，大家可以把Win10 TLSB看成是Windows10企业版的精简版本。<span id="more"></span>LTSB是英语Long Term Servicing Branch的首字母缩写，汉语一般翻译成长期服务分支。LTSB分支是专门面向企业版的，Win10企业版LTSB分支支持周期长达10年，但只会获取安全更新(应该也可以获取热补丁更新)，而不获取功能更新，即不会增加任何新功能。这也是Win10企业版LTSB分支和Win10企业版最根本性的区别。<br>　　Windows 10 LTSC 现在改名成了 LTSC(Long Term Support Channel)。距离上一个长期服务LTSB版本发布已过去近三年了(微软仅发布过2015LTSB、2016LTSB两个版本，之后杳无音信)，18年10月3日微软发布了 Windows 10 RS5，终于再次发布了 Win10 LTSC 2019，且该版本已包含暗黑主题。<br>　　现在很少有时间折腾电脑了，我的办公本运行起来最新版也吃力了，干脆直接装企业版ltsc2109了。之前用专业版时习惯了用win10的应用商店，不得不说UWP应用是真的好用（虽然功能少点，但是界面和流畅度溜的很），现在一下没了win10商店挺不舒服的，于是就想装回win10商店，百度了百度，最笨的办法就是拆包，用命令行打组件补丁包，还要注意修改权限之类的balabala。。。看了看我想肯定有比我更懒的人，他们肯定有更简单的，然后我去了gayhub，发现了这个项目：<a href="https://github.com/kkkgo/LTSC-Add-MicrosoftStore">https://github.com/kkkgo/LTSC-Add-MicrosoftStore</a><br>嘤垂丝汀~为照顾某些同学爬墙费尽我就贴上原项目教程来了<br>　　为Windows 10 Enterprise LTSC增加应用商店<br>适用于Windows 10 Enterprise LTSC 2019<br>下载地址：<a href="https://codeload.github.com/kkkgo/LTSC-Add-MicrosoftStore/zip/2019">https://codeload.github.com/kkkgo/LTSC-Add-MicrosoftStore/zip/2019</a><br>要开始安装, 请打包下载后用右键管理员运行</p>
@@ -542,6 +524,24 @@
       <tags>
         <tag>Windows</tag>
         <tag>Software</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>office2016和visio同时安装</title>
+    <url>/2019/09/03/office2016%E5%92%8Cvisio%E5%90%8C%E6%97%B6%E5%AE%89%E8%A3%85/</url>
+    <content><![CDATA[<p>　　最近朋友找我帮忙给一台主机重装系统并安装好office2016及其visio2016，在安装完office后再安装visio时就傻了眼，提示框忘记截图了，大概意思就是您已安装office（32位），因为您计算机上已经安装了这些64位程序balabala。。。<span id="more"></span><br>百度了下才发现正常条件下是不能同时安装的，网上有些教程没什么用或者不详细，我在这详细说一下。<br>我是在msdn：<a href="https://msdn.itellyou.cn/">https://msdn.itellyou.cn/</a> 下载的官方镜像属性入下图，<br><img src="https://i.loli.net/2019/09/09/JTbWeMSwiYBKNOm.png" alt="TIM图片20190909184613.png"><br>分别是visio和office，差不多大，百度了下才知道实际上office2016iso镜像里是包含有visio的，同理visio也是，与我经常安装的office2010不同，2016版并不能在安装时自定义安装组件，也就是你点击安装，他会默认把所有的组件都安装到c盘，没错，连盘符你都没法选择。<br>我们去官网下载Office Deployment Tool工具：<a href="https://www.microsoft.com/en-us/download/details.aspx?id=49117">https://www.microsoft.com/en-us/download/details.aspx?id=49117</a><br>我们安装到d盘Tool文件夹，发现里面有这四个文件，<br><img src="https://i.loli.net/2019/09/09/UxLIeXDkvqMhcdb.png" alt="TIM图片20190909185735.png"><br>前三个就是配置文件，最后一个就是安装程序，按照电脑处理器架构选择修改哪个配置文件，比如我的电脑是64位的，我就选择修改第一个，（32位电脑修改X86的）右键编辑它，“Configuration”和“/Configuration”(这里去掉了Configuration两边的&lt;&gt;符号来适应md格式)之间的就是默认的配置文件，我们修改如下</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;Configuration&gt;</span><br><span class="line">  &lt;Add SourcePath&#x3D;&quot;A:\&quot; OfficeClientEdition&#x3D;&quot;64&quot; Branch&#x3D;&quot;Current&quot;&gt;</span><br><span class="line">    &lt;!-- &lt;Product ID&#x3D;&quot;O365ProPlusRetail&quot;&gt;</span><br><span class="line">      &lt;Language ID&#x3D;&quot;en-us&quot; &#x2F;&gt;</span><br><span class="line">    &lt;&#x2F;Product&gt; --&gt;</span><br><span class="line">    &lt;Product ID&#x3D;&quot;VisioProRetail&quot;&gt;</span><br><span class="line">      &lt;Language ID&#x3D;&quot;zh-cn&quot; &#x2F;&gt;</span><br><span class="line">    &lt;&#x2F;Product&gt;</span><br><span class="line">    &lt;Product ID&#x3D;&quot;proplusretail&quot;&gt;</span><br><span class="line">      &lt;Language ID&#x3D;&quot;zh-cn&quot; &#x2F;&gt;</span><br><span class="line">      &lt;ExcludeApp ID&#x3D;&quot;Access&quot; &#x2F;&gt;</span><br><span class="line">      &lt;ExcludeApp ID&#x3D;&quot;Publisher&quot; &#x2F;&gt;</span><br><span class="line">      &lt;ExcludeApp ID&#x3D;&quot;Groove&quot; &#x2F;&gt;</span><br><span class="line">      &lt;ExcludeApp ID&#x3D;&quot;Lync&quot; &#x2F;&gt;</span><br><span class="line">      &lt;ExcludeApp ID&#x3D;&quot;Outlook&quot; &#x2F;&gt;</span><br><span class="line">&lt;ExcludeApp ID&#x3D;&quot;Skype&quot; &#x2F;&gt;</span><br><span class="line">    &lt;&#x2F;Product&gt;</span><br><span class="line">  &lt;&#x2F;Add&gt;</span><br><span class="line">  &lt;!--  &lt;Updates Enabled&#x3D;&quot;TRUE&quot; Branch&#x3D;&quot;Current&quot; &#x2F;&gt; --&gt;</span><br><span class="line">  &lt;!--  &lt;Display Level&#x3D;&quot;None&quot; AcceptEULA&#x3D;&quot;TRUE&quot; &#x2F;&gt;  --&gt;</span><br><span class="line">  &lt;!--  &lt;Property Name&#x3D;&quot;AUTOACTIVATE&quot; Value&#x3D;&quot;1&quot; &#x2F;&gt;  --&gt;</span><br><span class="line">&lt;&#x2F;Configuration&gt;</span><br></pre></td></tr></table></figure>
+<p>其中，我们把上面两个镜像其中的一个双击打开，他就会自动挂载光驱（这是win10很早之前就自带的功能了，不用使用第三方软件了，很方便），如图我们可以看到电脑将驱动器挂载为H：盘，<br><img src="https://i.loli.net/2019/09/09/f68zCwthXQ5uNd2.png" alt="TIM图片20190909193803.png"><br>所以我们修改&lt;Add SourcePath=”A:&quot;为&lt;Add SourcePath=”H:&quot;，我们电脑是64位，所以<br>OfficeClientEdition=”64”不用修改，32位的机器修改为32。<br>修改完保存，在这个配置文件所在目录下按住shift键，鼠标右键点击：在此处打开Powershell 窗口，<br><img src="https://i.loli.net/2019/09/09/d9T6brcmJjfopQx.png" alt="TIM图片20190909194027.png"><br>也可以打开cmd窗口，cd到该目录，运行</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">D:\tool&gt;setup.exe &#x2F;configure configuration-Office365-x64.xml</span><br></pre></td></tr></table></figure>
+<p>就ok啦（这里注意配置文件名）。用PowerShell时可能遇到需要在命令行前加“./”，如果提示就加上。<br>setup.exe会自动运行，按照你的配置文件展开安装啦。</p>
+]]></content>
+      <categories>
+        <category>Softwares For Windows</category>
+      </categories>
+      <tags>
+        <tag>Windows</tag>
+        <tag>office</tag>
+        <tag>visio</tag>
       </tags>
   </entry>
   <entry>
@@ -757,44 +757,6 @@
       </tags>
   </entry>
   <entry>
-    <title>农村什么让你感到最恐怖？</title>
-    <url>/2019/10/03/%E5%86%9C%E6%9D%91%E4%BB%80%E4%B9%88%E8%AE%A9%E4%BD%A0%E6%84%9F%E5%88%B0%E6%9C%80%E6%81%90%E6%80%96%EF%BC%9F/</url>
-    <content><![CDATA[<p>前几天有个自称是我表妹的人加我微信，我加了，然后刚加她就转来500块钱，说什么一点心意让我收下。</p>
-<p>“机智”如我立马辨出是“骗子＂，立即删除。（因为我和表妹很少联系，也实在想不出任何一个得让她给我转钱的理由。）<span id="more"></span></p>
-<p>今天那个号又加我，还备注了我的真实姓名。我又半信半疑地加了。</p>
-<p>和上次一样，微信页面上又是转账500元，连话术也一模一样。<br><img src="https://i.loli.net/2020/03/02/tqogVTpFx15nvu3.jpg" alt="800723844.jpg"></p>
-<p>我直接一个视频电话打过去，镜头另一端，<br>竟真的是我表妹。还是瘦，神情也还是那么怯怯的。<br>因为我在上班，不方便多说，确认是她后就<br>挂断了，然后在微信上寒暄了几句。</p>
-<p>改备注的时候，一阵心疼。<br>表妹名“孝勤＂，只比我小9天。“孝＂是字辈， “勤”是家人（尤其是她爷爷，也就是我外公的哥哥，我称呼他大外公）对她的期愿，希望她勤劳，多干活。</p>
-<p>小时候我是“别人家的孩子＂，聪明，成绩好，总是学校的第一名。但我知道我取得第一仅仅是因为我比其他人有更多的时间读书而已。</p>
-<p>我从小和外公外婆一起生活，他们虽没多少文化，但都深刻明白知识的重要性，所以哪怕是农忙时节，他们也从不让我下地干活，要求我专心学习。</p>
-<p>而其他的孩子，则是农活第一，学习第二，毕竟地里真的有那么多活，而学习却是一个太过长远的投资。</p>
-<p>所以同龄很多孩子的童年，大部分时间是在割猪草喂猪、割牛草喂牛、种包谷收包谷、打谷子、打柴…</p>
-<p>尤其是，我的表妹。</p>
-<p>表妹的爸妈也就是我的大舅、舅娘，都在外打工，表妹和哥哥、爷爷留守在家。</p>
-<p>和新闻里写得不太一样，留守的老人儿童其实并没有那么多时间和精力去思念亲人、感受孤独，他们有那么那么多农活要忙，面朝黄土背朝天，烈日下忙着掰包谷，淋着雨赶熟透的谷子的收期。被汗水和辛劳填充的生活，是根本腾不出时间和精力去感伤的。</p>
-<p>大外公早鳏，多年没有枕边人，加上繁重的农活，让他的脾气有些暴躁。更让人悲凉的是，妹妹从生下来起就从未得到过他的疼爱，因为他尤为重男轻女。</p>
-<p>表妹是从来没有娱乐时间的，大外公从不准她闲下来，只要看她稍微一坐下，新的农活便就又安排上了。每当我学习或玩乐的时候，表妹不是在割猪草，就是在打柴，她总<br>是那么忙，忙得只得把上学时间当作一天中短暂的休息时刻。</p>
-<p>其实如果只是受着她那个年龄不该承受的辛劳，或许不会让我至今想到她仍心疼至此。</p>
-<p>大外公如果太忙，或者喝了酒，或者在哪里不如意，表妹就会成为他出气的沙包。揪住头发打，用脚踹，踹胸口，踹头..</p>
-<p>此刻，打下这些字，仍忍不住心痛如绞。</p>
-<p>有一次，表妹不知道因为什么又被大外公打了。那时我们好像是8岁还是9岁。8岁、9岁的小姑娘，竟被活活打到小便失禁。</p>
-<p>在我听到咒骂声和哭声赶到的时候，表妹正躺在被便液浸湿的地上，小声鸣咽。</p>
-<p>所幸，如此拳打脚踢，表妹没被打死，仍然健康。</p>
-<p>可能是成长环境的原因，表妹自小就是内向的，极度内向，寡言少语，很少笑，外人看上去就是讷讷的。但勤劳，孝顺，老实本分，正如她的名字那样。</p>
-<p>改备注时想到了这些，想起了这个生来凄苦的姑娘。</p>
-<p>好在，表妹后来机缘巧合读了一所卫校，现在在一个药店上班，并在去年嫁给了一个与她同样内向的男生。我听说那个男生是个手艺人的时候，顿时舒了一口气，再艰难的岁月也饿不死手艺人，希望这个男孩能护表妹一世周全。</p>
-<p>对了，她之所以给我转钱，是因为去年她结婚的时候我给她包了一个红包。</p>
-<p>后来我也登记结婚，但不准备办婚礼，没有宴请，她可能是听到我结婚的消息了，所以就这么讷讷的，说要表达一点心意。</p>
-<p>看吧，这个傻姑娘，连发个红包都这么笨。</p>
-<p>我一直认为农村是美好的，有外公的手作玩具，有外婆采来的山林野果，有青山隐隐，有大大的水牛，有小鸡大鹅，但今天又一次认识到，这并不是农村的全部。</p>
-<p>农村最恐怖的地方吗？大概就是过错与痛苦情有可<br>怒却又只能努力去理解、去原谅、去祝福。最后，虽然世人皆苦，但真的好希望你幸福。</p>
-<p>转自知乎@落木柔</p>
-]]></content>
-      <categories>
-        <category>浮生记</category>
-      </categories>
-  </entry>
-  <entry>
     <title>中兴 ZXHN F677V2 光猫改桥接</title>
     <url>/2020/02/20/%E4%B8%AD%E5%85%B4%20ZXHN%20F677V2%20%E5%85%89%E7%8C%AB%E6%94%B9%E6%A1%A5%E6%8E%A5/</url>
     <content><![CDATA[<p>　　在2019年年底，我家终于扯通了宽带，这次放假回家之后看了看发现是中兴 ZXHN F677V2 的光猫，联通的宽带，没有送路由器，用的是光猫自带的2.4Ghz的WiFi。正好我家有闲置的路由器，是斐讯的K2，就接在光猫上自动获取ip地址进行上网。<span id="more"></span>由于疫情在家闲着没事干，准备申请一个公网ip试试，却发现给的就是公网ip，这样就省了一大步了。</p>
@@ -899,6 +861,44 @@
       <tags>
         <tag>悦･读</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>农村什么让你感到最恐怖？</title>
+    <url>/2019/10/03/%E5%86%9C%E6%9D%91%E4%BB%80%E4%B9%88%E8%AE%A9%E4%BD%A0%E6%84%9F%E5%88%B0%E6%9C%80%E6%81%90%E6%80%96%EF%BC%9F/</url>
+    <content><![CDATA[<p>前几天有个自称是我表妹的人加我微信，我加了，然后刚加她就转来500块钱，说什么一点心意让我收下。</p>
+<p>“机智”如我立马辨出是“骗子＂，立即删除。（因为我和表妹很少联系，也实在想不出任何一个得让她给我转钱的理由。）<span id="more"></span></p>
+<p>今天那个号又加我，还备注了我的真实姓名。我又半信半疑地加了。</p>
+<p>和上次一样，微信页面上又是转账500元，连话术也一模一样。<br><img src="https://i.loli.net/2020/03/02/tqogVTpFx15nvu3.jpg" alt="800723844.jpg"></p>
+<p>我直接一个视频电话打过去，镜头另一端，<br>竟真的是我表妹。还是瘦，神情也还是那么怯怯的。<br>因为我在上班，不方便多说，确认是她后就<br>挂断了，然后在微信上寒暄了几句。</p>
+<p>改备注的时候，一阵心疼。<br>表妹名“孝勤＂，只比我小9天。“孝＂是字辈， “勤”是家人（尤其是她爷爷，也就是我外公的哥哥，我称呼他大外公）对她的期愿，希望她勤劳，多干活。</p>
+<p>小时候我是“别人家的孩子＂，聪明，成绩好，总是学校的第一名。但我知道我取得第一仅仅是因为我比其他人有更多的时间读书而已。</p>
+<p>我从小和外公外婆一起生活，他们虽没多少文化，但都深刻明白知识的重要性，所以哪怕是农忙时节，他们也从不让我下地干活，要求我专心学习。</p>
+<p>而其他的孩子，则是农活第一，学习第二，毕竟地里真的有那么多活，而学习却是一个太过长远的投资。</p>
+<p>所以同龄很多孩子的童年，大部分时间是在割猪草喂猪、割牛草喂牛、种包谷收包谷、打谷子、打柴…</p>
+<p>尤其是，我的表妹。</p>
+<p>表妹的爸妈也就是我的大舅、舅娘，都在外打工，表妹和哥哥、爷爷留守在家。</p>
+<p>和新闻里写得不太一样，留守的老人儿童其实并没有那么多时间和精力去思念亲人、感受孤独，他们有那么那么多农活要忙，面朝黄土背朝天，烈日下忙着掰包谷，淋着雨赶熟透的谷子的收期。被汗水和辛劳填充的生活，是根本腾不出时间和精力去感伤的。</p>
+<p>大外公早鳏，多年没有枕边人，加上繁重的农活，让他的脾气有些暴躁。更让人悲凉的是，妹妹从生下来起就从未得到过他的疼爱，因为他尤为重男轻女。</p>
+<p>表妹是从来没有娱乐时间的，大外公从不准她闲下来，只要看她稍微一坐下，新的农活便就又安排上了。每当我学习或玩乐的时候，表妹不是在割猪草，就是在打柴，她总<br>是那么忙，忙得只得把上学时间当作一天中短暂的休息时刻。</p>
+<p>其实如果只是受着她那个年龄不该承受的辛劳，或许不会让我至今想到她仍心疼至此。</p>
+<p>大外公如果太忙，或者喝了酒，或者在哪里不如意，表妹就会成为他出气的沙包。揪住头发打，用脚踹，踹胸口，踹头..</p>
+<p>此刻，打下这些字，仍忍不住心痛如绞。</p>
+<p>有一次，表妹不知道因为什么又被大外公打了。那时我们好像是8岁还是9岁。8岁、9岁的小姑娘，竟被活活打到小便失禁。</p>
+<p>在我听到咒骂声和哭声赶到的时候，表妹正躺在被便液浸湿的地上，小声鸣咽。</p>
+<p>所幸，如此拳打脚踢，表妹没被打死，仍然健康。</p>
+<p>可能是成长环境的原因，表妹自小就是内向的，极度内向，寡言少语，很少笑，外人看上去就是讷讷的。但勤劳，孝顺，老实本分，正如她的名字那样。</p>
+<p>改备注时想到了这些，想起了这个生来凄苦的姑娘。</p>
+<p>好在，表妹后来机缘巧合读了一所卫校，现在在一个药店上班，并在去年嫁给了一个与她同样内向的男生。我听说那个男生是个手艺人的时候，顿时舒了一口气，再艰难的岁月也饿不死手艺人，希望这个男孩能护表妹一世周全。</p>
+<p>对了，她之所以给我转钱，是因为去年她结婚的时候我给她包了一个红包。</p>
+<p>后来我也登记结婚，但不准备办婚礼，没有宴请，她可能是听到我结婚的消息了，所以就这么讷讷的，说要表达一点心意。</p>
+<p>看吧，这个傻姑娘，连发个红包都这么笨。</p>
+<p>我一直认为农村是美好的，有外公的手作玩具，有外婆采来的山林野果，有青山隐隐，有大大的水牛，有小鸡大鹅，但今天又一次认识到，这并不是农村的全部。</p>
+<p>农村最恐怖的地方吗？大概就是过错与痛苦情有可<br>怒却又只能努力去理解、去原谅、去祝福。最后，虽然世人皆苦，但真的好希望你幸福。</p>
+<p>转自知乎@落木柔</p>
+]]></content>
+      <categories>
+        <category>浮生记</category>
+      </categories>
   </entry>
   <entry>
     <title>绕过校园网认证</title>

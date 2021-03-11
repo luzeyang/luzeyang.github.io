@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -226,323 +225,321 @@
       
       
       
-      <div class="post-body">
-      <link rel="stylesheet" href="https://cdn.bootcss.com/video.js/7.8.2/video-js.min.css">
+<div class="post-body">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/video.js/7.8.2/video-js.min.css">
 <div style="text-align:center;">
 <select id="selector_server" style="display: inlne-block;margin: 10px auto;"></select>
 <select id="selector_channel" style="display: inlne-block;margin: 10px auto;"></select>
 </div>
 <video id="player" class="video-js vjs-big-play-centered vjs-16-9" autoplay controls preload="auto" data-setup="{}">
-  <p class="vjs-no-js">
-    To view this video please enable JavaScript, and consider upgrading to a web browser that
-    <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-  </p>
+<p class="vjs-no-js">
+To view this video please enable JavaScript, and consider upgrading to a web browser that
+<a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+</p>
 </video>
 <script src="https://cdn.bootcss.com/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdn.bootcss.com/video.js/7.8.2/video.min.js"></script>
 <script src="https://cdn.bootcss.com/videojs-flash/2.2.1/videojs-flash.min.js"></script>
 <script>
-  var sources = [
-    {
-      name: "CCTV 1",
-      src: "/hls/cctv1hd.m3u8"
-    },
-    {
-      name: "CCTV 2",
-      src: "/hls/cctv2hd.m3u8"
-    },
-    {
-      name: "CCTV 3",
-      src: "/hls/cctv3hd.m3u8"
-    },
-    {
-      name: "CCTV 4",
-      src: "/hls/cctv4hd.m3u8"
-    },
-    {
-      name: "CCTV 5+",
-      src: "/hls/cctv5phd.m3u8"
-    },
-    {
-      name: "CCTV 6",
-      src: "/hls/cctv6hd.m3u8"
-    },
-    {
-      name: "CCTV 7",
-      src: "/hls/cctv7hd.m3u8"
-    },
-    {
-      name: "CCTV 8",
-      src: "/hls/cctv8hd.m3u8"
-    },
-    {
-      name: "CCTV 9",
-      src: "/hls/cctv9hd.m3u8"
-    },
-    {
-      name: "CCTV 10",
-      src: "/hls/cctv10hd.m3u8"
-    },
-    {
-      name: "CCTV 11",
-      src: "/hls/cctv11.m3u8"
-    },
-    {
-      name: "CCTV 12",
-      src: "/hls/cctv12hd.m3u8"
-    },
-    {
-      name: "CCTV 13",
-      src: "/hls/cctv13.m3u8"
-    },
-    {
-      name: "CCTV 14",
-      src: "/hls/cctv14hd.m3u8"
-    },
-    {
-      name: "CCTV 15",
-      src: "/hls/cctv15.m3u8"
-    },
-    {
-      name: "CCTV 17",
-      src: "/hls/cctv17hd.m3u8"
-    },
-    {
-      name: "CGTN",
-      src: "/hls/cgtnhd.m3u8"
-    },
-    {
-      name: "CGTN DOC",
-      src: "/hls/cgtndochd.m3u8"
-    },
-    {
-      name: "CETV 1",
-      src: "/hls/cetv1.m3u8"
-    },
-    {
-      name: "CETV 3",
-      src: "/hls/cetv3.m3u8"
-    },
-    {
-      name: "CETV 4",
-      src: "/hls/cetv4.m3u8"
-    },
-    {
-      name: "CHC高清电影",
-      src: "/hls/chchd.m3u8"
-    },
-    {
-      name: "北京卫视",
-      src: "/hls/btv1hd.m3u8"
-    },
-    {
-      name: "东方卫视",
-      src: "/hls/dfhd.m3u8"
-    },
-    {
-      name: "广东卫视",
-      src: "/hls/gdhd.m3u8"
-    },
-    {
-      name: "江苏卫视",
-      src: "/hls/jshd.m3u8"
-    },
-    {
-      name: "重庆卫视",
-      src: "/hls/cqhd.m3u8"
-    },
-    {
-      name: "四川卫视",
-      src: "/hls/schd.m3u8"
-    },
-    {
-      name: "山东卫视",
-      src: "/hls/sdhd.m3u8"
-    },
-    {
-      name: "天津卫视",
-      src: "/hls/tjhd.m3u8"
-    },
-    {
-      name: "山西卫视",
-      src: "/hls/sxrtv.m3u8"
-    },
-    {
-      name: "海南旅游卫视",
-      src: "/hls/lyhd.m3u8"
-    },
-    {
-      name: "湖南卫视",
-      src: "/hls/hunanhd.m3u8"
-    },
-    {
-      name: "湖北卫视",
-      src: "/hls/hbhd.m3u8"
-    },
-    {
-      name: "福建东南卫视",
-      src: "/hls/dnhd.m3u8"
-    },
-    {
-      name: "云南卫视",
-      src: "/hls/yntv.m3u8"
-    },
-    {
-      name: "河北卫视",
-      src: "/hls/hebhd.m3u8"
-    },
-    {
-      name: "河南卫视",
-      src: "/hls/hnhd.m3u8"
-    },
-    {
-      name: "浙江卫视",
-      src: "/hls/zjhd.m3u8"
-    },
-    {
-      name: "安徽卫视",
-      src: "/hls/ahhd.m3u8"
-    },
-    {
-      name: "黑龙江卫视",
-      src: "/hls/hljhd.m3u8"
-    },
-    {
-      name: "江西卫视",
-      src: "/hls/jxhd.m3u8"
-    },
-    {
-      name: "陕西卫视",
-      src: "/hls/sxtv.m3u8"
-    },
-    {
-      name: "辽宁卫视",
-      src: "/hls/lnhd.m3u8"
-    },
-    {
-      name: "吉林卫视",
-      src: "/hls/jlhd.m3u8"
-    },
-    {
-      name: "新疆卫视",
-      src: "/hls/xjtv.m3u8"
-    },
-    {
-      name: "兵团卫视",
-      src: "/hls/bttv.m3u8"
-    },
-    {
-      name: "广西卫视",
-      src: "/hls/gxhd.m3u8"
-    },
-    {
-      name: "青海卫视",
-      src: "/hls/qhtv.m3u8"
-    },
-    {
-      name: "甘肃卫视",
-      src: "/hls/gstv.m3u8"
-    },
-    {
-      name: "内蒙古卫视",
-      src: "/hls/nmtv.m3u8"
-    },
-    {
-      name: "宁夏卫视",
-      src: "/hls/nxtv.m3u8"
-    },
-    {
-      name: "贵州卫视",
-      src: "/hls/gzhd.m3u8"
-    },
-    {
-      name: "西藏卫视",
-      src: "/hls/xztv.m3u8"
-    },
-    {
-      name: "深圳卫视",
-      src: "/hls/szhd.m3u8"
-    },
-    {
-      name: "厦门卫视",
-      src: "/hls/xmtv.m3u8"
-    },
-    {
-      name: "延边卫视",
-      src: "/hls/ybtv.m3u8"
-    },
-    {
-      name: "三沙卫视",
-      src: "/hls/sstv.m3u8"
-    },
-    {
-      name: "山东教育",
-      src: "/hls/sdetv.m3u8"
-    },
-    {
-      name: "上海纪实",
-      src: "/hls/docuchina.m3u8"
-    },
-    {
-      name: "金鹰纪实",
-      src: "/hls/gedocu.m3u8"
-    },
-    {
-      name: "北京文艺",
-      src: "/hls/btv2hd.m3u8"
-    },
-    {
-      name: "北京科教",
-      src: "/hls/btv3.m3u8"
-    },
-    {
-      name: "北京影视",
-      src: "/hls/btv4hd.m3u8"
-    },
-    {
-      name: "北京财经",
-      src: "/hls/btv5.m3u8"
-    },
-    {
-      name: "北京生活",
-      src: "/hls/btv7.m3u8"
-    },
-    {
-      name: "北京青年",
-      src: "/hls/btv8.m3u8"
-    },
-    {
-      name: "北京新闻",
-      src: "/hls/btv9hd.m3u8"
-    },
-    {
-      name: "北京卡酷少儿",
-      src: "/hls/btv10.m3u8"
-    },
-    {
-      name: "北京冬奥纪实",
-      src: "/hls/btv11hd.m3u8"
-    }
-  ];
-  $(function () {
-    var player = videojs("player");
-    var playlist = sources || [];
-    var element_server = '<option value="http://ivi6.bupt.edu.cn">IVI(IPv6)</option>'
-    +'<option value="http://ivi.bupt.edu.cn">IVI(IPv4)</option>';
-    $("#selector_server").append(element_server).change(function () {
-      player.src($("#selector_server").val()+$("#selector_channel").val());
-    });
-    var element_channel = "<option>请选择电视频道</option>";
-    for (var i = 0; i < playlist.length; i++) {
-      element_channel += '<option value="' + playlist[i].src + '">' + playlist[i].name + "</option>";
-    }
-    $("#selector_channel").append(element_channel).change(function () {
-      player.src($("#selector_server").val()+$("#selector_channel").val());
-    });
-  });
-
-          
-
+var sources = [
+{
+name: "CCTV 1",
+src: "/hls/cctv1hd.m3u8"
+},
+{
+name: "CCTV 2",
+src: "/hls/cctv2hd.m3u8"
+},
+{
+name: "CCTV 3",
+src: "/hls/cctv3hd.m3u8"
+},
+{
+name: "CCTV 4",
+src: "/hls/cctv4hd.m3u8"
+},
+{
+name: "CCTV 5+",
+src: "/hls/cctv5phd.m3u8"
+},
+{
+name: "CCTV 6",
+src: "/hls/cctv6hd.m3u8"
+},
+{
+name: "CCTV 7",
+src: "/hls/cctv7hd.m3u8"
+},
+{
+name: "CCTV 8",
+src: "/hls/cctv8hd.m3u8"
+},
+{
+name: "CCTV 9",
+src: "/hls/cctv9hd.m3u8"
+},
+{
+name: "CCTV 10",
+src: "/hls/cctv10hd.m3u8"
+},
+{
+name: "CCTV 11",
+src: "/hls/cctv11.m3u8"
+},
+{
+name: "CCTV 12",
+src: "/hls/cctv12hd.m3u8"
+},
+{
+name: "CCTV 13",
+src: "/hls/cctv13.m3u8"
+},
+{
+name: "CCTV 14",
+src: "/hls/cctv14hd.m3u8"
+},
+{
+name: "CCTV 15",
+src: "/hls/cctv15.m3u8"
+},
+{
+name: "CCTV 17",
+src: "/hls/cctv17hd.m3u8"
+},
+{
+name: "CGTN",
+src: "/hls/cgtnhd.m3u8"
+},
+{
+name: "CGTN DOC",
+src: "/hls/cgtndochd.m3u8"
+},
+{
+name: "CETV 1",
+src: "/hls/cetv1.m3u8"
+},
+{
+name: "CETV 3",
+src: "/hls/cetv3.m3u8"
+},
+{
+name: "CETV 4",
+src: "/hls/cetv4.m3u8"
+},
+{
+name: "CHC高清电影",
+src: "/hls/chchd.m3u8"
+},
+{
+name: "北京卫视",
+src: "/hls/btv1hd.m3u8"
+},
+{
+name: "东方卫视",
+src: "/hls/dfhd.m3u8"
+},
+{
+name: "广东卫视",
+src: "/hls/gdhd.m3u8"
+},
+{
+name: "江苏卫视",
+src: "/hls/jshd.m3u8"
+},
+{
+name: "重庆卫视",
+src: "/hls/cqhd.m3u8"
+},
+{
+name: "四川卫视",
+src: "/hls/schd.m3u8"
+},
+{
+name: "山东卫视",
+src: "/hls/sdhd.m3u8"
+},
+{
+name: "天津卫视",
+src: "/hls/tjhd.m3u8"
+},
+{
+name: "山西卫视",
+src: "/hls/sxrtv.m3u8"
+},
+{
+name: "海南旅游卫视",
+src: "/hls/lyhd.m3u8"
+},
+{
+name: "湖南卫视",
+src: "/hls/hunanhd.m3u8"
+},
+{
+name: "湖北卫视",
+src: "/hls/hbhd.m3u8"
+},
+{
+name: "福建东南卫视",
+src: "/hls/dnhd.m3u8"
+},
+{
+name: "云南卫视",
+src: "/hls/yntv.m3u8"
+},
+{
+name: "河北卫视",
+src: "/hls/hebhd.m3u8"
+},
+{
+name: "河南卫视",
+src: "/hls/hnhd.m3u8"
+},
+{
+name: "浙江卫视",
+src: "/hls/zjhd.m3u8"
+},
+{
+name: "安徽卫视",
+src: "/hls/ahhd.m3u8"
+},
+{
+name: "黑龙江卫视",
+src: "/hls/hljhd.m3u8"
+},
+{
+name: "江西卫视",
+src: "/hls/jxhd.m3u8"
+},
+{
+name: "陕西卫视",
+src: "/hls/sxtv.m3u8"
+},
+{
+name: "辽宁卫视",
+src: "/hls/lnhd.m3u8"
+},
+{
+name: "吉林卫视",
+src: "/hls/jlhd.m3u8"
+},
+{
+name: "新疆卫视",
+src: "/hls/xjtv.m3u8"
+},
+{
+name: "兵团卫视",
+src: "/hls/bttv.m3u8"
+},
+{
+name: "广西卫视",
+src: "/hls/gxhd.m3u8"
+},
+{
+name: "青海卫视",
+src: "/hls/qhtv.m3u8"
+},
+{
+name: "甘肃卫视",
+src: "/hls/gstv.m3u8"
+},
+{
+name: "内蒙古卫视",
+src: "/hls/nmtv.m3u8"
+},
+{
+name: "宁夏卫视",
+src: "/hls/nxtv.m3u8"
+},
+{
+name: "贵州卫视",
+src: "/hls/gzhd.m3u8"
+},
+{
+name: "西藏卫视",
+src: "/hls/xztv.m3u8"
+},
+{
+name: "深圳卫视",
+src: "/hls/szhd.m3u8"
+},
+{
+name: "厦门卫视",
+src: "/hls/xmtv.m3u8"
+},
+{
+name: "延边卫视",
+src: "/hls/ybtv.m3u8"
+},
+{
+name: "三沙卫视",
+src: "/hls/sstv.m3u8"
+},
+{
+name: "山东教育",
+src: "/hls/sdetv.m3u8"
+},
+{
+name: "上海纪实",
+src: "/hls/docuchina.m3u8"
+},
+{
+name: "金鹰纪实",
+src: "/hls/gedocu.m3u8"
+},
+{
+name: "北京文艺",
+src: "/hls/btv2hd.m3u8"
+},
+{
+name: "北京科教",
+src: "/hls/btv3.m3u8"
+},
+{
+name: "北京影视",
+src: "/hls/btv4hd.m3u8"
+},
+{
+name: "北京财经",
+src: "/hls/btv5.m3u8"
+},
+{
+name: "北京生活",
+src: "/hls/btv7.m3u8"
+},
+{
+name: "北京青年",
+src: "/hls/btv8.m3u8"
+},
+{
+name: "北京新闻",
+src: "/hls/btv9hd.m3u8"
+},
+{
+name: "北京卡酷少儿",
+src: "/hls/btv10.m3u8"
+},
+{
+name: "北京冬奥纪实",
+src: "/hls/btv11hd.m3u8"
+}
+];
+$(function () {
+var player = videojs("player");
+var playlist = sources || [];
+var element_server = '<option value="http://ivi6.bupt.edu.cn">IVI(IPv6)</option>'
++'<option value="http://ivi.bupt.edu.cn">IVI(IPv4)</option>';
+$("#selector_server").append(element_server).change(function () {
+player.src($("#selector_server").val()+$("#selector_channel").val());
+});
+var element_channel = "<option>请选择电视频道</option>";
+for (var i = 0; i < playlist.length; i++) {
+element_channel += '<option value="' + playlist[i].src + '">' + playlist[i].name + "</option>";
+}
+$("#selector_channel").append(element_channel).change(function () {
+player.src($("#selector_server").val()+$("#selector_channel").val());
+});
+});
+</script>
       </div>
       
       
@@ -695,139 +692,6 @@
   <script src="/lib/velocity/velocity.ui.min.js"></script>
 
 <script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
-
-
-<script src="/js/schemes/pisces.js"></script>
-
-
-<script src="/js/next-boot.js"></script>
-
-
-
-
-  
-
-
-
-
-  
-<script src="/js/local-search.js"></script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-
-</body>
-</html>
-  <span class="links-of-author-item">
-        <a href="https://youtube.com/channel/UCb2qgv37R1pV5rkfxSv8apg" title="YouTube → https:&#x2F;&#x2F;youtube.com&#x2F;channel&#x2F;UCb2qgv37R1pV5rkfxSv8apg" rel="noopener" target="_blank"><i class="fab fa-youtube fa-fw"></i>YouTube</a>
-      </span>
-  </div>
-
-
-
-      </div>
-
-    </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
-
-
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        
-
-        
-
-<div class="copyright">
-  
-  &copy; 2019 – 
-  <span itemprop="copyrightYear">2021</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">路遥</span>
-</div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
-  </div>
-
-        
-
-
-
-
-
-
-
-
-      </div>
-    </footer>
-  </div>
-
-  
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
-
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
-
-
-<script src="/js/schemes/pisces.js"></script>
-
-
-<script src="/js/next-boot.js"></script>
-
-
-
-
-  
-
-
-
-
-  
-<script src="/js/local-search.js"></script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-
-</body>
-</html>
-
-</html>
-rc="/js/utils.js"></script>
 
 <script src="/js/motion.js"></script>
 
