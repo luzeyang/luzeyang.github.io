@@ -1289,7 +1289,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #7129f1;
+  background: #a36bda;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2857,4 +2857,7 @@ ul.breadcrumb li + li:last-child {
 .site-subtitle {
   font-family: cursive;
   font-size: revert;
+}
+.posts-expand .post-meta {
+  margin: 3px 0 9px 0px;
 }

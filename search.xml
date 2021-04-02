@@ -1,24 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>HWID数字许可激活工具</title>
-    <url>/2019/06/08/HWID%E6%95%B0%E5%AD%97%E8%AE%B8%E5%8F%AF%E6%BF%80%E6%B4%BB%E5%B7%A5%E5%85%B7/</url>
-    <content><![CDATA[<p>　　微软在2014年4月8日停止了xp系统的维护和更新，大部分用户都转战的win7，一晃十年过去了，win7用户占据了绝大部分，如今官网发布了公告：历经 10 年，对 Windows 7 的支持已近尾声 — 2020 年 1 月 14 日。我们了解，改变可能会很困难，因此，我们会为你提供有关后续行动的建议，并回答有关停止支持的问题。<span id="more"></span><br>　　自win10发布后微软也是费尽心思想让用户们升级win10，所以就很长一段时间的政策是如果你是win7用户，且系统处于激活状态，无论正版盗版升级到win10后都可以获得数字许可证（除企业版）。<br>　　这是什么概念？白给啊！！那有人就说了，我找工具类kms激活不一样嘛，答案是，，，确实一样。不过咱们是为了啥，毕竟正版用起来确实方便啊，尤其是学计算机的同学，我们买的电脑基本上都是预装的win10家庭中文版，够大部分人办公用了。可能有少部分人不满足家庭中文版的基本功能转战专业版企业版或者教育版，比如我。所以我当初没事干就是从win10家庭中文版重装到win7旗舰版，然后工具激活，再升级到win10专业版，获得了数字许可证，登录我微软账号后获得了与 Microsoft 帐户关联的数字许可证。然后为了纯净就格盘再重装win10专业版，联网自动激活，登录我微软账户，一个洗白党就此诞生，我当时是真能折腾。<br>　　这里先说一下区别，获得数字许可证相当于官网记录了你的电脑主板相关参数，只要你不换主板，无论重装多少次系统，只要是对应版本，在联网后都可以自动激活。<br>与 Microsoft 帐户关联的数字许可证呢，这个就是给予你的微软账号的权力了，一个微软账号可以关联5-8(范围区间)，具体我也不知道多少台电脑，也就是对应版本登录你的账号就可以选择是否激活该未激活电脑。<br>　　然后，，，在微软结束这个活动前，国外有人写了工具，就是模拟电脑环境从win7升级到win10来获得数字许可证，我当时就想，你怎么不早点写出来呢，，，后来国内大牛根据该工具用C重写了该工具，于是HWID数字许可激活工具就流传开来了，这个工具也整合了kms等激活方式，基本上全版本win10都可以用它激活，我是早期在远景论坛下载的，原帖现在也找不到了，就没标注原帖地址，贴上软件运行图</p>
-<p><strong>启动图</strong></p>
-<p><img src="https://i.loli.net/2019/09/09/ym8FBS4csvJAtqr.png" alt="TIM截图20190909212756.png"></p>
-<p><strong>主页面</strong><br><img src="https://i.loli.net/2019/09/09/MmtVCzXwnH7jORK.png" alt="TIM截图20190909212813.png"></p>
-<p><strong>下载地址</strong>：<a href="https://www.lanzous.com/i63k4ha">点我下载</a></p>
-<p>最后罗嗦两句，新系统肯定要比旧系统有优势，重点就在过渡期间，当初win10用户占用率少是什么原因？一是兼容性不好，好多游戏，软件win10兼容不了，二是win10太吃硬盘读写，在固态还没降价普及时大部分办公本以及网吧台式机都是用的机械硬盘，装win10开个机就轻易卡死，磁盘利用率动不动就100%，这要你有个球用。<br>现在好多了，兼容性基本上没问题了，固态硬盘价格也降了，就这么说吧，有固态上win10，没固态用win7，有没有固态用win10简直是两个体验，毕竟我是体验过4G RAM+机械盘+win7/10，4G RAM+固态盘+win7/10，8G RAM+固态盘的男人。</p>
-]]></content>
-      <categories>
-        <category>Softwares For Windows</category>
-      </categories>
-      <tags>
-        <tag>HWID</tag>
-        <tag>Windows</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hexo-视/音频插件-hexo-tag- a/d player</title>
     <url>/2019/10/04/Hexo%E6%8F%92%E4%BB%B6-hexo-tag-%20a%E2%80%A2d%20player/</url>
     <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>在Hexo文章中插入音频请使用<a href="https://github.com/MoePlayer/APlayer">hexo-tag-aplayer</a></p>
@@ -340,6 +322,24 @@
       </tags>
   </entry>
   <entry>
+    <title>HWID数字许可激活工具</title>
+    <url>/2019/06/08/HWID%E6%95%B0%E5%AD%97%E8%AE%B8%E5%8F%AF%E6%BF%80%E6%B4%BB%E5%B7%A5%E5%85%B7/</url>
+    <content><![CDATA[<p>　　微软在2014年4月8日停止了xp系统的维护和更新，大部分用户都转战的win7，一晃十年过去了，win7用户占据了绝大部分，如今官网发布了公告：历经 10 年，对 Windows 7 的支持已近尾声 — 2020 年 1 月 14 日。我们了解，改变可能会很困难，因此，我们会为你提供有关后续行动的建议，并回答有关停止支持的问题。<span id="more"></span><br>　　自win10发布后微软也是费尽心思想让用户们升级win10，所以就很长一段时间的政策是如果你是win7用户，且系统处于激活状态，无论正版盗版升级到win10后都可以获得数字许可证（除企业版）。<br>　　这是什么概念？白给啊！！那有人就说了，我找工具类kms激活不一样嘛，答案是，，，确实一样。不过咱们是为了啥，毕竟正版用起来确实方便啊，尤其是学计算机的同学，我们买的电脑基本上都是预装的win10家庭中文版，够大部分人办公用了。可能有少部分人不满足家庭中文版的基本功能转战专业版企业版或者教育版，比如我。所以我当初没事干就是从win10家庭中文版重装到win7旗舰版，然后工具激活，再升级到win10专业版，获得了数字许可证，登录我微软账号后获得了与 Microsoft 帐户关联的数字许可证。然后为了纯净就格盘再重装win10专业版，联网自动激活，登录我微软账户，一个洗白党就此诞生，我当时是真能折腾。<br>　　这里先说一下区别，获得数字许可证相当于官网记录了你的电脑主板相关参数，只要你不换主板，无论重装多少次系统，只要是对应版本，在联网后都可以自动激活。<br>与 Microsoft 帐户关联的数字许可证呢，这个就是给予你的微软账号的权力了，一个微软账号可以关联5-8(范围区间)，具体我也不知道多少台电脑，也就是对应版本登录你的账号就可以选择是否激活该未激活电脑。<br>　　然后，，，在微软结束这个活动前，国外有人写了工具，就是模拟电脑环境从win7升级到win10来获得数字许可证，我当时就想，你怎么不早点写出来呢，，，后来国内大牛根据该工具用C重写了该工具，于是HWID数字许可激活工具就流传开来了，这个工具也整合了kms等激活方式，基本上全版本win10都可以用它激活，我是早期在远景论坛下载的，原帖现在也找不到了，就没标注原帖地址，贴上软件运行图</p>
+<p><strong>启动图</strong></p>
+<p><img src="https://i.loli.net/2019/09/09/ym8FBS4csvJAtqr.png" alt="TIM截图20190909212756.png"></p>
+<p><strong>主页面</strong><br><img src="https://i.loli.net/2019/09/09/MmtVCzXwnH7jORK.png" alt="TIM截图20190909212813.png"></p>
+<p><strong>下载地址</strong>：<a href="https://www.lanzous.com/i63k4ha">点我下载</a></p>
+<p>最后罗嗦两句，新系统肯定要比旧系统有优势，重点就在过渡期间，当初win10用户占用率少是什么原因？一是兼容性不好，好多游戏，软件win10兼容不了，二是win10太吃硬盘读写，在固态还没降价普及时大部分办公本以及网吧台式机都是用的机械硬盘，装win10开个机就轻易卡死，磁盘利用率动不动就100%，这要你有个球用。<br>现在好多了，兼容性基本上没问题了，固态硬盘价格也降了，就这么说吧，有固态上win10，没固态用win7，有没有固态用win10简直是两个体验，毕竟我是体验过4G RAM+机械盘+win7/10，4G RAM+固态盘+win7/10，8G RAM+固态盘的男人。</p>
+]]></content>
+      <categories>
+        <category>Softwares For Windows</category>
+      </categories>
+      <tags>
+        <tag>HWID</tag>
+        <tag>Windows</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>K2（路由）老矣，尚能饭否？①</title>
     <url>/2020/03/03/K2%EF%BC%88%E8%B7%AF%E7%94%B1%EF%BC%89%E8%80%81%E7%9F%A3%EF%BC%8C%E5%B0%9A%E8%83%BD%E9%A5%AD%E5%90%A6%EF%BC%9F%20%20%E2%91%A0/</url>
     <content><![CDATA[<h2 id="设置路由拨号和实现DDNS远程访问"><a href="#设置路由拨号和实现DDNS远程访问" class="headerlink" title="设置路由拨号和实现DDNS远程访问"></a><p align="center">设置路由拨号和实现DDNS远程访问</p></h2><p>　　在斐讯辉煌之际，鄙人有幸上车，以364软妹币拿下这款理财产品，之后没多久斐讯就倒闭跑路了，万千产品今犹在，不见当年斐讯狂。</p>
@@ -524,6 +524,24 @@
       <tags>
         <tag>Windows</tag>
         <tag>Software</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>office2016和visio同时安装</title>
+    <url>/2019/09/03/office2016%E5%92%8Cvisio%E5%90%8C%E6%97%B6%E5%AE%89%E8%A3%85/</url>
+    <content><![CDATA[<p>　　最近朋友找我帮忙给一台主机重装系统并安装好office2016及其visio2016，在安装完office后再安装visio时就傻了眼，提示框忘记截图了，大概意思就是您已安装office（32位），因为您计算机上已经安装了这些64位程序balabala。。。<span id="more"></span><br>百度了下才发现正常条件下是不能同时安装的，网上有些教程没什么用或者不详细，我在这详细说一下。<br>我是在msdn：<a href="https://msdn.itellyou.cn/">https://msdn.itellyou.cn/</a> 下载的官方镜像属性入下图，<br><img src="https://i.loli.net/2019/09/09/JTbWeMSwiYBKNOm.png" alt="TIM图片20190909184613.png"><br>分别是visio和office，差不多大，百度了下才知道实际上office2016iso镜像里是包含有visio的，同理visio也是，与我经常安装的office2010不同，2016版并不能在安装时自定义安装组件，也就是你点击安装，他会默认把所有的组件都安装到c盘，没错，连盘符你都没法选择。<br>我们去官网下载Office Deployment Tool工具：<a href="https://www.microsoft.com/en-us/download/details.aspx?id=49117">https://www.microsoft.com/en-us/download/details.aspx?id=49117</a><br>我们安装到d盘Tool文件夹，发现里面有这四个文件，<br><img src="https://i.loli.net/2019/09/09/UxLIeXDkvqMhcdb.png" alt="TIM图片20190909185735.png"><br>前三个就是配置文件，最后一个就是安装程序，按照电脑处理器架构选择修改哪个配置文件，比如我的电脑是64位的，我就选择修改第一个，（32位电脑修改X86的）右键编辑它，“Configuration”和“/Configuration”(这里去掉了Configuration两边的&lt;&gt;符号来适应md格式)之间的就是默认的配置文件，我们修改如下</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;Configuration&gt;</span><br><span class="line">  &lt;Add SourcePath&#x3D;&quot;A:\&quot; OfficeClientEdition&#x3D;&quot;64&quot; Branch&#x3D;&quot;Current&quot;&gt;</span><br><span class="line">    &lt;!-- &lt;Product ID&#x3D;&quot;O365ProPlusRetail&quot;&gt;</span><br><span class="line">      &lt;Language ID&#x3D;&quot;en-us&quot; &#x2F;&gt;</span><br><span class="line">    &lt;&#x2F;Product&gt; --&gt;</span><br><span class="line">    &lt;Product ID&#x3D;&quot;VisioProRetail&quot;&gt;</span><br><span class="line">      &lt;Language ID&#x3D;&quot;zh-cn&quot; &#x2F;&gt;</span><br><span class="line">    &lt;&#x2F;Product&gt;</span><br><span class="line">    &lt;Product ID&#x3D;&quot;proplusretail&quot;&gt;</span><br><span class="line">      &lt;Language ID&#x3D;&quot;zh-cn&quot; &#x2F;&gt;</span><br><span class="line">      &lt;ExcludeApp ID&#x3D;&quot;Access&quot; &#x2F;&gt;</span><br><span class="line">      &lt;ExcludeApp ID&#x3D;&quot;Publisher&quot; &#x2F;&gt;</span><br><span class="line">      &lt;ExcludeApp ID&#x3D;&quot;Groove&quot; &#x2F;&gt;</span><br><span class="line">      &lt;ExcludeApp ID&#x3D;&quot;Lync&quot; &#x2F;&gt;</span><br><span class="line">      &lt;ExcludeApp ID&#x3D;&quot;Outlook&quot; &#x2F;&gt;</span><br><span class="line">&lt;ExcludeApp ID&#x3D;&quot;Skype&quot; &#x2F;&gt;</span><br><span class="line">    &lt;&#x2F;Product&gt;</span><br><span class="line">  &lt;&#x2F;Add&gt;</span><br><span class="line">  &lt;!--  &lt;Updates Enabled&#x3D;&quot;TRUE&quot; Branch&#x3D;&quot;Current&quot; &#x2F;&gt; --&gt;</span><br><span class="line">  &lt;!--  &lt;Display Level&#x3D;&quot;None&quot; AcceptEULA&#x3D;&quot;TRUE&quot; &#x2F;&gt;  --&gt;</span><br><span class="line">  &lt;!--  &lt;Property Name&#x3D;&quot;AUTOACTIVATE&quot; Value&#x3D;&quot;1&quot; &#x2F;&gt;  --&gt;</span><br><span class="line">&lt;&#x2F;Configuration&gt;</span><br></pre></td></tr></table></figure>
+<p>其中，我们把上面两个镜像其中的一个双击打开，他就会自动挂载光驱（这是win10很早之前就自带的功能了，不用使用第三方软件了，很方便），如图我们可以看到电脑将驱动器挂载为H：盘，<br><img src="https://i.loli.net/2019/09/09/f68zCwthXQ5uNd2.png" alt="TIM图片20190909193803.png"><br>所以我们修改&lt;Add SourcePath=”A:&quot;为&lt;Add SourcePath=”H:&quot;，我们电脑是64位，所以<br>OfficeClientEdition=”64”不用修改，32位的机器修改为32。<br>修改完保存，在这个配置文件所在目录下按住shift键，鼠标右键点击：在此处打开Powershell 窗口，<br><img src="https://i.loli.net/2019/09/09/d9T6brcmJjfopQx.png" alt="TIM图片20190909194027.png"><br>也可以打开cmd窗口，cd到该目录，运行</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">D:\tool&gt;setup.exe &#x2F;configure configuration-Office365-x64.xml</span><br></pre></td></tr></table></figure>
+<p>就ok啦（这里注意配置文件名）。用PowerShell时可能遇到需要在命令行前加“./”，如果提示就加上。<br>setup.exe会自动运行，按照你的配置文件展开安装啦。</p>
+]]></content>
+      <categories>
+        <category>Softwares For Windows</category>
+      </categories>
+      <tags>
+        <tag>Windows</tag>
+        <tag>office</tag>
+        <tag>visio</tag>
       </tags>
   </entry>
   <entry>
@@ -782,24 +800,6 @@
       </categories>
   </entry>
   <entry>
-    <title>office2016和visio同时安装</title>
-    <url>/2019/09/03/office2016%E5%92%8Cvisio%E5%90%8C%E6%97%B6%E5%AE%89%E8%A3%85/</url>
-    <content><![CDATA[<p>　　最近朋友找我帮忙给一台主机重装系统并安装好office2016及其visio2016，在安装完office后再安装visio时就傻了眼，提示框忘记截图了，大概意思就是您已安装office（32位），因为您计算机上已经安装了这些64位程序balabala。。。<span id="more"></span><br>百度了下才发现正常条件下是不能同时安装的，网上有些教程没什么用或者不详细，我在这详细说一下。<br>我是在msdn：<a href="https://msdn.itellyou.cn/">https://msdn.itellyou.cn/</a> 下载的官方镜像属性入下图，<br><img src="https://i.loli.net/2019/09/09/JTbWeMSwiYBKNOm.png" alt="TIM图片20190909184613.png"><br>分别是visio和office，差不多大，百度了下才知道实际上office2016iso镜像里是包含有visio的，同理visio也是，与我经常安装的office2010不同，2016版并不能在安装时自定义安装组件，也就是你点击安装，他会默认把所有的组件都安装到c盘，没错，连盘符你都没法选择。<br>我们去官网下载Office Deployment Tool工具：<a href="https://www.microsoft.com/en-us/download/details.aspx?id=49117">https://www.microsoft.com/en-us/download/details.aspx?id=49117</a><br>我们安装到d盘Tool文件夹，发现里面有这四个文件，<br><img src="https://i.loli.net/2019/09/09/UxLIeXDkvqMhcdb.png" alt="TIM图片20190909185735.png"><br>前三个就是配置文件，最后一个就是安装程序，按照电脑处理器架构选择修改哪个配置文件，比如我的电脑是64位的，我就选择修改第一个，（32位电脑修改X86的）右键编辑它，“Configuration”和“/Configuration”(这里去掉了Configuration两边的&lt;&gt;符号来适应md格式)之间的就是默认的配置文件，我们修改如下</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;Configuration&gt;</span><br><span class="line">  &lt;Add SourcePath&#x3D;&quot;A:\&quot; OfficeClientEdition&#x3D;&quot;64&quot; Branch&#x3D;&quot;Current&quot;&gt;</span><br><span class="line">    &lt;!-- &lt;Product ID&#x3D;&quot;O365ProPlusRetail&quot;&gt;</span><br><span class="line">      &lt;Language ID&#x3D;&quot;en-us&quot; &#x2F;&gt;</span><br><span class="line">    &lt;&#x2F;Product&gt; --&gt;</span><br><span class="line">    &lt;Product ID&#x3D;&quot;VisioProRetail&quot;&gt;</span><br><span class="line">      &lt;Language ID&#x3D;&quot;zh-cn&quot; &#x2F;&gt;</span><br><span class="line">    &lt;&#x2F;Product&gt;</span><br><span class="line">    &lt;Product ID&#x3D;&quot;proplusretail&quot;&gt;</span><br><span class="line">      &lt;Language ID&#x3D;&quot;zh-cn&quot; &#x2F;&gt;</span><br><span class="line">      &lt;ExcludeApp ID&#x3D;&quot;Access&quot; &#x2F;&gt;</span><br><span class="line">      &lt;ExcludeApp ID&#x3D;&quot;Publisher&quot; &#x2F;&gt;</span><br><span class="line">      &lt;ExcludeApp ID&#x3D;&quot;Groove&quot; &#x2F;&gt;</span><br><span class="line">      &lt;ExcludeApp ID&#x3D;&quot;Lync&quot; &#x2F;&gt;</span><br><span class="line">      &lt;ExcludeApp ID&#x3D;&quot;Outlook&quot; &#x2F;&gt;</span><br><span class="line">&lt;ExcludeApp ID&#x3D;&quot;Skype&quot; &#x2F;&gt;</span><br><span class="line">    &lt;&#x2F;Product&gt;</span><br><span class="line">  &lt;&#x2F;Add&gt;</span><br><span class="line">  &lt;!--  &lt;Updates Enabled&#x3D;&quot;TRUE&quot; Branch&#x3D;&quot;Current&quot; &#x2F;&gt; --&gt;</span><br><span class="line">  &lt;!--  &lt;Display Level&#x3D;&quot;None&quot; AcceptEULA&#x3D;&quot;TRUE&quot; &#x2F;&gt;  --&gt;</span><br><span class="line">  &lt;!--  &lt;Property Name&#x3D;&quot;AUTOACTIVATE&quot; Value&#x3D;&quot;1&quot; &#x2F;&gt;  --&gt;</span><br><span class="line">&lt;&#x2F;Configuration&gt;</span><br></pre></td></tr></table></figure>
-<p>其中，我们把上面两个镜像其中的一个双击打开，他就会自动挂载光驱（这是win10很早之前就自带的功能了，不用使用第三方软件了，很方便），如图我们可以看到电脑将驱动器挂载为H：盘，<br><img src="https://i.loli.net/2019/09/09/f68zCwthXQ5uNd2.png" alt="TIM图片20190909193803.png"><br>所以我们修改&lt;Add SourcePath=”A:&quot;为&lt;Add SourcePath=”H:&quot;，我们电脑是64位，所以<br>OfficeClientEdition=”64”不用修改，32位的机器修改为32。<br>修改完保存，在这个配置文件所在目录下按住shift键，鼠标右键点击：在此处打开Powershell 窗口，<br><img src="https://i.loli.net/2019/09/09/d9T6brcmJjfopQx.png" alt="TIM图片20190909194027.png"><br>也可以打开cmd窗口，cd到该目录，运行</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">D:\tool&gt;setup.exe &#x2F;configure configuration-Office365-x64.xml</span><br></pre></td></tr></table></figure>
-<p>就ok啦（这里注意配置文件名）。用PowerShell时可能遇到需要在命令行前加“./”，如果提示就加上。<br>setup.exe会自动运行，按照你的配置文件展开安装啦。</p>
-]]></content>
-      <categories>
-        <category>Softwares For Windows</category>
-      </categories>
-      <tags>
-        <tag>Windows</tag>
-        <tag>office</tag>
-        <tag>visio</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>农村什么让你感到最恐怖？</title>
     <url>/2019/10/03/%E5%86%9C%E6%9D%91%E4%BB%80%E4%B9%88%E8%AE%A9%E4%BD%A0%E6%84%9F%E5%88%B0%E6%9C%80%E6%81%90%E6%80%96%EF%BC%9F/</url>
     <content><![CDATA[<p>前几天有个自称是我表妹的人加我微信，我加了，然后刚加她就转来500块钱，说什么一点心意让我收下。</p>
@@ -836,70 +836,6 @@
       <categories>
         <category>浮生记</category>
       </categories>
-  </entry>
-  <entry>
-    <title>绕过校园网认证</title>
-    <url>/2019/04/01/%E7%BB%95%E8%BF%87%E6%A0%A1%E5%9B%AD%E7%BD%91%E8%AE%A4%E8%AF%81/</url>
-    <content><![CDATA[<p>　　大概一个月前阿里云活动，通过学生认证的购买服务器有很大的优惠，我就买了三个月的上海的服务器，本想建站呢，无奈备案过程太过复杂繁琐，就扔在一边不管了，这个月校园网到期了，平常又不怎么用，流量又用不完，所以就没续费，突然有个想法，绕过校园网认证上网。<span id="more"></span><br>　　这是我后续修改的内容，说点注意事项，服务器只有国内的才可以搭建openvpn，香港是中国的，但是香港的服务器却不能搭建，会被墙的。</p>
-<p>我们连接校园网，提示需要登录。</p>
-<p><img src="https://i.loli.net/2019/04/01/5ca1b8aae0e7f.jpg" alt="Screenshot_20190401-143631.jpg"></p>
-<p>　　我们到终端ping一下ip地址:115.239.210.27，此时是ping不通的，显然这是一个内网，通过这个内网登录到公网，经过认证成功后才能上网。</p>
-<p><img src="https://i.loli.net/2019/04/01/5ca1b8df36efb.jpg" alt="Screenshot_20190401-143622.jpg"></p>
-<p>所以整个认证过程是：</p>
-<h3 id="内网登录——公网认证——正常上网"><a href="#内网登录——公网认证——正常上网" class="headerlink" title="内网登录——公网认证——正常上网"></a>内网登录——公网认证——正常上网</h3><p>绕过过程是：</p>
-<h3 id="内网（不登陆）——绕过学校公网——连接服务器——正常上网"><a href="#内网（不登陆）——绕过学校公网——连接服务器——正常上网" class="headerlink" title="内网（不登陆）——绕过学校公网——连接服务器——正常上网"></a>内网（不登陆）——绕过学校公网——连接服务器——正常上网</h3><p>大概就是这样</p>
-<p><img src="https://i.loli.net/2019/04/02/5ca2c91de093a.jpg" alt="IMG_20190401_210247__01.jpg"></p>
-<p>　　那么怎样绕过呢？答案就是依赖端口通过UDP转发。重要的端口有三个，53，67，68。</p>
-<p>　　53端口:53端口为DNS(Domain Name Server,域名服务器)服务器所开放,主要用于域名解析,DNS 服务在NT系统中使用的最为广泛。</p>
-<p>　　67、68端口:67、68端口分别是为Bootp服务的Bootstrap Protocol Server(引导程序协议服务端)和Bootstrap Protocol Client(引导程序协议客户端)开放的端口。<br>　　SSR只可惜不代理UDP，只代理TCP，所以我们还是需要用OpenVPN，另一款优秀的代理软件。<br>　　这里是github项目地址：<a href="https://github.com/Nyr/openvpn-install">https://github.com/Nyr/openvpn-install</a></p>
-<p>　　搭建过程很简单，手机我就用JuiceSSH做演示了。连接服务器使用root账户，输入以下命令（不会使用juicessh的小伙伴可参考我博客的那篇文章）回车</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">wget https:&#x2F;&#x2F;git.io&#x2F;vpn -O openvpn-install.sh &amp;&amp; bash openvpn-install.sh</span><br></pre></td></tr></table></figure>
-<p>　　这里说一下，回车后会自动确定你服务器的内网（我用的不是大陆服务器，仅仅做演示，所以这里直接显示公网，省去了手动输入公网的步骤，你们在搭建的时候注意一下，其他基本一样，ip我也不打码了，演示完我就删掉了）</p>
-<p><img src="https://i.loli.net/2019/09/14/PxpgcbYsGQLThiy.jpg" alt="Screenshot_20190914-170125.jpg"></p>
-<p>　　下一步就是手动输入你的公网了，不明白的登录你的控制台找这里，公网内网都给你标注了</p>
-<p><img src="https://i.loli.net/2019/09/14/zTRxoIaSQlnEb95.jpg" alt="Screenshot_20190914-164547__01__01.jpg"></p>
-<p>　　接下来的除了端口都按照我的图里的选择就可以了，端口这个要自行测试你们学校的校园网了，一般的都是53可行，但是我是二班的，所以经过测试我们的是68,67可行。</p>
-<p><img src="https://i.loli.net/2019/09/14/iOfrAGWNV9TSv2p.jpg" alt="Screenshot_20190914-170300.jpg"></p>
-<p>　　最后一步输入配置文件名称，可自行编辑，我这边保持默认，回车等待部署安装就可以了</p>
-<p><img src="https://i.loli.net/2019/09/14/iOfrAGWNV9TSv2p.jpg" alt="Screenshot_20190914-170300.jpg"></p>
-<p>　　这就是搭建完成了，如果以后你想添加，删除用户，卸载都可以再次运行这个脚本，（如果你第一次搭建的端口学校不能，就可以再次运行该脚本先卸载再安装，因为添加用户端口是不会变的）还有生成的配置文件是保存在/root/client.ovpn的</p>
-<p>我们执行</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd &#x2F;root&#x2F;</span><br></pre></td></tr></table></figure>
-<p>切换到root目录下，执行</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cat client.ovpn</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://i.loli.net/2019/09/14/jfuZ9n2NecPzALQ.jpg" alt="Screenshot_20190914-173621.jpg"></p>
-<p>　　查看配置文件，然后复制整个配置文件的内容，大概就是如下，不要多也不要少复制了，包括client和tls-auth（为了适应markdown语法，两边没有加符号）。</p>
-<p><img src="https://i.loli.net/2019/09/14/bgQzNJ69GPRrWaM.jpg" alt="Screenshot_20190914-170641__01.jpg"></p>
-<p>　　我们新建一个文件，注意是文件，后缀为.ovpn，打开方式为文本编辑，或者事先修改后准为txt，mt可以直接打开，修改完再修改后缀为.ovpn也可以，把复制的内容粘贴过去就可以了。</p>
-<p><img src="https://i.loli.net/2019/09/14/vMjfC6sFTlJYAqX.jpg" alt="Screenshot_20190914-174257.jpg"></p>
-<p>打开openvpn软件，选择第三个</p>
-<p><img src="https://i.loli.net/2019/09/14/OhDrJVXkqu2aRdL.jpg" alt="Screenshot_20190914-171314.jpg"></p>
-<p>　　找到你新建文件的目录导入文件就可以啦，IMPORT和ADD，配置文件是没有密码的<br>　　<br>　　测一下速度，下载速度0.64M/s，我的服务器只有5Mbps，可以满速，实际使用中网速超过1M/s也是可能的</p>
-<p><img src="https://i.loli.net/2019/04/01/5ca21c8f70f7d.jpg" alt="Screenshot_20190401-214941.jpg"><br><img src="https://i.loli.net/2019/04/01/5ca217cef1f8b.jpg" alt="Screenshot_20190401-215148.jpg"></p>
-<p>　　最后放上我用平板测试的截图，B站，未登陆校园网，1080P可以看</p>
-<p><img src="https://i.loli.net/2019/04/01/5ca21da4df81c.png" alt="7ffa93fa4e5971cf.png"></p>
-<hr>
-<p>　　以上操作均是在Android上执行的，下面看一下ios端和Windows端的。</p>
-<h1 id="1：ios"><a href="#1：ios" class="headerlink" title="1：ios"></a>1：ios</h1><p>　　苹果商店是搜索不到vpn相关的软件的，可以自行注册或者找美国id登录商店搜索下载。<br>安装完成后电脑登录QQ，把配置文件发送到我的手机，然后在手机上接收，打开方式就选择用openvpn打开就行了，连接成功后测试如图</p>
-<p><img src="https://i.loli.net/2019/04/03/5ca433cb70c5e.png" alt="IMG_0021.png"></p>
-<h1 id="2：Windows"><a href="#2：Windows" class="headerlink" title="2：Windows"></a>2：Windows</h1><p>　　先连接有效网络<a href="https://www.lanzous.com/i3n8ewf">点我下载Windows客户端</a>，[<strong>自带配置文件已失效</strong>]解压到桌面，并运行exe执行文件，一路安装即可。</p>
-<p>安装完就可以连接校园网了。</p>
-<p>运行软件，右下角软件右键打开菜单，选择“Import file…”</p>
-<p><img src="https://i.loli.net/2019/04/03/5ca437707dfef.jpg" alt="-2dbec5eb280c420b.jpg"></p>
-<p>选择你的配置文件</p>
-<p><img src="https://i.loli.net/2019/04/03/5ca439748d377.png" alt="-63ce3226b4c9dedf.png"></p>
-<p>　　右下角软件右键打开菜单，选择“Connect”，输入用户和密码（这个项目默认的没有密码，可以直接连接）。</p>
-<p><img src="https://i.loli.net/2019/04/03/5ca439b26873e.png" alt="-442cdc5b11fb0173.png"></p>
-<p>连接成功，软件颜色变成绿色。</p>
-<p><img src="https://i.loli.net/2019/04/03/5ca439d455054.png" alt="20704d0de65fae4c.png"></p>
-]]></content>
-      <categories>
-        <category>Scripts For Linux</category>
-      </categories>
-      <tags>
-        <tag>SSR</tag>
-      </tags>
   </entry>
   <entry>
     <title>《电话》</title>
@@ -968,6 +904,70 @@
       </categories>
       <tags>
         <tag>悦･读</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>绕过校园网认证</title>
+    <url>/2019/04/01/%E7%BB%95%E8%BF%87%E6%A0%A1%E5%9B%AD%E7%BD%91%E8%AE%A4%E8%AF%81/</url>
+    <content><![CDATA[<p>　　大概一个月前阿里云活动，通过学生认证的购买服务器有很大的优惠，我就买了三个月的上海的服务器，本想建站呢，无奈备案过程太过复杂繁琐，就扔在一边不管了，这个月校园网到期了，平常又不怎么用，流量又用不完，所以就没续费，突然有个想法，绕过校园网认证上网。<span id="more"></span><br>　　这是我后续修改的内容，说点注意事项，服务器只有国内的才可以搭建openvpn，香港是中国的，但是香港的服务器却不能搭建，会被墙的。</p>
+<p>我们连接校园网，提示需要登录。</p>
+<p><img src="https://i.loli.net/2019/04/01/5ca1b8aae0e7f.jpg" alt="Screenshot_20190401-143631.jpg"></p>
+<p>　　我们到终端ping一下ip地址:115.239.210.27，此时是ping不通的，显然这是一个内网，通过这个内网登录到公网，经过认证成功后才能上网。</p>
+<p><img src="https://i.loli.net/2019/04/01/5ca1b8df36efb.jpg" alt="Screenshot_20190401-143622.jpg"></p>
+<p>所以整个认证过程是：</p>
+<h3 id="内网登录——公网认证——正常上网"><a href="#内网登录——公网认证——正常上网" class="headerlink" title="内网登录——公网认证——正常上网"></a>内网登录——公网认证——正常上网</h3><p>绕过过程是：</p>
+<h3 id="内网（不登陆）——绕过学校公网——连接服务器——正常上网"><a href="#内网（不登陆）——绕过学校公网——连接服务器——正常上网" class="headerlink" title="内网（不登陆）——绕过学校公网——连接服务器——正常上网"></a>内网（不登陆）——绕过学校公网——连接服务器——正常上网</h3><p>大概就是这样</p>
+<p><img src="https://i.loli.net/2019/04/02/5ca2c91de093a.jpg" alt="IMG_20190401_210247__01.jpg"></p>
+<p>　　那么怎样绕过呢？答案就是依赖端口通过UDP转发。重要的端口有三个，53，67，68。</p>
+<p>　　53端口:53端口为DNS(Domain Name Server,域名服务器)服务器所开放,主要用于域名解析,DNS 服务在NT系统中使用的最为广泛。</p>
+<p>　　67、68端口:67、68端口分别是为Bootp服务的Bootstrap Protocol Server(引导程序协议服务端)和Bootstrap Protocol Client(引导程序协议客户端)开放的端口。<br>　　SSR只可惜不代理UDP，只代理TCP，所以我们还是需要用OpenVPN，另一款优秀的代理软件。<br>　　这里是github项目地址：<a href="https://github.com/Nyr/openvpn-install">https://github.com/Nyr/openvpn-install</a></p>
+<p>　　搭建过程很简单，手机我就用JuiceSSH做演示了。连接服务器使用root账户，输入以下命令（不会使用juicessh的小伙伴可参考我博客的那篇文章）回车</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">wget https:&#x2F;&#x2F;git.io&#x2F;vpn -O openvpn-install.sh &amp;&amp; bash openvpn-install.sh</span><br></pre></td></tr></table></figure>
+<p>　　这里说一下，回车后会自动确定你服务器的内网（我用的不是大陆服务器，仅仅做演示，所以这里直接显示公网，省去了手动输入公网的步骤，你们在搭建的时候注意一下，其他基本一样，ip我也不打码了，演示完我就删掉了）</p>
+<p><img src="https://i.loli.net/2019/09/14/PxpgcbYsGQLThiy.jpg" alt="Screenshot_20190914-170125.jpg"></p>
+<p>　　下一步就是手动输入你的公网了，不明白的登录你的控制台找这里，公网内网都给你标注了</p>
+<p><img src="https://i.loli.net/2019/09/14/zTRxoIaSQlnEb95.jpg" alt="Screenshot_20190914-164547__01__01.jpg"></p>
+<p>　　接下来的除了端口都按照我的图里的选择就可以了，端口这个要自行测试你们学校的校园网了，一般的都是53可行，但是我是二班的，所以经过测试我们的是68,67可行。</p>
+<p><img src="https://i.loli.net/2019/09/14/iOfrAGWNV9TSv2p.jpg" alt="Screenshot_20190914-170300.jpg"></p>
+<p>　　最后一步输入配置文件名称，可自行编辑，我这边保持默认，回车等待部署安装就可以了</p>
+<p><img src="https://i.loli.net/2019/09/14/iOfrAGWNV9TSv2p.jpg" alt="Screenshot_20190914-170300.jpg"></p>
+<p>　　这就是搭建完成了，如果以后你想添加，删除用户，卸载都可以再次运行这个脚本，（如果你第一次搭建的端口学校不能，就可以再次运行该脚本先卸载再安装，因为添加用户端口是不会变的）还有生成的配置文件是保存在/root/client.ovpn的</p>
+<p>我们执行</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd &#x2F;root&#x2F;</span><br></pre></td></tr></table></figure>
+<p>切换到root目录下，执行</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cat client.ovpn</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://i.loli.net/2019/09/14/jfuZ9n2NecPzALQ.jpg" alt="Screenshot_20190914-173621.jpg"></p>
+<p>　　查看配置文件，然后复制整个配置文件的内容，大概就是如下，不要多也不要少复制了，包括client和tls-auth（为了适应markdown语法，两边没有加符号）。</p>
+<p><img src="https://i.loli.net/2019/09/14/bgQzNJ69GPRrWaM.jpg" alt="Screenshot_20190914-170641__01.jpg"></p>
+<p>　　我们新建一个文件，注意是文件，后缀为.ovpn，打开方式为文本编辑，或者事先修改后准为txt，mt可以直接打开，修改完再修改后缀为.ovpn也可以，把复制的内容粘贴过去就可以了。</p>
+<p><img src="https://i.loli.net/2019/09/14/vMjfC6sFTlJYAqX.jpg" alt="Screenshot_20190914-174257.jpg"></p>
+<p>打开openvpn软件，选择第三个</p>
+<p><img src="https://i.loli.net/2019/09/14/OhDrJVXkqu2aRdL.jpg" alt="Screenshot_20190914-171314.jpg"></p>
+<p>　　找到你新建文件的目录导入文件就可以啦，IMPORT和ADD，配置文件是没有密码的<br>　　<br>　　测一下速度，下载速度0.64M/s，我的服务器只有5Mbps，可以满速，实际使用中网速超过1M/s也是可能的</p>
+<p><img src="https://i.loli.net/2019/04/01/5ca21c8f70f7d.jpg" alt="Screenshot_20190401-214941.jpg"><br><img src="https://i.loli.net/2019/04/01/5ca217cef1f8b.jpg" alt="Screenshot_20190401-215148.jpg"></p>
+<p>　　最后放上我用平板测试的截图，B站，未登陆校园网，1080P可以看</p>
+<p><img src="https://i.loli.net/2019/04/01/5ca21da4df81c.png" alt="7ffa93fa4e5971cf.png"></p>
+<hr>
+<p>　　以上操作均是在Android上执行的，下面看一下ios端和Windows端的。</p>
+<h1 id="1：ios"><a href="#1：ios" class="headerlink" title="1：ios"></a>1：ios</h1><p>　　苹果商店是搜索不到vpn相关的软件的，可以自行注册或者找美国id登录商店搜索下载。<br>安装完成后电脑登录QQ，把配置文件发送到我的手机，然后在手机上接收，打开方式就选择用openvpn打开就行了，连接成功后测试如图</p>
+<p><img src="https://i.loli.net/2019/04/03/5ca433cb70c5e.png" alt="IMG_0021.png"></p>
+<h1 id="2：Windows"><a href="#2：Windows" class="headerlink" title="2：Windows"></a>2：Windows</h1><p>　　先连接有效网络<a href="https://www.lanzous.com/i3n8ewf">点我下载Windows客户端</a>，[<strong>自带配置文件已失效</strong>]解压到桌面，并运行exe执行文件，一路安装即可。</p>
+<p>安装完就可以连接校园网了。</p>
+<p>运行软件，右下角软件右键打开菜单，选择“Import file…”</p>
+<p><img src="https://i.loli.net/2019/04/03/5ca437707dfef.jpg" alt="-2dbec5eb280c420b.jpg"></p>
+<p>选择你的配置文件</p>
+<p><img src="https://i.loli.net/2019/04/03/5ca439748d377.png" alt="-63ce3226b4c9dedf.png"></p>
+<p>　　右下角软件右键打开菜单，选择“Connect”，输入用户和密码（这个项目默认的没有密码，可以直接连接）。</p>
+<p><img src="https://i.loli.net/2019/04/03/5ca439b26873e.png" alt="-442cdc5b11fb0173.png"></p>
+<p>连接成功，软件颜色变成绿色。</p>
+<p><img src="https://i.loli.net/2019/04/03/5ca439d455054.png" alt="20704d0de65fae4c.png"></p>
+]]></content>
+      <categories>
+        <category>Scripts For Linux</category>
+      </categories>
+      <tags>
+        <tag>SSR</tag>
       </tags>
   </entry>
   <entry>
