@@ -19,74 +19,6 @@
       </tags>
   </entry>
   <entry>
-    <title>K2（路由）老矣，尚能饭否？②</title>
-    <url>/2020/03/09/K2%EF%BC%88%E8%B7%AF%E7%94%B1%EF%BC%89%E8%80%81%E7%9F%A3%EF%BC%8C%E5%B0%9A%E8%83%BD%E9%A5%AD%E5%90%A6%EF%BC%9F%E2%91%A1/</url>
-    <content><![CDATA[<h2 id="开启KMS服务以激活Windows和office"><a href="#开启KMS服务以激活Windows和office" class="headerlink" title="开启KMS服务以激活Windows和office"></a><p align="center">开启KMS服务以激活Windows和office</p></h2><p>　　KMS激活网上有很多共享服务器和相关软件，既然咱们的路由器有此功能，何不用咱自己的呢，还能给周围小伙伴们激活相关产品。</p>
-<span id="more"></span>
-<ul>
-<li>点击配置拓展环境</li>
-<li>启用 opt 自动更新    </li>
-<li>启用 扩展脚本 自动更新    </li>
-<li>opt 强制安装</li>
-<li>打开启用KMS功能</li>
-</ul>
-<p><img src="https://i.loli.net/2020/05/05/AHesT7dKFMpvrhm.png" alt="12.png"></p>
-<p><img src="https://i.loli.net/2020/05/05/9nNhrluLyt4RxfS.png" alt="14.png"></p>
-<p>　　注意看路由日志，等待环境初始化完成无日志输出后就可以了</p>
-<h1 id="Office手动激活命令："><a href="#Office手动激活命令：" class="headerlink" title="Office手动激活命令："></a>Office手动激活命令：</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd C:\Program Files\Microsoft Office\Office15（注意路径代号）</span><br><span class="line">cscript ospp.vbs &#x2F;sethst:192.168.123.1（或域名）</span><br><span class="line">cscript ospp.vbs &#x2F;act</span><br><span class="line">cscript ospp.vbs &#x2F;dstatus</span><br></pre></td></tr></table></figure>
-<p>　　<br>　　<code>cscript ospp.vbs /sethst:192.168.123.1</code>这里面的可替换为你的域名，以供局域网外提供kms服务，同时端口转发设置为<br><img src="https://i.loli.net/2020/05/05/UVYHLOD8NBmr6aR.png" alt="KMS端口.png"></p>
-<p>　　注意，第一行别傻乎乎的按照它给的命令输，注意office安装路径和版本代号，版本代号如下：</p>
-<table>
-<thead>
-<tr>
-<th align="center">Office版本</th>
-<th align="center">开发版本号</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">office97</td>
-<td align="center">8.0</td>
-</tr>
-<tr>
-<td align="center">office2000</td>
-<td align="center">9.0</td>
-</tr>
-<tr>
-<td align="center">office XP （2002）</td>
-<td align="center">10.0</td>
-</tr>
-<tr>
-<td align="center">office2003</td>
-<td align="center">11.0</td>
-</tr>
-<tr>
-<td align="center">office2007</td>
-<td align="center">12.0</td>
-</tr>
-<tr>
-<td align="center">office2010</td>
-<td align="center">14.0</td>
-</tr>
-<tr>
-<td align="center">office2013</td>
-<td align="center">15.0</td>
-</tr>
-<tr>
-<td align="center">office2016</td>
-<td align="center">16.0</td>
-</tr>
-</tbody></table>
-<p>　　还有就是一定要用<strong>管理员</strong>运行CMD或者PowerShell，一定奥！</p>
-<h1 id="windows手动激活命令："><a href="#windows手动激活命令：" class="headerlink" title="windows手动激活命令："></a>windows手动激活命令：</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 卸载当前产品密钥</span><br><span class="line">slmgr.vbs &#x2F;upk </span><br><span class="line"># 设置KMS服务器</span><br><span class="line">slmgr.vbs &#x2F;skms 192.168.123.1 </span><br><span class="line">#安装&#x2F;替换密钥</span><br><span class="line">slmgr.vbs &#x2F;ipk XXXXX-XXXXX-XXXXX-XXXXX-XXXXX </span><br><span class="line"># 自动在线激活Windows</span><br><span class="line">slmgr.vbs &#x2F;ato </span><br><span class="line">#查看激活状态</span><br><span class="line">slmgr.vbs &#x2F;xpr </span><br></pre></td></tr></table></figure>
-<p>　　<code>XXXXX-XXXXX-XXXXX-XXXXX-XXXXX</code>代表的是密钥，可找Windows对应版本的密钥。</p>
-<hr>
-<p>　　此系列教程包括但不仅限于k2路由，只要是老毛子padvan固件，都是一样的操作。</p>
-]]></content>
-      <categories>
-        <category>路由器</category>
-      </categories>
-  </entry>
-  <entry>
     <title>Hexo-视/音频插件-hexo-tag- a/d player</title>
     <url>/2019/10/04/Hexo%E6%8F%92%E4%BB%B6-hexo-tag-%20a%E2%80%A2d%20player/</url>
     <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>在Hexo文章中插入音频请使用<a href="https://github.com/MoePlayer/APlayer">hexo-tag-aplayer</a></p>
@@ -461,6 +393,74 @@
       </categories>
   </entry>
   <entry>
+    <title>K2（路由）老矣，尚能饭否？②</title>
+    <url>/2020/03/09/K2%EF%BC%88%E8%B7%AF%E7%94%B1%EF%BC%89%E8%80%81%E7%9F%A3%EF%BC%8C%E5%B0%9A%E8%83%BD%E9%A5%AD%E5%90%A6%EF%BC%9F%E2%91%A1/</url>
+    <content><![CDATA[<h2 id="开启KMS服务以激活Windows和office"><a href="#开启KMS服务以激活Windows和office" class="headerlink" title="开启KMS服务以激活Windows和office"></a><p align="center">开启KMS服务以激活Windows和office</p></h2><p>　　KMS激活网上有很多共享服务器和相关软件，既然咱们的路由器有此功能，何不用咱自己的呢，还能给周围小伙伴们激活相关产品。</p>
+<span id="more"></span>
+<ul>
+<li>点击配置拓展环境</li>
+<li>启用 opt 自动更新    </li>
+<li>启用 扩展脚本 自动更新    </li>
+<li>opt 强制安装</li>
+<li>打开启用KMS功能</li>
+</ul>
+<p><img src="https://i.loli.net/2020/05/05/AHesT7dKFMpvrhm.png" alt="12.png"></p>
+<p><img src="https://i.loli.net/2020/05/05/9nNhrluLyt4RxfS.png" alt="14.png"></p>
+<p>　　注意看路由日志，等待环境初始化完成无日志输出后就可以了</p>
+<h1 id="Office手动激活命令："><a href="#Office手动激活命令：" class="headerlink" title="Office手动激活命令："></a>Office手动激活命令：</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd C:\Program Files\Microsoft Office\Office15（注意路径代号）</span><br><span class="line">cscript ospp.vbs &#x2F;sethst:192.168.123.1（或域名）</span><br><span class="line">cscript ospp.vbs &#x2F;act</span><br><span class="line">cscript ospp.vbs &#x2F;dstatus</span><br></pre></td></tr></table></figure>
+<p>　　<br>　　<code>cscript ospp.vbs /sethst:192.168.123.1</code>这里面的可替换为你的域名，以供局域网外提供kms服务，同时端口转发设置为<br><img src="https://i.loli.net/2020/05/05/UVYHLOD8NBmr6aR.png" alt="KMS端口.png"></p>
+<p>　　注意，第一行别傻乎乎的按照它给的命令输，注意office安装路径和版本代号，版本代号如下：</p>
+<table>
+<thead>
+<tr>
+<th align="center">Office版本</th>
+<th align="center">开发版本号</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">office97</td>
+<td align="center">8.0</td>
+</tr>
+<tr>
+<td align="center">office2000</td>
+<td align="center">9.0</td>
+</tr>
+<tr>
+<td align="center">office XP （2002）</td>
+<td align="center">10.0</td>
+</tr>
+<tr>
+<td align="center">office2003</td>
+<td align="center">11.0</td>
+</tr>
+<tr>
+<td align="center">office2007</td>
+<td align="center">12.0</td>
+</tr>
+<tr>
+<td align="center">office2010</td>
+<td align="center">14.0</td>
+</tr>
+<tr>
+<td align="center">office2013</td>
+<td align="center">15.0</td>
+</tr>
+<tr>
+<td align="center">office2016</td>
+<td align="center">16.0</td>
+</tr>
+</tbody></table>
+<p>　　还有就是一定要用<strong>管理员</strong>运行CMD或者PowerShell，一定奥！</p>
+<h1 id="windows手动激活命令："><a href="#windows手动激活命令：" class="headerlink" title="windows手动激活命令："></a>windows手动激活命令：</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 卸载当前产品密钥</span><br><span class="line">slmgr.vbs &#x2F;upk </span><br><span class="line"># 设置KMS服务器</span><br><span class="line">slmgr.vbs &#x2F;skms 192.168.123.1 </span><br><span class="line">#安装&#x2F;替换密钥</span><br><span class="line">slmgr.vbs &#x2F;ipk XXXXX-XXXXX-XXXXX-XXXXX-XXXXX </span><br><span class="line"># 自动在线激活Windows</span><br><span class="line">slmgr.vbs &#x2F;ato </span><br><span class="line">#查看激活状态</span><br><span class="line">slmgr.vbs &#x2F;xpr </span><br></pre></td></tr></table></figure>
+<p>　　<code>XXXXX-XXXXX-XXXXX-XXXXX-XXXXX</code>代表的是密钥，可找Windows对应版本的密钥。</p>
+<hr>
+<p>　　此系列教程包括但不仅限于k2路由，只要是老毛子padvan固件，都是一样的操作。</p>
+]]></content>
+      <categories>
+        <category>路由器</category>
+      </categories>
+  </entry>
+  <entry>
     <title>K2（路由）老矣，尚能饭否？③</title>
     <url>/2020/03/16/K2%EF%BC%88%E8%B7%AF%E7%94%B1%EF%BC%89%E8%80%81%E7%9F%A3%EF%BC%8C%E5%B0%9A%E8%83%BD%E9%A5%AD%E5%90%A6%EF%BC%9F%E2%91%A2/</url>
     <content><![CDATA[<h2 id="老毛子padvan固件开启ipv6"><a href="#老毛子padvan固件开启ipv6" class="headerlink" title="老毛子padvan固件开启ipv6"></a><p align="center">老毛子padvan固件开启ipv6</p></h2><p>　　前面我们用光猫桥接模式已经建立并使用了ipv4/ipv6的连接，所以，我们今天就在路由器固件上要开启ipv6。</p>
@@ -525,6 +525,12 @@
         <tag>Windows</tag>
         <tag>Software</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>《超脱》：穷尽一生，我们要学会的，不过是彼此拥抱。</title>
+    <url>/2020/05/07/%E3%80%8A%E8%B6%85%E8%84%B1%E3%80%8B%EF%BC%9A%E7%A9%B7%E5%B0%BD%E4%B8%80%E7%94%9F%EF%BC%8C%E6%88%91%E4%BB%AC%E8%A6%81%E5%AD%A6%E4%BC%9A%E7%9A%84%EF%BC%8C%E4%B8%8D%E8%BF%87%E6%98%AF%E5%BD%BC%E6%AD%A4%E6%8B%A5%E6%8A%B1/</url>
+    <content><![CDATA[<p>​        影片所展现出的孤独感无力感，让每个有过生活压力的人，甚至从此封闭内心的人都感到痛彻心扉，其实我们穷尽一生，所要学会的，不过是在生活对你施以重压的时候不要忘记，彼此拥抱。<span id="more"></span></p>
+<iframe src="//player.bilibili.com/player.html?aid=32514557&bvid=BV1qW411U7N1&cid=56886545&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%" height="100%"> </iframe>]]></content>
   </entry>
   <entry>
     <title>《无题》</title>
@@ -794,75 +800,6 @@
       </tags>
   </entry>
   <entry>
-    <title>《电话》</title>
-    <url>/2019/06/22/%E7%94%B5%E8%AF%9D/</url>
-    <content><![CDATA[<p>我从十九楼跳了下去。</p>
-<p>原因是我“心理素质太差”，受不了来自父母的批评。</p>
-<p>在我的脑袋与地板亲密接触的那一刻，想象中的巨痛并涌上来。<span id="more"></span></p>
-<p>我的脑袋像是信号不良的老旧电视，画面开始泛起了ー点一点细碎的雪花，随后这些雪花越来越 多，将我的视野淹没。</p>
-<p>我就这么走了。</p>
-<p>当一个穿白色衣服的长舌头的人和一个穿黑衣服拿手铐的人一起站在我面前的时候，我终于意识到了这个现实。</p>
-<p>“怎么又是个小崽子？”白色长舌头的人说话了，他的声音很清楚，我非常好奇他到底是怎么伸着舌头说话的。</p>
-<p>“我怎么知道。＂黑色衣服的人瞪了他一眼，又低下头翻着手中一本陈旧的册子。</p>
-<p>那册子看着很薄，却怎么都翻不完。</p>
-<p>半晌，黑色衣服的人定了神:“有了。＂他用手指指着书页，读着那一行字，声音细若蚊吟。</p>
-<p>他的眉头逐渐皱了起来，嘟囔了一句:“不对啊。”</p>
-<p>“啥啥啥，怎么不对了。”伸着长舌头的人湊了过去，那舌头上流的口水溅到了黑衣服的人身上。</p>
-<p>我坐在地上，犹豫在三还是认为不告诉那位黑乎乎的兄弟这件事比较好。</p>
-<p>我看着他们讨论，什么也没想。</p>
-<p>半晌，他们终于有了结果。他们抬起头，装出正儿八经的样，清了嗓子。</p>
-<p>“你阳寿未尽，若非你自身意愿，我等不可轻易带你去往下一个轮回。予你半月时间，仔细考虑一番再定。”</p>
-<p>话音未落，他们化作一阵青烟消失了。也只是一阵恍愡，我的视野又逐漸清晰起来。</p>
-<p>一阵夜风吹来，我整个人都清醒了过来。</p>
-<p>仔细一看，我还在郊区废置的大楼楼顶。</p>
-<p>我的脚下，是十九层的高空。</p>
-<p>我选择闭上眼，再次试着向前迈出那一步。</p>
-<p>但是我没有，我也做不到了。</p>
-<p>在我第一次从这里跃下时，我的脑内出现的走马灯。</p>
-<p>我看到了我母亲第一次看到我时的笑容，看到了父亲在我开口叫他父亲时的兴奋。</p>
-<p>看到了他们在外奔波，回到家只能疲惫的瘫在沙发上。</p>
-<p>再长大一些，我看到母亲在台下看我表演时的喜悦，看到了父亲拿到我那张漂亮的成绩单时的欣慰。</p>
-<p>等我上了初中，看到了母亲在我初三时为我熬的鸡汤，看到了父亲为了不打扰我读书而戒了自己直以来的酒瘾。</p>
-<p>现在，我能想象到他们握着自己的手机，坐在客厅里。母亲时不时的看着门，父亲一支又一支的抽着烟，一旦手机屏幕亮起就匆匆点开查看是否是我的信息。</p>
-<p>我睁开眼晴，抬起头看了看天空。</p>
-<p>夜幕已然降临，繁星闪烁，以星芒点缀天空。不远处的城市中心区华灯璀璨。</p>
-<p>我叹了口气，转了身走到边绿以内，俯下身拎起了我的书包。我迅速的检查了一遍里面的物品。</p>
-<p>拿出了公交车卡，并掏出了我的遗书。</p>
-<p>我展开信纸，将那封自己亲手写的信读了一遍。</p>
-<p>幼稚至极，又不负责任。</p>
-<p>我在心里狼狠的唾弃了自己一番，随后将那封信撕碎，将碎纸片顺着夜风扬了出去。</p>
-<p>“回家吧…”我轻声对自己说。</p>
-<p>正当我背起我的书包时，口袋中的手机却亮了起来。</p>
-<p>我心下一惊，掏出手机查看上头显示的联系人ーー是我的父亲。</p>
-<p>我想了方才的种种，满怀期待的接了电话。</p>
-<p>“这么晚你去哪里了？”电话那头传来了父亲的声音，语调有点高。</p>
-<p>“现在跟哪个男的出去鬼混？要是搞出什么丑事老子打断你的腿！赶紧滚回来，少给我在外面丢人！”</p>
-<p>父亲劈头盖脸的一顿骂让我没来得及反应。我缓了缓，张开嘴想辩解什么却又来不及了。</p>
-<p>电话那头，已换了人。</p>
-<p>“你这孩子为什么这么不懂事？是想离家出走是吗，是要和爸爸妈妈对着干是吗？好啊，你就出去啊。看看没有爸妈谁养的起你，这么大了为什么就不懂得想想爸妈的难处？</p>
-<p>哦，考试没考好，跟同学闹矛盾了被爸妈说了几句就要耍性子离家出走？爸妈当年是怎么被你爷爷奶奶外公外婆管的你知道吧？你这就是我们给惯的！</p>
-<p>当初就不应该生你，一个女孩子这么没用，将来还要嫁出去，好啊你现在出去也是出去，随便找个男的嫁了赶紧把我们养你的钱还回来给我们养老好吧？”</p>
-<p>我的大脑像是被什么砸了一样，嗡嗡作响。我什么都不知道，也什么都想不出，只是呆呆的站在十九楼的夜风里。</p>
-<p>我抿了抿唇，颤着声。</p>
-<p>“妈，我在十九楼楼顶。”</p>
-<p>电话那头沉默了一下，我的心脏在这段沉默的期间愈发的闷。</p>
-<p>半晌，那边传来了一声冷笑。</p>
-<p>“翅膀硬了是吧，想拿命吓唬爸妈？</p>
-<p>我告诉你，你有本事就跳！马上跳，跳下去我和你爸趁着年轻还能再生一个孩子。</p>
-<p>那孩子肯定比你强！你今天有本事就跳，别给我回来！”</p>
-<p>我深深吸了一口气，摁掉了电话。</p>
-<p>我从十九楼跳了下去。</p>
-<p>文:郑清河</p>
-<p><img src="https://i.loli.net/2019/09/06/lqSIUfz2YZ1hETg.jpg" alt="754625857.jpeg"></p>
-]]></content>
-      <categories>
-        <category>浮生记</category>
-      </categories>
-      <tags>
-        <tag>悦･读</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>农村什么让你感到最恐怖？</title>
     <url>/2019/10/03/%E5%86%9C%E6%9D%91%E4%BB%80%E4%B9%88%E8%AE%A9%E4%BD%A0%E6%84%9F%E5%88%B0%E6%9C%80%E6%81%90%E6%80%96%EF%BC%9F/</url>
     <content><![CDATA[<p>前几天有个自称是我表妹的人加我微信，我加了，然后刚加她就转来500块钱，说什么一点心意让我收下。</p>
@@ -962,6 +899,75 @@
       </categories>
       <tags>
         <tag>SSR</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>《电话》</title>
+    <url>/2019/06/22/%E7%94%B5%E8%AF%9D/</url>
+    <content><![CDATA[<p>我从十九楼跳了下去。</p>
+<p>原因是我“心理素质太差”，受不了来自父母的批评。</p>
+<p>在我的脑袋与地板亲密接触的那一刻，想象中的巨痛并涌上来。<span id="more"></span></p>
+<p>我的脑袋像是信号不良的老旧电视，画面开始泛起了ー点一点细碎的雪花，随后这些雪花越来越 多，将我的视野淹没。</p>
+<p>我就这么走了。</p>
+<p>当一个穿白色衣服的长舌头的人和一个穿黑衣服拿手铐的人一起站在我面前的时候，我终于意识到了这个现实。</p>
+<p>“怎么又是个小崽子？”白色长舌头的人说话了，他的声音很清楚，我非常好奇他到底是怎么伸着舌头说话的。</p>
+<p>“我怎么知道。＂黑色衣服的人瞪了他一眼，又低下头翻着手中一本陈旧的册子。</p>
+<p>那册子看着很薄，却怎么都翻不完。</p>
+<p>半晌，黑色衣服的人定了神:“有了。＂他用手指指着书页，读着那一行字，声音细若蚊吟。</p>
+<p>他的眉头逐渐皱了起来，嘟囔了一句:“不对啊。”</p>
+<p>“啥啥啥，怎么不对了。”伸着长舌头的人湊了过去，那舌头上流的口水溅到了黑衣服的人身上。</p>
+<p>我坐在地上，犹豫在三还是认为不告诉那位黑乎乎的兄弟这件事比较好。</p>
+<p>我看着他们讨论，什么也没想。</p>
+<p>半晌，他们终于有了结果。他们抬起头，装出正儿八经的样，清了嗓子。</p>
+<p>“你阳寿未尽，若非你自身意愿，我等不可轻易带你去往下一个轮回。予你半月时间，仔细考虑一番再定。”</p>
+<p>话音未落，他们化作一阵青烟消失了。也只是一阵恍愡，我的视野又逐漸清晰起来。</p>
+<p>一阵夜风吹来，我整个人都清醒了过来。</p>
+<p>仔细一看，我还在郊区废置的大楼楼顶。</p>
+<p>我的脚下，是十九层的高空。</p>
+<p>我选择闭上眼，再次试着向前迈出那一步。</p>
+<p>但是我没有，我也做不到了。</p>
+<p>在我第一次从这里跃下时，我的脑内出现的走马灯。</p>
+<p>我看到了我母亲第一次看到我时的笑容，看到了父亲在我开口叫他父亲时的兴奋。</p>
+<p>看到了他们在外奔波，回到家只能疲惫的瘫在沙发上。</p>
+<p>再长大一些，我看到母亲在台下看我表演时的喜悦，看到了父亲拿到我那张漂亮的成绩单时的欣慰。</p>
+<p>等我上了初中，看到了母亲在我初三时为我熬的鸡汤，看到了父亲为了不打扰我读书而戒了自己直以来的酒瘾。</p>
+<p>现在，我能想象到他们握着自己的手机，坐在客厅里。母亲时不时的看着门，父亲一支又一支的抽着烟，一旦手机屏幕亮起就匆匆点开查看是否是我的信息。</p>
+<p>我睁开眼晴，抬起头看了看天空。</p>
+<p>夜幕已然降临，繁星闪烁，以星芒点缀天空。不远处的城市中心区华灯璀璨。</p>
+<p>我叹了口气，转了身走到边绿以内，俯下身拎起了我的书包。我迅速的检查了一遍里面的物品。</p>
+<p>拿出了公交车卡，并掏出了我的遗书。</p>
+<p>我展开信纸，将那封自己亲手写的信读了一遍。</p>
+<p>幼稚至极，又不负责任。</p>
+<p>我在心里狼狠的唾弃了自己一番，随后将那封信撕碎，将碎纸片顺着夜风扬了出去。</p>
+<p>“回家吧…”我轻声对自己说。</p>
+<p>正当我背起我的书包时，口袋中的手机却亮了起来。</p>
+<p>我心下一惊，掏出手机查看上头显示的联系人ーー是我的父亲。</p>
+<p>我想了方才的种种，满怀期待的接了电话。</p>
+<p>“这么晚你去哪里了？”电话那头传来了父亲的声音，语调有点高。</p>
+<p>“现在跟哪个男的出去鬼混？要是搞出什么丑事老子打断你的腿！赶紧滚回来，少给我在外面丢人！”</p>
+<p>父亲劈头盖脸的一顿骂让我没来得及反应。我缓了缓，张开嘴想辩解什么却又来不及了。</p>
+<p>电话那头，已换了人。</p>
+<p>“你这孩子为什么这么不懂事？是想离家出走是吗，是要和爸爸妈妈对着干是吗？好啊，你就出去啊。看看没有爸妈谁养的起你，这么大了为什么就不懂得想想爸妈的难处？</p>
+<p>哦，考试没考好，跟同学闹矛盾了被爸妈说了几句就要耍性子离家出走？爸妈当年是怎么被你爷爷奶奶外公外婆管的你知道吧？你这就是我们给惯的！</p>
+<p>当初就不应该生你，一个女孩子这么没用，将来还要嫁出去，好啊你现在出去也是出去，随便找个男的嫁了赶紧把我们养你的钱还回来给我们养老好吧？”</p>
+<p>我的大脑像是被什么砸了一样，嗡嗡作响。我什么都不知道，也什么都想不出，只是呆呆的站在十九楼的夜风里。</p>
+<p>我抿了抿唇，颤着声。</p>
+<p>“妈，我在十九楼楼顶。”</p>
+<p>电话那头沉默了一下，我的心脏在这段沉默的期间愈发的闷。</p>
+<p>半晌，那边传来了一声冷笑。</p>
+<p>“翅膀硬了是吧，想拿命吓唬爸妈？</p>
+<p>我告诉你，你有本事就跳！马上跳，跳下去我和你爸趁着年轻还能再生一个孩子。</p>
+<p>那孩子肯定比你强！你今天有本事就跳，别给我回来！”</p>
+<p>我深深吸了一口气，摁掉了电话。</p>
+<p>我从十九楼跳了下去。</p>
+<p>文:郑清河</p>
+<p><img src="https://i.loli.net/2019/09/06/lqSIUfz2YZ1hETg.jpg" alt="754625857.jpeg"></p>
+]]></content>
+      <categories>
+        <category>浮生记</category>
+      </categories>
+      <tags>
+        <tag>悦･读</tag>
       </tags>
   </entry>
   <entry>
