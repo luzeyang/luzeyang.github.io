@@ -526,8 +526,8 @@ src: "/hls/btv11hd.m3u8"
 $(function () {
 var player = videojs("player");
 var playlist = sources || [];
-var element_server = '<option value="http://ivi.bupt.edu.cn">IPv4</option>'
-+'<option value="http://ivi6.bupt.edu.cn">IPv6</option>';
+var element_server = '<option value="//ivi.bupt.edu.cn">IPv4</option>'
++'<option value="//ivi6.bupt.edu.cn">IPv6</option>';
 $("#selector_server").append(element_server).change(function () {
 player.src($("#selector_server").val()+$("#selector_channel").val());
 });
