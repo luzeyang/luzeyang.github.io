@@ -340,59 +340,6 @@
       </tags>
   </entry>
   <entry>
-    <title>K2（路由）老矣，尚能饭否？①</title>
-    <url>/2020/03/03/K2%EF%BC%88%E8%B7%AF%E7%94%B1%EF%BC%89%E8%80%81%E7%9F%A3%EF%BC%8C%E5%B0%9A%E8%83%BD%E9%A5%AD%E5%90%A6%EF%BC%9F%20%20%E2%91%A0/</url>
-    <content><![CDATA[<h2 id="设置路由拨号和实现DDNS远程访问"><a href="#设置路由拨号和实现DDNS远程访问" class="headerlink" title="设置路由拨号和实现DDNS远程访问"></a><p align="center">设置路由拨号和实现DDNS远程访问</p></h2><p>　　在斐讯辉煌之际，鄙人有幸上车，以364软妹币拿下这款理财产品，之后没多久斐讯就倒闭跑路了，万千产品今犹在，不见当年斐讯狂。</p>
-<span id="more"></span>
-<p>　　官方固件没什么可说的，求稳就用官改，我一直用的H大的Padavan固件，这里贴上tg地址，有需求的可以看看：<a href="https://t.me/pdcn1/221">tg地址</a>，至于刷机我就不多说了，恩山多逛逛就会了。</p>
-<p>　　上一次说了中兴F677V2改桥接，关闭残废WIFI，也算是尽了它的使命，接下来的事就交给路由器来处理吧！</p>
-<p>　　<strong>1：拨号上网</strong></p>
-<p>　　外部网络-外网设置-外网连接类型：PPPoE：拨号，在PPPoE 和 PPP VPN 客户端设置里设置用户名和密码就可以了。<br><img src="https://i.loli.net/2020/05/05/mfilW9NQB2zuxda.png" alt="7.png"></p>
-<p>　　<strong>2：DDNS&amp;远程访问</strong></p>
-<p>　　远程访问需要知道公网ip和端口，运营商给我们分配的公网大都是动态的，也就是说它会变，要准确知道每次更换的IP地址就需要DDNS了。</p>
-<p>　　DDNS（Dynamic Domain Name Server，动态域名服务）是将用户的动态IP地址映射到一个固定的域名解析服务上，用户每次连接网络的时候客户端程序就会通过信息传递把该主机的动态IP地址传送给位于服务商主机上的服务器程序，服务器程序负责提供DNS服务并实现动态域名解析。</p>
-<p>　　花生壳是一个不错的选择，注册后会给你你个免费的域名，虽然很长很难记，但是毕竟它免费啊。<br><img src="https://i.loli.net/2020/05/05/3DXzqRY2amZIJrC.jpg" alt="Screenshot_20200505-121923.jpg"><br>　　<br>　　注册完要及时进行实名认证，不然过几天解析服务会停止。</p>
-<p>　　在路由器外部网络内，会有一个DDNS功能，不过咱们不用它，用自定义脚本，方便快捷又高效。</p>
-<ul>
-<li>打开自定义设置-脚本-自定义脚本0（功能配置）。<br>找到</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 如何在路由器中设置花生壳服务</span><br><span class="line">#&#x2F;tmp&#x2F;sh_ddns.sh &#x2F;tmp&#x2F;orayddns.log &#39;http:&#x2F;&#x2F;您的花生壳帐号:您的帐号密码@ddns.oray.com&#x2F;ph&#x2F;update?hostname&#x3D;你的ddns域名&#39; &amp;</span><br></pre></td></tr></table></figure>
-
-<p>　　可以看到里面有两个可选服务，一个orayddns一个3322ddns，我们用一个orayddns就行了，填上你的用户名和密码，删除<code>/tmp</code>之前的<code>#</code>，如下图，应用本面设置就可以了。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;tmp&#x2F;sh_ddns.sh &#x2F;tmp&#x2F;orayddns.log &#39;http:&#x2F;&#x2F;184××××××××:×××××××@ddns.oray.com&#x2F;ph&#x2F;update?hostname&#x3D;2××××××××.zicp.vip&#39; &amp;</span><br></pre></td></tr></table></figure>
-<p><img src="https://i.loli.net/2020/05/05/YOBugmpaVFZ1PK4.png" alt="8.png"></p>
-<p>　　注意后面的域名要换成你的。</p>
-<p>　　在花生壳里点击域名试试，是不是出现域名IP地址指向的IP了？</p>
-<p><img src="https://i.loli.net/2020/05/05/GfxmvHQ637LqlpW.jpg" alt="Screenshot_20200505-122757__01.jpg"></p>
-<p>　　3322ddns同理</p>
-<ul>
-<li>点击防火墙-从外网访问路由器服务</li>
-<li>打开允许从互联网设置</li>
-<li>互联网设置通信端口自行填写，注意端口范围和避免填写常用端口，这里我设置的：6688</li>
-<li>打开允许外网 HTTPS 访问Web服务    </li>
-<li>外网 HTTPS 访问 Web 服务端口自行填写，注意端口范围和避免填写常用端口，这里我设置的：6689</li>
-</ul>
-<p><img src="https://i.loli.net/2020/05/05/kyucXmvZ9zwgNUI.png" alt="9.png"></p>
-<p>　　应用设置，第一步完成，下面进行端口转发。</p>
-<ul>
-<li>打开外部网络-端口转发（UPnP）</li>
-<li>服务名称：自定义，自己知道是干啥的端口即可，我写的是K2</li>
-<li>源IP地址：暂不填写，默认全部</li>
-<li>端口范围：刚才设置的6688</li>
-<li>内网IP：路由登录IP，老毛子固件默认是192.168.123.1</li>
-<li>本地端口：和上面一样6688</li>
-<li>协议：TCP/UDP</li>
-</ul>
-<p><img src="https://i.loli.net/2020/05/05/cCoED2xV9MtvHuZ.png" alt="10.png"><br><img src="https://i.loli.net/2020/05/05/znquVfxbN5g9dA7.png" alt="11.png"></p>
-<p>　　点击+号，点击应用设置即可，现在就可以试试远程访问路由器了，浏览器输入你的花生壳域名:你设置的端口，例如我的：2×××××××.zicp.vip:6688就可以了。</p>
-<hr>
-<p>　　此系列教程包括但不仅限于k2路由，只要是老毛子padvan固件，都是一样的操作。</p>
-]]></content>
-      <categories>
-        <category>路由器</category>
-      </categories>
-  </entry>
-  <entry>
     <title>K2（路由）老矣，尚能饭否？②</title>
     <url>/2020/03/09/K2%EF%BC%88%E8%B7%AF%E7%94%B1%EF%BC%89%E8%80%81%E7%9F%A3%EF%BC%8C%E5%B0%9A%E8%83%BD%E9%A5%AD%E5%90%A6%EF%BC%9F%E2%91%A1/</url>
     <content><![CDATA[<h2 id="开启KMS服务以激活Windows和office"><a href="#开启KMS服务以激活Windows和office" class="headerlink" title="开启KMS服务以激活Windows和office"></a><p align="center">开启KMS服务以激活Windows和office</p></h2><p>　　KMS激活网上有很多共享服务器和相关软件，既然咱们的路由器有此功能，何不用咱自己的呢，还能给周围小伙伴们激活相关产品。</p>
@@ -461,6 +408,143 @@
       </categories>
   </entry>
   <entry>
+    <title>K2（路由）老矣，尚能饭否？①</title>
+    <url>/2020/03/03/K2%EF%BC%88%E8%B7%AF%E7%94%B1%EF%BC%89%E8%80%81%E7%9F%A3%EF%BC%8C%E5%B0%9A%E8%83%BD%E9%A5%AD%E5%90%A6%EF%BC%9F%20%20%E2%91%A0/</url>
+    <content><![CDATA[<h2 id="设置路由拨号和实现DDNS远程访问"><a href="#设置路由拨号和实现DDNS远程访问" class="headerlink" title="设置路由拨号和实现DDNS远程访问"></a><p align="center">设置路由拨号和实现DDNS远程访问</p></h2><p>　　在斐讯辉煌之际，鄙人有幸上车，以364软妹币拿下这款理财产品，之后没多久斐讯就倒闭跑路了，万千产品今犹在，不见当年斐讯狂。</p>
+<span id="more"></span>
+<p>　　官方固件没什么可说的，求稳就用官改，我一直用的H大的Padavan固件，这里贴上tg地址，有需求的可以看看：<a href="https://t.me/pdcn1/221">tg地址</a>，至于刷机我就不多说了，恩山多逛逛就会了。</p>
+<p>　　上一次说了中兴F677V2改桥接，关闭残废WIFI，也算是尽了它的使命，接下来的事就交给路由器来处理吧！</p>
+<p>　　<strong>1：拨号上网</strong></p>
+<p>　　外部网络-外网设置-外网连接类型：PPPoE：拨号，在PPPoE 和 PPP VPN 客户端设置里设置用户名和密码就可以了。<br><img src="https://i.loli.net/2020/05/05/mfilW9NQB2zuxda.png" alt="7.png"></p>
+<p>　　<strong>2：DDNS&amp;远程访问</strong></p>
+<p>　　远程访问需要知道公网ip和端口，运营商给我们分配的公网大都是动态的，也就是说它会变，要准确知道每次更换的IP地址就需要DDNS了。</p>
+<p>　　DDNS（Dynamic Domain Name Server，动态域名服务）是将用户的动态IP地址映射到一个固定的域名解析服务上，用户每次连接网络的时候客户端程序就会通过信息传递把该主机的动态IP地址传送给位于服务商主机上的服务器程序，服务器程序负责提供DNS服务并实现动态域名解析。</p>
+<p>　　花生壳是一个不错的选择，注册后会给你你个免费的域名，虽然很长很难记，但是毕竟它免费啊。<br><img src="https://i.loli.net/2020/05/05/3DXzqRY2amZIJrC.jpg" alt="Screenshot_20200505-121923.jpg"><br>　　<br>　　注册完要及时进行实名认证，不然过几天解析服务会停止。</p>
+<p>　　在路由器外部网络内，会有一个DDNS功能，不过咱们不用它，用自定义脚本，方便快捷又高效。</p>
+<ul>
+<li>打开自定义设置-脚本-自定义脚本0（功能配置）。<br>找到</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 如何在路由器中设置花生壳服务</span><br><span class="line">#&#x2F;tmp&#x2F;sh_ddns.sh &#x2F;tmp&#x2F;orayddns.log &#39;http:&#x2F;&#x2F;您的花生壳帐号:您的帐号密码@ddns.oray.com&#x2F;ph&#x2F;update?hostname&#x3D;你的ddns域名&#39; &amp;</span><br></pre></td></tr></table></figure>
+
+<p>　　可以看到里面有两个可选服务，一个orayddns一个3322ddns，我们用一个orayddns就行了，填上你的用户名和密码，删除<code>/tmp</code>之前的<code>#</code>，如下图，应用本面设置就可以了。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;tmp&#x2F;sh_ddns.sh &#x2F;tmp&#x2F;orayddns.log &#39;http:&#x2F;&#x2F;184××××××××:×××××××@ddns.oray.com&#x2F;ph&#x2F;update?hostname&#x3D;2××××××××.zicp.vip&#39; &amp;</span><br></pre></td></tr></table></figure>
+<p><img src="https://i.loli.net/2020/05/05/YOBugmpaVFZ1PK4.png" alt="8.png"></p>
+<p>　　注意后面的域名要换成你的。</p>
+<p>　　在花生壳里点击域名试试，是不是出现域名IP地址指向的IP了？</p>
+<p><img src="https://i.loli.net/2020/05/05/GfxmvHQ637LqlpW.jpg" alt="Screenshot_20200505-122757__01.jpg"></p>
+<p>　　3322ddns同理</p>
+<ul>
+<li>点击防火墙-从外网访问路由器服务</li>
+<li>打开允许从互联网设置</li>
+<li>互联网设置通信端口自行填写，注意端口范围和避免填写常用端口，这里我设置的：6688</li>
+<li>打开允许外网 HTTPS 访问Web服务    </li>
+<li>外网 HTTPS 访问 Web 服务端口自行填写，注意端口范围和避免填写常用端口，这里我设置的：6689</li>
+</ul>
+<p><img src="https://i.loli.net/2020/05/05/kyucXmvZ9zwgNUI.png" alt="9.png"></p>
+<p>　　应用设置，第一步完成，下面进行端口转发。</p>
+<ul>
+<li>打开外部网络-端口转发（UPnP）</li>
+<li>服务名称：自定义，自己知道是干啥的端口即可，我写的是K2</li>
+<li>源IP地址：暂不填写，默认全部</li>
+<li>端口范围：刚才设置的6688</li>
+<li>内网IP：路由登录IP，老毛子固件默认是192.168.123.1</li>
+<li>本地端口：和上面一样6688</li>
+<li>协议：TCP/UDP</li>
+</ul>
+<p><img src="https://i.loli.net/2020/05/05/cCoED2xV9MtvHuZ.png" alt="10.png"><br><img src="https://i.loli.net/2020/05/05/znquVfxbN5g9dA7.png" alt="11.png"></p>
+<p>　　点击+号，点击应用设置即可，现在就可以试试远程访问路由器了，浏览器输入你的花生壳域名:你设置的端口，例如我的：2×××××××.zicp.vip:6688就可以了。</p>
+<hr>
+<p>　　此系列教程包括但不仅限于k2路由，只要是老毛子padvan固件，都是一样的操作。</p>
+]]></content>
+      <categories>
+        <category>路由器</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>K2（路由）老矣，尚能饭否？③</title>
+    <url>/2020/03/16/K2%EF%BC%88%E8%B7%AF%E7%94%B1%EF%BC%89%E8%80%81%E7%9F%A3%EF%BC%8C%E5%B0%9A%E8%83%BD%E9%A5%AD%E5%90%A6%EF%BC%9F%E2%91%A2/</url>
+    <content><![CDATA[<h2 id="老毛子padvan固件开启ipv6"><a href="#老毛子padvan固件开启ipv6" class="headerlink" title="老毛子padvan固件开启ipv6"></a><p align="center">老毛子padvan固件开启ipv6</p></h2><p>　　前面我们用光猫桥接模式已经建立并使用了ipv4/ipv6的连接，所以，我们今天就在路由器固件上要开启ipv6。</p>
+<ul>
+<li><p>外部网络-IPv6 设置<span id="more"></span><br><img src="https://i.loli.net/2020/05/08/rV9EGZMeDpxbgIo.png" alt="1.png"></p>
+</li>
+<li><p>内部网络-DHCP 服务器<br><img src="https://i.loli.net/2020/05/08/VvdSs64DjaOXcoL.png" alt="2.png"></p>
+</li>
+<li><p>配置拓展环境<br><img src="https://i.loli.net/2020/05/08/biZsacxpVOLfSAF.png" alt="3.png"></p>
+</li>
+<li><p>系统管理-服务-启用SSH服务<br><img src="https://i.loli.net/2020/05/08/b5MJjhyLTgC38VQ.png" alt="4.png"></p>
+</li>
+<li><p>用putty或者xshell登录路由器<br><img src="https://i.loli.net/2020/05/08/5fs9PaAOiTUd6og.png" alt="5.png"></p>
+</li>
+</ul>
+<p>　　执行<code>ifconfig</code>，查看内网网卡，找到后缀最大的那个<br><img src="https://i.loli.net/2020/05/08/YIVOzAMRKrEk2X1.png" alt="6.png"></p>
+<ul>
+<li>执行以下命令<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">opkg update</span><br><span class="line">opkg install 6relayd</span><br></pre></td></tr></table></figure></li>
+<li>自定义设置-脚本-在路由器启动后执行，添加<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 自启动ipv6服务</span><br><span class="line">&#x2F;opt&#x2F;sbin&#x2F;6relayd -d -A eth2.2 br0</span><br></pre></td></tr></table></figure>
+<img src="https://i.loli.net/2020/05/08/7CYm2ifZWOMVzoU.png" alt="7.png"></li>
+</ul>
+<h2 id="注意：这里的eth2-2就是你执行ifconfig后看到的后缀最大的那个"><a href="#注意：这里的eth2-2就是你执行ifconfig后看到的后缀最大的那个" class="headerlink" title="注意：这里的eth2.2就是你执行ifconfig后看到的后缀最大的那个"></a><em>注意：这里的eth2.2就是你执行<code>ifconfig</code>后看到的后缀最大的那个</em></h2><ul>
+<li>系统管理-服务-计划任务，添加<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">*&#x2F;2 * * * * &#x2F;bin&#x2F;ping -6 -c 2 ipv6.baidu.com</span><br></pre></td></tr></table></figure>
+意思是每隔两分钟ping一下ipv6.baidu.com，不过没必要这么频繁，我设置的是每12小时ping一次。<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">30 *&#x2F;1 * * * &#x2F;bin&#x2F;ping -6 -c 2 ipv6.baidu.com</span><br></pre></td></tr></table></figure>
+<img src="https://i.loli.net/2020/05/08/wqARuHk94fOUWXi.png" alt="8.5.png"></li>
+</ul>
+<p><img src="https://i.loli.net/2020/05/08/PchJfqubZo9AKU1.png" alt="9.png"></p>
+<ul>
+<li>这里说一下计划任务的基本格式<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 基本格式 : </span><br><span class="line"># 0　　*　　*　　*　　*　　command </span><br><span class="line"># 分　时　日　月　周　命令 </span><br><span class="line"># 在以上各个字段中，还可以使用以下特殊字符：</span><br><span class="line"># 第一个数字（分钟）不能为*</span><br><span class="line"># 星号（*）：代表所有可能的值，例如month字段如果是星号，则表示在满足其它字段的制约条件后每月都执行该命令操作。</span><br><span class="line"># 逗号（,）：可以用逗号隔开的值指定一个列表范围，例如，“1,2,5,7,8,9”</span><br><span class="line"># 中杠（-）：可以用整数之间的中杠表示一个整数范围，例如“2-6”表示“2,3,4,5,6”</span><br><span class="line"># 正斜线（&#x2F;）：可以用正斜线指定时间的间隔频率，例如“0-23&#x2F;2”表示每两小时执行一次。同时正斜线可以和星号一起使用，例如*&#x2F;10，如果用在minute字段，表示每十分钟执行一次。</span><br></pre></td></tr></table></figure></li>
+<li>重启，点击网络地图_查看外部网络状态，发现ipv4和ipv6的wan，lan都正常了。<br><img src="https://i.loli.net/2020/05/08/JMGiayRvhF1x27Q.png" alt="10.png"></li>
+</ul>
+<hr>
+<p>　　此系列教程包括但不仅限于k2路由，只要是老毛子padvan固件，都是一样的操作。</p>
+]]></content>
+      <categories>
+        <category>路由器</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>WindowsStore_LTSC 2019</title>
+    <url>/2019/07/07/WindowsStore_LTSC%202019/</url>
+    <content><![CDATA[<p>　　Win10 TLSB属于Win10企业版，LTSB就是长期支持更新分支（Long Time Service Branch），这个版本专门给一些企业用户的，相比一般版本会缺少很多新功能，例如没有应用商店、没有Edge浏览器，没有cortana，大家可以把Win10 TLSB看成是Windows10企业版的精简版本。<span id="more"></span>LTSB是英语Long Term Servicing Branch的首字母缩写，汉语一般翻译成长期服务分支。LTSB分支是专门面向企业版的，Win10企业版LTSB分支支持周期长达10年，但只会获取安全更新(应该也可以获取热补丁更新)，而不获取功能更新，即不会增加任何新功能。这也是Win10企业版LTSB分支和Win10企业版最根本性的区别。<br>　　Windows 10 LTSC 现在改名成了 LTSC(Long Term Support Channel)。距离上一个长期服务LTSB版本发布已过去近三年了(微软仅发布过2015LTSB、2016LTSB两个版本，之后杳无音信)，18年10月3日微软发布了 Windows 10 RS5，终于再次发布了 Win10 LTSC 2019，且该版本已包含暗黑主题。<br>　　现在很少有时间折腾电脑了，我的办公本运行起来最新版也吃力了，干脆直接装企业版ltsc2109了。之前用专业版时习惯了用win10的应用商店，不得不说UWP应用是真的好用（虽然功能少点，但是界面和流畅度溜的很），现在一下没了win10商店挺不舒服的，于是就想装回win10商店，百度了百度，最笨的办法就是拆包，用命令行打组件补丁包，还要注意修改权限之类的balabala。。。看了看我想肯定有比我更懒的人，他们肯定有更简单的，然后我去了gayhub，发现了这个项目：<a href="https://github.com/kkkgo/LTSC-Add-MicrosoftStore">https://github.com/kkkgo/LTSC-Add-MicrosoftStore</a><br>嘤垂丝汀~为照顾某些同学爬墙费尽我就贴上原项目教程来了<br>　　为Windows 10 Enterprise LTSC增加应用商店<br>适用于Windows 10 Enterprise LTSC 2019<br>下载地址：<a href="https://codeload.github.com/kkkgo/LTSC-Add-MicrosoftStore/zip/2019">https://codeload.github.com/kkkgo/LTSC-Add-MicrosoftStore/zip/2019</a><br>要开始安装, 请打包下载后用右键管理员运行</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Add-Store.cmd</span><br></pre></td></tr></table></figure>
+<p>如果您不想安装App Installer / Purchase App / Xbox，请在运行安装之前删除对应的.appxbundle后缀的文件。但是，如果您计划安装游戏，或带有购买选项的应用，则不要删除。<br>如果装完之后商店仍然打不开，请先重启试试。如果仍然不行，请以管理员身份打开命令提示符并运行以下命令之后，然后再重启试试。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">PowerShell -ExecutionPolicy Unrestricted -Command &quot;&amp; &#123;$manifest &#x3D; (Get-AppxPackage Microsoft.WindowsStore).InstallLocation + &#39;\AppxManifest.xml&#39; ; Add-AppxPackage -DisableDevelopmentMode -Register $manifest&#125;&quot;</span><br></pre></td></tr></table></figure>
+<p>商店修复<br>Win+R打开运行，输入</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">WSReset.exe</span><br></pre></td></tr></table></figure>
+<p>回车。<br>该命令会清空并重置Windows Store商店的所有缓存。<br>该脚本由abbodi1406贡献：<br><a href="https://forums.mydigitallife.net/threads/add-store-to-windows-10-enterprise-ltsc-LTSC.70741/page-30#post-1468779">https://forums.mydigitallife.net/threads/add-store-to-windows-10-enterprise-ltsc-LTSC.70741/page-30#post-1468779</a></p>
+<hr>
+<p>　　于是乎我就装上了，可能有同学感觉还是麻烦，于是还有更简单的，后来逛吾爱时我发现有大神整合了该组件包，并打包成了exe可执行文件，双击鼠标就行了。原帖在这<br><a href="https://www.52pojie.cn/thread-868710-1-1.html">https://www.52pojie.cn/thread-868710-1-1.html</a><br>于是我就下载下来了，为了安全<del>好奇心驱使</del>我用UniExtract解包看了一下，奥豁~<br><strong>组件图</strong><br><img src="https://i.loli.net/2019/09/10/TRg6mpzBL5lAMFk.png" alt="TIM截图20190909212608.png"><br>　　确实够安全，打开bat文件看了看，现在把批处理命令贴出来</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@ECHO OFF&amp;PUSHD %~DP0 &amp;TITLE Windows Store for LTSC x64 </span><br><span class="line">::author MoeClub by Vicer**感谢这位作者（笔者言）**</span><br><span class="line">setlocal enabledelayedexpansion</span><br><span class="line">mode con cols&#x3D;60 lines&#x3D;30</span><br><span class="line">color 87</span><br><span class="line">cd.&gt;%WINDIR%\GetAdmin</span><br><span class="line">if exist %WINDIR%\GetAdmin (del &#x2F;f &#x2F;q &quot;%WINDIR%\GetAdmin&quot;) else (</span><br><span class="line">echo CreateObject^(&quot;Shell.Application&quot;^).ShellExecute &quot;%~s0&quot;, &quot;%*&quot;, &quot;&quot;, &quot;runas&quot;, 1 &gt;&gt; &quot;%temp%\Admin.vbs&quot;</span><br><span class="line">&quot;%temp%\Admin.vbs&quot;</span><br><span class="line">del &#x2F;s &#x2F;q &quot;%temp%\Admin.vbs&quot;</span><br><span class="line">exit &#x2F;b 2)</span><br><span class="line">cls</span><br><span class="line"></span><br><span class="line">if not exist &quot;%ProgramFiles%\WindowsApps&quot; goto error_exit</span><br><span class="line">if not exist &quot;%WINDIR%\SysWOW64&quot; goto error_exit</span><br><span class="line"></span><br><span class="line">::grant perm</span><br><span class="line">TAKEOWN &#x2F;F &quot;%ProgramFiles%\WindowsApps&quot; &#x2F;A &gt;NUL</span><br><span class="line">ICACLS &quot;%ProgramFiles%\WindowsApps&quot; &#x2F;grant:r &quot;Administrators:F&quot; &#x2F;Q &gt;NUL</span><br><span class="line">ICACLS &quot;%ProgramFiles%\WindowsApps&quot; &#x2F;grant:r &quot;All Application Packages:RX&quot; &#x2F;setintegritylevel L:I &#x2F;inheritance:e &#x2F;Q &gt;NUL</span><br><span class="line"></span><br><span class="line">::copy</span><br><span class="line">XCOPY &#x2F;Q&#x2F;Y&#x2F;E&#x2F;H&#x2F;O &quot;%~DP0WindowsApps\*&quot; &quot;%ProgramFiles%\WindowsApps\&quot; &gt;NUL 2&gt;NUL</span><br><span class="line"></span><br><span class="line">::restore perm</span><br><span class="line">ICACLS &quot;%ProgramFiles%\WindowsApps&quot; &#x2F;setowner &quot;NT Service\TrustedInstaller&quot; &#x2F;Q &gt;NUL </span><br><span class="line">ICACLS &quot;%ProgramFiles%\WindowsApps&quot; &#x2F;grant:r &quot;Administrators:RX&quot; &#x2F;Q &gt;NUL </span><br><span class="line">ICACLS &quot;%ProgramFiles%\WindowsApps&quot; &#x2F;reset &gt;NUL</span><br><span class="line"></span><br><span class="line">::install</span><br><span class="line">FOR &#x2F;F &quot;delims&#x3D;&quot; %%i IN (Package.txt) DO (PowerShell -Command &quot;&amp; &#123;Add-AppXPackage -Path &#39;%ProgramFiles%\WindowsApps\%%i\AppXManifest.xml&#39; -Register -DisableDevelopmentMode&#125;&quot;)</span><br><span class="line"></span><br><span class="line">:success_exit</span><br><span class="line">ECHO.</span><br><span class="line">ECHO Install finish.</span><br><span class="line">TIMEOUT &#x2F;T 3 &#x2F;NOBREAK &gt;NUL 2&gt;NUL</span><br><span class="line">exit 0</span><br><span class="line"></span><br><span class="line">:error_exit</span><br><span class="line">ECHO.</span><br><span class="line">ECHO Not support this device.</span><br><span class="line">TIMEOUT &#x2F;T 5 &#x2F;NOBREAK &gt;NUL 2&gt;NUL</span><br><span class="line">exit 1</span><br></pre></td></tr></table></figure>
+<p><strong>卸载命令单拉出来</strong><br>::unstal（卸载命令）</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Get-AppxPackage Microsoft.XboxIdentityProvider |Remove-AppxPackage</span><br><span class="line">Get-AppxPackage Microsoft.StorePurchaseApp |Remove-AppxPackage</span><br><span class="line">Get-AppxPackage Microsoft.WindowsStore |Remove-AppxPackage</span><br><span class="line">Get-AppxPackage Microsoft.Advertising.Xaml |Remove-AppxPackage</span><br><span class="line">Get-AppxPackage Microsoft.VCLibs.140.00 |Remove-AppxPackage</span><br><span class="line">Get-AppxPackage Microsoft.NET.Native.Framework.1.6 |Remove-AppxPackage</span><br><span class="line">Get-AppxPackage Microsoft.NET.Native.Runtime.1.6 |Remove-AppxPackage</span><br></pre></td></tr></table></figure>
+<p>这下可以放心了，说一下，我仅仅解包查看了内部结构，并未做出任何修改和打包处理，再次感谢作者。<br>然后我在我室友电脑上成功安装，第一次打开可能是英文，商店检测更新，更新完后就是中文啦</p>
+<p><strong>商店主页面</strong></p>
+<p><img src="https://i.loli.net/2019/09/10/WnzGiXmpZsldht9.png" alt="TIM截图20190909212317.png"></p>
+]]></content>
+      <categories>
+        <category>Softwares For Windows</category>
+      </categories>
+      <tags>
+        <tag>Windows</tag>
+        <tag>Software</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>office2016和visio同时安装</title>
+    <url>/2019/09/03/office2016%E5%92%8Cvisio%E5%90%8C%E6%97%B6%E5%AE%89%E8%A3%85/</url>
+    <content><![CDATA[<p>　　最近朋友找我帮忙给一台主机重装系统并安装好office2016及其visio2016，在安装完office后再安装visio时就傻了眼，提示框忘记截图了，大概意思就是您已安装office（32位），因为您计算机上已经安装了这些64位程序balabala。。。<span id="more"></span><br>百度了下才发现正常条件下是不能同时安装的，网上有些教程没什么用或者不详细，我在这详细说一下。<br>我是在msdn：<a href="https://msdn.itellyou.cn/">https://msdn.itellyou.cn/</a> 下载的官方镜像属性入下图，<br><img src="https://i.loli.net/2019/09/09/JTbWeMSwiYBKNOm.png" alt="TIM图片20190909184613.png"><br>分别是visio和office，差不多大，百度了下才知道实际上office2016iso镜像里是包含有visio的，同理visio也是，与我经常安装的office2010不同，2016版并不能在安装时自定义安装组件，也就是你点击安装，他会默认把所有的组件都安装到c盘，没错，连盘符你都没法选择。<br>我们去官网下载Office Deployment Tool工具：<a href="https://www.microsoft.com/en-us/download/details.aspx?id=49117">https://www.microsoft.com/en-us/download/details.aspx?id=49117</a><br>我们安装到d盘Tool文件夹，发现里面有这四个文件，<br><img src="https://i.loli.net/2019/09/09/UxLIeXDkvqMhcdb.png" alt="TIM图片20190909185735.png"><br>前三个就是配置文件，最后一个就是安装程序，按照电脑处理器架构选择修改哪个配置文件，比如我的电脑是64位的，我就选择修改第一个，（32位电脑修改X86的）右键编辑它，“Configuration”和“/Configuration”(这里去掉了Configuration两边的&lt;&gt;符号来适应md格式)之间的就是默认的配置文件，我们修改如下</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;Configuration&gt;</span><br><span class="line">  &lt;Add SourcePath&#x3D;&quot;A:\&quot; OfficeClientEdition&#x3D;&quot;64&quot; Branch&#x3D;&quot;Current&quot;&gt;</span><br><span class="line">    &lt;!-- &lt;Product ID&#x3D;&quot;O365ProPlusRetail&quot;&gt;</span><br><span class="line">      &lt;Language ID&#x3D;&quot;en-us&quot; &#x2F;&gt;</span><br><span class="line">    &lt;&#x2F;Product&gt; --&gt;</span><br><span class="line">    &lt;Product ID&#x3D;&quot;VisioProRetail&quot;&gt;</span><br><span class="line">      &lt;Language ID&#x3D;&quot;zh-cn&quot; &#x2F;&gt;</span><br><span class="line">    &lt;&#x2F;Product&gt;</span><br><span class="line">    &lt;Product ID&#x3D;&quot;proplusretail&quot;&gt;</span><br><span class="line">      &lt;Language ID&#x3D;&quot;zh-cn&quot; &#x2F;&gt;</span><br><span class="line">      &lt;ExcludeApp ID&#x3D;&quot;Access&quot; &#x2F;&gt;</span><br><span class="line">      &lt;ExcludeApp ID&#x3D;&quot;Publisher&quot; &#x2F;&gt;</span><br><span class="line">      &lt;ExcludeApp ID&#x3D;&quot;Groove&quot; &#x2F;&gt;</span><br><span class="line">      &lt;ExcludeApp ID&#x3D;&quot;Lync&quot; &#x2F;&gt;</span><br><span class="line">      &lt;ExcludeApp ID&#x3D;&quot;Outlook&quot; &#x2F;&gt;</span><br><span class="line">&lt;ExcludeApp ID&#x3D;&quot;Skype&quot; &#x2F;&gt;</span><br><span class="line">    &lt;&#x2F;Product&gt;</span><br><span class="line">  &lt;&#x2F;Add&gt;</span><br><span class="line">  &lt;!--  &lt;Updates Enabled&#x3D;&quot;TRUE&quot; Branch&#x3D;&quot;Current&quot; &#x2F;&gt; --&gt;</span><br><span class="line">  &lt;!--  &lt;Display Level&#x3D;&quot;None&quot; AcceptEULA&#x3D;&quot;TRUE&quot; &#x2F;&gt;  --&gt;</span><br><span class="line">  &lt;!--  &lt;Property Name&#x3D;&quot;AUTOACTIVATE&quot; Value&#x3D;&quot;1&quot; &#x2F;&gt;  --&gt;</span><br><span class="line">&lt;&#x2F;Configuration&gt;</span><br></pre></td></tr></table></figure>
+<p>其中，我们把上面两个镜像其中的一个双击打开，他就会自动挂载光驱（这是win10很早之前就自带的功能了，不用使用第三方软件了，很方便），如图我们可以看到电脑将驱动器挂载为H：盘，<br><img src="https://i.loli.net/2019/09/09/f68zCwthXQ5uNd2.png" alt="TIM图片20190909193803.png"><br>所以我们修改&lt;Add SourcePath=”A:&quot;为&lt;Add SourcePath=”H:&quot;，我们电脑是64位，所以<br>OfficeClientEdition=”64”不用修改，32位的机器修改为32。<br>修改完保存，在这个配置文件所在目录下按住shift键，鼠标右键点击：在此处打开Powershell 窗口，<br><img src="https://i.loli.net/2019/09/09/d9T6brcmJjfopQx.png" alt="TIM图片20190909194027.png"><br>也可以打开cmd窗口，cd到该目录，运行</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">D:\tool&gt;setup.exe &#x2F;configure configuration-Office365-x64.xml</span><br></pre></td></tr></table></figure>
+<p>就ok啦（这里注意配置文件名）。用PowerShell时可能遇到需要在命令行前加“./”，如果提示就加上。<br>setup.exe会自动运行，按照你的配置文件展开安装啦。</p>
+]]></content>
+      <categories>
+        <category>Softwares For Windows</category>
+      </categories>
+      <tags>
+        <tag>Windows</tag>
+        <tag>office</tag>
+        <tag>visio</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>《超脱》：穷尽一生，我们要学会的不过是彼此拥抱。</title>
     <url>/2020/05/07/%E3%80%8A%E8%B6%85%E8%84%B1%E3%80%8B%EF%BC%9A%E7%A9%B7%E5%B0%BD%E4%B8%80%E7%94%9F%EF%BC%8C%E6%88%91%E4%BB%AC%E8%A6%81%E5%AD%A6%E4%BC%9A%E7%9A%84%EF%BC%8C%E4%B8%8D%E8%BF%87%E6%98%AF%E5%BD%BC%E6%AD%A4%E6%8B%A5%E6%8A%B1/</url>
     <content><![CDATA[<p>我从未这般深切的感觉到，我的灵魂与我之间的距离如此遥远，而我的存在却如此依赖这个世界——阿尔伯特<strong>·</strong>加嫪。影片所展现出的孤独感无力感，让每个有过生活压力的人，甚至从此封闭内心的人都感到痛彻心扉。其实我们穷尽一生，所要学会的，不过是在生活对你施以重压的时候不要忘记彼此拥抱。<span id="more"></span></p>
@@ -471,43 +555,6 @@
 <iframe src="//player.bilibili.com/player.html?aid=32514557&bvid=BV1qW411U7N1&cid=56886545&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%" height="100%"> </iframe>
 
 ]]></content>
-  </entry>
-  <entry>
-    <title>中兴 ZXHN F677V2 光猫改桥接</title>
-    <url>/2020/02/20/%E4%B8%AD%E5%85%B4%20ZXHN%20F677V2%20%E5%85%89%E7%8C%AB%E6%94%B9%E6%A1%A5%E6%8E%A5/</url>
-    <content><![CDATA[<p>　　在2019年年底，我家终于扯通了宽带，这次放假回家之后看了看发现是中兴 ZXHN F677V2 的光猫，联通的宽带，没有送路由器，用的是光猫自带的2.4Ghz的WiFi。正好我家有闲置的路由器，是斐讯的K2，就接在光猫上自动获取ip地址进行上网。<span id="more"></span>由于疫情在家闲着没事干，准备申请一个公网ip试试，却发现给的就是公网ip，这样就省了一大步了。</p>
-<p>　　要发挥公网的最大用处第一步就是改光猫拨号为光猫桥接，路由拨号，这个就需要超级管理员密码了。</p>
-<p>　　市面上大部分的光猫超级账户和密码在网上都能搜索的到。此教程仅适用于该型号或者此系列路由，目前我知道的我家的现况是设备注册后密码会随机设置，未开启telnet。</p>
-<p>　　先用光猫后边的密码进管理界面记录下INTERNET和iptv的VID和LOID码，一定要记住！一定！（我这个是改过桥接了）</p>
-<p><img src="https://i.loli.net/2020/05/05/DOTZgw4dac2j1i3.png" alt="QQ截图20200505114032.png"></p>
-<p>　　<strong>x_INTERNET_y_VID_z</strong></p>
-<p>　　我们来看一下他的结构，x 代表的是序号，我这是设置的第四个连接方式。y 代表的是拨号方式，R 是路由，B是桥接。z 就是你的VLAN ID了，一定要截图记录下来</p>
-<p><img src="https://i.loli.net/2020/05/05/gtZAqlr2bKh983G.png" alt="2.png"></p>
-<p>　　这个同样重要，记录下来！记录后还可以以便后续还原，或者自行更换光猫时使用。</p>
-<p>　　按住猫上的重置键30秒以上等猫重置了重启进  <a href="http://192.168.1.1/hidden_version_switch.gch">http://192.168.1.1/hidden_version_switch.gch</a> 选择<code>default version</code>，密码是：<code>CUAdmin</code>提交后光猫会重启。<br><img src="https://i.loli.net/2020/05/05/YRSK6kLFsgNO9Zn.png" alt="3.png"><br>　　光猫重启后用putty或者xshell连接类型选择telnet。</p>
-<ul>
-<li>用户名：<code>root</code></li>
-<li>密码：<code>Zte521</code><br><img src="https://i.loli.net/2020/05/05/JKwuzSihsOIdHn6.png" alt="4.png"><br><img src="https://i.loli.net/2020/05/05/Xxt3zNbprqOMTPg.png" alt="5.png"></li>
-</ul>
-<p>　　进入控制台后依次输入以下命令行</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">setmac 1 2180 你的LOID</span><br><span class="line">sendcmd 1 DB set PDTCTUSERINFO 0 tForcePushFlg 0</span><br><span class="line">sendcmd 1 DB set PDTCTUSERINFO 0 Result 1</span><br><span class="line">sendcmd 1 DB set CltLmt 8 Enable 0</span><br><span class="line">sendcmd 1 DB set DevAuthInfo 0 Enable 1</span><br><span class="line">sendcmd 1 DB save</span><br><span class="line">sendcmd 1 DB set TelnetCfg 0 Lan_EnableAfterOlt 1</span><br><span class="line">sendcmd 1 DB save</span><br></pre></td></tr></table></figure>
-<p>　　最后进192.168.1.1/cu.html，管理员账号密码都是：<code>CUAdmin</code>。</p>
-<p>　　以上命令行为恩山坛友提供：<a href="https://www.right.com.cn/forum/forum.php?mod=viewthread&tid=1263340&page=1">原帖</a></p>
-<p>　　进入后，选择基本配置，新建一个连接选项，我这里选择的是ipv4/v6，当然，现在ipv6还未普及，你觉得影响日常浏览体验可以只选择ipv4。（ipv6可是大势所趋啊，给都给了，干嘛不用呢）。</p>
-<ul>
-<li>端口绑定：你用哪个口就绑哪个吧。</li>
-<li>业务模式：<code>Bridge</code>，桥接模式。</li>
-<li>业务模式选择：<code>INTERNET</code>。</li>
-<li>VLAN模式选择改写，VLAN ID就写之前默认的数字。</li>
-</ul>
-<p><img src="https://i.loli.net/2020/05/05/OvnwXgPQHITFNZl.png" alt="6.png"></p>
-<p>　　这样桥接模式就添加了，为了稳定，我就把光猫自带的2.4GHzWIFI给关了，徒增功耗。</p>
-<p>　　IPTV同理。</p>
-<p>　　普通用户登录光猫，网络-宽带配置-上网账号设置就选择你刚才新建的那个，确定重启光猫，用终端拨号试试吧。</p>
-]]></content>
-      <categories>
-        <category>路由器</category>
-      </categories>
   </entry>
   <entry>
     <title>《无题》</title>
@@ -722,87 +769,94 @@
       </tags>
   </entry>
   <entry>
-    <title>K2（路由）老矣，尚能饭否？③</title>
-    <url>/2020/03/16/K2%EF%BC%88%E8%B7%AF%E7%94%B1%EF%BC%89%E8%80%81%E7%9F%A3%EF%BC%8C%E5%B0%9A%E8%83%BD%E9%A5%AD%E5%90%A6%EF%BC%9F%E2%91%A2/</url>
-    <content><![CDATA[<h2 id="老毛子padvan固件开启ipv6"><a href="#老毛子padvan固件开启ipv6" class="headerlink" title="老毛子padvan固件开启ipv6"></a><p align="center">老毛子padvan固件开启ipv6</p></h2><p>　　前面我们用光猫桥接模式已经建立并使用了ipv4/ipv6的连接，所以，我们今天就在路由器固件上要开启ipv6。</p>
+    <title>农村什么让你感到最恐怖？</title>
+    <url>/2019/10/03/%E5%86%9C%E6%9D%91%E4%BB%80%E4%B9%88%E8%AE%A9%E4%BD%A0%E6%84%9F%E5%88%B0%E6%9C%80%E6%81%90%E6%80%96%EF%BC%9F/</url>
+    <content><![CDATA[<p>前几天有个自称是我表妹的人加我微信，我加了，然后刚加她就转来500块钱，说什么一点心意让我收下。</p>
+<p>“机智”如我立马辨出是“骗子＂，立即删除。（因为我和表妹很少联系，也实在想不出任何一个得让她给我转钱的理由。）<span id="more"></span></p>
+<p>今天那个号又加我，还备注了我的真实姓名。我又半信半疑地加了。</p>
+<p>和上次一样，微信页面上又是转账500元，连话术也一模一样。<br><img src="https://i.loli.net/2020/03/02/tqogVTpFx15nvu3.jpg" alt="800723844.jpg"></p>
+<p>我直接一个视频电话打过去，镜头另一端，<br>竟真的是我表妹。还是瘦，神情也还是那么怯怯的。<br>因为我在上班，不方便多说，确认是她后就<br>挂断了，然后在微信上寒暄了几句。</p>
+<p>改备注的时候，一阵心疼。<br>表妹名“孝勤＂，只比我小9天。“孝＂是字辈， “勤”是家人（尤其是她爷爷，也就是我外公的哥哥，我称呼他大外公）对她的期愿，希望她勤劳，多干活。</p>
+<p>小时候我是“别人家的孩子＂，聪明，成绩好，总是学校的第一名。但我知道我取得第一仅仅是因为我比其他人有更多的时间读书而已。</p>
+<p>我从小和外公外婆一起生活，他们虽没多少文化，但都深刻明白知识的重要性，所以哪怕是农忙时节，他们也从不让我下地干活，要求我专心学习。</p>
+<p>而其他的孩子，则是农活第一，学习第二，毕竟地里真的有那么多活，而学习却是一个太过长远的投资。</p>
+<p>所以同龄很多孩子的童年，大部分时间是在割猪草喂猪、割牛草喂牛、种包谷收包谷、打谷子、打柴…</p>
+<p>尤其是，我的表妹。</p>
+<p>表妹的爸妈也就是我的大舅、舅娘，都在外打工，表妹和哥哥、爷爷留守在家。</p>
+<p>和新闻里写得不太一样，留守的老人儿童其实并没有那么多时间和精力去思念亲人、感受孤独，他们有那么那么多农活要忙，面朝黄土背朝天，烈日下忙着掰包谷，淋着雨赶熟透的谷子的收期。被汗水和辛劳填充的生活，是根本腾不出时间和精力去感伤的。</p>
+<p>大外公早鳏，多年没有枕边人，加上繁重的农活，让他的脾气有些暴躁。更让人悲凉的是，妹妹从生下来起就从未得到过他的疼爱，因为他尤为重男轻女。</p>
+<p>表妹是从来没有娱乐时间的，大外公从不准她闲下来，只要看她稍微一坐下，新的农活便就又安排上了。每当我学习或玩乐的时候，表妹不是在割猪草，就是在打柴，她总<br>是那么忙，忙得只得把上学时间当作一天中短暂的休息时刻。</p>
+<p>其实如果只是受着她那个年龄不该承受的辛劳，或许不会让我至今想到她仍心疼至此。</p>
+<p>大外公如果太忙，或者喝了酒，或者在哪里不如意，表妹就会成为他出气的沙包。揪住头发打，用脚踹，踹胸口，踹头..</p>
+<p>此刻，打下这些字，仍忍不住心痛如绞。</p>
+<p>有一次，表妹不知道因为什么又被大外公打了。那时我们好像是8岁还是9岁。8岁、9岁的小姑娘，竟被活活打到小便失禁。</p>
+<p>在我听到咒骂声和哭声赶到的时候，表妹正躺在被便液浸湿的地上，小声鸣咽。</p>
+<p>所幸，如此拳打脚踢，表妹没被打死，仍然健康。</p>
+<p>可能是成长环境的原因，表妹自小就是内向的，极度内向，寡言少语，很少笑，外人看上去就是讷讷的。但勤劳，孝顺，老实本分，正如她的名字那样。</p>
+<p>改备注时想到了这些，想起了这个生来凄苦的姑娘。</p>
+<p>好在，表妹后来机缘巧合读了一所卫校，现在在一个药店上班，并在去年嫁给了一个与她同样内向的男生。我听说那个男生是个手艺人的时候，顿时舒了一口气，再艰难的岁月也饿不死手艺人，希望这个男孩能护表妹一世周全。</p>
+<p>对了，她之所以给我转钱，是因为去年她结婚的时候我给她包了一个红包。</p>
+<p>后来我也登记结婚，但不准备办婚礼，没有宴请，她可能是听到我结婚的消息了，所以就这么讷讷的，说要表达一点心意。</p>
+<p>看吧，这个傻姑娘，连发个红包都这么笨。</p>
+<p>我一直认为农村是美好的，有外公的手作玩具，有外婆采来的山林野果，有青山隐隐，有大大的水牛，有小鸡大鹅，但今天又一次认识到，这并不是农村的全部。</p>
+<p>农村最恐怖的地方吗？大概就是过错与痛苦情有可<br>怒却又只能努力去理解、去原谅、去祝福。最后，虽然世人皆苦，但真的好希望你幸福。</p>
+<p>转自知乎@落木柔</p>
+]]></content>
+      <categories>
+        <category>浮生记</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>中兴 ZXHN F677V2 光猫改桥接</title>
+    <url>/2020/02/20/%E4%B8%AD%E5%85%B4%20ZXHN%20F677V2%20%E5%85%89%E7%8C%AB%E6%94%B9%E6%A1%A5%E6%8E%A5/</url>
+    <content><![CDATA[<p>　　在2019年年底，我家终于扯通了宽带，这次放假回家之后看了看发现是中兴 ZXHN F677V2 的光猫，联通的宽带，没有送路由器，用的是光猫自带的2.4Ghz的WiFi。正好我家有闲置的路由器，是斐讯的K2，就接在光猫上自动获取ip地址进行上网。<span id="more"></span>由于疫情在家闲着没事干，准备申请一个公网ip试试，却发现给的就是公网ip，这样就省了一大步了。</p>
+<p>　　要发挥公网的最大用处第一步就是改光猫拨号为光猫桥接，路由拨号，这个就需要超级管理员密码了。</p>
+<p>　　市面上大部分的光猫超级账户和密码在网上都能搜索的到。此教程仅适用于该型号或者此系列路由，目前我知道的我家的现况是设备注册后密码会随机设置，未开启telnet。</p>
+<p>　　先用光猫后边的密码进管理界面记录下INTERNET和iptv的VID和LOID码，一定要记住！一定！（我这个是改过桥接了）</p>
+<p><img src="https://i.loli.net/2020/05/05/DOTZgw4dac2j1i3.png" alt="QQ截图20200505114032.png"></p>
+<p>　　<strong>x_INTERNET_y_VID_z</strong></p>
+<p>　　我们来看一下他的结构，x 代表的是序号，我这是设置的第四个连接方式。y 代表的是拨号方式，R 是路由，B是桥接。z 就是你的VLAN ID了，一定要截图记录下来</p>
+<p><img src="https://i.loli.net/2020/05/05/gtZAqlr2bKh983G.png" alt="2.png"></p>
+<p>　　这个同样重要，记录下来！记录后还可以以便后续还原，或者自行更换光猫时使用。</p>
+<p>　　按住猫上的重置键30秒以上等猫重置了重启进  <a href="http://192.168.1.1/hidden_version_switch.gch">http://192.168.1.1/hidden_version_switch.gch</a> 选择<code>default version</code>，密码是：<code>CUAdmin</code>提交后光猫会重启。<br><img src="https://i.loli.net/2020/05/05/YRSK6kLFsgNO9Zn.png" alt="3.png"><br>　　光猫重启后用putty或者xshell连接类型选择telnet。</p>
 <ul>
-<li><p>外部网络-IPv6 设置<span id="more"></span><br><img src="https://i.loli.net/2020/05/08/rV9EGZMeDpxbgIo.png" alt="1.png"></p>
-</li>
-<li><p>内部网络-DHCP 服务器<br><img src="https://i.loli.net/2020/05/08/VvdSs64DjaOXcoL.png" alt="2.png"></p>
-</li>
-<li><p>配置拓展环境<br><img src="https://i.loli.net/2020/05/08/biZsacxpVOLfSAF.png" alt="3.png"></p>
-</li>
-<li><p>系统管理-服务-启用SSH服务<br><img src="https://i.loli.net/2020/05/08/b5MJjhyLTgC38VQ.png" alt="4.png"></p>
-</li>
-<li><p>用putty或者xshell登录路由器<br><img src="https://i.loli.net/2020/05/08/5fs9PaAOiTUd6og.png" alt="5.png"></p>
-</li>
+<li>用户名：<code>root</code></li>
+<li>密码：<code>Zte521</code><br><img src="https://i.loli.net/2020/05/05/JKwuzSihsOIdHn6.png" alt="4.png"><br><img src="https://i.loli.net/2020/05/05/Xxt3zNbprqOMTPg.png" alt="5.png"></li>
 </ul>
-<p>　　执行<code>ifconfig</code>，查看内网网卡，找到后缀最大的那个<br><img src="https://i.loli.net/2020/05/08/YIVOzAMRKrEk2X1.png" alt="6.png"></p>
+<p>　　进入控制台后依次输入以下命令行</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">setmac 1 2180 你的LOID</span><br><span class="line">sendcmd 1 DB set PDTCTUSERINFO 0 tForcePushFlg 0</span><br><span class="line">sendcmd 1 DB set PDTCTUSERINFO 0 Result 1</span><br><span class="line">sendcmd 1 DB set CltLmt 8 Enable 0</span><br><span class="line">sendcmd 1 DB set DevAuthInfo 0 Enable 1</span><br><span class="line">sendcmd 1 DB save</span><br><span class="line">sendcmd 1 DB set TelnetCfg 0 Lan_EnableAfterOlt 1</span><br><span class="line">sendcmd 1 DB save</span><br></pre></td></tr></table></figure>
+<p>　　最后进192.168.1.1/cu.html，管理员账号密码都是：<code>CUAdmin</code>。</p>
+<p>　　以上命令行为恩山坛友提供：<a href="https://www.right.com.cn/forum/forum.php?mod=viewthread&tid=1263340&page=1">原帖</a></p>
+<p>　　进入后，选择基本配置，新建一个连接选项，我这里选择的是ipv4/v6，当然，现在ipv6还未普及，你觉得影响日常浏览体验可以只选择ipv4。（ipv6可是大势所趋啊，给都给了，干嘛不用呢）。</p>
 <ul>
-<li>执行以下命令<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">opkg update</span><br><span class="line">opkg install 6relayd</span><br></pre></td></tr></table></figure></li>
-<li>自定义设置-脚本-在路由器启动后执行，添加<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 自启动ipv6服务</span><br><span class="line">&#x2F;opt&#x2F;sbin&#x2F;6relayd -d -A eth2.2 br0</span><br></pre></td></tr></table></figure>
-<img src="https://i.loli.net/2020/05/08/7CYm2ifZWOMVzoU.png" alt="7.png"></li>
+<li>端口绑定：你用哪个口就绑哪个吧。</li>
+<li>业务模式：<code>Bridge</code>，桥接模式。</li>
+<li>业务模式选择：<code>INTERNET</code>。</li>
+<li>VLAN模式选择改写，VLAN ID就写之前默认的数字。</li>
 </ul>
-<h2 id="注意：这里的eth2-2就是你执行ifconfig后看到的后缀最大的那个"><a href="#注意：这里的eth2-2就是你执行ifconfig后看到的后缀最大的那个" class="headerlink" title="注意：这里的eth2.2就是你执行ifconfig后看到的后缀最大的那个"></a><em>注意：这里的eth2.2就是你执行<code>ifconfig</code>后看到的后缀最大的那个</em></h2><ul>
-<li>系统管理-服务-计划任务，添加<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">*&#x2F;2 * * * * &#x2F;bin&#x2F;ping -6 -c 2 ipv6.baidu.com</span><br></pre></td></tr></table></figure>
-意思是每隔两分钟ping一下ipv6.baidu.com，不过没必要这么频繁，我设置的是每12小时ping一次。<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">30 *&#x2F;1 * * * &#x2F;bin&#x2F;ping -6 -c 2 ipv6.baidu.com</span><br></pre></td></tr></table></figure>
-<img src="https://i.loli.net/2020/05/08/wqARuHk94fOUWXi.png" alt="8.5.png"></li>
-</ul>
-<p><img src="https://i.loli.net/2020/05/08/PchJfqubZo9AKU1.png" alt="9.png"></p>
-<ul>
-<li>这里说一下计划任务的基本格式<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 基本格式 : </span><br><span class="line"># 0　　*　　*　　*　　*　　command </span><br><span class="line"># 分　时　日　月　周　命令 </span><br><span class="line"># 在以上各个字段中，还可以使用以下特殊字符：</span><br><span class="line"># 第一个数字（分钟）不能为*</span><br><span class="line"># 星号（*）：代表所有可能的值，例如month字段如果是星号，则表示在满足其它字段的制约条件后每月都执行该命令操作。</span><br><span class="line"># 逗号（,）：可以用逗号隔开的值指定一个列表范围，例如，“1,2,5,7,8,9”</span><br><span class="line"># 中杠（-）：可以用整数之间的中杠表示一个整数范围，例如“2-6”表示“2,3,4,5,6”</span><br><span class="line"># 正斜线（&#x2F;）：可以用正斜线指定时间的间隔频率，例如“0-23&#x2F;2”表示每两小时执行一次。同时正斜线可以和星号一起使用，例如*&#x2F;10，如果用在minute字段，表示每十分钟执行一次。</span><br></pre></td></tr></table></figure></li>
-<li>重启，点击网络地图_查看外部网络状态，发现ipv4和ipv6的wan，lan都正常了。<br><img src="https://i.loli.net/2020/05/08/JMGiayRvhF1x27Q.png" alt="10.png"></li>
-</ul>
-<hr>
-<p>　　此系列教程包括但不仅限于k2路由，只要是老毛子padvan固件，都是一样的操作。</p>
+<p><img src="https://i.loli.net/2020/05/05/OvnwXgPQHITFNZl.png" alt="6.png"></p>
+<p>　　这样桥接模式就添加了，为了稳定，我就把光猫自带的2.4GHzWIFI给关了，徒增功耗。</p>
+<p>　　IPTV同理。</p>
+<p>　　普通用户登录光猫，网络-宽带配置-上网账号设置就选择你刚才新建的那个，确定重启光猫，用终端拨号试试吧。</p>
 ]]></content>
       <categories>
         <category>路由器</category>
       </categories>
   </entry>
   <entry>
-    <title>office2016和visio同时安装</title>
-    <url>/2019/09/03/office2016%E5%92%8Cvisio%E5%90%8C%E6%97%B6%E5%AE%89%E8%A3%85/</url>
-    <content><![CDATA[<p>　　最近朋友找我帮忙给一台主机重装系统并安装好office2016及其visio2016，在安装完office后再安装visio时就傻了眼，提示框忘记截图了，大概意思就是您已安装office（32位），因为您计算机上已经安装了这些64位程序balabala。。。<span id="more"></span><br>百度了下才发现正常条件下是不能同时安装的，网上有些教程没什么用或者不详细，我在这详细说一下。<br>我是在msdn：<a href="https://msdn.itellyou.cn/">https://msdn.itellyou.cn/</a> 下载的官方镜像属性入下图，<br><img src="https://i.loli.net/2019/09/09/JTbWeMSwiYBKNOm.png" alt="TIM图片20190909184613.png"><br>分别是visio和office，差不多大，百度了下才知道实际上office2016iso镜像里是包含有visio的，同理visio也是，与我经常安装的office2010不同，2016版并不能在安装时自定义安装组件，也就是你点击安装，他会默认把所有的组件都安装到c盘，没错，连盘符你都没法选择。<br>我们去官网下载Office Deployment Tool工具：<a href="https://www.microsoft.com/en-us/download/details.aspx?id=49117">https://www.microsoft.com/en-us/download/details.aspx?id=49117</a><br>我们安装到d盘Tool文件夹，发现里面有这四个文件，<br><img src="https://i.loli.net/2019/09/09/UxLIeXDkvqMhcdb.png" alt="TIM图片20190909185735.png"><br>前三个就是配置文件，最后一个就是安装程序，按照电脑处理器架构选择修改哪个配置文件，比如我的电脑是64位的，我就选择修改第一个，（32位电脑修改X86的）右键编辑它，“Configuration”和“/Configuration”(这里去掉了Configuration两边的&lt;&gt;符号来适应md格式)之间的就是默认的配置文件，我们修改如下</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;Configuration&gt;</span><br><span class="line">  &lt;Add SourcePath&#x3D;&quot;A:\&quot; OfficeClientEdition&#x3D;&quot;64&quot; Branch&#x3D;&quot;Current&quot;&gt;</span><br><span class="line">    &lt;!-- &lt;Product ID&#x3D;&quot;O365ProPlusRetail&quot;&gt;</span><br><span class="line">      &lt;Language ID&#x3D;&quot;en-us&quot; &#x2F;&gt;</span><br><span class="line">    &lt;&#x2F;Product&gt; --&gt;</span><br><span class="line">    &lt;Product ID&#x3D;&quot;VisioProRetail&quot;&gt;</span><br><span class="line">      &lt;Language ID&#x3D;&quot;zh-cn&quot; &#x2F;&gt;</span><br><span class="line">    &lt;&#x2F;Product&gt;</span><br><span class="line">    &lt;Product ID&#x3D;&quot;proplusretail&quot;&gt;</span><br><span class="line">      &lt;Language ID&#x3D;&quot;zh-cn&quot; &#x2F;&gt;</span><br><span class="line">      &lt;ExcludeApp ID&#x3D;&quot;Access&quot; &#x2F;&gt;</span><br><span class="line">      &lt;ExcludeApp ID&#x3D;&quot;Publisher&quot; &#x2F;&gt;</span><br><span class="line">      &lt;ExcludeApp ID&#x3D;&quot;Groove&quot; &#x2F;&gt;</span><br><span class="line">      &lt;ExcludeApp ID&#x3D;&quot;Lync&quot; &#x2F;&gt;</span><br><span class="line">      &lt;ExcludeApp ID&#x3D;&quot;Outlook&quot; &#x2F;&gt;</span><br><span class="line">&lt;ExcludeApp ID&#x3D;&quot;Skype&quot; &#x2F;&gt;</span><br><span class="line">    &lt;&#x2F;Product&gt;</span><br><span class="line">  &lt;&#x2F;Add&gt;</span><br><span class="line">  &lt;!--  &lt;Updates Enabled&#x3D;&quot;TRUE&quot; Branch&#x3D;&quot;Current&quot; &#x2F;&gt; --&gt;</span><br><span class="line">  &lt;!--  &lt;Display Level&#x3D;&quot;None&quot; AcceptEULA&#x3D;&quot;TRUE&quot; &#x2F;&gt;  --&gt;</span><br><span class="line">  &lt;!--  &lt;Property Name&#x3D;&quot;AUTOACTIVATE&quot; Value&#x3D;&quot;1&quot; &#x2F;&gt;  --&gt;</span><br><span class="line">&lt;&#x2F;Configuration&gt;</span><br></pre></td></tr></table></figure>
-<p>其中，我们把上面两个镜像其中的一个双击打开，他就会自动挂载光驱（这是win10很早之前就自带的功能了，不用使用第三方软件了，很方便），如图我们可以看到电脑将驱动器挂载为H：盘，<br><img src="https://i.loli.net/2019/09/09/f68zCwthXQ5uNd2.png" alt="TIM图片20190909193803.png"><br>所以我们修改&lt;Add SourcePath=”A:&quot;为&lt;Add SourcePath=”H:&quot;，我们电脑是64位，所以<br>OfficeClientEdition=”64”不用修改，32位的机器修改为32。<br>修改完保存，在这个配置文件所在目录下按住shift键，鼠标右键点击：在此处打开Powershell 窗口，<br><img src="https://i.loli.net/2019/09/09/d9T6brcmJjfopQx.png" alt="TIM图片20190909194027.png"><br>也可以打开cmd窗口，cd到该目录，运行</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">D:\tool&gt;setup.exe &#x2F;configure configuration-Office365-x64.xml</span><br></pre></td></tr></table></figure>
-<p>就ok啦（这里注意配置文件名）。用PowerShell时可能遇到需要在命令行前加“./”，如果提示就加上。<br>setup.exe会自动运行，按照你的配置文件展开安装啦。</p>
+    <title>《测试》</title>
+    <url>/2021/04/13/%E6%B5%8B%E8%AF%95/</url>
+    <content><![CDATA[<p>​    这是一个测试HTML与Markdown文件的文章</p>
+<span id="more"></span>
+
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&#123;% raw %&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">&quot;Content-Type&quot;</span> <span class="attr">content</span>=<span class="string">&quot;text/html; charset=utf-8&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;initial-scale=1.0, user-scalable=no&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span></span><br><span class="line"><span class="css">        <span class="selector-tag">body</span>, <span class="selector-tag">html</span>, <span class="selector-id">#allmap</span> &#123;</span></span><br><span class="line"><span class="css">            <span class="attribute">width</span>: <span class="number">100%</span>;</span></span><br><span class="line"><span class="css">            <span class="attribute">height</span>: <span class="number">100%</span>;</span></span><br><span class="line"><span class="css">            <span class="attribute">overflow</span>: hidden;</span></span><br><span class="line"><span class="css">            <span class="attribute">margin</span>: <span class="number">0</span>;</span></span><br><span class="line"><span class="css">            <span class="attribute">font-family</span>: <span class="string">&quot;微软雅黑&quot;</span>;</span></span><br><span class="line">        &#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!-- 实际应用时，请把qFf6d6jjokkyC4CVPxzqLVfZufEdu1dh改成您的百度开发都访问应用AK --&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 本AK仅用于测试，我们不保证该AK长期有效 --&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 可到：http://lbsyun.baidu.com/ 网站申请，应用类型为 浏览器 端 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">src</span>=<span class="string">&quot;http://api.map.baidu.com/api?v=2.0&amp;ak=QXwuA2Zi8h3huVQvqVrW2MhU&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">src</span>=<span class="string">&quot;http://developer.baidu.com/map/jsdemo/demo/convertor.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    </span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>野火GPS地图<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;allmap&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">try</span> &#123;</span></span><br><span class="line"></span><br><span class="line">   </span><br><span class="line"><span class="javascript">    <span class="comment">// 百度地图API功能</span></span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> map = <span class="keyword">new</span> BMap.Map(<span class="string">&quot;allmap&quot;</span>);            <span class="comment">// 创建Map实例</span></span></span><br><span class="line"></span><br><span class="line"><span class="javascript">    <span class="comment">//添加拖拽和缩放功能</span></span></span><br><span class="line"><span class="javascript">    map.enableScrollWheelZoom(<span class="literal">true</span>);</span></span><br><span class="line">    map.enableDragging();   </span><br><span class="line"></span><br><span class="line"><span class="javascript">    <span class="comment">//添加控件和比例尺</span></span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> top_right_control = <span class="keyword">new</span> BMap.ScaleControl(&#123; <span class="attr">anchor</span>: BMAP_ANCHOR_BOTTOM_LEFT &#125;);<span class="comment">// 左下角，添加比例尺</span></span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> top_right_navigation = <span class="keyword">new</span> BMap.NavigationControl(&#123; <span class="attr">anchor</span>: BMAP_ANCHOR_BOTTOM_LEFT &#125;);  <span class="comment">//左下角，添加默认缩放平移控件</span></span></span><br><span class="line"></span><br><span class="line">    map.addControl(top_right_control);</span><br><span class="line">    map.addControl(top_right_navigation);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="javascript">    <span class="comment">//添加地图类型</span></span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> mapType1 = <span class="keyword">new</span> BMap.MapTypeControl(&#123; <span class="attr">mapTypes</span>: [BMAP_NORMAL_MAP, BMAP_HYBRID_MAP] &#125;);</span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> mapType2 = <span class="keyword">new</span> BMap.MapTypeControl(&#123; <span class="attr">anchor</span>: BMAP_ANCHOR_TOP_LEFT &#125;);</span></span><br><span class="line"></span><br><span class="line"><span class="javascript">    <span class="comment">//添加地图类型和缩略图</span></span></span><br><span class="line">   </span><br><span class="line"><span class="javascript">    map.addControl(mapType1);          <span class="comment">//2D图，卫星图</span></span></span><br><span class="line"><span class="javascript">    map.addControl(mapType2);          <span class="comment">//左上角，默认地图控件</span></span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="javascript">    <span class="comment">//创建点</span></span></span><br><span class="line"><span class="javascript">    <span class="comment">//map.clearOverlays();</span></span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> point = <span class="keyword">new</span> BMap.Point(<span class="number">116.404</span>, <span class="number">39.915</span>);</span></span><br><span class="line">    map.centerAndZoom(point, 12);</span><br><span class="line"><span class="javascript">    <span class="comment">//var marker = new BMap.Marker(point);  // 创建标注</span></span></span><br><span class="line"><span class="javascript">    <span class="comment">//map.addOverlay(marker);               // 将标注添加到地图中</span></span></span><br><span class="line">    </span><br><span class="line"><span class="javascript">    <span class="comment">//根据IP定位城市</span></span></span><br><span class="line"><span class="javascript">    <span class="function"><span class="keyword">function</span> <span class="title">myFun</span>(<span class="params">result</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> cityName = result.name;</span></span><br><span class="line">        map.setCenter(cityName);</span><br><span class="line">    &#125;</span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> myCity = <span class="keyword">new</span> BMap.LocalCity();</span></span><br><span class="line">    myCity.get(myFun);</span><br><span class="line"></span><br><span class="line"><span class="javascript">    <span class="comment">//showalert(testmsg);</span></span></span><br><span class="line"></span><br><span class="line"><span class="javascript">    <span class="comment">//对传入的经纬度进行标注：纬度，经度</span></span></span><br><span class="line"><span class="javascript">   <span class="comment">// var Latt = 116.404;</span></span></span><br><span class="line"><span class="javascript">   <span class="comment">// var Lott = 39.915;</span></span></span><br><span class="line"></span><br><span class="line"><span class="javascript">   <span class="comment">// theLocation(Latt, Lott);</span></span></span><br><span class="line"><span class="javascript">   <span class="comment">// testAlert();</span></span></span><br><span class="line">    </span><br><span class="line"><span class="javascript">    <span class="comment">// 用经纬度设置地图中心点</span></span></span><br><span class="line"><span class="javascript">    <span class="function"><span class="keyword">function</span> <span class="title">theLocation</span>(<span class="params">Longitude,Latitude</span>) </span>&#123;</span></span><br><span class="line">        </span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> gpsPoint = <span class="keyword">new</span> BMap.Point(Longitude, Latitude);</span></span><br><span class="line"></span><br><span class="line"><span class="javascript">        <span class="comment">//gps坐标纠偏</span></span></span><br><span class="line"><span class="javascript">        BMap.Convertor.translate(gpsPoint, <span class="number">0</span>, translateCallback);     <span class="comment">//真实经纬度转成百度坐标</span></span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="javascript">            <span class="comment">//map.clearOverlays();</span></span></span><br><span class="line"><span class="javascript">            <span class="comment">//var new_point = new BMap.Point(Longitude,Latitude );</span></span></span><br><span class="line"><span class="javascript">            <span class="comment">//var marker = new BMap.Marker(new_point);  // 创建标注</span></span></span><br><span class="line"><span class="javascript">            <span class="comment">//map.addOverlay(marker);              // 将标注添加到地图中</span></span></span><br><span class="line"><span class="javascript">            <span class="comment">//map.panTo(new_point);</span></span></span><br><span class="line"><span class="javascript">            <span class="comment">//marker.setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画</span></span></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="javascript">    <span class="comment">// 用经纬度设置地图中心点</span></span></span><br><span class="line"><span class="javascript">    <span class="function"><span class="keyword">function</span> <span class="title">testAlert</span>(<span class="params">msg</span>) </span>&#123;</span></span><br><span class="line"></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> str = <span class="keyword">new</span> <span class="built_in">String</span>;</span></span><br><span class="line">        str =  msg.toString()</span><br><span class="line"><span class="javascript">       <span class="comment">// str = &quot;test&quot;</span></span></span><br><span class="line"></span><br><span class="line">        alert(str);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="javascript">    <span class="function"><span class="keyword">function</span> <span class="title">enableZoomDrag</span>(<span class="params"></span>)</span></span></span><br><span class="line">    &#123;</span><br><span class="line"><span class="javascript">        <span class="comment">//添加拖拽和缩放功能</span></span></span><br><span class="line"><span class="javascript">        map.enableScrollWheelZoom(<span class="literal">true</span>);</span></span><br><span class="line">        map.enableDragging();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="javascript">    <span class="comment">//坐标转换完之后的回调函数</span></span></span><br><span class="line"><span class="javascript">    translateCallback = <span class="function"><span class="keyword">function</span> (<span class="params">point</span>) </span>&#123;</span></span><br><span class="line"></span><br><span class="line">        map.clearOverlays();</span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> marker = <span class="keyword">new</span> BMap.Marker(point);</span></span><br><span class="line">        map.addOverlay(marker);</span><br><span class="line">        map.setCenter(point);</span><br><span class="line"><span class="javascript">      <span class="comment">//  marker.setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画</span></span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="javascript">    &#125; <span class="keyword">catch</span> (e) &#123;</span></span><br><span class="line"></span><br><span class="line"><span class="javascript">        alert(<span class="string">&quot;地图加载失败，请检查网络！&quot;</span>);</span></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">   </span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#123;% endraw %&#125;</span><br></pre></td></tr></table></figure>
+
 ]]></content>
       <categories>
-        <category>Softwares For Windows</category>
+        <category>浮生记</category>
       </categories>
       <tags>
-        <tag>Windows</tag>
-        <tag>office</tag>
-        <tag>visio</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>WindowsStore_LTSC 2019</title>
-    <url>/2019/07/07/WindowsStore_LTSC%202019/</url>
-    <content><![CDATA[<p>　　Win10 TLSB属于Win10企业版，LTSB就是长期支持更新分支（Long Time Service Branch），这个版本专门给一些企业用户的，相比一般版本会缺少很多新功能，例如没有应用商店、没有Edge浏览器，没有cortana，大家可以把Win10 TLSB看成是Windows10企业版的精简版本。<span id="more"></span>LTSB是英语Long Term Servicing Branch的首字母缩写，汉语一般翻译成长期服务分支。LTSB分支是专门面向企业版的，Win10企业版LTSB分支支持周期长达10年，但只会获取安全更新(应该也可以获取热补丁更新)，而不获取功能更新，即不会增加任何新功能。这也是Win10企业版LTSB分支和Win10企业版最根本性的区别。<br>　　Windows 10 LTSC 现在改名成了 LTSC(Long Term Support Channel)。距离上一个长期服务LTSB版本发布已过去近三年了(微软仅发布过2015LTSB、2016LTSB两个版本，之后杳无音信)，18年10月3日微软发布了 Windows 10 RS5，终于再次发布了 Win10 LTSC 2019，且该版本已包含暗黑主题。<br>　　现在很少有时间折腾电脑了，我的办公本运行起来最新版也吃力了，干脆直接装企业版ltsc2109了。之前用专业版时习惯了用win10的应用商店，不得不说UWP应用是真的好用（虽然功能少点，但是界面和流畅度溜的很），现在一下没了win10商店挺不舒服的，于是就想装回win10商店，百度了百度，最笨的办法就是拆包，用命令行打组件补丁包，还要注意修改权限之类的balabala。。。看了看我想肯定有比我更懒的人，他们肯定有更简单的，然后我去了gayhub，发现了这个项目：<a href="https://github.com/kkkgo/LTSC-Add-MicrosoftStore">https://github.com/kkkgo/LTSC-Add-MicrosoftStore</a><br>嘤垂丝汀~为照顾某些同学爬墙费尽我就贴上原项目教程来了<br>　　为Windows 10 Enterprise LTSC增加应用商店<br>适用于Windows 10 Enterprise LTSC 2019<br>下载地址：<a href="https://codeload.github.com/kkkgo/LTSC-Add-MicrosoftStore/zip/2019">https://codeload.github.com/kkkgo/LTSC-Add-MicrosoftStore/zip/2019</a><br>要开始安装, 请打包下载后用右键管理员运行</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Add-Store.cmd</span><br></pre></td></tr></table></figure>
-<p>如果您不想安装App Installer / Purchase App / Xbox，请在运行安装之前删除对应的.appxbundle后缀的文件。但是，如果您计划安装游戏，或带有购买选项的应用，则不要删除。<br>如果装完之后商店仍然打不开，请先重启试试。如果仍然不行，请以管理员身份打开命令提示符并运行以下命令之后，然后再重启试试。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">PowerShell -ExecutionPolicy Unrestricted -Command &quot;&amp; &#123;$manifest &#x3D; (Get-AppxPackage Microsoft.WindowsStore).InstallLocation + &#39;\AppxManifest.xml&#39; ; Add-AppxPackage -DisableDevelopmentMode -Register $manifest&#125;&quot;</span><br></pre></td></tr></table></figure>
-<p>商店修复<br>Win+R打开运行，输入</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">WSReset.exe</span><br></pre></td></tr></table></figure>
-<p>回车。<br>该命令会清空并重置Windows Store商店的所有缓存。<br>该脚本由abbodi1406贡献：<br><a href="https://forums.mydigitallife.net/threads/add-store-to-windows-10-enterprise-ltsc-LTSC.70741/page-30#post-1468779">https://forums.mydigitallife.net/threads/add-store-to-windows-10-enterprise-ltsc-LTSC.70741/page-30#post-1468779</a></p>
-<hr>
-<p>　　于是乎我就装上了，可能有同学感觉还是麻烦，于是还有更简单的，后来逛吾爱时我发现有大神整合了该组件包，并打包成了exe可执行文件，双击鼠标就行了。原帖在这<br><a href="https://www.52pojie.cn/thread-868710-1-1.html">https://www.52pojie.cn/thread-868710-1-1.html</a><br>于是我就下载下来了，为了安全<del>好奇心驱使</del>我用UniExtract解包看了一下，奥豁~<br><strong>组件图</strong><br><img src="https://i.loli.net/2019/09/10/TRg6mpzBL5lAMFk.png" alt="TIM截图20190909212608.png"><br>　　确实够安全，打开bat文件看了看，现在把批处理命令贴出来</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@ECHO OFF&amp;PUSHD %~DP0 &amp;TITLE Windows Store for LTSC x64 </span><br><span class="line">::author MoeClub by Vicer**感谢这位作者（笔者言）**</span><br><span class="line">setlocal enabledelayedexpansion</span><br><span class="line">mode con cols&#x3D;60 lines&#x3D;30</span><br><span class="line">color 87</span><br><span class="line">cd.&gt;%WINDIR%\GetAdmin</span><br><span class="line">if exist %WINDIR%\GetAdmin (del &#x2F;f &#x2F;q &quot;%WINDIR%\GetAdmin&quot;) else (</span><br><span class="line">echo CreateObject^(&quot;Shell.Application&quot;^).ShellExecute &quot;%~s0&quot;, &quot;%*&quot;, &quot;&quot;, &quot;runas&quot;, 1 &gt;&gt; &quot;%temp%\Admin.vbs&quot;</span><br><span class="line">&quot;%temp%\Admin.vbs&quot;</span><br><span class="line">del &#x2F;s &#x2F;q &quot;%temp%\Admin.vbs&quot;</span><br><span class="line">exit &#x2F;b 2)</span><br><span class="line">cls</span><br><span class="line"></span><br><span class="line">if not exist &quot;%ProgramFiles%\WindowsApps&quot; goto error_exit</span><br><span class="line">if not exist &quot;%WINDIR%\SysWOW64&quot; goto error_exit</span><br><span class="line"></span><br><span class="line">::grant perm</span><br><span class="line">TAKEOWN &#x2F;F &quot;%ProgramFiles%\WindowsApps&quot; &#x2F;A &gt;NUL</span><br><span class="line">ICACLS &quot;%ProgramFiles%\WindowsApps&quot; &#x2F;grant:r &quot;Administrators:F&quot; &#x2F;Q &gt;NUL</span><br><span class="line">ICACLS &quot;%ProgramFiles%\WindowsApps&quot; &#x2F;grant:r &quot;All Application Packages:RX&quot; &#x2F;setintegritylevel L:I &#x2F;inheritance:e &#x2F;Q &gt;NUL</span><br><span class="line"></span><br><span class="line">::copy</span><br><span class="line">XCOPY &#x2F;Q&#x2F;Y&#x2F;E&#x2F;H&#x2F;O &quot;%~DP0WindowsApps\*&quot; &quot;%ProgramFiles%\WindowsApps\&quot; &gt;NUL 2&gt;NUL</span><br><span class="line"></span><br><span class="line">::restore perm</span><br><span class="line">ICACLS &quot;%ProgramFiles%\WindowsApps&quot; &#x2F;setowner &quot;NT Service\TrustedInstaller&quot; &#x2F;Q &gt;NUL </span><br><span class="line">ICACLS &quot;%ProgramFiles%\WindowsApps&quot; &#x2F;grant:r &quot;Administrators:RX&quot; &#x2F;Q &gt;NUL </span><br><span class="line">ICACLS &quot;%ProgramFiles%\WindowsApps&quot; &#x2F;reset &gt;NUL</span><br><span class="line"></span><br><span class="line">::install</span><br><span class="line">FOR &#x2F;F &quot;delims&#x3D;&quot; %%i IN (Package.txt) DO (PowerShell -Command &quot;&amp; &#123;Add-AppXPackage -Path &#39;%ProgramFiles%\WindowsApps\%%i\AppXManifest.xml&#39; -Register -DisableDevelopmentMode&#125;&quot;)</span><br><span class="line"></span><br><span class="line">:success_exit</span><br><span class="line">ECHO.</span><br><span class="line">ECHO Install finish.</span><br><span class="line">TIMEOUT &#x2F;T 3 &#x2F;NOBREAK &gt;NUL 2&gt;NUL</span><br><span class="line">exit 0</span><br><span class="line"></span><br><span class="line">:error_exit</span><br><span class="line">ECHO.</span><br><span class="line">ECHO Not support this device.</span><br><span class="line">TIMEOUT &#x2F;T 5 &#x2F;NOBREAK &gt;NUL 2&gt;NUL</span><br><span class="line">exit 1</span><br></pre></td></tr></table></figure>
-<p><strong>卸载命令单拉出来</strong><br>::unstal（卸载命令）</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Get-AppxPackage Microsoft.XboxIdentityProvider |Remove-AppxPackage</span><br><span class="line">Get-AppxPackage Microsoft.StorePurchaseApp |Remove-AppxPackage</span><br><span class="line">Get-AppxPackage Microsoft.WindowsStore |Remove-AppxPackage</span><br><span class="line">Get-AppxPackage Microsoft.Advertising.Xaml |Remove-AppxPackage</span><br><span class="line">Get-AppxPackage Microsoft.VCLibs.140.00 |Remove-AppxPackage</span><br><span class="line">Get-AppxPackage Microsoft.NET.Native.Framework.1.6 |Remove-AppxPackage</span><br><span class="line">Get-AppxPackage Microsoft.NET.Native.Runtime.1.6 |Remove-AppxPackage</span><br></pre></td></tr></table></figure>
-<p>这下可以放心了，说一下，我仅仅解包查看了内部结构，并未做出任何修改和打包处理，再次感谢作者。<br>然后我在我室友电脑上成功安装，第一次打开可能是英文，商店检测更新，更新完后就是中文啦</p>
-<p><strong>商店主页面</strong></p>
-<p><img src="https://i.loli.net/2019/09/10/WnzGiXmpZsldht9.png" alt="TIM截图20190909212317.png"></p>
-]]></content>
-      <categories>
-        <category>Softwares For Windows</category>
-      </categories>
-      <tags>
-        <tag>Windows</tag>
-        <tag>Software</tag>
+        <tag>悦･读</tag>
       </tags>
   </entry>
   <entry>
@@ -880,44 +934,6 @@
     <content><![CDATA[<p>　　生活大概总是这样，让你年轻时有梦，又让你中年时梦醒，给你理想破灭时的颓丧，又会奖励你家人陪伴时的温暖。和这个世界负隅顽抗的结果就是没有结果，还要承受满身累累的伤，<span id="more"></span>所以不管我们愿意还是不愿意，被迫还是主动，所有的长发都终会剪去，所有桀骜的目光终会变得慈祥，所有身处孤岛的人，也终究都要回到岸上。
 　　</p>
 <p>　　<iframe src="//player.bilibili.com/player.html?aid=75115390&bvid=BV1BE411v776&cid=128496622&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width='100%' height='100%'> </iframe><br>　　他们的故事其实也是我们自己的故事，我们每个人的少年时期都是无可救药的理想主义者，只是随着时间的推移，环境的改变，我们慢慢变得没有那么勇敢和坚定，和王彩玲，黄四宝，胡金泉，周瑜一样，年轻时我们都曾撒泼打滚地要诗和远方，都把自己活成了孤岛，但我们一路漂泊和跋涉之后才发现，原来最后我们都踏上了同一片大陆，叩响了同一块门铃，那扇门里住着的，叫做踏踏实实的大人。时间伟力正在于此，那就是无论早晚，我们一定会跨进去的，虽然不知道那迈出的永恒一脚，到底是叫做成长还是投降。</p>
-]]></content>
-      <categories>
-        <category>浮生记</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>农村什么让你感到最恐怖？</title>
-    <url>/2019/10/03/%E5%86%9C%E6%9D%91%E4%BB%80%E4%B9%88%E8%AE%A9%E4%BD%A0%E6%84%9F%E5%88%B0%E6%9C%80%E6%81%90%E6%80%96%EF%BC%9F/</url>
-    <content><![CDATA[<p>前几天有个自称是我表妹的人加我微信，我加了，然后刚加她就转来500块钱，说什么一点心意让我收下。</p>
-<p>“机智”如我立马辨出是“骗子＂，立即删除。（因为我和表妹很少联系，也实在想不出任何一个得让她给我转钱的理由。）<span id="more"></span></p>
-<p>今天那个号又加我，还备注了我的真实姓名。我又半信半疑地加了。</p>
-<p>和上次一样，微信页面上又是转账500元，连话术也一模一样。<br><img src="https://i.loli.net/2020/03/02/tqogVTpFx15nvu3.jpg" alt="800723844.jpg"></p>
-<p>我直接一个视频电话打过去，镜头另一端，<br>竟真的是我表妹。还是瘦，神情也还是那么怯怯的。<br>因为我在上班，不方便多说，确认是她后就<br>挂断了，然后在微信上寒暄了几句。</p>
-<p>改备注的时候，一阵心疼。<br>表妹名“孝勤＂，只比我小9天。“孝＂是字辈， “勤”是家人（尤其是她爷爷，也就是我外公的哥哥，我称呼他大外公）对她的期愿，希望她勤劳，多干活。</p>
-<p>小时候我是“别人家的孩子＂，聪明，成绩好，总是学校的第一名。但我知道我取得第一仅仅是因为我比其他人有更多的时间读书而已。</p>
-<p>我从小和外公外婆一起生活，他们虽没多少文化，但都深刻明白知识的重要性，所以哪怕是农忙时节，他们也从不让我下地干活，要求我专心学习。</p>
-<p>而其他的孩子，则是农活第一，学习第二，毕竟地里真的有那么多活，而学习却是一个太过长远的投资。</p>
-<p>所以同龄很多孩子的童年，大部分时间是在割猪草喂猪、割牛草喂牛、种包谷收包谷、打谷子、打柴…</p>
-<p>尤其是，我的表妹。</p>
-<p>表妹的爸妈也就是我的大舅、舅娘，都在外打工，表妹和哥哥、爷爷留守在家。</p>
-<p>和新闻里写得不太一样，留守的老人儿童其实并没有那么多时间和精力去思念亲人、感受孤独，他们有那么那么多农活要忙，面朝黄土背朝天，烈日下忙着掰包谷，淋着雨赶熟透的谷子的收期。被汗水和辛劳填充的生活，是根本腾不出时间和精力去感伤的。</p>
-<p>大外公早鳏，多年没有枕边人，加上繁重的农活，让他的脾气有些暴躁。更让人悲凉的是，妹妹从生下来起就从未得到过他的疼爱，因为他尤为重男轻女。</p>
-<p>表妹是从来没有娱乐时间的，大外公从不准她闲下来，只要看她稍微一坐下，新的农活便就又安排上了。每当我学习或玩乐的时候，表妹不是在割猪草，就是在打柴，她总<br>是那么忙，忙得只得把上学时间当作一天中短暂的休息时刻。</p>
-<p>其实如果只是受着她那个年龄不该承受的辛劳，或许不会让我至今想到她仍心疼至此。</p>
-<p>大外公如果太忙，或者喝了酒，或者在哪里不如意，表妹就会成为他出气的沙包。揪住头发打，用脚踹，踹胸口，踹头..</p>
-<p>此刻，打下这些字，仍忍不住心痛如绞。</p>
-<p>有一次，表妹不知道因为什么又被大外公打了。那时我们好像是8岁还是9岁。8岁、9岁的小姑娘，竟被活活打到小便失禁。</p>
-<p>在我听到咒骂声和哭声赶到的时候，表妹正躺在被便液浸湿的地上，小声鸣咽。</p>
-<p>所幸，如此拳打脚踢，表妹没被打死，仍然健康。</p>
-<p>可能是成长环境的原因，表妹自小就是内向的，极度内向，寡言少语，很少笑，外人看上去就是讷讷的。但勤劳，孝顺，老实本分，正如她的名字那样。</p>
-<p>改备注时想到了这些，想起了这个生来凄苦的姑娘。</p>
-<p>好在，表妹后来机缘巧合读了一所卫校，现在在一个药店上班，并在去年嫁给了一个与她同样内向的男生。我听说那个男生是个手艺人的时候，顿时舒了一口气，再艰难的岁月也饿不死手艺人，希望这个男孩能护表妹一世周全。</p>
-<p>对了，她之所以给我转钱，是因为去年她结婚的时候我给她包了一个红包。</p>
-<p>后来我也登记结婚，但不准备办婚礼，没有宴请，她可能是听到我结婚的消息了，所以就这么讷讷的，说要表达一点心意。</p>
-<p>看吧，这个傻姑娘，连发个红包都这么笨。</p>
-<p>我一直认为农村是美好的，有外公的手作玩具，有外婆采来的山林野果，有青山隐隐，有大大的水牛，有小鸡大鹅，但今天又一次认识到，这并不是农村的全部。</p>
-<p>农村最恐怖的地方吗？大概就是过错与痛苦情有可<br>怒却又只能努力去理解、去原谅、去祝福。最后，虽然世人皆苦，但真的好希望你幸福。</p>
-<p>转自知乎@落木柔</p>
 ]]></content>
       <categories>
         <category>浮生记</category>
