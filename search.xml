@@ -1,24 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>HWID数字许可激活工具</title>
-    <url>/2019/06/08/HWID%E6%95%B0%E5%AD%97%E8%AE%B8%E5%8F%AF%E6%BF%80%E6%B4%BB%E5%B7%A5%E5%85%B7/</url>
-    <content><![CDATA[<p>　　微软在2014年4月8日停止了xp系统的维护和更新，大部分用户都转战的win7，一晃十年过去了，win7用户占据了绝大部分，如今官网发布了公告：历经 10 年，对 Windows 7 的支持已近尾声 — 2020 年 1 月 14 日。我们了解，改变可能会很困难，因此，我们会为你提供有关后续行动的建议，并回答有关停止支持的问题。<span id="more"></span><br>　　自win10发布后微软也是费尽心思想让用户们升级win10，所以就很长一段时间的政策是如果你是win7用户，且系统处于激活状态，无论正版盗版升级到win10后都可以获得数字许可证（除企业版）。<br>　　这是什么概念？白给啊！！那有人就说了，我找工具类kms激活不一样嘛，答案是，，，确实一样。不过咱们是为了啥，毕竟正版用起来确实方便啊，尤其是学计算机的同学，我们买的电脑基本上都是预装的win10家庭中文版，够大部分人办公用了。可能有少部分人不满足家庭中文版的基本功能转战专业版企业版或者教育版，比如我。所以我当初没事干就是从win10家庭中文版重装到win7旗舰版，然后工具激活，再升级到win10专业版，获得了数字许可证，登录我微软账号后获得了与 Microsoft 帐户关联的数字许可证。然后为了纯净就格盘再重装win10专业版，联网自动激活，登录我微软账户，一个洗白党就此诞生，我当时是真能折腾。<br>　　这里先说一下区别，获得数字许可证相当于官网记录了你的电脑主板相关参数，只要你不换主板，无论重装多少次系统，只要是对应版本，在联网后都可以自动激活。<br>与 Microsoft 帐户关联的数字许可证呢，这个就是给予你的微软账号的权力了，一个微软账号可以关联5-8(范围区间)，具体我也不知道多少台电脑，也就是对应版本登录你的账号就可以选择是否激活该未激活电脑。<br>　　然后，，，在微软结束这个活动前，国外有人写了工具，就是模拟电脑环境从win7升级到win10来获得数字许可证，我当时就想，你怎么不早点写出来呢，，，后来国内大牛根据该工具用C重写了该工具，于是HWID数字许可激活工具就流传开来了，这个工具也整合了kms等激活方式，基本上全版本win10都可以用它激活，我是早期在远景论坛下载的，原帖现在也找不到了，就没标注原帖地址，贴上软件运行图</p>
-<p><strong>启动图</strong></p>
-<p><img src="https://i.loli.net/2019/09/09/ym8FBS4csvJAtqr.png" alt="TIM截图20190909212756.png"></p>
-<p><strong>主页面</strong><br><img src="https://i.loli.net/2019/09/09/MmtVCzXwnH7jORK.png" alt="TIM截图20190909212813.png"></p>
-<p><strong>下载地址</strong>：<a href="https://www.lanzous.com/i63k4ha">点我下载</a></p>
-<p>最后罗嗦两句，新系统肯定要比旧系统有优势，重点就在过渡期间，当初win10用户占用率少是什么原因？一是兼容性不好，好多游戏，软件win10兼容不了，二是win10太吃硬盘读写，在固态还没降价普及时大部分办公本以及网吧台式机都是用的机械硬盘，装win10开个机就轻易卡死，磁盘利用率动不动就100%，这要你有个球用。<br>现在好多了，兼容性基本上没问题了，固态硬盘价格也降了，就这么说吧，有固态上win10，没固态用win7，有没有固态用win10简直是两个体验，毕竟我是体验过4G RAM+机械盘+win7/10，4G RAM+固态盘+win7/10，8G RAM+固态盘的男人。</p>
-]]></content>
-      <categories>
-        <category>Softwares For Windows</category>
-      </categories>
-      <tags>
-        <tag>HWID</tag>
-        <tag>Windows</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hexo-视/音频插件-hexo-tag- a/d player</title>
     <url>/2019/10/04/Hexo%E6%8F%92%E4%BB%B6-hexo-tag-%20a%E2%80%A2d%20player/</url>
     <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>在Hexo文章中插入音频请使用<a href="https://github.com/MoePlayer/APlayer">hexo-tag-aplayer</a></p>
@@ -337,6 +319,24 @@
         <tag>Linux</tag>
         <tag>aplayer</tag>
         <tag>dplayer</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>HWID数字许可激活工具</title>
+    <url>/2019/06/08/HWID%E6%95%B0%E5%AD%97%E8%AE%B8%E5%8F%AF%E6%BF%80%E6%B4%BB%E5%B7%A5%E5%85%B7/</url>
+    <content><![CDATA[<p>　　微软在2014年4月8日停止了xp系统的维护和更新，大部分用户都转战的win7，一晃十年过去了，win7用户占据了绝大部分，如今官网发布了公告：历经 10 年，对 Windows 7 的支持已近尾声 — 2020 年 1 月 14 日。我们了解，改变可能会很困难，因此，我们会为你提供有关后续行动的建议，并回答有关停止支持的问题。<span id="more"></span><br>　　自win10发布后微软也是费尽心思想让用户们升级win10，所以就很长一段时间的政策是如果你是win7用户，且系统处于激活状态，无论正版盗版升级到win10后都可以获得数字许可证（除企业版）。<br>　　这是什么概念？白给啊！！那有人就说了，我找工具类kms激活不一样嘛，答案是，，，确实一样。不过咱们是为了啥，毕竟正版用起来确实方便啊，尤其是学计算机的同学，我们买的电脑基本上都是预装的win10家庭中文版，够大部分人办公用了。可能有少部分人不满足家庭中文版的基本功能转战专业版企业版或者教育版，比如我。所以我当初没事干就是从win10家庭中文版重装到win7旗舰版，然后工具激活，再升级到win10专业版，获得了数字许可证，登录我微软账号后获得了与 Microsoft 帐户关联的数字许可证。然后为了纯净就格盘再重装win10专业版，联网自动激活，登录我微软账户，一个洗白党就此诞生，我当时是真能折腾。<br>　　这里先说一下区别，获得数字许可证相当于官网记录了你的电脑主板相关参数，只要你不换主板，无论重装多少次系统，只要是对应版本，在联网后都可以自动激活。<br>与 Microsoft 帐户关联的数字许可证呢，这个就是给予你的微软账号的权力了，一个微软账号可以关联5-8(范围区间)，具体我也不知道多少台电脑，也就是对应版本登录你的账号就可以选择是否激活该未激活电脑。<br>　　然后，，，在微软结束这个活动前，国外有人写了工具，就是模拟电脑环境从win7升级到win10来获得数字许可证，我当时就想，你怎么不早点写出来呢，，，后来国内大牛根据该工具用C重写了该工具，于是HWID数字许可激活工具就流传开来了，这个工具也整合了kms等激活方式，基本上全版本win10都可以用它激活，我是早期在远景论坛下载的，原帖现在也找不到了，就没标注原帖地址，贴上软件运行图</p>
+<p><strong>启动图</strong></p>
+<p><img src="https://i.loli.net/2019/09/09/ym8FBS4csvJAtqr.png" alt="TIM截图20190909212756.png"></p>
+<p><strong>主页面</strong><br><img src="https://i.loli.net/2019/09/09/MmtVCzXwnH7jORK.png" alt="TIM截图20190909212813.png"></p>
+<p><strong>下载地址</strong>：<a href="https://www.lanzous.com/i63k4ha">点我下载</a></p>
+<p>最后罗嗦两句，新系统肯定要比旧系统有优势，重点就在过渡期间，当初win10用户占用率少是什么原因？一是兼容性不好，好多游戏，软件win10兼容不了，二是win10太吃硬盘读写，在固态还没降价普及时大部分办公本以及网吧台式机都是用的机械硬盘，装win10开个机就轻易卡死，磁盘利用率动不动就100%，这要你有个球用。<br>现在好多了，兼容性基本上没问题了，固态硬盘价格也降了，就这么说吧，有固态上win10，没固态用win7，有没有固态用win10简直是两个体验，毕竟我是体验过4G RAM+机械盘+win7/10，4G RAM+固态盘+win7/10，8G RAM+固态盘的男人。</p>
+]]></content>
+      <categories>
+        <category>Softwares For Windows</category>
+      </categories>
+      <tags>
+        <tag>HWID</tag>
+        <tag>Windows</tag>
       </tags>
   </entry>
   <entry>
@@ -846,9 +846,149 @@
   <entry>
     <title>《测试》</title>
     <url>/2021/04/13/%E6%B5%8B%E8%AF%95/</url>
-    <content><![CDATA[<span id="more"></span>
+    <content><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+        body, html, #allmap {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            margin: 0;
+            font-family: "微软雅黑";
+        }
+    </style>
 
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span></span><br><span class="line"><span class="code">    &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot; /&gt;</span></span><br><span class="line"><span class="code">    &lt;meta name=&quot;viewport&quot; content=&quot;initial-scale=1.0, user-scalable=no&quot; /&gt;</span></span><br><span class="line"><span class="code">    &lt;style type=&quot;text/css&quot;&gt;</span></span><br><span class="line"><span class="code">        body, html, #allmap &#123;</span></span><br><span class="line"><span class="code">            width: 100%;</span></span><br><span class="line"><span class="code">            height: 100%;</span></span><br><span class="line"><span class="code">            overflow: hidden;</span></span><br><span class="line"><span class="code">            margin: 0;</span></span><br><span class="line"><span class="code">            font-family: &quot;微软雅黑&quot;;</span></span><br><span class="line"><span class="code">        &#125;</span></span><br><span class="line"><span class="code">    &lt;/style&gt;</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">    &lt;!-- 实际应用时，请把qFf6d6jjokkyC4CVPxzqLVfZufEdu1dh改成您的百度开发都访问应用AK --&gt;</span></span><br><span class="line"><span class="code">    &lt;!-- 本AK仅用于测试，我们不保证该AK长期有效 --&gt;</span></span><br><span class="line"><span class="code">    &lt;!-- 可到：http://lbsyun.baidu.com/ 网站申请，应用类型为 浏览器 端 --&gt;</span></span><br><span class="line"><span class="code">    &lt;script type=&quot;text/javascript&quot; src=&quot;http://api.map.baidu.com/api?v=2.0&amp;ak=QXwuA2Zi8h3huVQvqVrW2MhU&quot;&gt;&lt;/script&gt;</span></span><br><span class="line"><span class="code">    &lt;script type=&quot;text/javascript&quot; src=&quot;http://developer.baidu.com/map/jsdemo/demo/convertor.js&quot;&gt;&lt;/script&gt;</span></span><br><span class="line"><span class="code">    </span></span><br><span class="line"><span class="code">    &lt;title&gt;野火GPS地图&lt;/title&gt;</span></span><br><span class="line"><span class="code">&lt;/head&gt;</span></span><br><span class="line"><span class="code">&lt;body&gt;</span></span><br><span class="line"><span class="code">    &lt;div id=&quot;allmap&quot;&gt;&lt;/div&gt;</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">&lt;/body&gt;</span></span><br><span class="line"><span class="code">&lt;/html&gt;</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">&lt;script type=&quot;text/javascript&quot;&gt;</span></span><br><span class="line"><span class="code">    try &#123;</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">   </span></span><br><span class="line"><span class="code">    // 百度地图API功能</span></span><br><span class="line"><span class="code">    var map = new BMap.Map(&quot;allmap&quot;);            // 创建Map实例</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">    //添加拖拽和缩放功能</span></span><br><span class="line"><span class="code">    map.enableScrollWheelZoom(true);</span></span><br><span class="line"><span class="code">    map.enableDragging();   </span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">    //添加控件和比例尺</span></span><br><span class="line"><span class="code">    var top_right_control = new BMap.ScaleControl(&#123; anchor: BMAP_ANCHOR_BOTTOM_LEFT &#125;);// 左下角，添加比例尺</span></span><br><span class="line"><span class="code">    var top_right_navigation = new BMap.NavigationControl(&#123; anchor: BMAP_ANCHOR_BOTTOM_LEFT &#125;);  //左下角，添加默认缩放平移控件</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">    map.addControl(top_right_control);</span></span><br><span class="line"><span class="code">    map.addControl(top_right_navigation);</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">    //添加地图类型</span></span><br><span class="line"><span class="code">    var mapType1 = new BMap.MapTypeControl(&#123; mapTypes: [BMAP_NORMAL_MAP, BMAP_HYBRID_MAP] &#125;);</span></span><br><span class="line"><span class="code">    var mapType2 = new BMap.MapTypeControl(&#123; anchor: BMAP_ANCHOR_TOP_LEFT &#125;);</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">    //添加地图类型和缩略图</span></span><br><span class="line"><span class="code">   </span></span><br><span class="line"><span class="code">    map.addControl(mapType1);          //2D图，卫星图</span></span><br><span class="line"><span class="code">    map.addControl(mapType2);          //左上角，默认地图控件</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">    //创建点</span></span><br><span class="line"><span class="code">    //map.clearOverlays();</span></span><br><span class="line"><span class="code">    var point = new BMap.Point(116.404, 39.915);</span></span><br><span class="line"><span class="code">    map.centerAndZoom(point, 12);</span></span><br><span class="line"><span class="code">    //var marker = new BMap.Marker(point);  // 创建标注</span></span><br><span class="line"><span class="code">    //map.addOverlay(marker);               // 将标注添加到地图中</span></span><br><span class="line"><span class="code">    </span></span><br><span class="line"><span class="code">    //根据IP定位城市</span></span><br><span class="line"><span class="code">    function myFun(result) &#123;</span></span><br><span class="line"><span class="code">        var cityName = result.name;</span></span><br><span class="line"><span class="code">        map.setCenter(cityName);</span></span><br><span class="line"><span class="code">    &#125;</span></span><br><span class="line"><span class="code">    var myCity = new BMap.LocalCity();</span></span><br><span class="line"><span class="code">    myCity.get(myFun);</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">    //showalert(testmsg);</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">    //对传入的经纬度进行标注：纬度，经度</span></span><br><span class="line"><span class="code">   // var Latt = 116.404;</span></span><br><span class="line"><span class="code">   // var Lott = 39.915;</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">   // theLocation(Latt, Lott);</span></span><br><span class="line"><span class="code">   // testAlert();</span></span><br><span class="line"><span class="code">    </span></span><br><span class="line"><span class="code">    // 用经纬度设置地图中心点</span></span><br><span class="line"><span class="code">    function theLocation(Longitude,Latitude) &#123;</span></span><br><span class="line"><span class="code">        </span></span><br><span class="line"><span class="code">        var gpsPoint = new BMap.Point(Longitude, Latitude);</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">        //gps坐标纠偏</span></span><br><span class="line"><span class="code">        BMap.Convertor.translate(gpsPoint, 0, translateCallback);     //真实经纬度转成百度坐标</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">            //map.clearOverlays();</span></span><br><span class="line"><span class="code">            //var new_point = new BMap.Point(Longitude,Latitude );</span></span><br><span class="line"><span class="code">            //var marker = new BMap.Marker(new_point);  // 创建标注</span></span><br><span class="line"><span class="code">            //map.addOverlay(marker);              // 将标注添加到地图中</span></span><br><span class="line"><span class="code">            //map.panTo(new_point);</span></span><br><span class="line"><span class="code">            //marker.setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">    &#125;</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">    // 用经纬度设置地图中心点</span></span><br><span class="line"><span class="code">    function testAlert(msg) &#123;</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">        var str = new String;</span></span><br><span class="line"><span class="code">        str =  msg.toString()</span></span><br><span class="line"><span class="code">       // str = &quot;test&quot;</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">        alert(str);</span></span><br><span class="line"><span class="code">    &#125;</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">    function enableZoomDrag()</span></span><br><span class="line"><span class="code">    &#123;</span></span><br><span class="line"><span class="code">        //添加拖拽和缩放功能</span></span><br><span class="line"><span class="code">        map.enableScrollWheelZoom(true);</span></span><br><span class="line"><span class="code">        map.enableDragging();</span></span><br><span class="line"><span class="code">    &#125;</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">    //坐标转换完之后的回调函数</span></span><br><span class="line"><span class="code">    translateCallback = function (point) &#123;</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">        map.clearOverlays();</span></span><br><span class="line"><span class="code">        var marker = new BMap.Marker(point);</span></span><br><span class="line"><span class="code">        map.addOverlay(marker);</span></span><br><span class="line"><span class="code">        map.setCenter(point);</span></span><br><span class="line"><span class="code">      //  marker.setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画</span></span><br><span class="line"><span class="code">    &#125;</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">    &#125; catch (e) &#123;</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">        alert(&quot;地图加载失败，请检查网络！&quot;);</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">    &#125;</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">   </span></span><br><span class="line"><span class="code">&lt;/script&gt;</span></span><br></pre></td></tr></table></figure>
+<pre><code>&lt;!-- 实际应用时，请把qFf6d6jjokkyC4CVPxzqLVfZufEdu1dh改成您的百度开发都访问应用AK --&gt;
+&lt;!-- 本AK仅用于测试，我们不保证该AK长期有效 --&gt;
+&lt;!-- 可到：http://lbsyun.baidu.com/ 网站申请，应用类型为 浏览器 端 --&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;http://api.map.baidu.com/api?v=2.0&amp;ak=QXwuA2Zi8h3huVQvqVrW2MhU&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;http://developer.baidu.com/map/jsdemo/demo/convertor.js&quot;&gt;&lt;/script&gt;
+
+&lt;title&gt;野火GPS地图&lt;/title&gt;
+</code></pre>
+</head>
+<body>
+    <div id="allmap"></div>
+
+
+
+</body>
+</html>
+
+
+
+<script type="text/javascript">
+    try {
+
+
+    // 百度地图API功能
+    var map = new BMap.Map("allmap");            // 创建Map实例
+    
+    //添加拖拽和缩放功能
+    map.enableScrollWheelZoom(true);
+    map.enableDragging();   
+    
+    //添加控件和比例尺
+    var top_right_control = new BMap.ScaleControl({ anchor: BMAP_ANCHOR_BOTTOM_LEFT });// 左下角，添加比例尺
+    var top_right_navigation = new BMap.NavigationControl({ anchor: BMAP_ANCHOR_BOTTOM_LEFT });  //左下角，添加默认缩放平移控件
+    
+    map.addControl(top_right_control);
+    map.addControl(top_right_navigation);
+
+
+    //添加地图类型
+    var mapType1 = new BMap.MapTypeControl({ mapTypes: [BMAP_NORMAL_MAP, BMAP_HYBRID_MAP] });
+    var mapType2 = new BMap.MapTypeControl({ anchor: BMAP_ANCHOR_TOP_LEFT });
+    
+    //添加地图类型和缩略图
+       
+    map.addControl(mapType1);          //2D图，卫星图
+    map.addControl(mapType2);          //左上角，默认地图控件
+
+
+    //创建点
+    //map.clearOverlays();
+    var point = new BMap.Point(116.404, 39.915);
+    map.centerAndZoom(point, 12);
+    //var marker = new BMap.Marker(point);  // 创建标注
+    //map.addOverlay(marker);               // 将标注添加到地图中
+    
+    //根据IP定位城市
+    function myFun(result) {
+        var cityName = result.name;
+        map.setCenter(cityName);
+    }
+    var myCity = new BMap.LocalCity();
+    myCity.get(myFun);
+    
+    //showalert(testmsg);
+    
+    //对传入的经纬度进行标注：纬度，经度
+   // var Latt = 116.404;
+   // var Lott = 39.915;
+
+   // theLocation(Latt, Lott);
+   // testAlert();
+    
+    // 用经纬度设置地图中心点
+    function theLocation(Longitude,Latitude) {
+        
+        var gpsPoint = new BMap.Point(Longitude, Latitude);
+    
+        //gps坐标纠偏
+        BMap.Convertor.translate(gpsPoint, 0, translateCallback);     //真实经纬度转成百度坐标
+
+
+            //map.clearOverlays();
+            //var new_point = new BMap.Point(Longitude,Latitude );
+            //var marker = new BMap.Marker(new_point);  // 创建标注
+            //map.addOverlay(marker);              // 将标注添加到地图中
+            //map.panTo(new_point);
+            //marker.setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画
+    
+    }
+
+
+    // 用经纬度设置地图中心点
+    function testAlert(msg) {
+    
+        var str = new String;
+        str =  msg.toString()
+       // str = "test"
+    
+        alert(str);
+    }
+    
+    function enableZoomDrag()
+    {
+        //添加拖拽和缩放功能
+        map.enableScrollWheelZoom(true);
+        map.enableDragging();
+    }
+
+
+    //坐标转换完之后的回调函数
+    translateCallback = function (point) {
+    
+        map.clearOverlays();
+        var marker = new BMap.Marker(point);
+        map.addOverlay(marker);
+        map.setCenter(point);
+      //  marker.setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画
+    }
+    
+    } catch (e) {
+    
+        alert("地图加载失败，请检查网络！");
+    
+    }
+
+   
+
+</script>
 
 ]]></content>
       <categories>
