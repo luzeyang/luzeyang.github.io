@@ -1,6 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>HWID数字许可激活工具</title>
+    <url>/2019/06/08/HWID%E6%95%B0%E5%AD%97%E8%AE%B8%E5%8F%AF%E6%BF%80%E6%B4%BB%E5%B7%A5%E5%85%B7/</url>
+    <content><![CDATA[<p>　　微软在2014年4月8日停止了xp系统的维护和更新，大部分用户都转战的win7，一晃十年过去了，win7用户占据了绝大部分，如今官网发布了公告：历经 10 年，对 Windows 7 的支持已近尾声 — 2020 年 1 月 14 日。我们了解，改变可能会很困难，因此，我们会为你提供有关后续行动的建议，并回答有关停止支持的问题。<span id="more"></span><br>　　自win10发布后微软也是费尽心思想让用户们升级win10，所以就很长一段时间的政策是如果你是win7用户，且系统处于激活状态，无论正版盗版升级到win10后都可以获得数字许可证（除企业版）。<br>　　这是什么概念？白给啊！！那有人就说了，我找工具类kms激活不一样嘛，答案是，，，确实一样。不过咱们是为了啥，毕竟正版用起来确实方便啊，尤其是学计算机的同学，我们买的电脑基本上都是预装的win10家庭中文版，够大部分人办公用了。可能有少部分人不满足家庭中文版的基本功能转战专业版企业版或者教育版，比如我。所以我当初没事干就是从win10家庭中文版重装到win7旗舰版，然后工具激活，再升级到win10专业版，获得了数字许可证，登录我微软账号后获得了与 Microsoft 帐户关联的数字许可证。然后为了纯净就格盘再重装win10专业版，联网自动激活，登录我微软账户，一个洗白党就此诞生，我当时是真能折腾。<br>　　这里先说一下区别，获得数字许可证相当于官网记录了你的电脑主板相关参数，只要你不换主板，无论重装多少次系统，只要是对应版本，在联网后都可以自动激活。<br>与 Microsoft 帐户关联的数字许可证呢，这个就是给予你的微软账号的权力了，一个微软账号可以关联5-8(范围区间)，具体我也不知道多少台电脑，也就是对应版本登录你的账号就可以选择是否激活该未激活电脑。<br>　　然后，，，在微软结束这个活动前，国外有人写了工具，就是模拟电脑环境从win7升级到win10来获得数字许可证，我当时就想，你怎么不早点写出来呢，，，后来国内大牛根据该工具用C重写了该工具，于是HWID数字许可激活工具就流传开来了，这个工具也整合了kms等激活方式，基本上全版本win10都可以用它激活，我是早期在远景论坛下载的，原帖现在也找不到了，就没标注原帖地址，贴上软件运行图</p>
+<p><strong>启动图</strong></p>
+<p><img src="https://i.loli.net/2019/09/09/ym8FBS4csvJAtqr.png" alt="TIM截图20190909212756.png"></p>
+<p><strong>主页面</strong><br><img src="https://i.loli.net/2019/09/09/MmtVCzXwnH7jORK.png" alt="TIM截图20190909212813.png"></p>
+<p><strong>下载地址</strong>：<a href="https://www.lanzous.com/i63k4ha">点我下载</a></p>
+<p>最后罗嗦两句，新系统肯定要比旧系统有优势，重点就在过渡期间，当初win10用户占用率少是什么原因？一是兼容性不好，好多游戏，软件win10兼容不了，二是win10太吃硬盘读写，在固态还没降价普及时大部分办公本以及网吧台式机都是用的机械硬盘，装win10开个机就轻易卡死，磁盘利用率动不动就100%，这要你有个球用。<br>现在好多了，兼容性基本上没问题了，固态硬盘价格也降了，就这么说吧，有固态上win10，没固态用win7，有没有固态用win10简直是两个体验，毕竟我是体验过4G RAM+机械盘+win7/10，4G RAM+固态盘+win7/10，8G RAM+固态盘的男人。</p>
+]]></content>
+      <categories>
+        <category>Softwares For Windows</category>
+      </categories>
+      <tags>
+        <tag>HWID</tag>
+        <tag>Windows</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>K2（路由）老矣，尚能饭否？①</title>
+    <url>/2020/03/03/K2%EF%BC%88%E8%B7%AF%E7%94%B1%EF%BC%89%E8%80%81%E7%9F%A3%EF%BC%8C%E5%B0%9A%E8%83%BD%E9%A5%AD%E5%90%A6%EF%BC%9F%20%20%E2%91%A0/</url>
+    <content><![CDATA[<h2 id="设置路由拨号和实现DDNS远程访问"><a href="#设置路由拨号和实现DDNS远程访问" class="headerlink" title="设置路由拨号和实现DDNS远程访问"></a><p align="center">设置路由拨号和实现DDNS远程访问</p></h2><p>　　在斐讯辉煌之际，鄙人有幸上车，以364软妹币拿下这款理财产品，之后没多久斐讯就倒闭跑路了，万千产品今犹在，不见当年斐讯狂。</p>
+<span id="more"></span>
+<p>　　官方固件没什么可说的，求稳就用官改，我一直用的H大的Padavan固件，这里贴上tg地址，有需求的可以看看：<a href="https://t.me/pdcn1/221">tg地址</a>，至于刷机我就不多说了，恩山多逛逛就会了。</p>
+<p>　　上一次说了中兴F677V2改桥接，关闭残废WIFI，也算是尽了它的使命，接下来的事就交给路由器来处理吧！</p>
+<p>　　<strong>1：拨号上网</strong></p>
+<p>　　外部网络-外网设置-外网连接类型：PPPoE：拨号，在PPPoE 和 PPP VPN 客户端设置里设置用户名和密码就可以了。<br><img src="https://i.loli.net/2020/05/05/mfilW9NQB2zuxda.png" alt="7.png"></p>
+<p>　　<strong>2：DDNS&amp;远程访问</strong></p>
+<p>　　远程访问需要知道公网ip和端口，运营商给我们分配的公网大都是动态的，也就是说它会变，要准确知道每次更换的IP地址就需要DDNS了。</p>
+<p>　　DDNS（Dynamic Domain Name Server，动态域名服务）是将用户的动态IP地址映射到一个固定的域名解析服务上，用户每次连接网络的时候客户端程序就会通过信息传递把该主机的动态IP地址传送给位于服务商主机上的服务器程序，服务器程序负责提供DNS服务并实现动态域名解析。</p>
+<p>　　花生壳是一个不错的选择，注册后会给你你个免费的域名，虽然很长很难记，但是毕竟它免费啊。<br><img src="https://i.loli.net/2020/05/05/3DXzqRY2amZIJrC.jpg" alt="Screenshot_20200505-121923.jpg"><br>　　<br>　　注册完要及时进行实名认证，不然过几天解析服务会停止。</p>
+<p>　　在路由器外部网络内，会有一个DDNS功能，不过咱们不用它，用自定义脚本，方便快捷又高效。</p>
+<ul>
+<li>打开自定义设置-脚本-自定义脚本0（功能配置）。<br>找到</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 如何在路由器中设置花生壳服务</span><br><span class="line">#&#x2F;tmp&#x2F;sh_ddns.sh &#x2F;tmp&#x2F;orayddns.log &#39;http:&#x2F;&#x2F;您的花生壳帐号:您的帐号密码@ddns.oray.com&#x2F;ph&#x2F;update?hostname&#x3D;你的ddns域名&#39; &amp;</span><br></pre></td></tr></table></figure>
+
+<p>　　可以看到里面有两个可选服务，一个orayddns一个3322ddns，我们用一个orayddns就行了，填上你的用户名和密码，删除<code>/tmp</code>之前的<code>#</code>，如下图，应用本面设置就可以了。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;tmp&#x2F;sh_ddns.sh &#x2F;tmp&#x2F;orayddns.log &#39;http:&#x2F;&#x2F;184××××××××:×××××××@ddns.oray.com&#x2F;ph&#x2F;update?hostname&#x3D;2××××××××.zicp.vip&#39; &amp;</span><br></pre></td></tr></table></figure>
+<p><img src="https://i.loli.net/2020/05/05/YOBugmpaVFZ1PK4.png" alt="8.png"></p>
+<p>　　注意后面的域名要换成你的。</p>
+<p>　　在花生壳里点击域名试试，是不是出现域名IP地址指向的IP了？</p>
+<p><img src="https://i.loli.net/2020/05/05/GfxmvHQ637LqlpW.jpg" alt="Screenshot_20200505-122757__01.jpg"></p>
+<p>　　3322ddns同理</p>
+<ul>
+<li>点击防火墙-从外网访问路由器服务</li>
+<li>打开允许从互联网设置</li>
+<li>互联网设置通信端口自行填写，注意端口范围和避免填写常用端口，这里我设置的：6688</li>
+<li>打开允许外网 HTTPS 访问Web服务    </li>
+<li>外网 HTTPS 访问 Web 服务端口自行填写，注意端口范围和避免填写常用端口，这里我设置的：6689</li>
+</ul>
+<p><img src="https://i.loli.net/2020/05/05/kyucXmvZ9zwgNUI.png" alt="9.png"></p>
+<p>　　应用设置，第一步完成，下面进行端口转发。</p>
+<ul>
+<li>打开外部网络-端口转发（UPnP）</li>
+<li>服务名称：自定义，自己知道是干啥的端口即可，我写的是K2</li>
+<li>源IP地址：暂不填写，默认全部</li>
+<li>端口范围：刚才设置的6688</li>
+<li>内网IP：路由登录IP，老毛子固件默认是192.168.123.1</li>
+<li>本地端口：和上面一样6688</li>
+<li>协议：TCP/UDP</li>
+</ul>
+<p><img src="https://i.loli.net/2020/05/05/cCoED2xV9MtvHuZ.png" alt="10.png"><br><img src="https://i.loli.net/2020/05/05/znquVfxbN5g9dA7.png" alt="11.png"></p>
+<p>　　点击+号，点击应用设置即可，现在就可以试试远程访问路由器了，浏览器输入你的花生壳域名:你设置的端口，例如我的：2×××××××.zicp.vip:6688就可以了。</p>
+<hr>
+<p>　　此系列教程包括但不仅限于k2路由，只要是老毛子padvan固件，都是一样的操作。</p>
+]]></content>
+      <categories>
+        <category>路由器</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Hexo-视/音频插件-hexo-tag- a/d player</title>
     <url>/2019/10/04/Hexo%E6%8F%92%E4%BB%B6-hexo-tag-%20a%E2%80%A2d%20player/</url>
     <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>在Hexo文章中插入音频请使用<a href="https://github.com/MoePlayer/APlayer">hexo-tag-aplayer</a></p>
@@ -322,77 +393,6 @@
       </tags>
   </entry>
   <entry>
-    <title>HWID数字许可激活工具</title>
-    <url>/2019/06/08/HWID%E6%95%B0%E5%AD%97%E8%AE%B8%E5%8F%AF%E6%BF%80%E6%B4%BB%E5%B7%A5%E5%85%B7/</url>
-    <content><![CDATA[<p>　　微软在2014年4月8日停止了xp系统的维护和更新，大部分用户都转战的win7，一晃十年过去了，win7用户占据了绝大部分，如今官网发布了公告：历经 10 年，对 Windows 7 的支持已近尾声 — 2020 年 1 月 14 日。我们了解，改变可能会很困难，因此，我们会为你提供有关后续行动的建议，并回答有关停止支持的问题。<span id="more"></span><br>　　自win10发布后微软也是费尽心思想让用户们升级win10，所以就很长一段时间的政策是如果你是win7用户，且系统处于激活状态，无论正版盗版升级到win10后都可以获得数字许可证（除企业版）。<br>　　这是什么概念？白给啊！！那有人就说了，我找工具类kms激活不一样嘛，答案是，，，确实一样。不过咱们是为了啥，毕竟正版用起来确实方便啊，尤其是学计算机的同学，我们买的电脑基本上都是预装的win10家庭中文版，够大部分人办公用了。可能有少部分人不满足家庭中文版的基本功能转战专业版企业版或者教育版，比如我。所以我当初没事干就是从win10家庭中文版重装到win7旗舰版，然后工具激活，再升级到win10专业版，获得了数字许可证，登录我微软账号后获得了与 Microsoft 帐户关联的数字许可证。然后为了纯净就格盘再重装win10专业版，联网自动激活，登录我微软账户，一个洗白党就此诞生，我当时是真能折腾。<br>　　这里先说一下区别，获得数字许可证相当于官网记录了你的电脑主板相关参数，只要你不换主板，无论重装多少次系统，只要是对应版本，在联网后都可以自动激活。<br>与 Microsoft 帐户关联的数字许可证呢，这个就是给予你的微软账号的权力了，一个微软账号可以关联5-8(范围区间)，具体我也不知道多少台电脑，也就是对应版本登录你的账号就可以选择是否激活该未激活电脑。<br>　　然后，，，在微软结束这个活动前，国外有人写了工具，就是模拟电脑环境从win7升级到win10来获得数字许可证，我当时就想，你怎么不早点写出来呢，，，后来国内大牛根据该工具用C重写了该工具，于是HWID数字许可激活工具就流传开来了，这个工具也整合了kms等激活方式，基本上全版本win10都可以用它激活，我是早期在远景论坛下载的，原帖现在也找不到了，就没标注原帖地址，贴上软件运行图</p>
-<p><strong>启动图</strong></p>
-<p><img src="https://i.loli.net/2019/09/09/ym8FBS4csvJAtqr.png" alt="TIM截图20190909212756.png"></p>
-<p><strong>主页面</strong><br><img src="https://i.loli.net/2019/09/09/MmtVCzXwnH7jORK.png" alt="TIM截图20190909212813.png"></p>
-<p><strong>下载地址</strong>：<a href="https://www.lanzous.com/i63k4ha">点我下载</a></p>
-<p>最后罗嗦两句，新系统肯定要比旧系统有优势，重点就在过渡期间，当初win10用户占用率少是什么原因？一是兼容性不好，好多游戏，软件win10兼容不了，二是win10太吃硬盘读写，在固态还没降价普及时大部分办公本以及网吧台式机都是用的机械硬盘，装win10开个机就轻易卡死，磁盘利用率动不动就100%，这要你有个球用。<br>现在好多了，兼容性基本上没问题了，固态硬盘价格也降了，就这么说吧，有固态上win10，没固态用win7，有没有固态用win10简直是两个体验，毕竟我是体验过4G RAM+机械盘+win7/10，4G RAM+固态盘+win7/10，8G RAM+固态盘的男人。</p>
-]]></content>
-      <categories>
-        <category>Softwares For Windows</category>
-      </categories>
-      <tags>
-        <tag>HWID</tag>
-        <tag>Windows</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>K2（路由）老矣，尚能饭否？①</title>
-    <url>/2020/03/03/K2%EF%BC%88%E8%B7%AF%E7%94%B1%EF%BC%89%E8%80%81%E7%9F%A3%EF%BC%8C%E5%B0%9A%E8%83%BD%E9%A5%AD%E5%90%A6%EF%BC%9F%20%20%E2%91%A0/</url>
-    <content><![CDATA[<h2 id="设置路由拨号和实现DDNS远程访问"><a href="#设置路由拨号和实现DDNS远程访问" class="headerlink" title="设置路由拨号和实现DDNS远程访问"></a><p align="center">设置路由拨号和实现DDNS远程访问</p></h2><p>　　在斐讯辉煌之际，鄙人有幸上车，以364软妹币拿下这款理财产品，之后没多久斐讯就倒闭跑路了，万千产品今犹在，不见当年斐讯狂。</p>
-<span id="more"></span>
-<p>　　官方固件没什么可说的，求稳就用官改，我一直用的H大的Padavan固件，这里贴上tg地址，有需求的可以看看：<a href="https://t.me/pdcn1/221">tg地址</a>，至于刷机我就不多说了，恩山多逛逛就会了。</p>
-<p>　　上一次说了中兴F677V2改桥接，关闭残废WIFI，也算是尽了它的使命，接下来的事就交给路由器来处理吧！</p>
-<p>　　<strong>1：拨号上网</strong></p>
-<p>　　外部网络-外网设置-外网连接类型：PPPoE：拨号，在PPPoE 和 PPP VPN 客户端设置里设置用户名和密码就可以了。<br><img src="https://i.loli.net/2020/05/05/mfilW9NQB2zuxda.png" alt="7.png"></p>
-<p>　　<strong>2：DDNS&amp;远程访问</strong></p>
-<p>　　远程访问需要知道公网ip和端口，运营商给我们分配的公网大都是动态的，也就是说它会变，要准确知道每次更换的IP地址就需要DDNS了。</p>
-<p>　　DDNS（Dynamic Domain Name Server，动态域名服务）是将用户的动态IP地址映射到一个固定的域名解析服务上，用户每次连接网络的时候客户端程序就会通过信息传递把该主机的动态IP地址传送给位于服务商主机上的服务器程序，服务器程序负责提供DNS服务并实现动态域名解析。</p>
-<p>　　花生壳是一个不错的选择，注册后会给你你个免费的域名，虽然很长很难记，但是毕竟它免费啊。<br><img src="https://i.loli.net/2020/05/05/3DXzqRY2amZIJrC.jpg" alt="Screenshot_20200505-121923.jpg"><br>　　<br>　　注册完要及时进行实名认证，不然过几天解析服务会停止。</p>
-<p>　　在路由器外部网络内，会有一个DDNS功能，不过咱们不用它，用自定义脚本，方便快捷又高效。</p>
-<ul>
-<li>打开自定义设置-脚本-自定义脚本0（功能配置）。<br>找到</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 如何在路由器中设置花生壳服务</span><br><span class="line">#&#x2F;tmp&#x2F;sh_ddns.sh &#x2F;tmp&#x2F;orayddns.log &#39;http:&#x2F;&#x2F;您的花生壳帐号:您的帐号密码@ddns.oray.com&#x2F;ph&#x2F;update?hostname&#x3D;你的ddns域名&#39; &amp;</span><br></pre></td></tr></table></figure>
-
-<p>　　可以看到里面有两个可选服务，一个orayddns一个3322ddns，我们用一个orayddns就行了，填上你的用户名和密码，删除<code>/tmp</code>之前的<code>#</code>，如下图，应用本面设置就可以了。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;tmp&#x2F;sh_ddns.sh &#x2F;tmp&#x2F;orayddns.log &#39;http:&#x2F;&#x2F;184××××××××:×××××××@ddns.oray.com&#x2F;ph&#x2F;update?hostname&#x3D;2××××××××.zicp.vip&#39; &amp;</span><br></pre></td></tr></table></figure>
-<p><img src="https://i.loli.net/2020/05/05/YOBugmpaVFZ1PK4.png" alt="8.png"></p>
-<p>　　注意后面的域名要换成你的。</p>
-<p>　　在花生壳里点击域名试试，是不是出现域名IP地址指向的IP了？</p>
-<p><img src="https://i.loli.net/2020/05/05/GfxmvHQ637LqlpW.jpg" alt="Screenshot_20200505-122757__01.jpg"></p>
-<p>　　3322ddns同理</p>
-<ul>
-<li>点击防火墙-从外网访问路由器服务</li>
-<li>打开允许从互联网设置</li>
-<li>互联网设置通信端口自行填写，注意端口范围和避免填写常用端口，这里我设置的：6688</li>
-<li>打开允许外网 HTTPS 访问Web服务    </li>
-<li>外网 HTTPS 访问 Web 服务端口自行填写，注意端口范围和避免填写常用端口，这里我设置的：6689</li>
-</ul>
-<p><img src="https://i.loli.net/2020/05/05/kyucXmvZ9zwgNUI.png" alt="9.png"></p>
-<p>　　应用设置，第一步完成，下面进行端口转发。</p>
-<ul>
-<li>打开外部网络-端口转发（UPnP）</li>
-<li>服务名称：自定义，自己知道是干啥的端口即可，我写的是K2</li>
-<li>源IP地址：暂不填写，默认全部</li>
-<li>端口范围：刚才设置的6688</li>
-<li>内网IP：路由登录IP，老毛子固件默认是192.168.123.1</li>
-<li>本地端口：和上面一样6688</li>
-<li>协议：TCP/UDP</li>
-</ul>
-<p><img src="https://i.loli.net/2020/05/05/cCoED2xV9MtvHuZ.png" alt="10.png"><br><img src="https://i.loli.net/2020/05/05/znquVfxbN5g9dA7.png" alt="11.png"></p>
-<p>　　点击+号，点击应用设置即可，现在就可以试试远程访问路由器了，浏览器输入你的花生壳域名:你设置的端口，例如我的：2×××××××.zicp.vip:6688就可以了。</p>
-<hr>
-<p>　　此系列教程包括但不仅限于k2路由，只要是老毛子padvan固件，都是一样的操作。</p>
-]]></content>
-      <categories>
-        <category>路由器</category>
-      </categories>
-  </entry>
-  <entry>
     <title>K2（路由）老矣，尚能饭否？②</title>
     <url>/2020/03/09/K2%EF%BC%88%E8%B7%AF%E7%94%B1%EF%BC%89%E8%80%81%E7%9F%A3%EF%BC%8C%E5%B0%9A%E8%83%BD%E9%A5%AD%E5%90%A6%EF%BC%9F%E2%91%A1/</url>
     <content><![CDATA[<h2 id="开启KMS服务以激活Windows和office"><a href="#开启KMS服务以激活Windows和office" class="headerlink" title="开启KMS服务以激活Windows和office"></a><p align="center">开启KMS服务以激活Windows和office</p></h2><p>　　KMS激活网上有很多共享服务器和相关软件，既然咱们的路由器有此功能，何不用咱自己的呢，还能给周围小伙伴们激活相关产品。</p>
@@ -461,33 +461,6 @@
       </categories>
   </entry>
   <entry>
-    <title>WindowsStore_LTSC 2019</title>
-    <url>/2019/07/07/WindowsStore_LTSC%202019/</url>
-    <content><![CDATA[<p>　　Win10 TLSB属于Win10企业版，LTSB就是长期支持更新分支（Long Time Service Branch），这个版本专门给一些企业用户的，相比一般版本会缺少很多新功能，例如没有应用商店、没有Edge浏览器，没有cortana，大家可以把Win10 TLSB看成是Windows10企业版的精简版本。<span id="more"></span>LTSB是英语Long Term Servicing Branch的首字母缩写，汉语一般翻译成长期服务分支。LTSB分支是专门面向企业版的，Win10企业版LTSB分支支持周期长达10年，但只会获取安全更新(应该也可以获取热补丁更新)，而不获取功能更新，即不会增加任何新功能。这也是Win10企业版LTSB分支和Win10企业版最根本性的区别。<br>　　Windows 10 LTSC 现在改名成了 LTSC(Long Term Support Channel)。距离上一个长期服务LTSB版本发布已过去近三年了(微软仅发布过2015LTSB、2016LTSB两个版本，之后杳无音信)，18年10月3日微软发布了 Windows 10 RS5，终于再次发布了 Win10 LTSC 2019，且该版本已包含暗黑主题。<br>　　现在很少有时间折腾电脑了，我的办公本运行起来最新版也吃力了，干脆直接装企业版ltsc2109了。之前用专业版时习惯了用win10的应用商店，不得不说UWP应用是真的好用（虽然功能少点，但是界面和流畅度溜的很），现在一下没了win10商店挺不舒服的，于是就想装回win10商店，百度了百度，最笨的办法就是拆包，用命令行打组件补丁包，还要注意修改权限之类的balabala。。。看了看我想肯定有比我更懒的人，他们肯定有更简单的，然后我去了gayhub，发现了这个项目：<a href="https://github.com/kkkgo/LTSC-Add-MicrosoftStore">https://github.com/kkkgo/LTSC-Add-MicrosoftStore</a><br>嘤垂丝汀~为照顾某些同学爬墙费尽我就贴上原项目教程来了<br>　　为Windows 10 Enterprise LTSC增加应用商店<br>适用于Windows 10 Enterprise LTSC 2019<br>下载地址：<a href="https://codeload.github.com/kkkgo/LTSC-Add-MicrosoftStore/zip/2019">https://codeload.github.com/kkkgo/LTSC-Add-MicrosoftStore/zip/2019</a><br>要开始安装, 请打包下载后用右键管理员运行</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Add-Store.cmd</span><br></pre></td></tr></table></figure>
-<p>如果您不想安装App Installer / Purchase App / Xbox，请在运行安装之前删除对应的.appxbundle后缀的文件。但是，如果您计划安装游戏，或带有购买选项的应用，则不要删除。<br>如果装完之后商店仍然打不开，请先重启试试。如果仍然不行，请以管理员身份打开命令提示符并运行以下命令之后，然后再重启试试。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">PowerShell -ExecutionPolicy Unrestricted -Command &quot;&amp; &#123;$manifest &#x3D; (Get-AppxPackage Microsoft.WindowsStore).InstallLocation + &#39;\AppxManifest.xml&#39; ; Add-AppxPackage -DisableDevelopmentMode -Register $manifest&#125;&quot;</span><br></pre></td></tr></table></figure>
-<p>商店修复<br>Win+R打开运行，输入</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">WSReset.exe</span><br></pre></td></tr></table></figure>
-<p>回车。<br>该命令会清空并重置Windows Store商店的所有缓存。<br>该脚本由abbodi1406贡献：<br><a href="https://forums.mydigitallife.net/threads/add-store-to-windows-10-enterprise-ltsc-LTSC.70741/page-30#post-1468779">https://forums.mydigitallife.net/threads/add-store-to-windows-10-enterprise-ltsc-LTSC.70741/page-30#post-1468779</a></p>
-<hr>
-<p>　　于是乎我就装上了，可能有同学感觉还是麻烦，于是还有更简单的，后来逛吾爱时我发现有大神整合了该组件包，并打包成了exe可执行文件，双击鼠标就行了。原帖在这<br><a href="https://www.52pojie.cn/thread-868710-1-1.html">https://www.52pojie.cn/thread-868710-1-1.html</a><br>于是我就下载下来了，为了安全<del>好奇心驱使</del>我用UniExtract解包看了一下，奥豁~<br><strong>组件图</strong><br><img src="https://i.loli.net/2019/09/10/TRg6mpzBL5lAMFk.png" alt="TIM截图20190909212608.png"><br>　　确实够安全，打开bat文件看了看，现在把批处理命令贴出来</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@ECHO OFF&amp;PUSHD %~DP0 &amp;TITLE Windows Store for LTSC x64 </span><br><span class="line">::author MoeClub by Vicer**感谢这位作者（笔者言）**</span><br><span class="line">setlocal enabledelayedexpansion</span><br><span class="line">mode con cols&#x3D;60 lines&#x3D;30</span><br><span class="line">color 87</span><br><span class="line">cd.&gt;%WINDIR%\GetAdmin</span><br><span class="line">if exist %WINDIR%\GetAdmin (del &#x2F;f &#x2F;q &quot;%WINDIR%\GetAdmin&quot;) else (</span><br><span class="line">echo CreateObject^(&quot;Shell.Application&quot;^).ShellExecute &quot;%~s0&quot;, &quot;%*&quot;, &quot;&quot;, &quot;runas&quot;, 1 &gt;&gt; &quot;%temp%\Admin.vbs&quot;</span><br><span class="line">&quot;%temp%\Admin.vbs&quot;</span><br><span class="line">del &#x2F;s &#x2F;q &quot;%temp%\Admin.vbs&quot;</span><br><span class="line">exit &#x2F;b 2)</span><br><span class="line">cls</span><br><span class="line"></span><br><span class="line">if not exist &quot;%ProgramFiles%\WindowsApps&quot; goto error_exit</span><br><span class="line">if not exist &quot;%WINDIR%\SysWOW64&quot; goto error_exit</span><br><span class="line"></span><br><span class="line">::grant perm</span><br><span class="line">TAKEOWN &#x2F;F &quot;%ProgramFiles%\WindowsApps&quot; &#x2F;A &gt;NUL</span><br><span class="line">ICACLS &quot;%ProgramFiles%\WindowsApps&quot; &#x2F;grant:r &quot;Administrators:F&quot; &#x2F;Q &gt;NUL</span><br><span class="line">ICACLS &quot;%ProgramFiles%\WindowsApps&quot; &#x2F;grant:r &quot;All Application Packages:RX&quot; &#x2F;setintegritylevel L:I &#x2F;inheritance:e &#x2F;Q &gt;NUL</span><br><span class="line"></span><br><span class="line">::copy</span><br><span class="line">XCOPY &#x2F;Q&#x2F;Y&#x2F;E&#x2F;H&#x2F;O &quot;%~DP0WindowsApps\*&quot; &quot;%ProgramFiles%\WindowsApps\&quot; &gt;NUL 2&gt;NUL</span><br><span class="line"></span><br><span class="line">::restore perm</span><br><span class="line">ICACLS &quot;%ProgramFiles%\WindowsApps&quot; &#x2F;setowner &quot;NT Service\TrustedInstaller&quot; &#x2F;Q &gt;NUL </span><br><span class="line">ICACLS &quot;%ProgramFiles%\WindowsApps&quot; &#x2F;grant:r &quot;Administrators:RX&quot; &#x2F;Q &gt;NUL </span><br><span class="line">ICACLS &quot;%ProgramFiles%\WindowsApps&quot; &#x2F;reset &gt;NUL</span><br><span class="line"></span><br><span class="line">::install</span><br><span class="line">FOR &#x2F;F &quot;delims&#x3D;&quot; %%i IN (Package.txt) DO (PowerShell -Command &quot;&amp; &#123;Add-AppXPackage -Path &#39;%ProgramFiles%\WindowsApps\%%i\AppXManifest.xml&#39; -Register -DisableDevelopmentMode&#125;&quot;)</span><br><span class="line"></span><br><span class="line">:success_exit</span><br><span class="line">ECHO.</span><br><span class="line">ECHO Install finish.</span><br><span class="line">TIMEOUT &#x2F;T 3 &#x2F;NOBREAK &gt;NUL 2&gt;NUL</span><br><span class="line">exit 0</span><br><span class="line"></span><br><span class="line">:error_exit</span><br><span class="line">ECHO.</span><br><span class="line">ECHO Not support this device.</span><br><span class="line">TIMEOUT &#x2F;T 5 &#x2F;NOBREAK &gt;NUL 2&gt;NUL</span><br><span class="line">exit 1</span><br></pre></td></tr></table></figure>
-<p><strong>卸载命令单拉出来</strong><br>::unstal（卸载命令）</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Get-AppxPackage Microsoft.XboxIdentityProvider |Remove-AppxPackage</span><br><span class="line">Get-AppxPackage Microsoft.StorePurchaseApp |Remove-AppxPackage</span><br><span class="line">Get-AppxPackage Microsoft.WindowsStore |Remove-AppxPackage</span><br><span class="line">Get-AppxPackage Microsoft.Advertising.Xaml |Remove-AppxPackage</span><br><span class="line">Get-AppxPackage Microsoft.VCLibs.140.00 |Remove-AppxPackage</span><br><span class="line">Get-AppxPackage Microsoft.NET.Native.Framework.1.6 |Remove-AppxPackage</span><br><span class="line">Get-AppxPackage Microsoft.NET.Native.Runtime.1.6 |Remove-AppxPackage</span><br></pre></td></tr></table></figure>
-<p>这下可以放心了，说一下，我仅仅解包查看了内部结构，并未做出任何修改和打包处理，再次感谢作者。<br>然后我在我室友电脑上成功安装，第一次打开可能是英文，商店检测更新，更新完后就是中文啦</p>
-<p><strong>商店主页面</strong></p>
-<p><img src="https://i.loli.net/2019/09/10/WnzGiXmpZsldht9.png" alt="TIM截图20190909212317.png"></p>
-]]></content>
-      <categories>
-        <category>Softwares For Windows</category>
-      </categories>
-      <tags>
-        <tag>Windows</tag>
-        <tag>Software</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>K2（路由）老矣，尚能饭否？③</title>
     <url>/2020/03/16/K2%EF%BC%88%E8%B7%AF%E7%94%B1%EF%BC%89%E8%80%81%E7%9F%A3%EF%BC%8C%E5%B0%9A%E8%83%BD%E9%A5%AD%E5%90%A6%EF%BC%9F%E2%91%A2/</url>
     <content><![CDATA[<h2 id="老毛子padvan固件开启ipv6"><a href="#老毛子padvan固件开启ipv6" class="headerlink" title="老毛子padvan固件开启ipv6"></a><p align="center">老毛子padvan固件开启ipv6</p></h2><p>　　前面我们用光猫桥接模式已经建立并使用了ipv4/ipv6的连接，所以，我们今天就在路由器固件上要开启ipv6。</p>
@@ -525,6 +498,33 @@
       <categories>
         <category>路由器</category>
       </categories>
+  </entry>
+  <entry>
+    <title>WindowsStore_LTSC 2019</title>
+    <url>/2019/07/07/WindowsStore_LTSC%202019/</url>
+    <content><![CDATA[<p>　　Win10 TLSB属于Win10企业版，LTSB就是长期支持更新分支（Long Time Service Branch），这个版本专门给一些企业用户的，相比一般版本会缺少很多新功能，例如没有应用商店、没有Edge浏览器，没有cortana，大家可以把Win10 TLSB看成是Windows10企业版的精简版本。<span id="more"></span>LTSB是英语Long Term Servicing Branch的首字母缩写，汉语一般翻译成长期服务分支。LTSB分支是专门面向企业版的，Win10企业版LTSB分支支持周期长达10年，但只会获取安全更新(应该也可以获取热补丁更新)，而不获取功能更新，即不会增加任何新功能。这也是Win10企业版LTSB分支和Win10企业版最根本性的区别。<br>　　Windows 10 LTSC 现在改名成了 LTSC(Long Term Support Channel)。距离上一个长期服务LTSB版本发布已过去近三年了(微软仅发布过2015LTSB、2016LTSB两个版本，之后杳无音信)，18年10月3日微软发布了 Windows 10 RS5，终于再次发布了 Win10 LTSC 2019，且该版本已包含暗黑主题。<br>　　现在很少有时间折腾电脑了，我的办公本运行起来最新版也吃力了，干脆直接装企业版ltsc2109了。之前用专业版时习惯了用win10的应用商店，不得不说UWP应用是真的好用（虽然功能少点，但是界面和流畅度溜的很），现在一下没了win10商店挺不舒服的，于是就想装回win10商店，百度了百度，最笨的办法就是拆包，用命令行打组件补丁包，还要注意修改权限之类的balabala。。。看了看我想肯定有比我更懒的人，他们肯定有更简单的，然后我去了gayhub，发现了这个项目：<a href="https://github.com/kkkgo/LTSC-Add-MicrosoftStore">https://github.com/kkkgo/LTSC-Add-MicrosoftStore</a><br>嘤垂丝汀~为照顾某些同学爬墙费尽我就贴上原项目教程来了<br>　　为Windows 10 Enterprise LTSC增加应用商店<br>适用于Windows 10 Enterprise LTSC 2019<br>下载地址：<a href="https://codeload.github.com/kkkgo/LTSC-Add-MicrosoftStore/zip/2019">https://codeload.github.com/kkkgo/LTSC-Add-MicrosoftStore/zip/2019</a><br>要开始安装, 请打包下载后用右键管理员运行</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Add-Store.cmd</span><br></pre></td></tr></table></figure>
+<p>如果您不想安装App Installer / Purchase App / Xbox，请在运行安装之前删除对应的.appxbundle后缀的文件。但是，如果您计划安装游戏，或带有购买选项的应用，则不要删除。<br>如果装完之后商店仍然打不开，请先重启试试。如果仍然不行，请以管理员身份打开命令提示符并运行以下命令之后，然后再重启试试。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">PowerShell -ExecutionPolicy Unrestricted -Command &quot;&amp; &#123;$manifest &#x3D; (Get-AppxPackage Microsoft.WindowsStore).InstallLocation + &#39;\AppxManifest.xml&#39; ; Add-AppxPackage -DisableDevelopmentMode -Register $manifest&#125;&quot;</span><br></pre></td></tr></table></figure>
+<p>商店修复<br>Win+R打开运行，输入</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">WSReset.exe</span><br></pre></td></tr></table></figure>
+<p>回车。<br>该命令会清空并重置Windows Store商店的所有缓存。<br>该脚本由abbodi1406贡献：<br><a href="https://forums.mydigitallife.net/threads/add-store-to-windows-10-enterprise-ltsc-LTSC.70741/page-30#post-1468779">https://forums.mydigitallife.net/threads/add-store-to-windows-10-enterprise-ltsc-LTSC.70741/page-30#post-1468779</a></p>
+<hr>
+<p>　　于是乎我就装上了，可能有同学感觉还是麻烦，于是还有更简单的，后来逛吾爱时我发现有大神整合了该组件包，并打包成了exe可执行文件，双击鼠标就行了。原帖在这<br><a href="https://www.52pojie.cn/thread-868710-1-1.html">https://www.52pojie.cn/thread-868710-1-1.html</a><br>于是我就下载下来了，为了安全<del>好奇心驱使</del>我用UniExtract解包看了一下，奥豁~<br><strong>组件图</strong><br><img src="https://i.loli.net/2019/09/10/TRg6mpzBL5lAMFk.png" alt="TIM截图20190909212608.png"><br>　　确实够安全，打开bat文件看了看，现在把批处理命令贴出来</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@ECHO OFF&amp;PUSHD %~DP0 &amp;TITLE Windows Store for LTSC x64 </span><br><span class="line">::author MoeClub by Vicer**感谢这位作者（笔者言）**</span><br><span class="line">setlocal enabledelayedexpansion</span><br><span class="line">mode con cols&#x3D;60 lines&#x3D;30</span><br><span class="line">color 87</span><br><span class="line">cd.&gt;%WINDIR%\GetAdmin</span><br><span class="line">if exist %WINDIR%\GetAdmin (del &#x2F;f &#x2F;q &quot;%WINDIR%\GetAdmin&quot;) else (</span><br><span class="line">echo CreateObject^(&quot;Shell.Application&quot;^).ShellExecute &quot;%~s0&quot;, &quot;%*&quot;, &quot;&quot;, &quot;runas&quot;, 1 &gt;&gt; &quot;%temp%\Admin.vbs&quot;</span><br><span class="line">&quot;%temp%\Admin.vbs&quot;</span><br><span class="line">del &#x2F;s &#x2F;q &quot;%temp%\Admin.vbs&quot;</span><br><span class="line">exit &#x2F;b 2)</span><br><span class="line">cls</span><br><span class="line"></span><br><span class="line">if not exist &quot;%ProgramFiles%\WindowsApps&quot; goto error_exit</span><br><span class="line">if not exist &quot;%WINDIR%\SysWOW64&quot; goto error_exit</span><br><span class="line"></span><br><span class="line">::grant perm</span><br><span class="line">TAKEOWN &#x2F;F &quot;%ProgramFiles%\WindowsApps&quot; &#x2F;A &gt;NUL</span><br><span class="line">ICACLS &quot;%ProgramFiles%\WindowsApps&quot; &#x2F;grant:r &quot;Administrators:F&quot; &#x2F;Q &gt;NUL</span><br><span class="line">ICACLS &quot;%ProgramFiles%\WindowsApps&quot; &#x2F;grant:r &quot;All Application Packages:RX&quot; &#x2F;setintegritylevel L:I &#x2F;inheritance:e &#x2F;Q &gt;NUL</span><br><span class="line"></span><br><span class="line">::copy</span><br><span class="line">XCOPY &#x2F;Q&#x2F;Y&#x2F;E&#x2F;H&#x2F;O &quot;%~DP0WindowsApps\*&quot; &quot;%ProgramFiles%\WindowsApps\&quot; &gt;NUL 2&gt;NUL</span><br><span class="line"></span><br><span class="line">::restore perm</span><br><span class="line">ICACLS &quot;%ProgramFiles%\WindowsApps&quot; &#x2F;setowner &quot;NT Service\TrustedInstaller&quot; &#x2F;Q &gt;NUL </span><br><span class="line">ICACLS &quot;%ProgramFiles%\WindowsApps&quot; &#x2F;grant:r &quot;Administrators:RX&quot; &#x2F;Q &gt;NUL </span><br><span class="line">ICACLS &quot;%ProgramFiles%\WindowsApps&quot; &#x2F;reset &gt;NUL</span><br><span class="line"></span><br><span class="line">::install</span><br><span class="line">FOR &#x2F;F &quot;delims&#x3D;&quot; %%i IN (Package.txt) DO (PowerShell -Command &quot;&amp; &#123;Add-AppXPackage -Path &#39;%ProgramFiles%\WindowsApps\%%i\AppXManifest.xml&#39; -Register -DisableDevelopmentMode&#125;&quot;)</span><br><span class="line"></span><br><span class="line">:success_exit</span><br><span class="line">ECHO.</span><br><span class="line">ECHO Install finish.</span><br><span class="line">TIMEOUT &#x2F;T 3 &#x2F;NOBREAK &gt;NUL 2&gt;NUL</span><br><span class="line">exit 0</span><br><span class="line"></span><br><span class="line">:error_exit</span><br><span class="line">ECHO.</span><br><span class="line">ECHO Not support this device.</span><br><span class="line">TIMEOUT &#x2F;T 5 &#x2F;NOBREAK &gt;NUL 2&gt;NUL</span><br><span class="line">exit 1</span><br></pre></td></tr></table></figure>
+<p><strong>卸载命令单拉出来</strong><br>::unstal（卸载命令）</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Get-AppxPackage Microsoft.XboxIdentityProvider |Remove-AppxPackage</span><br><span class="line">Get-AppxPackage Microsoft.StorePurchaseApp |Remove-AppxPackage</span><br><span class="line">Get-AppxPackage Microsoft.WindowsStore |Remove-AppxPackage</span><br><span class="line">Get-AppxPackage Microsoft.Advertising.Xaml |Remove-AppxPackage</span><br><span class="line">Get-AppxPackage Microsoft.VCLibs.140.00 |Remove-AppxPackage</span><br><span class="line">Get-AppxPackage Microsoft.NET.Native.Framework.1.6 |Remove-AppxPackage</span><br><span class="line">Get-AppxPackage Microsoft.NET.Native.Runtime.1.6 |Remove-AppxPackage</span><br></pre></td></tr></table></figure>
+<p>这下可以放心了，说一下，我仅仅解包查看了内部结构，并未做出任何修改和打包处理，再次感谢作者。<br>然后我在我室友电脑上成功安装，第一次打开可能是英文，商店检测更新，更新完后就是中文啦</p>
+<p><strong>商店主页面</strong></p>
+<p><img src="https://i.loli.net/2019/09/10/WnzGiXmpZsldht9.png" alt="TIM截图20190909212317.png"></p>
+]]></content>
+      <categories>
+        <category>Softwares For Windows</category>
+      </categories>
+      <tags>
+        <tag>Windows</tag>
+        <tag>Software</tag>
+      </tags>
   </entry>
   <entry>
     <title>office2016和visio同时安装</title>
@@ -851,10 +851,19 @@
       </categories>
   </entry>
   <entry>
+    <title>爱&amp;情</title>
+    <url>/2021/05/14/%E7%88%B1&amp;%E6%83%85/</url>
+    <content><![CDATA[<p>　　1：等有资格结婚了，我要嫁给一个很平易近人的男人，他没有大大的啤酒肚，没有地中海似的大光头，没有鸡毛蒜皮都计较的小心眼，也没有莫名其妙就爆发的坏脾气，他要喜欢运动，充满男子气，他要喜欢唱歌就算走调让我哭笑不得，他要捧着我的脸说娶到你真是我的福气。<span id="more"></span><br>　　多年以后他已经被世人的奸诈狡猾刺的浑身伤痕，被生意的应酬喝出了一个大大的啤酒肚，被日夜的焦虑头发变的稀疏了，为了赚钱养家变的斤斤计较了，没有时间再去运动了，时间把他变的苍老了，他喜欢听歌却唱的走调被人嘲笑再也不开口了，他捧着你的脸你一脸嫌弃，却未曾想过，他原来就是你最爱的样子啊。<br>　　2：我一直都觉得最难过的瞬间，一定不是你爱而不得的时候，而是你明白你和这个人真的没有以后了，以后他给过你的没有给过你的，都要给另一个人了，而你连眼红都没有资格。</p>
+]]></content>
+      <categories>
+        <category>浮生纪</category>
+      </categories>
+  </entry>
+  <entry>
     <title>MyLife，OurLife</title>
     <url>/2021/05/18/%E6%B5%8B%E8%AF%95/</url>
     <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
-  <script id="hbeData" type="hbeData" data-hmacdigest="0f23880aded40bac70d21271469403169a8d20bd4534105a442fb5b66cd60859">3ebe4bd6f767105d8b4ddcc8fea7f6fd7ca4fc4c055e053e3fe941677ea4a08537c31c1625cc36105fa210b5290fbf2ec632988841ee0238e4ae2a7b13dd999d3f0c617913fb6c4d1c3854a46bf28ed7325f0fbe146efed00cb13ee5df8809d9c312248a0f8bcf8451dc4d3fc52481d8d921937556ffca6d4a5bc8d6c85f0e9958dd53844b4cf3cb8def638056ea99c06854e62caba18aba4de924f6ff9684e33e522c05a95854eebcda66c069fb822c</script>
+  <script id="hbeData" type="hbeData" data-hmacdigest="998646943395b846b8a466838be0b394e9d3b01bf4786ff3c70acbd710b70e4b">3ebe4bd6f767105d8b4ddcc8fea7f6fd60ffd487cf109a5052662961d99676561aeb9fd3a8b21907970667c7470dfa975eedf1985db09d7555064098131b315831b24314da17fc1a34863344a980cb7a9a265030583932389756d9cf761ea2ab8f04037b1f8f2f27df88f22e1e51e1fefb1b52c87cf915548f70318e2d710da65d09a5cdc3df353b24de4d6683d285ceb121ace4cf21e265d1a5b11caa0fd14d</script>
   <div class="hbe hbe-content">
     <div class="hbe hbe-input hbe-input-xray">
       <input class="hbe hbe-input-field hbe-input-field-xray" type="password" id="hbePass">
@@ -872,26 +881,6 @@
       <tags>
         <tag>MyLife</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>爱&amp;情</title>
-    <url>/2021/05/14/%E7%88%B1&amp;%E6%83%85/</url>
-    <content><![CDATA[<p>　　1：等有资格结婚了，我要嫁给一个很平易近人的男人，他没有大大的啤酒肚，没有地中海似的大光头，没有鸡毛蒜皮都计较的小心眼，也没有莫名其妙就爆发的坏脾气，他要喜欢运动，充满男子气，他要喜欢唱歌就算走调让我哭笑不得，他要捧着我的脸说娶到你真是我的福气。<span id="more"></span><br>　　多年以后他已经被世人的奸诈狡猾刺的浑身伤痕，被生意的应酬喝出了一个大大的啤酒肚，被日夜的焦虑头发变的稀疏了，为了赚钱养家变的斤斤计较了，没有时间再去运动了，时间把他变的苍老了，他喜欢听歌却唱的走调被人嘲笑再也不开口了，他捧着你的脸你一脸嫌弃，却未曾想过，他原来就是你最爱的样子啊。<br>　　2：我一直都觉得最难过的瞬间，一定不是你爱而不得的时候，而是你明白你和这个人真的没有以后了，以后他给过你的没有给过你的，都要给另一个人了，而你连眼红都没有资格。</p>
-]]></content>
-      <categories>
-        <category>浮生纪</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>《立春》：这个世界有多无奈，它就有多精彩。</title>
-    <url>/2020/05/28/%E7%AB%8B%E6%98%A5/</url>
-    <content><![CDATA[<p>　　生活大概总是这样，让你年轻时有梦，又让你中年时梦醒，给你理想破灭时的颓丧，又会奖励你家人陪伴时的温暖。和这个世界负隅顽抗的结果就是没有结果，还要承受满身累累的伤，<span id="more"></span>所以不管我们愿意还是不愿意，被迫还是主动，所有的长发都终会剪去，所有桀骜的目光终会变得慈祥，所有身处孤岛的人，也终究都要回到岸上。
-　　</p>
-<p>　　<iframe src="//player.bilibili.com/player.html?aid=75115390&bvid=BV1BE411v776&cid=128496622&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width='100%' height='100%'> </iframe><br>　　他们的故事其实也是我们自己的故事，我们每个人的少年时期都是无可救药的理想主义者，只是随着时间的推移，环境的改变，我们慢慢变得没有那么勇敢和坚定，和王彩玲，黄四宝，胡金泉，周瑜一样，年轻时我们都曾撒泼打滚地要诗和远方，都把自己活成了孤岛，但我们一路漂泊和跋涉之后才发现，原来最后我们都踏上了同一片大陆，叩响了同一块门铃，那扇门里住着的，叫做踏踏实实的大人。时间伟力正在于此，那就是无论早晚，我们一定会跨进去的，虽然不知道那迈出的永恒一脚，到底是叫做成长还是投降。</p>
-]]></content>
-      <categories>
-        <category>浮生记</category>
-      </categories>
   </entry>
   <entry>
     <title>《电话》</title>
@@ -961,6 +950,17 @@
       <tags>
         <tag>悦･读</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>《立春》：这个世界有多无奈，它就有多精彩。</title>
+    <url>/2020/05/28/%E7%AB%8B%E6%98%A5/</url>
+    <content><![CDATA[<p>　　生活大概总是这样，让你年轻时有梦，又让你中年时梦醒，给你理想破灭时的颓丧，又会奖励你家人陪伴时的温暖。和这个世界负隅顽抗的结果就是没有结果，还要承受满身累累的伤，<span id="more"></span>所以不管我们愿意还是不愿意，被迫还是主动，所有的长发都终会剪去，所有桀骜的目光终会变得慈祥，所有身处孤岛的人，也终究都要回到岸上。
+　　</p>
+<p>　　<iframe src="//player.bilibili.com/player.html?aid=75115390&bvid=BV1BE411v776&cid=128496622&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width='100%' height='100%'> </iframe><br>　　他们的故事其实也是我们自己的故事，我们每个人的少年时期都是无可救药的理想主义者，只是随着时间的推移，环境的改变，我们慢慢变得没有那么勇敢和坚定，和王彩玲，黄四宝，胡金泉，周瑜一样，年轻时我们都曾撒泼打滚地要诗和远方，都把自己活成了孤岛，但我们一路漂泊和跋涉之后才发现，原来最后我们都踏上了同一片大陆，叩响了同一块门铃，那扇门里住着的，叫做踏踏实实的大人。时间伟力正在于此，那就是无论早晚，我们一定会跨进去的，虽然不知道那迈出的永恒一脚，到底是叫做成长还是投降。</p>
+]]></content>
+      <categories>
+        <category>浮生记</category>
+      </categories>
   </entry>
   <entry>
     <title>绕过校园网认证</title>
