@@ -555,43 +555,6 @@
 <iframe src="//player.bilibili.com/player.html?aid=32514557&bvid=BV1qW411U7N1&cid=56886545&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%" height="100%"> </iframe>]]></content>
   </entry>
   <entry>
-    <title>中兴 ZXHN F677V2 光猫改桥接</title>
-    <url>/2020/02/20/%E4%B8%AD%E5%85%B4%20ZXHN%20F677V2%20%E5%85%89%E7%8C%AB%E6%94%B9%E6%A1%A5%E6%8E%A5/</url>
-    <content><![CDATA[<p>　　在2019年年底，我家终于扯通了宽带，这次放假回家之后看了看发现是中兴 ZXHN F677V2 的光猫，联通的宽带，没有送路由器，用的是光猫自带的2.4Ghz的WiFi。正好我家有闲置的路由器，是斐讯的K2，就接在光猫上自动获取ip地址进行上网。<span id="more"></span>由于疫情在家闲着没事干，准备申请一个公网ip试试，却发现给的就是公网ip，这样就省了一大步了。</p>
-<p>　　要发挥公网的最大用处第一步就是改光猫拨号为光猫桥接，路由拨号，这个就需要超级管理员密码了。</p>
-<p>　　市面上大部分的光猫超级账户和密码在网上都能搜索的到。此教程仅适用于该型号或者此系列路由，目前我知道的我家的现况是设备注册后密码会随机设置，未开启telnet。</p>
-<p>　　先用光猫后边的密码进管理界面记录下INTERNET和iptv的VID和LOID码，一定要记住！一定！（我这个是改过桥接了）</p>
-<p><img src="https://i.loli.net/2020/05/05/DOTZgw4dac2j1i3.png" alt="QQ截图20200505114032.png"></p>
-<p>　　<strong>x_INTERNET_y_VID_z</strong></p>
-<p>　　我们来看一下他的结构，x 代表的是序号，我这是设置的第四个连接方式。y 代表的是拨号方式，R 是路由，B是桥接。z 就是你的VLAN ID了，一定要截图记录下来</p>
-<p><img src="https://i.loli.net/2020/05/05/gtZAqlr2bKh983G.png" alt="2.png"></p>
-<p>　　这个同样重要，记录下来！记录后还可以以便后续还原，或者自行更换光猫时使用。</p>
-<p>　　按住猫上的重置键30秒以上等猫重置了重启进  <a href="http://192.168.1.1/hidden_version_switch.gch">http://192.168.1.1/hidden_version_switch.gch</a> 选择<code>default version</code>，密码是：<code>CUAdmin</code>提交后光猫会重启。<br><img src="https://i.loli.net/2020/05/05/YRSK6kLFsgNO9Zn.png" alt="3.png"><br>　　光猫重启后用putty或者xshell连接类型选择telnet。</p>
-<ul>
-<li>用户名：<code>root</code></li>
-<li>密码：<code>Zte521</code><br><img src="https://i.loli.net/2020/05/05/JKwuzSihsOIdHn6.png" alt="4.png"><br><img src="https://i.loli.net/2020/05/05/Xxt3zNbprqOMTPg.png" alt="5.png"></li>
-</ul>
-<p>　　进入控制台后依次输入以下命令行</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">setmac 1 2180 你的LOID</span><br><span class="line">sendcmd 1 DB set PDTCTUSERINFO 0 tForcePushFlg 0</span><br><span class="line">sendcmd 1 DB set PDTCTUSERINFO 0 Result 1</span><br><span class="line">sendcmd 1 DB set CltLmt 8 Enable 0</span><br><span class="line">sendcmd 1 DB set DevAuthInfo 0 Enable 1</span><br><span class="line">sendcmd 1 DB save</span><br><span class="line">sendcmd 1 DB set TelnetCfg 0 Lan_EnableAfterOlt 1</span><br><span class="line">sendcmd 1 DB save</span><br></pre></td></tr></table></figure>
-<p>　　最后进192.168.1.1/cu.html，管理员账号密码都是：<code>CUAdmin</code>。</p>
-<p>　　以上命令行为恩山坛友提供：<a href="https://www.right.com.cn/forum/forum.php?mod=viewthread&tid=1263340&page=1">原帖</a></p>
-<p>　　进入后，选择基本配置，新建一个连接选项，我这里选择的是ipv4/v6，当然，现在ipv6还未普及，你觉得影响日常浏览体验可以只选择ipv4。（ipv6可是大势所趋啊，给都给了，干嘛不用呢）。</p>
-<ul>
-<li>端口绑定：你用哪个口就绑哪个吧。</li>
-<li>业务模式：<code>Bridge</code>，桥接模式。</li>
-<li>业务模式选择：<code>INTERNET</code>。</li>
-<li>VLAN模式选择改写，VLAN ID就写之前默认的数字。</li>
-</ul>
-<p><img src="https://i.loli.net/2020/05/05/OvnwXgPQHITFNZl.png" alt="6.png"></p>
-<p>　　这样桥接模式就添加了，为了稳定，我就把光猫自带的2.4GHzWIFI给关了，徒增功耗。</p>
-<p>　　IPTV同理。</p>
-<p>　　普通用户登录光猫，网络-宽带配置-上网账号设置就选择你刚才新建的那个，确定重启光猫，用终端拨号试试吧。</p>
-]]></content>
-      <categories>
-        <category>路由器</category>
-      </categories>
-  </entry>
-  <entry>
     <title>《无题》</title>
     <url>/2019/04/22/%E4%B8%80%E7%94%9F/</url>
     <content><![CDATA[<p>18岁，你读了大学</p>
@@ -804,6 +767,43 @@
       </tags>
   </entry>
   <entry>
+    <title>中兴 ZXHN F677V2 光猫改桥接</title>
+    <url>/2020/02/20/%E4%B8%AD%E5%85%B4%20ZXHN%20F677V2%20%E5%85%89%E7%8C%AB%E6%94%B9%E6%A1%A5%E6%8E%A5/</url>
+    <content><![CDATA[<p>　　在2019年年底，我家终于扯通了宽带，这次放假回家之后看了看发现是中兴 ZXHN F677V2 的光猫，联通的宽带，没有送路由器，用的是光猫自带的2.4Ghz的WiFi。正好我家有闲置的路由器，是斐讯的K2，就接在光猫上自动获取ip地址进行上网。<span id="more"></span>由于疫情在家闲着没事干，准备申请一个公网ip试试，却发现给的就是公网ip，这样就省了一大步了。</p>
+<p>　　要发挥公网的最大用处第一步就是改光猫拨号为光猫桥接，路由拨号，这个就需要超级管理员密码了。</p>
+<p>　　市面上大部分的光猫超级账户和密码在网上都能搜索的到。此教程仅适用于该型号或者此系列路由，目前我知道的我家的现况是设备注册后密码会随机设置，未开启telnet。</p>
+<p>　　先用光猫后边的密码进管理界面记录下INTERNET和iptv的VID和LOID码，一定要记住！一定！（我这个是改过桥接了）</p>
+<p><img src="https://i.loli.net/2020/05/05/DOTZgw4dac2j1i3.png" alt="QQ截图20200505114032.png"></p>
+<p>　　<strong>x_INTERNET_y_VID_z</strong></p>
+<p>　　我们来看一下他的结构，x 代表的是序号，我这是设置的第四个连接方式。y 代表的是拨号方式，R 是路由，B是桥接。z 就是你的VLAN ID了，一定要截图记录下来</p>
+<p><img src="https://i.loli.net/2020/05/05/gtZAqlr2bKh983G.png" alt="2.png"></p>
+<p>　　这个同样重要，记录下来！记录后还可以以便后续还原，或者自行更换光猫时使用。</p>
+<p>　　按住猫上的重置键30秒以上等猫重置了重启进  <a href="http://192.168.1.1/hidden_version_switch.gch">http://192.168.1.1/hidden_version_switch.gch</a> 选择<code>default version</code>，密码是：<code>CUAdmin</code>提交后光猫会重启。<br><img src="https://i.loli.net/2020/05/05/YRSK6kLFsgNO9Zn.png" alt="3.png"><br>　　光猫重启后用putty或者xshell连接类型选择telnet。</p>
+<ul>
+<li>用户名：<code>root</code></li>
+<li>密码：<code>Zte521</code><br><img src="https://i.loli.net/2020/05/05/JKwuzSihsOIdHn6.png" alt="4.png"><br><img src="https://i.loli.net/2020/05/05/Xxt3zNbprqOMTPg.png" alt="5.png"></li>
+</ul>
+<p>　　进入控制台后依次输入以下命令行</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">setmac 1 2180 你的LOID</span><br><span class="line">sendcmd 1 DB set PDTCTUSERINFO 0 tForcePushFlg 0</span><br><span class="line">sendcmd 1 DB set PDTCTUSERINFO 0 Result 1</span><br><span class="line">sendcmd 1 DB set CltLmt 8 Enable 0</span><br><span class="line">sendcmd 1 DB set DevAuthInfo 0 Enable 1</span><br><span class="line">sendcmd 1 DB save</span><br><span class="line">sendcmd 1 DB set TelnetCfg 0 Lan_EnableAfterOlt 1</span><br><span class="line">sendcmd 1 DB save</span><br></pre></td></tr></table></figure>
+<p>　　最后进192.168.1.1/cu.html，管理员账号密码都是：<code>CUAdmin</code>。</p>
+<p>　　以上命令行为恩山坛友提供：<a href="https://www.right.com.cn/forum/forum.php?mod=viewthread&tid=1263340&page=1">原帖</a></p>
+<p>　　进入后，选择基本配置，新建一个连接选项，我这里选择的是ipv4/v6，当然，现在ipv6还未普及，你觉得影响日常浏览体验可以只选择ipv4。（ipv6可是大势所趋啊，给都给了，干嘛不用呢）。</p>
+<ul>
+<li>端口绑定：你用哪个口就绑哪个吧。</li>
+<li>业务模式：<code>Bridge</code>，桥接模式。</li>
+<li>业务模式选择：<code>INTERNET</code>。</li>
+<li>VLAN模式选择改写，VLAN ID就写之前默认的数字。</li>
+</ul>
+<p><img src="https://i.loli.net/2020/05/05/OvnwXgPQHITFNZl.png" alt="6.png"></p>
+<p>　　这样桥接模式就添加了，为了稳定，我就把光猫自带的2.4GHzWIFI给关了，徒增功耗。</p>
+<p>　　IPTV同理。</p>
+<p>　　普通用户登录光猫，网络-宽带配置-上网账号设置就选择你刚才新建的那个，确定重启光猫，用终端拨号试试吧。</p>
+]]></content>
+      <categories>
+        <category>路由器</category>
+      </categories>
+  </entry>
+  <entry>
     <title>农村什么让你感到最恐怖？</title>
     <url>/2019/10/03/%E5%86%9C%E6%9D%91%E4%BB%80%E4%B9%88%E8%AE%A9%E4%BD%A0%E6%84%9F%E5%88%B0%E6%9C%80%E6%81%90%E6%80%96%EF%BC%9F/</url>
     <content><![CDATA[<p>前几天有个自称是我表妹的人加我微信，我加了，然后刚加她就转来500块钱，说什么一点心意让我收下。</p>
@@ -851,15 +851,6 @@
       </categories>
   </entry>
   <entry>
-    <title>爱&amp;情</title>
-    <url>/2021/05/14/%E7%88%B1&amp;%E6%83%85/</url>
-    <content><![CDATA[<p>　　1：等有资格结婚了，我要嫁给一个很平易近人的男人，他没有大大的啤酒肚，没有地中海似的大光头，没有鸡毛蒜皮都计较的小心眼，也没有莫名其妙就爆发的坏脾气，他要喜欢运动，充满男子气，他要喜欢唱歌就算走调让我哭笑不得，他要捧着我的脸说娶到你真是我的福气。<span id="more"></span><br>　　多年以后他已经被世人的奸诈狡猾刺的浑身伤痕，被生意的应酬喝出了一个大大的啤酒肚，被日夜的焦虑头发变的稀疏了，为了赚钱养家变的斤斤计较了，没有时间再去运动了，时间把他变的苍老了，他喜欢听歌却唱的走调被人嘲笑再也不开口了，他捧着你的脸你一脸嫌弃，却未曾想过，他原来就是你最爱的样子啊。<br>　　2：我一直都觉得最难过的瞬间，一定不是你爱而不得的时候，而是你明白你和这个人真的没有以后了，以后他给过你的没有给过你的，都要给另一个人了，而你连眼红都没有资格。</p>
-]]></content>
-      <categories>
-        <category>浮生纪</category>
-      </categories>
-  </entry>
-  <entry>
     <title>MyLife，OurLife</title>
     <url>/2021/05/18/%E6%B5%8B%E8%AF%95/</url>
     <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
@@ -877,6 +868,15 @@
       <tags>
         <tag>MyLife</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>爱&amp;情</title>
+    <url>/2021/05/14/%E7%88%B1&amp;%E6%83%85/</url>
+    <content><![CDATA[<p>　　1：等有资格结婚了，我要嫁给一个很平易近人的男人，他没有大大的啤酒肚，没有地中海似的大光头，没有鸡毛蒜皮都计较的小心眼，也没有莫名其妙就爆发的坏脾气，他要喜欢运动，充满男子气，他要喜欢唱歌就算走调让我哭笑不得，他要捧着我的脸说娶到你真是我的福气。<span id="more"></span><br>　　多年以后他已经被世人的奸诈狡猾刺的浑身伤痕，被生意的应酬喝出了一个大大的啤酒肚，被日夜的焦虑头发变的稀疏了，为了赚钱养家变的斤斤计较了，没有时间再去运动了，时间把他变的苍老了，他喜欢听歌却唱的走调被人嘲笑再也不开口了，他捧着你的脸你一脸嫌弃，却未曾想过，他原来就是你最爱的样子啊。<br>　　2：我一直都觉得最难过的瞬间，一定不是你爱而不得的时候，而是你明白你和这个人真的没有以后了，以后他给过你的没有给过你的，都要给另一个人了，而你连眼红都没有资格。</p>
+]]></content>
+      <categories>
+        <category>浮生纪</category>
+      </categories>
   </entry>
   <entry>
     <title>《电话》</title>
